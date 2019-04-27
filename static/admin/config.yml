@@ -1,0 +1,221 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "universities"
+    label: "Hochschulen"
+    folder: "src/data/schools"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Name, name: name, widget: string}
+      - {label: Stadt, name: city, widget: string}
+      - {label: Adresse, name: address, widget: string}
+      - label: Hochschultyp
+        name: type
+        widget: "select"
+        options:
+          - { label: "Universität", value: "university" }
+          - { label: "Kunsthochschule", value: "artCollege" }
+          - { label: "Fachhochschule", value: "college" }
+
+      - {label: Website, name: webseite, widget: string}
+      - {label: Facebook, name: facebook, widget: string}
+      - {label: Instagram, name: instagram, widget: string}
+      - {label: Twitter, name: twitter, widget: string}
+      - {label: Longitude, name: longitude, widget: number, valueType: float}
+      - {label: Latitude, name: latitude, widget: number, valueType: float}
+  - name: "master"
+    label: "Master"
+    folder: "src/data/masters"
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Grundinformationen
+        name: main
+        widget: object
+        fields:
+        - label: Bewerbungsfristen
+          name: applicationDeadlines
+          widget: list
+          fields:
+            - {label: Datum, name: date, widget: date}
+            - {label: International, name: international, widget: boolean, default: false}
+            - label: Zulassungssemester
+              name: type
+              widget: "select"
+              multiple: true
+              options:
+                - { label: "Sommersemester", value: "summer" }
+                - { label: "Wintersemester", value: "winter" }
+
+        - label: "Hochschule"
+          name: "university"
+          widget: "relation"
+          collection: "universities"
+          searchFields: ["name", "city"]
+          valueField: "name"
+          displayFields: ["name", "city"]
+      
+      - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
+        name: "topicAndFocus"
+        widget: object
+        fields:
+          - label: "Inhaltlicher Fokus"
+            widget: select
+            name: topicFocus
+            options:
+              - {label: Fachspezifisch, value: fachspezifisch}
+              - {label: Fachübergreifend, value: fachuebergreifend}
+              - {label: Thematisch, value: thematisch}
+          - label: "Fachliche Zusammensetzung"
+            name: functionalComposition
+            widget: select
+            multiple: true
+            options:
+              - {label: "Disziplinär", name: "disciplinary"}
+              - {label: "Interdisziplinär gestalterisch", name: "interdisciplinaryArt"}
+              - {label: "Gestalterisch & nicht-gestalterisch", name: "artAndNonArt"}
+          - label: "Zugelassene Disziplinen"
+            name: allowedDisciplines
+            widget: select
+            multiple: true
+            options:
+              - {label: "Digitale Medien", name: "digital"}
+              - {label: "Film/Fotografie", name: "filmAndPhotograpy"}
+              - {label: "Illustrationen", name: "illustrations"}
+              - {label: "Mode/Textil", name: "fashion"}
+              - {label: "Produkt/Industrie", name: "product"}
+              - {label: "Raum", name: room}
+              - {label: "Schmuck", name: jewelry}
+              - {label: "Visuelle Kommunikation", name: "visualCommunication"}
+      - label: "Zeit und geld"
+        name: timeAndMoney
+        widget: object
+        fields:
+          - label: Studienformen
+            name: allowedForms
+            widget: select
+            multiple: true
+            options:
+            - {label: Vollzeit, name: fullTime}
+            - {label: Teilzeit, name: partTime}
+            - {label: Berufsbegleitend, name: extraOccupational}
+            - {label: Ferstudium, name: remote}
+          - label: Gebühren
+            name: costs
+            widget: number
+            valueType: int
+            default: 0
+          - label: Regelstudienzeit (Semester)
+            name: semester
+            widget: number
+            valueType: int
+            default: 4
+      
+      - label: Ausrichtung
+        name: direction
+        widget: object
+        fields:
+          - label: Abschluss
+            name: degree
+            widget: select
+            options:
+              - {label: "Master of Arts (MA)", name: ma}
+              - {label: "Master of Fine Arts (MFA)", name: mfa}
+              - {label: "Master of Science (MSc)", name: msc}
+          - label: Ausrichtung
+            name: direction
+            widget: select
+            multiple: true
+            options:
+              - {label: Praktisch, name: practical}
+              - {label: Theoretisch, name: theoretical}
+          - label: Mastertyp
+            name: masterType
+            widget: select
+            options:
+              - {label: Konsekutiv, name: consecutive}
+              - {label: "Nicht Konsekutiv", name: notConsecutive}
+              - {label: "Weiterbildend", name: studyingFurther}
+      - label: Internationalität
+        name: internationality
+        widget: object
+        fields:
+          - label: Hauptunterrichtssprachen
+            name: mainLanguages
+            widget: select
+            multiple: true
+            options:
+              - {label: deutsch, name: german}
+              - {label: english, name: english}
+          - label: "Integriertes Auslandssemester"
+            name: semesterAbroad
+            options:
+              - {label: "Ja", name: "yes"}
+              - {label: "Nein", name: "no"}
+              - {label: "Wahlweise", name: "choose"}
+          - label: "Doppelter Abschluss"
+            name: "doubleDegree"
+            widget: boolean
+            default: false
+
+      
+
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading, widget: string}
+          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Description, name: description, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: Full_image, name: full_image, widget: image}
+          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
