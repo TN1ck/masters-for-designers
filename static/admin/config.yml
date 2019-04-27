@@ -61,7 +61,31 @@ collections:
         valueField: "name"
         displayFields: ["name", "city"]
       - {label: "Website", name: "website", widget: string}
-      
+      - label: Ausrichtung
+        name: direction
+        widget: object
+        fields:
+          - label: Abschluss
+            name: degree
+            widget: select
+            options:
+              - {label: "Master of Arts (MA)", value: ma}
+              - {label: "Master of Fine Arts (MFA)", value: mfa}
+              - {label: "Master of Science (MSc)", value: msc}
+          - label: Ausrichtung
+            name: direction
+            widget: select
+            multiple: true
+            options:
+              - {label: Praktisch, value: practical}
+              - {label: Theoretisch, value: theoretical}
+          - label: Mastertyp
+            name: masterType
+            widget: select
+            options:
+              - {label: Konsekutiv, value: consecutive}
+              - {label: "Nicht Konsekutiv", value: notConsecutive}
+              - {label: "Weiterbildend", value: studyingFurther}
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
         widget: object
@@ -94,7 +118,7 @@ collections:
               - {label: "Raum", value: room}
               - {label: "Schmuck", value: jewelry}
               - {label: "Visuelle Kommunikation", value: "visualCommunication"}
-      - label: "Zeit und geld"
+      - label: "Zeit und Geld"
         name: timeAndMoney
         widget: object
         fields:
@@ -117,32 +141,6 @@ collections:
             widget: number
             valueType: int
             default: 4
-      
-      - label: Ausrichtung
-        name: direction
-        widget: object
-        fields:
-          - label: Abschluss
-            name: degree
-            widget: select
-            options:
-              - {label: "Master of Arts (MA)", value: ma}
-              - {label: "Master of Fine Arts (MFA)", value: mfa}
-              - {label: "Master of Science (MSc)", value: msc}
-          - label: Ausrichtung
-            name: direction
-            widget: select
-            multiple: true
-            options:
-              - {label: Praktisch, value: practical}
-              - {label: Theoretisch, value: theoretical}
-          - label: Mastertyp
-            name: masterType
-            widget: select
-            options:
-              - {label: Konsekutiv, value: consecutive}
-              - {label: "Nicht Konsekutiv", value: notConsecutive}
-              - {label: "Weiterbildend", value: studyingFurther}
       - label: Internationalität
         name: internationality
         widget: object
@@ -156,6 +154,7 @@ collections:
               - {label: english, value: english}
           - label: "Integriertes Auslandssemester"
             name: semesterAbroad
+            widget: select
             options:
               - {label: "Ja", value: "yes"}
               - {label: "Nein", value: "no"}
