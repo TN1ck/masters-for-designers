@@ -21,11 +21,12 @@ const NavbarLinks = styled.div``;
 
 const Navbar = class extends React.Component {
   render() {
+    const {universityCount, masterCount} = this.props;
     return (
       <NavbarContainer role="navigation" aria-label="main-navigation">
         <NavbarInformation>
-          <NavbarLink to="/masters">{`Studiengänge 000`}</NavbarLink>
-          <NavbarLink to="/universities">{`Hochschulen 000`}</NavbarLink>
+          <NavbarLink to="/masters">{`Studiengänge ${masterCount}`}</NavbarLink>
+          <NavbarLink to="/universities">{`Hochschulen ${universityCount}`}</NavbarLink>
         </NavbarInformation>
         <NavbarLinks>
           <NavbarLink to="/about">About</NavbarLink>

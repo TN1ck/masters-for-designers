@@ -37,7 +37,7 @@ class Masters extends React.Component {
       <Layout>
         <Masthead>
           <Container>
-            <Navbar />
+            <Navbar universityCount={universities.length} masterCount={masters.length} />
             <Headline>
               <i>M</i>
               {"asters for"}
