@@ -11,6 +11,7 @@ collections:
     folder: "src/data/schools"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: name
     fields:
       - {label: Name, name: name, widget: string}
       - {label: Stadt, name: city, widget: string}
@@ -30,6 +31,7 @@ collections:
       - {label: Longitude, name: longitude, widget: number, valueType: float}
       - {label: Latitude, name: latitude, widget: number, valueType: float}
   - name: "master"
+    identifier_field: name
     label: "Master"
     folder: "src/data/masters"
     extension: json
