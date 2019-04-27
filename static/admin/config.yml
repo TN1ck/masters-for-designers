@@ -10,9 +10,9 @@ collections:
     label: "Hochschulen"
     folder: "src/data/schools"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: Name, name: title, widget: string}
+      - {label: Name, name: name, widget: string}
       - {label: Stadt, name: city, widget: string}
       - {label: Adresse, name: address, widget: string}
       - label: Hochschultyp
@@ -34,9 +34,9 @@ collections:
     folder: "src/data/masters"
     extension: json
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - label: {label: Name, name: Title, widget: string}
+      - {label: Name, name: name, widget: string}
       - label: Bewerbungsfristen
         name: applicationDeadlines
         widget: list
@@ -50,7 +50,6 @@ collections:
             options:
               - { label: "Sommersemester", value: "summer" }
               - { label: "Wintersemester", value: "winter" }
-      - {label: "Website", name: "website", widget: string}
       - label: "Hochschule"
         name: "university"
         widget: "relation"
@@ -58,6 +57,7 @@ collections:
         searchFields: ["name", "city"]
         valueField: "name"
         displayFields: ["name", "city"]
+      - {label: "Website", name: "website", widget: string}
       
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
