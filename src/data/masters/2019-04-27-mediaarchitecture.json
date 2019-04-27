@@ -3,7 +3,7 @@
   "applicationDeadlines": [
     {
       "date": "2019-07-15T15:36:53.820Z",
-      "international": true,
+      "international": false,
       "type": [
         "summer"
       ]
