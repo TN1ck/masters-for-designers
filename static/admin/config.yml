@@ -12,7 +12,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: Name, name: name, widget: string}
+      - {label: Name, name: title, widget: string}
       - {label: Stadt, name: city, widget: string}
       - {label: Adresse, name: address, widget: string}
       - label: Hochschultyp
@@ -36,31 +36,28 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - label: Grundinformationen
-        name: main
-        widget: object
+      - label: {label: Name, name: Title, widget: string}
+      - label: Bewerbungsfristen
+        name: applicationDeadlines
+        widget: list
         fields:
-        - label: Bewerbungsfristen
-          name: applicationDeadlines
-          widget: list
-          fields:
-            - {label: Datum, name: date, widget: date}
-            - {label: International, name: international, widget: boolean, default: false}
-            - label: Zulassungssemester
-              name: type
-              widget: "select"
-              multiple: true
-              options:
-                - { label: "Sommersemester", value: "summer" }
-                - { label: "Wintersemester", value: "winter" }
-
-        - label: "Hochschule"
-          name: "university"
-          widget: "relation"
-          collection: "universities"
-          searchFields: ["name", "city"]
-          valueField: "name"
-          displayFields: ["name", "city"]
+          - {label: Datum, name: date, widget: date}
+          - {label: International, name: international, widget: boolean, default: false}
+          - label: Zulassungssemester
+            name: type
+            widget: "select"
+            multiple: true
+            options:
+              - { label: "Sommersemester", value: "summer" }
+              - { label: "Wintersemester", value: "winter" }
+      - {label: "Website", name: "website", widget: string}
+      - label: "Hochschule"
+        name: "university"
+        widget: "relation"
+        collection: "universities"
+        searchFields: ["name", "city"]
+        valueField: "name"
+        displayFields: ["name", "city"]
       
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
