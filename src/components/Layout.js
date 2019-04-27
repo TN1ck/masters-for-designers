@@ -1,14 +1,27 @@
 import React from "react";
+import {createGlobalStyle} from "styled-components";
 import Helmet from "react-helmet";
+
 import Footer from "../components/Footer";
 import useSiteMetadata from "./SiteMetadata";
 
-import "./all.sass";
+// import "./all.sass";
+import Fonts from "./Fonts";
+
+const GlobalStyle = createGlobalStyle`
+  body, html {
+    font-family: L10;
+    padding: 0;
+    margin: 0;
+  }
+`;
 
 const TemplateWrapper = ({children}) => {
   const {title, description} = useSiteMetadata();
   return (
     <div>
+      <GlobalStyle />
+      <Fonts />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

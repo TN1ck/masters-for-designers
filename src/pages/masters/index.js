@@ -13,12 +13,16 @@ const Headline = styled.h1`
   font-size: 54px;
   color: black;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 `;
 
 const SubHeadline = styled.h3`
   font-size: 24px;
   color: black;
+  font-weight: 300;
 `;
 
 class Masters extends React.Component {
@@ -28,7 +32,12 @@ class Masters extends React.Component {
         <Masthead>
           <Container>
             <Navbar />
-            <Headline>{"Masters for Designers"}</Headline>
+            <Headline>
+              <i>M</i>
+              {"asters for"}
+              <br />
+              <i>D</i>esigners
+            </Headline>
             <SubHeadline>
               {
                 "MD bietet einen Überblick über alle für Designer zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
