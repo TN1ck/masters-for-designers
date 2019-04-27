@@ -13,6 +13,7 @@ module.exports = {
         displayName: true,
       },
     },
+    `gatsby-transformer-json`,
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {

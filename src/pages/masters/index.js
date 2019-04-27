@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Navbar from "./Navbar";
 import Container from "../../components/Container";
+import {StaticQuery, graphql} from "gatsby";
+import Master from "./Master";
 
 const Masthead = styled.header`
   background-color: rgb(255, 105, 58);
@@ -23,10 +25,14 @@ const SubHeadline = styled.h3`
   font-size: 24px;
   color: black;
   font-weight: 300;
+  line-height: 1.5;
 `;
 
 class Masters extends React.Component {
   render() {
+    const masters = this.props.data.masters.edges.map(n => n.node);
+    const universities = this.props.data.universities.edges.map(n => n.node);
+    console.log(masters, universities);
     return (
       <Layout>
         <Masthead>
@@ -45,9 +51,67 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
+        {masters.map(master => {
+          return <Master master={master} />;
+        })}
       </Layout>
     );
   }
 }
 
-export default Masters;
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query MastersQuery {
+        masters: allMastersJson {
+          edges {
+            node {
+              name
+              university
+              website
+              applicationDeadlines {
+                date
+                international
+                type
+              }
+              internationality {
+                semesterAbroad
+                doubleDegree
+                mainLanguages
+              }
+              timeAndMoney {
+                costs
+                semester
+                allowedForms
+              }
+              direction {
+                degree
+                masterType
+                direction
+              }
+              topicAndFocus {
+                topicFocus
+                functionalComposition
+                allowedDisciplines
+              }
+            }
+          }
+        }
+        universities: allSchoolsJson {
+          edges {
+            node {
+              id
+              name
+              city
+              address
+              type
+              longitude
+              latitude
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Masters data={data} />}
+  />
+);
