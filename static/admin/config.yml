@@ -42,7 +42,6 @@ collections:
           - label: Zulassungssemester
             name: type
             widget: "select"
-            multiple: true
             options:
               - { label: "Sommersemester", value: "summer" }
               - { label: "Wintersemester", value: "winter" }
@@ -99,8 +98,8 @@ collections:
               - {label: "Disziplinär", value: "disciplinary"}
               - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
               - {label: "Gestalterisch & nicht-gestalterisch", value: "artAndNonArt"}
-          - label: "Zugelassene Disziplinen"
-            name: allowedDisciplines
+          - label: "Zugelassene Disziplinen Tags"
+            name: allowedDisciplinesTags
             widget: select
             multiple: true
             options:
@@ -112,6 +111,9 @@ collections:
               - {label: "Raum", value: room}
               - {label: "Schmuck", value: jewelry}
               - {label: "Visuelle Kommunikation", value: "visualCommunication"}
+          - label: "Zugelassene Disziplinen"
+            name: allowedDisciplines
+            widget: string
       - label: "Zeit und Geld"
         name: timeAndMoney
         widget: object
