@@ -68,7 +68,6 @@ export default () => (
             node {
               name
               university
-              website
               applicationDeadlines {
                 date
                 international
@@ -93,6 +92,12 @@ export default () => (
                 topicFocus
                 functionalComposition
                 allowedDisciplines
+              }
+              metadata {
+                website
+                facebook
+                instagram
+                twitter
               }
             }
           }

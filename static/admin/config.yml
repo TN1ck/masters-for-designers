@@ -24,11 +24,6 @@ collections:
           - { label: "Universität", value: "university" }
           - { label: "Kunsthochschule", value: "artCollege" }
           - { label: "Fachhochschule", value: "college" }
-
-      - {label: Website, name: webseite, widget: string}
-      - {label: Facebook, name: facebook, widget: string}
-      - {label: Instagram, name: instagram, widget: string}
-      - {label: Twitter, name: twitter, widget: string}
       - {label: Longitude, name: longitude, widget: number, valueType: float}
       - {label: Latitude, name: latitude, widget: number, valueType: float}
   - name: "master"
@@ -60,7 +55,6 @@ collections:
         searchFields: ["name", "city"]
         valueField: "name"
         displayFields: ["name", "city"]
-      - {label: "Website", name: "website", widget: string}
       - label: Ausrichtung
         name: direction
         widget: object
@@ -163,8 +157,16 @@ collections:
             name: "doubleDegree"
             widget: boolean
             default: false
+      - label: Metadata
+        name: metadata
+        widget: object
+        fields:
+        - {label: Website, name: webseite, widget: string}
+        - {label: Facebook, name: facebook, widget: string}
+        - {label: Instagram, name: instagram, widget: string}
+        - {label: Twitter, name: twitter, widget: string}
 
-      
+
 
   - name: "blog"
     label: "Blog"

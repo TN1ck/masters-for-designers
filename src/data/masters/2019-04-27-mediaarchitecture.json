@@ -10,7 +10,6 @@
     }
   ],
   "university": "Bahaus-Unversität Weimar",
-  "website": "https://www.uni-weimar.de/de/architektur-und-urbanistik/studium/master/master-mediaarchitecture-msc/",
   "direction": {
     "degree": "msc",
     "direction": [
@@ -45,5 +44,11 @@
     ],
     "semesterAbroad": "no",
     "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.uni-weimar.de/de/architektur-und-urbanistik/studium/master/master-mediaarchitecture-msc/",
+    "facebook": "https://www.facebook.com/bauhausuni",
+    "instagram": "https://www.instagram.com/bauhaus_uni/",
+    "twitter": "https://twitter.com/bauhaus_uni"
   }
 }
