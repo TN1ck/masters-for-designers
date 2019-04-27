@@ -62,7 +62,7 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
-        {masters.map((master, i) => {
+        {masters.slice(0, 10).map((master, i) => {
           const university = universityMap[master.university];
           console.log(university);
           return (
