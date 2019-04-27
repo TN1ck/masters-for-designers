@@ -9,6 +9,7 @@ collections:
   - name: "universities"
     label: "Hochschulen"
     folder: "src/data/schools"
+    extension: json
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: name
@@ -77,22 +78,22 @@ collections:
             widget: select
             multiple: true
             options:
-              - {label: "Disziplinär", name: "disciplinary"}
-              - {label: "Interdisziplinär gestalterisch", name: "interdisciplinaryArt"}
-              - {label: "Gestalterisch & nicht-gestalterisch", name: "artAndNonArt"}
+              - {label: "Disziplinär", value: "disciplinary"}
+              - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
+              - {label: "Gestalterisch & nicht-gestalterisch", value: "artAndNonArt"}
           - label: "Zugelassene Disziplinen"
             name: allowedDisciplines
             widget: select
             multiple: true
             options:
-              - {label: "Digitale Medien", name: "digital"}
-              - {label: "Film/Fotografie", name: "filmAndPhotograpy"}
-              - {label: "Illustrationen", name: "illustrations"}
-              - {label: "Mode/Textil", name: "fashion"}
-              - {label: "Produkt/Industrie", name: "product"}
-              - {label: "Raum", name: room}
-              - {label: "Schmuck", name: jewelry}
-              - {label: "Visuelle Kommunikation", name: "visualCommunication"}
+              - {label: "Digitale Medien", value: "digital"}
+              - {label: "Film/Fotografie", value: "filmAndPhotograpy"}
+              - {label: "Illustrationen", value: "illustrations"}
+              - {label: "Mode/Textil", value: "fashion"}
+              - {label: "Produkt/Industrie", value: "product"}
+              - {label: "Raum", value: room}
+              - {label: "Schmuck", value: jewelry}
+              - {label: "Visuelle Kommunikation", value: "visualCommunication"}
       - label: "Zeit und geld"
         name: timeAndMoney
         widget: object
@@ -102,10 +103,10 @@ collections:
             widget: select
             multiple: true
             options:
-            - {label: Vollzeit, name: fullTime}
-            - {label: Teilzeit, name: partTime}
-            - {label: Berufsbegleitend, name: extraOccupational}
-            - {label: Ferstudium, name: remote}
+            - {label: Vollzeit, value: fullTime}
+            - {label: Teilzeit, value: partTime}
+            - {label: Berufsbegleitend, value: extraOccupational}
+            - {label: Ferstudium, value: remote}
           - label: Gebühren
             name: costs
             widget: number
@@ -125,23 +126,23 @@ collections:
             name: degree
             widget: select
             options:
-              - {label: "Master of Arts (MA)", name: ma}
-              - {label: "Master of Fine Arts (MFA)", name: mfa}
-              - {label: "Master of Science (MSc)", name: msc}
+              - {label: "Master of Arts (MA)", value: ma}
+              - {label: "Master of Fine Arts (MFA)", value: mfa}
+              - {label: "Master of Science (MSc)", value: msc}
           - label: Ausrichtung
             name: direction
             widget: select
             multiple: true
             options:
-              - {label: Praktisch, name: practical}
-              - {label: Theoretisch, name: theoretical}
+              - {label: Praktisch, value: practical}
+              - {label: Theoretisch, value: theoretical}
           - label: Mastertyp
             name: masterType
             widget: select
             options:
-              - {label: Konsekutiv, name: consecutive}
-              - {label: "Nicht Konsekutiv", name: notConsecutive}
-              - {label: "Weiterbildend", name: studyingFurther}
+              - {label: Konsekutiv, value: consecutive}
+              - {label: "Nicht Konsekutiv", value: notConsecutive}
+              - {label: "Weiterbildend", value: studyingFurther}
       - label: Internationalität
         name: internationality
         widget: object
@@ -151,14 +152,14 @@ collections:
             widget: select
             multiple: true
             options:
-              - {label: deutsch, name: german}
-              - {label: english, name: english}
+              - {label: deutsch, value: german}
+              - {label: english, value: english}
           - label: "Integriertes Auslandssemester"
             name: semesterAbroad
             options:
-              - {label: "Ja", name: "yes"}
-              - {label: "Nein", name: "no"}
-              - {label: "Wahlweise", name: "choose"}
+              - {label: "Ja", value: "yes"}
+              - {label: "Nein", value: "no"}
+              - {label: "Wahlweise", value: "choose"}
           - label: "Doppelter Abschluss"
             name: "doubleDegree"
             widget: boolean
