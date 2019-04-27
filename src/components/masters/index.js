@@ -51,8 +51,12 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
-        {masters.map(master => {
-          return <Master master={master} />;
+        {masters.map((master, i) => {
+          return (
+            <Container key={i}>
+              <Master master={master} />
+            </Container>
+          );
         })}
       </Layout>
     );

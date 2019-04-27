@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: L10;
     padding: 0;
     margin: 0;
+    font-weight: 300;
   }
 `;
 

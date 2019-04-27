@@ -2,12 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {Link} from "gatsby";
 
-const NavbarContainer = styled.nav`
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-`;
-
 const NavbarInformation = styled.div`
   display: flex;
 `;
@@ -18,6 +12,20 @@ const NavbarLink = styled(Link)`
 `;
 
 const NavbarLinks = styled.div``;
+
+const NavbarContainer = styled.nav`
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+
+    & ${NavbarLinks} {
+      padding-top: 10px;
+    }
+  }
+`;
 
 const Navbar = class extends React.Component {
   render() {

@@ -1,18 +1,44 @@
 import React from "react";
 import styled from "styled-components";
 
-const MasterContainer = styled.div`
-  padding: 0 10px;
-  border-top: 1px solid black;
-`;
-
 const MasterTitle = styled.div`
-  font-family: 24px;
+  font-size: 30px;
+  width: 48%;
 `;
 
-const MasterCity = styled.div``;
+const MasterCity = styled.div`
+  margin-left; 4%;
+  width: 22%;
+`;
 
-const MasterUniversity = styled.div``;
+const MasterUniversity = styled.div`
+  margin-left; 4%;
+  width: 22%;
+`;
+
+const MasterContainer = styled.div`
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-top: 1px solid black;
+  display: flex;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+
+    & ${MasterCity} {
+      width: 100%;
+    }
+
+    & ${MasterUniversity} {
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    & ${MasterTitle} {
+      width: 100%;
+    }
+  }
+`;
 
 class Master extends React.Component {
   render() {
