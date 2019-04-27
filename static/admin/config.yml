@@ -7,7 +7,7 @@ public_folder: "/img"
 
 collections:
   - name: "universities"
-    label: "Hochschulen"
+    label: "Hochschule"
     folder: "src/data/schools"
     extension: json
     create: true
@@ -44,8 +44,6 @@ collections:
         name: applicationDeadlines
         widget: list
         fields:
-          - {label: Datum, name: date, widget: date}
-          - {label: International, name: international, widget: boolean, default: false}
           - label: Zulassungssemester
             name: type
             widget: "select"
@@ -53,6 +51,8 @@ collections:
             options:
               - { label: "Sommersemester", value: "summer" }
               - { label: "Wintersemester", value: "winter" }
+          - {label: Datum, name: date, widget: date}
+          - {label: International, name: international, widget: boolean, default: false}
       - label: "Hochschule"
         name: "university"
         widget: "relation"
