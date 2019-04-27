@@ -7,12 +7,12 @@ const MasterTitle = styled.div`
 `;
 
 const MasterCity = styled.div`
-  margin-left; 4%;
+  margin-left: 4%;
   width: 22%;
 `;
 
 const MasterUniversity = styled.div`
-  margin-left; 4%;
+  margin-left: 4%;
   width: 22%;
 `;
 
@@ -42,12 +42,12 @@ const MasterContainer = styled.div`
 
 class Master extends React.Component {
   render() {
-    const {master} = this.props;
+    const {master, university} = this.props;
     return (
       <MasterContainer>
         <MasterTitle>{master.name}</MasterTitle>
         <MasterUniversity>{master.university}</MasterUniversity>
-        <MasterCity>{master.city}</MasterCity>
+        <MasterCity>{university.city}</MasterCity>
       </MasterContainer>
     );
   }

@@ -32,7 +32,18 @@ class Masters extends React.Component {
   render() {
     const masters = this.props.data.masters.edges.map(n => n.node);
     const universities = this.props.data.universities.edges.map(n => n.node);
-    console.log(masters, universities);
+
+    const universityMap = {};
+    for (const university of universities) {
+      university.masters = [];
+      universityMap[university.name] = university;
+    }
+
+    for (const master of masters) {
+      const university = universityMap[master.university];
+      university.masters.push(master);
+    }
+
     return (
       <Layout>
         <Masthead>
@@ -52,9 +63,11 @@ class Masters extends React.Component {
           </Container>
         </Masthead>
         {masters.map((master, i) => {
+          const university = universityMap[master.university];
+          console.log(university);
           return (
             <Container key={i}>
-              <Master master={master} />
+              <Master master={master} university={university} />
             </Container>
           );
         })}
