@@ -42,6 +42,7 @@ export const mastersQuery = graphql`
           topicFocus
           functionalComposition
           allowedDisciplines
+          allowedDisciplinesTag
         }
         metadata {
           website
@@ -90,6 +91,7 @@ const FilterContainer = styled.div`
 `;
 
 const FilterButton = styled.button`
+  position: relative;
   font-family: "L10";
   font-weight: 400;
   font-size: 12px;
@@ -143,37 +145,239 @@ const FilterSectionButtons = styled.div`
   }
 `;
 
-const example = {
-  name: "Advanced Design",
-  applicationDeadlines: [{date: "2018-01-15T00:00:00.000Z", international: false, type: "summer"}],
-  university: "Hochschule München",
-  direction: {degree: "ma", direction: ["practical"], masterType: "consecutive"},
-  topicAndFocus: {
-    topicFocus: "thematisch",
-    functionalComposition: "artAndNonArt",
-    allowedDisciplines: "Design, Architektur",
-    allowedDisciplinesTag: [
-      "room",
-      "visualCommunication",
-      "digital",
-      "filmAndPhotograpy",
-      "product",
-      "fashion",
-      "illustrations",
-      "jewelry",
-    ],
-  },
-  timeAndMoney: {allowedForms: ["fullTime"], costs: 0, semester: "3"},
-  internationality: {mainLanguages: ["german"], semesterAbroad: "no", doubleDegree: false},
-  metadata: {
-    website: "http://www.design.hm.edu/studienangebote/master/masterofartsinadvanceddesign.de.html",
-    facebook: "https://www.facebook.com/HochschuleMuenchen/?fref=ts",
-    instagram: "—",
-    twitter: "https://twitter.com/haw_muenchen?lang=de",
-  },
+const FILTERS = {
+  universityType: [
+    {
+      type: "universityType",
+      value: "university",
+      name: "Universität",
+      filter: (m, u) => u.type === "university",
+    },
+    {
+      type: "universityType",
+      value: "artCollege",
+      name: "Kunsthochschule",
+      filter: (m, u) => u.type === "artCollege",
+    },
+    {
+      type: "universityType",
+      value: "college",
+      name: "Fachhochschule",
+      filter: (m, u) => u.type === "college",
+    },
+  ],
+  masterType: [
+    {
+      type: "masterType",
+      value: "consecutive",
+      name: "Konsektutiv",
+      filter: m => m.direction.masterType === "consecutive",
+    },
+    {
+      type: "masterType",
+      value: "notConsecutive",
+      name: "Nicht konsekutiv",
+      filter: m => m.direction.masterType === "notConsecutive",
+    },
+    {
+      type: "masterType",
+      value: "studyingFurther",
+      name: "Weiterbildend",
+      filter: m => m.direction.masterType === "studyingFurther",
+    },
+  ],
+  direction: [
+    {
+      type: "direction",
+      value: "practical",
+      name: "Praktisch",
+      filter: m => m.direction.direction.includes("practical"),
+    },
+    {
+      type: "direction",
+      value: "theoretical",
+      name: "Theoretisch",
+      filter: m => m.direction.direction.includes("theoretical"),
+    },
+  ],
+  topicFocus: [
+    {
+      type: "topicFocus",
+      value: "fachspezifisch",
+      name: "Fachspezifisch",
+      filter: m => m.topicAndFocus.topicFocus === "fachspezifisch",
+    },
+    {
+      type: "topicFocus",
+      value: "fachuebergreifend",
+      name: "Fachübergreifend",
+      filter: m => m.topicAndFocus.topicFocus === "fachuebergreifend",
+    },
+    {
+      type: "topicFocus",
+      value: "thematisch",
+      name: "Thematisch",
+      filter: m => m.topicAndFocus.topicFocus === "thematisch",
+    },
+  ],
+  composition: [
+    {
+      type: "functionalComposition",
+      value: "disciplinary",
+      name: "Disziplinär",
+      filter: m => m.topicAndFocus.functionalComposition === "disciplinary",
+    },
+    {
+      type: "functionalComposition",
+      value: "interdisciplinaryArt",
+      name: "Interdisziplinär gestalterisch",
+      filter: m => m.topicAndFocus.functionalComposition === "interdisciplinaryArt",
+    },
+    {
+      type: "functionalComposition",
+      value: "artAndNonArt",
+      name: "Gestalterisch & Nicht gestalterisch",
+      filter: m => m.topicAndFocus.functionalComposition === "artAndNonArt",
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "digital",
+      name: "Digitale Medien",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("digital"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "filmAndPhotograpy",
+      name: "Fotografie/Film",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("filmAndPhotograpy"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "illustrations",
+      name: "Illustration",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("illustrations"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "fashion",
+      name: "Mode/Textil",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("fashion"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "product",
+      name: "Produkt/Industrie",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("product"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "room",
+      name: "Raum",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("room"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "jewelry",
+      name: "Schmuck",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("jewelry"),
+    },
+    {
+      type: "allowedDisciplinesTag",
+      value: "visualCommunication",
+      name: "Visuelle Kommunikation",
+      filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("visualCommunication"),
+    },
+  ],
+  allowedForms: [
+    {
+      type: "allowedForms",
+      value: "fullTime",
+      name: "Vollzeit",
+      filter: m => m.timeAndMoney.allowedForms.includes("fullTime"),
+    },
+    {
+      type: "allowedForms",
+      value: "partTime",
+      name: "Teilzeit",
+      filter: m => m.timeAndMoney.allowedForms.includes("partTime"),
+    },
+    {
+      type: "allowedForms",
+      value: "extraOccupational",
+      name: "Berufsbegleitend",
+      filter: m => m.timeAndMoney.allowedForms.includes("extraOccupational"),
+    },
+    {
+      type: "allowedForms",
+      value: "remote",
+      name: "Fernstudium",
+      filter: m => m.timeAndMoney.allowedForms.includes("remote"),
+    },
+  ],
+  semesterType: [
+    {
+      type: "semesterType",
+      value: "summer",
+      name: "Sommersemester",
+      filter: m => m.applicationDeadlines.some(d => d.type === "summer"),
+    },
+    {
+      type: "semesterType",
+      value: "winter",
+      name: "Wintersemester",
+      filter: m => m.applicationDeadlines.some(d => d.type === "winter"),
+    },
+  ],
+  internationalityEnglish: [
+    {
+      type: "internationalityEnglish",
+      value: "english",
+      name: "Englischsprachig",
+      filter: m => m.internationality.mainLanguages.includes("english"),
+    },
+  ],
+  internationalitySemesterAbroad: [
+    {
+      type: "internationalitySemesterAbroad",
+      value: "semesterAbroad",
+      name: "Intergriertes Auslandssemster",
+      filter: m => m.internationality.semesterAbroad !== "no",
+    },
+  ],
+  internationalityDoubleDegree: [
+    {
+      type: "internationalityDoubleDegree",
+      value: "doubleDegree",
+      name: "Doppelter Abschluss",
+      filter: m => m.internationality.doubleDegree,
+    },
+  ],
 };
 
 const empty = arr => arr.length === 0;
+
+const example = {
+  name: "Architectural Lighting and Design Management",
+  applicationDeadlines: [{date: "2017-08-30T00:00:00.000Z", international: false, type: "winter"}],
+  university: "Hochschule Wismar",
+  otherUniversity: "nein",
+  department: "Gestaltung",
+  direction: {degree: "ma", direction: ["practical"], masterType: "studyingFurther"},
+  topicAndFocus: {
+    topicFocus: "fachspezifisch",
+    functionalComposition: "artAndNonArt",
+    allowedDisciplines: "Design, Innenarchitektur, Architektur, Elektrotechnik",
+    allowedDisciplinesTag: ["room", "product"],
+  },
+  timeAndMoney: {allowedForms: ["remote", "partTime"], costs: 3900, semester: "4"},
+  internationality: {mainLanguages: ["english"], semesterAbroad: "yes", doubleDegree: false},
+  metadata: {
+    website: "https://www.wings.hs-wismar.de/de/fernstudium_master/lighting_design",
+    facebook: "https://www.facebook.com/WingsFernstudium",
+    instagram: null,
+    twitter: "https://twitter.com/WingsStudium",
+  },
+};
 
 class Masters extends React.Component {
   state = {
@@ -187,7 +391,9 @@ class Masters extends React.Component {
       allowedDisciplinesTag: [],
       allowedForms: [],
       semesterType: [],
-      internationality: [],
+      internationalityEnglish: [],
+      internationalitySemesterAbroad: [],
+      internationalityDoubleDegree: [],
     },
   };
   toggleFilter = (type, value) => {
@@ -228,75 +434,68 @@ class Masters extends React.Component {
       const university = universityMap[m.university];
       const universityType =
         empty(this.state.filters.universityType) || this.state.filters.universityType.includes(university.type);
+
       const masterType =
         empty(this.state.filters.masterType) || this.state.filters.masterType.includes(m.direction.masterType);
-      return universityType && masterType;
+
+      const masterDirection =
+        empty(this.state.filters.direction) ||
+        this.state.filters.direction.some(d => m.direction.direction.includes(d));
+
+      const topicFocus =
+        empty(this.state.filters.topicFocus) || this.state.filters.topicFocus.includes(m.topicAndFocus.topicFocus);
+
+      const functionalComposition =
+        empty(this.state.filters.functionalComposition) ||
+        this.state.filters.functionalComposition.includes(m.topicAndFocus.functionalComposition);
+
+      const allowedDisciplinesTag =
+        empty(this.state.filters.allowedDisciplinesTag) ||
+        this.state.filters.allowedDisciplinesTag.some(d => m.topicAndFocus.allowedDisciplinesTag.includes(d));
+
+      const allowedForms =
+        empty(this.state.filters.allowedForms) ||
+        this.state.filters.allowedForms.some(d => m.timeAndMoney.allowedForms.includes(d));
+
+      const semesterType =
+        empty(this.state.filters.semesterType) ||
+        this.state.filters.semesterType.some(d => m.applicationDeadlines.some(dd => dd.type === d));
+
+      const english =
+        empty(this.state.filters.internationalityEnglish) || m.internationality.mainLanguages.includes("english");
+      const semesterAbroad =
+        empty(this.state.filters.internationalitySemesterAbroad) || m.internationality.semesterAbroad !== "no";
+      const doubleDegree = empty(this.state.filters.internationalityDoubleDegree) || m.internationality.doubleDegree;
+
+      return (
+        universityType &&
+        masterType &&
+        masterDirection &&
+        topicFocus &&
+        functionalComposition &&
+        allowedDisciplinesTag &&
+        allowedForms &&
+        semesterType &&
+        english &&
+        semesterAbroad &&
+        doubleDegree
+      );
     });
 
-    const filters = {
-      universityType: [
-        {type: "universityType", value: "university", name: "Universität"},
-        {type: "universityType", value: "artCollege", name: "Kunsthochschule"},
-        {type: "universityType", value: "college", name: "Fachhochschule"},
-      ],
-      masterType: [
-        {type: "masterType", value: "consecutive", name: "Konsektutiv"},
-        {type: "masterType", value: "notConsecutive", name: "Nicht konsekutiv"},
-        {type: "masterType", value: "studyingFurther", name: "Weiterbildend"},
-      ],
-      direction: [
-        {type: "direction", value: "practical", name: "Praktisch"},
-        {type: "direction", value: "theoretical", name: "Theoretisch"},
-        {type: "direction", value: "thematic", name: "Thematisch"},
-      ],
-      topicFocus: [
-        {type: "topicFocus", value: "disciplinary", name: "Fachspezifisch"},
-        {type: "topicFocus", value: "interdisciplinary", name: "Fachübergreifend"},
-        {type: "topicFocus", value: "thematic", name: "Thematisch"},
-      ],
-      composition: [
-        {type: "functionalComposition", value: "disciplinary", name: "Disziplinär"},
-        {
-          type: "functionalComposition",
-          value: "interdisciplinaryArt",
-          name: "Interdisziplinär gestalterisch",
-        },
-        {
-          type: "functionalComposition",
-          value: "artAndNonArt",
-          name: "Gestalterisch & Nicht gestalterisch",
-        },
-        {type: "allowedDisciplinesTag", value: "digital", name: "Digitale Medien"},
-        {type: "allowedDisciplinesTag", value: "filmAndPhotograpy", name: "Fotografie/Film"},
-        {type: "allowedDisciplinesTag", value: "illustrations", name: "Illustration"},
-        {type: "allowedDisciplinesTag", value: "fashion", name: "Mode/Textil"},
-        {type: "allowedDisciplinesTag", value: "product", name: "Produkt/Industrie"},
-        {type: "allowedDisciplinesTag", value: "room", name: "Raum"},
-        {type: "allowedDisciplinesTag", value: "jewelry", name: "Schmuck"},
-        {type: "allowedDisciplinesTag", value: "visualCommunication", name: "Visuelle Kommunikation"},
-      ],
-      allowedForms: [
-        {type: "allowedForms", value: "fullTime", name: "Vollzeit"},
-        {type: "allowedForms", value: "partTime", name: "Teilzeit"},
-        {type: "allowedForms", value: "extraOccupational", name: "Berufsbegleitend"},
-        {type: "allowedForms", value: "remote", name: "Fernstudium"},
-      ],
-      semesterType: [
-        {type: "semesterType", value: "summer", name: "Sommersemester"},
-        {type: "semesterType", value: "winter", name: "Wintersemester"},
-      ],
-      internationality: [
-        {type: "internationality", value: "english", name: "Englischsprachig"},
-        {type: "internationality", value: "semesterAbroad", name: "Intergriertes Auslandssemster"},
-        {type: "internationality", value: "doubleDegree", name: "Doppelter Abschluss"},
-      ],
-    };
-
-    const createButton = ({type, value, name}) => {
+    const createButton = ({type, value, name, filter}) => {
       const active = this.state.filters[type].includes(value);
+      const isEmpty = empty(this.state.filters[type]);
       return (
-        <FilterButton active={active} key={value} onClick={this.createToggleFilter(type, value)}>
-          {name}
+        <FilterButton
+          style={{paddingRight: 50}}
+          active={active}
+          key={value}
+          onClick={this.createToggleFilter(type, value)}
+        >
+          {name}{" "}
+          <span style={{position: "absolute", right: 45, top: 10, transform: "translate(100%)"}}>
+            {isEmpty ? `(${filteredMasters.filter(m => filter(m, universityMap[m.university])).length})` : "    "}
+          </span>
         </FilterButton>
       );
     };
@@ -335,35 +534,40 @@ class Masters extends React.Component {
             <div style={{display: this.state.show ? "block" : "none"}}>
               <FilterSection>
                 <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.universityType.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.universityType.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Mastertyp"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.masterType.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.masterType.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.direction.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.direction.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Inhaltlicher Fokus"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.topicFocus.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.topicFocus.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Disziplinäre Zusammensetzung"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.composition.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.composition.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Studienform"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.allowedForms.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.allowedForms.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Zulassungssemester"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.semesterType.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>{FILTERS.semesterType.map(createButton)}</FilterSectionButtons>
               </FilterSection>
               <FilterSection>
                 <FilterSectionTitle>{"Internationailtät"}</FilterSectionTitle>
-                <FilterSectionButtons>{filters.internationality.map(createButton)}</FilterSectionButtons>
+                <FilterSectionButtons>
+                  {FILTERS.internationalityEnglish
+                    .map(createButton)
+                    .concat(FILTERS.internationalitySemesterAbroad.map(createButton))
+                    .concat(FILTERS.internationalityDoubleDegree.map(createButton))}
+                </FilterSectionButtons>
               </FilterSection>
             </div>
           </Container>
