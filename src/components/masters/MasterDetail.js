@@ -89,36 +89,6 @@ const MasterDetailItem = ({dt, dd}) => {
   return <MasterDetailSectionTitle />;
 };
 
-const example = {
-  name: "Advanced Design",
-  applicationDeadlines: [{date: "2018-01-15T00:00:00.000Z", international: false, type: "summer"}],
-  university: "Hochschule München",
-  direction: {degree: "ma", direction: ["practical"], masterType: "consecutive"},
-  topicAndFocus: {
-    topicFocus: "thematisch",
-    functionalComposition: "artAndNonArt",
-    allowedDisciplines: "Design, Architektur",
-    allowedDisciplinesTag: [
-      "room",
-      "visualCommunication",
-      "digital",
-      "filmAndPhotograpy",
-      "product",
-      "fashion",
-      "illustrations",
-      "jewelry",
-    ],
-  },
-  timeAndMoney: {allowedForms: ["fullTime"], costs: 0, semester: "3"},
-  internationality: {mainLanguages: ["german"], semesterAbroad: "no", doubleDegree: false},
-  metadata: {
-    website: "http://www.design.hm.edu/studienangebote/master/masterofartsinadvanceddesign.de.html",
-    facebook: "https://www.facebook.com/HochschuleMuenchen/?fref=ts",
-    instagram: "—",
-    twitter: "https://twitter.com/haw_muenchen?lang=de",
-  },
-};
-
 const MasterDetail = ({master, university}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
   return (
