@@ -115,7 +115,13 @@ const FilterButtonSection = styled.div`
 `;
 
 const SortSection = styled.div`
+  cursor: pointer;
   display: flex;
+  position: relative;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const SortText = styled.div`
@@ -356,32 +362,26 @@ const FILTERS = {
 
 const empty = arr => arr.length === 0;
 
-const example = {
-  name: "Architectural Lighting and Design Management",
-  applicationDeadlines: [{date: "2017-08-30T00:00:00.000Z", international: false, type: "winter"}],
-  university: "Hochschule Wismar",
-  otherUniversity: "nein",
-  department: "Gestaltung",
-  direction: {degree: "ma", direction: ["practical"], masterType: "studyingFurther"},
-  topicAndFocus: {
-    topicFocus: "fachspezifisch",
-    functionalComposition: "artAndNonArt",
-    allowedDisciplines: "Design, Innenarchitektur, Architektur, Elektrotechnik",
-    allowedDisciplinesTag: ["room", "product"],
-  },
-  timeAndMoney: {allowedForms: ["remote", "partTime"], costs: 3900, semester: "4"},
-  internationality: {mainLanguages: ["english"], semesterAbroad: "yes", doubleDegree: false},
-  metadata: {
-    website: "https://www.wings.hs-wismar.de/de/fernstudium_master/lighting_design",
-    facebook: "https://www.facebook.com/WingsFernstudium",
-    instagram: null,
-    twitter: "https://twitter.com/WingsStudium",
-  },
-};
+const SortOptions = styled.div`
+  position: absolute;
+  width: 160px;
+  border: 1px solid black;
+  top: 22px;
+`;
+const SortOption = styled.div`
+  padding: 15px;
+  background: white;
+
+  &:hover {
+    background: #eaeaea;
+  }
+`;
 
 class Masters extends React.Component {
   state = {
     show: false,
+    showSort: false,
+    sort: "master",
     filters: {
       universityType: [],
       masterType: [],
@@ -423,6 +423,21 @@ class Masters extends React.Component {
   toggleShow = () => {
     this.setState({
       show: !this.state.show,
+    });
+  };
+  sortShow = () => {
+    this.setState({
+      showSort: true,
+    });
+  };
+  sortHide = () => {
+    this.setState({
+      showSort: false,
+    });
+  };
+  setSort = sort => {
+    this.setState({
+      sort,
     });
   };
   render() {
@@ -526,9 +541,22 @@ class Masters extends React.Component {
                 <FilterText>{"Filter: "}</FilterText>
                 <FilterButton onClick={this.toggleShow}>{this.state.show ? "hide all" : "show all"}</FilterButton>
               </FilterButtonSection>
-              <SortSection>
+              <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
                 <SortText>{"Sortieren: "}</SortText>
-                {"Studiengang"}
+                {
+                  {
+                    master: "Studiengang",
+                    city: "Studienort",
+                    applicationDeadline: "Bewerbungsfrist",
+                  }[this.state.sort]
+                }
+                {this.state.showSort && (
+                  <SortOptions>
+                    <SortOption onClick={() => this.setSort("master")}>{"Studiengang"}</SortOption>
+                    <SortOption onClick={() => this.setSort("city")}>{"Studienort"}</SortOption>
+                    <SortOption onClick={() => this.setSort("applicationDeadline")}>{"Bewerbungsfrist"}</SortOption>
+                  </SortOptions>
+                )}
               </SortSection>
             </FilterHeader>
             <div style={{display: this.state.show ? "block" : "none"}}>
