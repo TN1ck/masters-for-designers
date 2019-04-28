@@ -180,85 +180,87 @@ class Masters extends React.Component {
             <FilterHeader>
               <FilterButtonSection>
                 <FilterText>{"Filter: "}</FilterText>
-                <FilterButton onClick={this.toggleShow}>{"show all"}</FilterButton>
+                <FilterButton onClick={this.toggleShow}>{this.state.show ? "hide all" : "show all"}</FilterButton>
               </FilterButtonSection>
               <SortSection>
                 <SortText>{"Sortieren: "}</SortText>
                 {"Studiengang"}
               </SortSection>
             </FilterHeader>
-            <FilterSection>
-              <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Universität"}</FilterButton>
-                <FilterButton>{"Kunsthochschule"}</FilterButton>
-                <FilterButton>{"Fachhochschule"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Mastertyp"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Konsektutiv"}</FilterButton>
-                <FilterButton>{"Nicht konsekutiv"}</FilterButton>
-                <FilterButton>{"Weiterbildend"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"praktisch"}</FilterButton>
-                <FilterButton>{"theoretisch"}</FilterButton>
-                <FilterButton>{"thematisch"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Inhaltlicher Fokus"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Fachspezifisch"}</FilterButton>
-                <FilterButton>{"Fachübergreifend"}</FilterButton>
-                <FilterButton>{"Thematisch"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Disziplinäre Zusammensetzung"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Disziplinär"}</FilterButton>
-                <FilterButton>{"Interdisziplinär gestalterisch"}</FilterButton>
-                <FilterButton>{"Gestalterisch & Nicht gestalterisch"}</FilterButton>
-                <FilterButton>{"Digitale Medien"}</FilterButton>
-                <FilterButton>{"Fotografie/Film"}</FilterButton>
-                <FilterButton>{"Illustration"}</FilterButton>
-                <FilterButton>{"Mode/Textil"}</FilterButton>
-                <FilterButton>{"Produkt/Industrie"}</FilterButton>
-                <FilterButton>{"Raum"}</FilterButton>
-                <FilterButton>{"Schmuck"}</FilterButton>
-                <FilterButton>{"Visuelle Kommunikation"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Studienform"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Vollzeit"}</FilterButton>
-                <FilterButton>{"Teilzeit"}</FilterButton>
-                <FilterButton>{"Berufsbegleitend"}</FilterButton>
-                <FilterButton>{"Fernstudium"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Zulassungssemester"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Sommersemester"}</FilterButton>
-                <FilterButton>{"Wintersemester"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
-            <FilterSection>
-              <FilterSectionTitle>{"Internationailtät"}</FilterSectionTitle>
-              <FilterSectionButtons>
-                <FilterButton>{"Englischsprachig"}</FilterButton>
-                <FilterButton>{"Intergriertes Auslandssemster"}</FilterButton>
-                <FilterButton>{"Doppelter Abschluss"}</FilterButton>
-              </FilterSectionButtons>
-            </FilterSection>
+            <div style={{display: this.state.show ? "block" : "none"}}>
+              <FilterSection>
+                <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Universität"}</FilterButton>
+                  <FilterButton>{"Kunsthochschule"}</FilterButton>
+                  <FilterButton>{"Fachhochschule"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Mastertyp"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Konsektutiv"}</FilterButton>
+                  <FilterButton>{"Nicht konsekutiv"}</FilterButton>
+                  <FilterButton>{"Weiterbildend"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"praktisch"}</FilterButton>
+                  <FilterButton>{"theoretisch"}</FilterButton>
+                  <FilterButton>{"thematisch"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Inhaltlicher Fokus"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Fachspezifisch"}</FilterButton>
+                  <FilterButton>{"Fachübergreifend"}</FilterButton>
+                  <FilterButton>{"Thematisch"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Disziplinäre Zusammensetzung"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Disziplinär"}</FilterButton>
+                  <FilterButton>{"Interdisziplinär gestalterisch"}</FilterButton>
+                  <FilterButton>{"Gestalterisch & Nicht gestalterisch"}</FilterButton>
+                  <FilterButton>{"Digitale Medien"}</FilterButton>
+                  <FilterButton>{"Fotografie/Film"}</FilterButton>
+                  <FilterButton>{"Illustration"}</FilterButton>
+                  <FilterButton>{"Mode/Textil"}</FilterButton>
+                  <FilterButton>{"Produkt/Industrie"}</FilterButton>
+                  <FilterButton>{"Raum"}</FilterButton>
+                  <FilterButton>{"Schmuck"}</FilterButton>
+                  <FilterButton>{"Visuelle Kommunikation"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Studienform"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Vollzeit"}</FilterButton>
+                  <FilterButton>{"Teilzeit"}</FilterButton>
+                  <FilterButton>{"Berufsbegleitend"}</FilterButton>
+                  <FilterButton>{"Fernstudium"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Zulassungssemester"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Sommersemester"}</FilterButton>
+                  <FilterButton>{"Wintersemester"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+              <FilterSection>
+                <FilterSectionTitle>{"Internationailtät"}</FilterSectionTitle>
+                <FilterSectionButtons>
+                  <FilterButton>{"Englischsprachig"}</FilterButton>
+                  <FilterButton>{"Intergriertes Auslandssemster"}</FilterButton>
+                  <FilterButton>{"Doppelter Abschluss"}</FilterButton>
+                </FilterSectionButtons>
+              </FilterSection>
+            </div>
           </Container>
         </FilterContainer>
         {masters.map((master, i) => {
