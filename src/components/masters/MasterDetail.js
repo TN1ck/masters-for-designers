@@ -121,7 +121,6 @@ const example = {
 
 const MasterDetail = ({master, university}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
-  console.log(university.masters, mastersSameUniversity);
   return (
     <MasterDetailContainer>
       <MasterDetailTitle>

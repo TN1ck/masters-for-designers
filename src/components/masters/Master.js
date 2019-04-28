@@ -39,19 +39,32 @@ const MasterContainer = styled.div`
       width: 100%;
     }
   }
+
+  &:hover {
+    cursor: pointer;
+    background: #eaeaea;
+  }
 `;
 
 class Master extends React.Component {
+  state = {
+    open: false,
+  };
+  toggle = () => {
+    this.setState({
+      open: !this.state.open,
+    });
+  };
   render() {
     const {master, university} = this.props;
     return (
       <div>
-        <MasterContainer>
+        <MasterContainer onClick={this.toggle}>
           <MasterTitle>{master.name}</MasterTitle>
           <MasterUniversity>{master.university}</MasterUniversity>
           <MasterCity>{university.city}</MasterCity>
         </MasterContainer>
-        <MasterDetail master={master} university={university} />
+        {this.state.open && <MasterDetail master={master} university={university} />}
       </div>
     );
   }
