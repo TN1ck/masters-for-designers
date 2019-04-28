@@ -33,7 +33,7 @@ const Navbar = class extends React.Component {
     return (
       <NavbarContainer role="navigation" aria-label="main-navigation">
         <NavbarInformation>
-          <NavbarLink to="/masters">{`Studiengänge ${masterCount}`}</NavbarLink>
+          <NavbarLink to="/">{`Studiengänge ${masterCount}`}</NavbarLink>
           <NavbarLink to="/universities">{`Hochschulen ${universityCount}`}</NavbarLink>
         </NavbarInformation>
         <NavbarLinks>

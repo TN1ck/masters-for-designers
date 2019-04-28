@@ -54,6 +54,13 @@ collections:
         searchFields: ["name", "city"]
         valueField: "name"
         displayFields: ["name", "city"]
+      - label: "Hochschulübergreifend"
+        name: otherUniversity
+        widget: text
+        default: "nein"
+      - label: "Fachbereich"
+        name: department
+        widget: text
       - label: Ausrichtung
         name: direction
         widget: object

@@ -1,48 +1,93 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Navbar from "./Navbar";
 import Container from "../../components/Container";
-import {StaticQuery, graphql} from "gatsby";
+import {StaticQuery} from "gatsby";
 import Master from "./Master";
+import {graphql} from "gatsby";
+import {Masthead} from "./Masthead";
+import {Headline} from "./Headline";
+import {SubHeadline} from "./SubHeadline";
 
-const Masthead = styled.header`
-  background-color: rgb(255, 105, 58);
-  padding-bottom: 20px;
+export const mastersQuery = graphql`
+  fragment Masters on MastersJsonConnection {
+    edges {
+      node {
+        name
+        university
+        department
+        otherUniversity
+        applicationDeadlines {
+          date
+          international
+          type
+        }
+        internationality {
+          semesterAbroad
+          doubleDegree
+          mainLanguages
+        }
+        timeAndMoney {
+          costs
+          semester
+          allowedForms
+        }
+        direction {
+          degree
+          masterType
+          direction
+        }
+        topicAndFocus {
+          topicFocus
+          functionalComposition
+          allowedDisciplines
+        }
+        metadata {
+          website
+          facebook
+          instagram
+          twitter
+        }
+      }
+    }
+  }
 `;
 
-const Headline = styled.h1`
-  font-size: 54px;
-  color: black;
-  padding-top: 20px;
-  padding-bottom: 0;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 3.2px;
+export const universityQuery = graphql`
+  fragment Universities on SchoolsJsonConnection {
+    edges {
+      node {
+        id
+        name
+        city
+        address
+        type
+        longitude
+        latitude
+      }
+    }
+  }
 `;
 
-const SubHeadline = styled.h3`
-  font-size: 24px;
-  color: black;
-  font-weight: 300;
-  line-height: 1.5;
-`;
+export const enhanceUniversities = (universities, masters) => {
+  const universityMap = {};
+  for (const university of universities) {
+    university.masters = [];
+    universityMap[university.name] = university;
+  }
+
+  for (const master of masters) {
+    const university = universityMap[master.university];
+    university.masters.push(master);
+  }
+  return universityMap;
+};
 
 class Masters extends React.Component {
   render() {
     const masters = this.props.data.masters.edges.map(n => n.node);
     const universities = this.props.data.universities.edges.map(n => n.node);
-
-    const universityMap = {};
-    for (const university of universities) {
-      university.masters = [];
-      universityMap[university.name] = university;
-    }
-
-    for (const master of masters) {
-      const university = universityMap[master.university];
-      university.masters.push(master);
-    }
+    const universityMap = enhanceUniversities(universities, masters);
 
     return (
       <Layout>
@@ -64,7 +109,6 @@ class Masters extends React.Component {
         </Masthead>
         {masters.slice(0, 10).map((master, i) => {
           const university = universityMap[master.university];
-          console.log(university);
           return (
             <Container key={i}>
               <Master master={master} university={university} />
@@ -81,56 +125,10 @@ export default () => (
     query={graphql`
       query MastersQuery {
         masters: allMastersJson {
-          edges {
-            node {
-              name
-              university
-              applicationDeadlines {
-                date
-                international
-                type
-              }
-              internationality {
-                semesterAbroad
-                doubleDegree
-                mainLanguages
-              }
-              timeAndMoney {
-                costs
-                semester
-                allowedForms
-              }
-              direction {
-                degree
-                masterType
-                direction
-              }
-              topicAndFocus {
-                topicFocus
-                functionalComposition
-                allowedDisciplines
-              }
-              metadata {
-                website
-                facebook
-                instagram
-                twitter
-              }
-            }
-          }
+          ...Masters
         }
         universities: allSchoolsJson {
-          edges {
-            node {
-              id
-              name
-              city
-              address
-              type
-              longitude
-              latitude
-            }
-          }
+          ...Universities
         }
       }
     `}
