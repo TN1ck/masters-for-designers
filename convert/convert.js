@@ -26,8 +26,6 @@ function slugify(str) {
   return str;
 }
 
-console.log(mastersRaw.masters.length);
-
 const masters = mastersRaw.masters.map(masterRaw => {
   const transformed = {
     name: masterRaw.Studiengang,
@@ -43,6 +41,8 @@ const masters = mastersRaw.masters.map(masterRaw => {
         };
       }),
     university: masterRaw.Name,
+    otherUniversity: masterRaw["Hochschulübergreifend"],
+    department: masterRaw["Fachbereich"],
     direction: {
       degree: masterRaw.Abschluss.toLowerCase(),
       direction: masterRaw.Ausrichtung.replace(/ /g, "")
