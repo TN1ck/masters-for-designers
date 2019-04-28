@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Navbar from "./Navbar";
 import Container from "../../components/Container";
@@ -83,7 +84,72 @@ export const enhanceUniversities = (universities, masters) => {
   return universityMap;
 };
 
+const FilterContainer = styled.div`
+  padding-top: 20px;
+  background: #9dc9fb;
+`;
+
+const FilterButton = styled.button`
+  font-family: "L10";
+  font-weight: 400;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 300ms ease-out;
+  border: 1px solid black;
+  padding: 10px 20px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+`;
+
+const FilterText = styled.div`
+  padding-right: 40px;
+`;
+
+const FilterButtonSection = styled.div`
+  display: flex;
+`;
+
+const SortSection = styled.div`
+  display: flex;
+`;
+
+const SortText = styled.div`
+  padding-right: 10px;
+`;
+
+const FilterHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+`;
+
+const FilterSection = styled.div`
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+`;
+
+const FilterSectionTitle = styled.div`
+  padding: 20px 0;
+`;
+const FilterSectionButtons = styled.div`
+  & ${FilterButton} {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+`;
+
 class Masters extends React.Component {
+  state = {
+    show: false,
+  };
+  toggleShow = () => {
+    this.setState({
+      show: !this.state.show,
+    });
+  };
   render() {
     const masters = this.props.data.masters.edges.map(n => n.node);
     const universities = this.props.data.universities.edges.map(n => n.node);
@@ -107,6 +173,76 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
+        <FilterContainer>
+          <Container>
+            <FilterHeader>
+              <FilterButtonSection>
+                <FilterText>{"Filter: "}</FilterText>
+                <FilterButton onClick={this.toggleShow}>{"show all"}</FilterButton>
+              </FilterButtonSection>
+              <SortSection>
+                <SortText>{"Sortieren: "}</SortText>
+                {"Studiengang"}
+              </SortSection>
+            </FilterHeader>
+            <FilterSection>
+              <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
+              <FilterSectionButtons>
+                <FilterButton>{"Universität"}</FilterButton>
+                <FilterButton>{"Kunsthochschule"}</FilterButton>
+                <FilterButton>{"Fachhochschule"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
+              <FilterSectionButtons>
+                <FilterButton>{"Konsektutiv"}</FilterButton>
+                <FilterButton>{"Nicht konsekutiv"}</FilterButton>
+                <FilterButton>{"Weiterbildend"}</FilterButton>
+                <FilterButton>{"praktisch"}</FilterButton>
+                <FilterButton>{"theoretisch"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Inhaltlicher Fokus und fachliche Zusammensetzung"}</FilterSectionTitle>
+              <FilterSectionButtons>
+                <FilterButton>{"Fachspezifisch"}</FilterButton>
+                <FilterButton>{"Fachübergreifend"}</FilterButton>
+                <FilterButton>{"Thematisch"}</FilterButton>
+                <FilterButton>{"Disziplinär"}</FilterButton>
+                <FilterButton>{"Interdisziplinär gestalterisch"}</FilterButton>
+                <FilterButton>{"Gestalterisch & Nicht gestalterisch"}</FilterButton>
+                <FilterButton>{"Digitale Medien"}</FilterButton>
+                <FilterButton>{"Fotografie/Film"}</FilterButton>
+                <FilterButton>{"Illustration"}</FilterButton>
+                <FilterButton>{"Mode/Textil"}</FilterButton>
+                <FilterButton>{"Produkt/Industrie"}</FilterButton>
+                <FilterButton>{"Raum"}</FilterButton>
+                <FilterButton>{"Schmuck"}</FilterButton>
+                <FilterButton>{"Visuelle Kommunikation"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Zeit und Geld"}</FilterSectionTitle>
+              <FilterSectionButtons>
+                <FilterButton>{"Vollzeit"}</FilterButton>
+                <FilterButton>{"Teilzeit"}</FilterButton>
+                <FilterButton>{"Berufsbegleitend"}</FilterButton>
+                <FilterButton>{"Fernstudium"}</FilterButton>
+                <FilterButton>{"Sommersemester"}</FilterButton>
+                <FilterButton>{"Wintersemester"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Internationailtät"}</FilterSectionTitle>
+              <FilterSectionButtons>
+                <FilterButton>{"Englischsprachig"}</FilterButton>
+                <FilterButton>{"Intergriertes Auslandssemster"}</FilterButton>
+                <FilterButton>{"Doppelter Abschluss"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+          </Container>
+        </FilterContainer>
         {masters.map((master, i) => {
           const university = universityMap[master.university];
           return (
