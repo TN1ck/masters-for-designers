@@ -127,12 +127,14 @@ const FilterHeader = styled.div`
 `;
 
 const FilterSection = styled.div`
+  display: flex;
+  padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid black;
 `;
 
 const FilterSectionTitle = styled.div`
-  padding: 20px 0;
+  flex-basis: 170px;
+  flex-shrink: 0;
 `;
 const FilterSectionButtons = styled.div`
   & ${FilterButton} {
@@ -194,21 +196,32 @@ class Masters extends React.Component {
               </FilterSectionButtons>
             </FilterSection>
             <FilterSection>
-              <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
+              <FilterSectionTitle>{"Mastertyp"}</FilterSectionTitle>
               <FilterSectionButtons>
                 <FilterButton>{"Konsektutiv"}</FilterButton>
                 <FilterButton>{"Nicht konsekutiv"}</FilterButton>
                 <FilterButton>{"Weiterbildend"}</FilterButton>
-                <FilterButton>{"praktisch"}</FilterButton>
-                <FilterButton>{"theoretisch"}</FilterButton>
               </FilterSectionButtons>
             </FilterSection>
             <FilterSection>
-              <FilterSectionTitle>{"Inhaltlicher Fokus und fachliche Zusammensetzung"}</FilterSectionTitle>
+              <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
+              <FilterSectionButtons>
+                <FilterButton>{"praktisch"}</FilterButton>
+                <FilterButton>{"theoretisch"}</FilterButton>
+                <FilterButton>{"thematisch"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Inhaltlicher Fokus"}</FilterSectionTitle>
               <FilterSectionButtons>
                 <FilterButton>{"Fachspezifisch"}</FilterButton>
                 <FilterButton>{"Fachübergreifend"}</FilterButton>
                 <FilterButton>{"Thematisch"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Disziplinäre Zusammensetzung"}</FilterSectionTitle>
+              <FilterSectionButtons>
                 <FilterButton>{"Disziplinär"}</FilterButton>
                 <FilterButton>{"Interdisziplinär gestalterisch"}</FilterButton>
                 <FilterButton>{"Gestalterisch & Nicht gestalterisch"}</FilterButton>
@@ -223,12 +236,17 @@ class Masters extends React.Component {
               </FilterSectionButtons>
             </FilterSection>
             <FilterSection>
-              <FilterSectionTitle>{"Zeit und Geld"}</FilterSectionTitle>
+              <FilterSectionTitle>{"Studienform"}</FilterSectionTitle>
               <FilterSectionButtons>
                 <FilterButton>{"Vollzeit"}</FilterButton>
                 <FilterButton>{"Teilzeit"}</FilterButton>
                 <FilterButton>{"Berufsbegleitend"}</FilterButton>
                 <FilterButton>{"Fernstudium"}</FilterButton>
+              </FilterSectionButtons>
+            </FilterSection>
+            <FilterSection>
+              <FilterSectionTitle>{"Zulassungssemester"}</FilterSectionTitle>
+              <FilterSectionButtons>
                 <FilterButton>{"Sommersemester"}</FilterButton>
                 <FilterButton>{"Wintersemester"}</FilterButton>
               </FilterSectionButtons>
