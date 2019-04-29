@@ -100,6 +100,12 @@ const FilterButton = styled.button`
   border: 1px solid black;
   padding: 10px 20px;
 
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+  }
+
   &:hover {
     cursor: pointer;
     background-color: ${p => (p.active ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.3)")};
@@ -511,12 +517,15 @@ class Masters extends React.Component {
           : filterMasters(masters, filtersWithCurrent, universityMap).length - filteredMasters.length;
       }
 
+      const disable = count === 0 && !active;
+
       return (
         <FilterButton
+          disabled={disable}
           style={{paddingRight: 50}}
           active={active}
           key={value}
-          onClick={this.createToggleFilter(type, value)}
+          onClick={disable ? () => {} : this.createToggleFilter(type, value)}
         >
           {name}{" "}
           {!active && (
