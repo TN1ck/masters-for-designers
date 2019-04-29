@@ -377,6 +377,52 @@ const SortOption = styled.div`
   }
 `;
 
+function filterMasters(masters, filters, universityMap) {
+  const filteredMasters = masters.filter(m => {
+    const university = universityMap[m.university];
+    const universityType = empty(filters.universityType) || filters.universityType.includes(university.type);
+
+    const masterType = empty(filters.masterType) || filters.masterType.includes(m.direction.masterType);
+
+    const masterDirection = empty(filters.direction) || filters.direction.some(d => m.direction.direction.includes(d));
+
+    const topicFocus = empty(filters.topicFocus) || filters.topicFocus.includes(m.topicAndFocus.topicFocus);
+
+    const functionalComposition =
+      empty(filters.functionalComposition) ||
+      filters.functionalComposition.includes(m.topicAndFocus.functionalComposition);
+
+    const allowedDisciplinesTag =
+      empty(filters.allowedDisciplinesTag) ||
+      filters.allowedDisciplinesTag.some(d => m.topicAndFocus.allowedDisciplinesTag.includes(d));
+
+    const allowedForms =
+      empty(filters.allowedForms) || filters.allowedForms.some(d => m.timeAndMoney.allowedForms.includes(d));
+
+    const semesterType =
+      empty(filters.semesterType) || filters.semesterType.some(d => m.applicationDeadlines.some(dd => dd.type === d));
+
+    const english = empty(filters.internationalityEnglish) || m.internationality.mainLanguages.includes("english");
+    const semesterAbroad = empty(filters.internationalitySemesterAbroad) || m.internationality.semesterAbroad !== "no";
+    const doubleDegree = empty(filters.internationalityDoubleDegree) || m.internationality.doubleDegree;
+
+    return (
+      universityType &&
+      masterType &&
+      masterDirection &&
+      topicFocus &&
+      functionalComposition &&
+      allowedDisciplinesTag &&
+      allowedForms &&
+      semesterType &&
+      english &&
+      semesterAbroad &&
+      doubleDegree
+    );
+  });
+  return filteredMasters;
+}
+
 class Masters extends React.Component {
   state = {
     show: false,
@@ -445,61 +491,26 @@ class Masters extends React.Component {
     const universities = this.props.data.universities.edges.map(n => n.node);
     const universityMap = enhanceUniversities(universities, masters);
 
-    const filteredMasters = masters.filter(m => {
-      const university = universityMap[m.university];
-      const universityType =
-        empty(this.state.filters.universityType) || this.state.filters.universityType.includes(university.type);
-
-      const masterType =
-        empty(this.state.filters.masterType) || this.state.filters.masterType.includes(m.direction.masterType);
-
-      const masterDirection =
-        empty(this.state.filters.direction) ||
-        this.state.filters.direction.some(d => m.direction.direction.includes(d));
-
-      const topicFocus =
-        empty(this.state.filters.topicFocus) || this.state.filters.topicFocus.includes(m.topicAndFocus.topicFocus);
-
-      const functionalComposition =
-        empty(this.state.filters.functionalComposition) ||
-        this.state.filters.functionalComposition.includes(m.topicAndFocus.functionalComposition);
-
-      const allowedDisciplinesTag =
-        empty(this.state.filters.allowedDisciplinesTag) ||
-        this.state.filters.allowedDisciplinesTag.some(d => m.topicAndFocus.allowedDisciplinesTag.includes(d));
-
-      const allowedForms =
-        empty(this.state.filters.allowedForms) ||
-        this.state.filters.allowedForms.some(d => m.timeAndMoney.allowedForms.includes(d));
-
-      const semesterType =
-        empty(this.state.filters.semesterType) ||
-        this.state.filters.semesterType.some(d => m.applicationDeadlines.some(dd => dd.type === d));
-
-      const english =
-        empty(this.state.filters.internationalityEnglish) || m.internationality.mainLanguages.includes("english");
-      const semesterAbroad =
-        empty(this.state.filters.internationalitySemesterAbroad) || m.internationality.semesterAbroad !== "no";
-      const doubleDegree = empty(this.state.filters.internationalityDoubleDegree) || m.internationality.doubleDegree;
-
-      return (
-        universityType &&
-        masterType &&
-        masterDirection &&
-        topicFocus &&
-        functionalComposition &&
-        allowedDisciplinesTag &&
-        allowedForms &&
-        semesterType &&
-        english &&
-        semesterAbroad &&
-        doubleDegree
-      );
-    });
+    const filteredMasters = filterMasters(masters, this.state.filters, universityMap);
+    console.log(filteredMasters);
 
     const createButton = ({type, value, name, filter}) => {
       const active = this.state.filters[type].includes(value);
       const isEmpty = empty(this.state.filters[type]);
+      // when it is not empty, we can find out how mich will be added when clicking the button
+      // for this we clone the current filters and add ourselves to it
+      const filtersWithCurrent = {
+        ...this.state.filters,
+        [type]: [value].concat(this.state.filters[type]),
+      };
+
+      let count = 0;
+      if (isEmpty || !active) {
+        count = isEmpty
+          ? filteredMasters.filter(m => filter(m, universityMap[m.university])).length
+          : filterMasters(masters, filtersWithCurrent, universityMap).length - filteredMasters.length;
+      }
+
       return (
         <FilterButton
           style={{paddingRight: 50}}
@@ -508,9 +519,11 @@ class Masters extends React.Component {
           onClick={this.createToggleFilter(type, value)}
         >
           {name}{" "}
-          <span style={{position: "absolute", right: 45, top: 10, transform: "translate(100%)"}}>
-            {isEmpty ? `(${filteredMasters.filter(m => filter(m, universityMap[m.university])).length})` : "    "}
-          </span>
+          {!active && (
+            <span style={{position: "absolute", right: 45, top: 10, transform: "translate(100%)"}}>
+              {isEmpty ? `(${count})` : `(+${count})`}
+            </span>
+          )}
         </FilterButton>
       );
     };
