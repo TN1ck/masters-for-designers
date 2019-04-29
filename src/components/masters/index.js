@@ -165,6 +165,7 @@ const SortOptions = styled.div`
   width: 160px;
   border: 1px solid black;
   top: 22px;
+  z-index: 99;
 `;
 const SortOption = styled.div`
   padding: 15px;
@@ -173,6 +174,15 @@ const SortOption = styled.div`
   &:hover {
     background: #eaeaea;
   }
+`;
+
+const GroupHeader = styled.h3`
+  top: 0;
+  position: sticky;
+  background: white;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid black;
 `;
 
 class Masters extends React.Component {
@@ -373,7 +383,7 @@ class Masters extends React.Component {
           {groupedAndSortedMasters.map(([group, name, masters]) => {
             return (
               <React.Fragment key={group}>
-                <h2>{name}</h2>
+                <GroupHeader>{name}</GroupHeader>
                 {masters.map((master, i) => {
                   const university = universityMap[master.university];
                   return <Master key={i} master={master} university={university} />;
