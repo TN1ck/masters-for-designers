@@ -9,6 +9,7 @@ import {groupBy} from "../utils/groupBy";
 import {pairs} from "../utils/pairs";
 import Navbar from "../components/masters/Navbar";
 import {StaticQuery, graphql} from "gatsby";
+import {sortBy} from "../utils/sortBy";
 
 const GLOSSARY = [
   {
@@ -180,7 +181,7 @@ const GlossarContainer = styled.main`
   background: #9acafe;
 `;
 
-const GroupedByLetter = pairs(groupBy(GLOSSARY, d => d.title[0]));
+const GroupedByLetter = sortBy(pairs(groupBy(GLOSSARY, d => d.title[0])), d => d[0]);
 
 const GroupContainer = styled.div`
   display: grid;
@@ -239,11 +240,11 @@ class Glossar extends React.Component {
             <GroupContainer>
               {GroupedByLetter.map(([letter, list]) => {
                 return (
-                  <Group>
+                  <Group key={letter}>
                     <GroupLetter>{letter}</GroupLetter>
-                    {list.map(d => {
+                    {list.map((d, i) => {
                       return (
-                        <>
+                        <React.Fragment key={i}>
                           <h3>{d.title}</h3>
                           <p>{d.content}</p>
                           {d.sections &&
@@ -253,7 +254,7 @@ class Glossar extends React.Component {
                                 <p>{content}</p>
                               </>
                             ))}
-                        </>
+                        </React.Fragment>
                       );
                     })}
                   </Group>

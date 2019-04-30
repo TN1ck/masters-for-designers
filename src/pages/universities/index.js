@@ -6,6 +6,7 @@ import Container from "../../components/Container";
 import {Masthead} from "../../components/Masthead";
 import {Headline} from "../../components/Headline";
 import {SubHeadline} from "../../components/SubHeadline";
+import Navbar from "../../components/masters/Navbar";
 
 const Universities = ({data}) => {
   const masters = data.masters.edges.map(n => n.node);
@@ -15,6 +16,7 @@ const Universities = ({data}) => {
     <Layout>
       <Masthead>
         <Container>
+          <Navbar universityCount={universities.length} masterCount={masters.length} />
           <Headline>{"Universities"}</Headline>
           <SubHeadline>{"Hier kannst du alle Universitäten sehen."}</SubHeadline>
         </Container>

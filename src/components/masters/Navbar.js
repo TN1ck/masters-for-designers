@@ -38,7 +38,7 @@ const Navbar = class extends React.Component {
         </NavbarInformation>
         <NavbarLinks>
           <NavbarLink to="/about">About</NavbarLink>
-          <NavbarLink to="/glossar">Glossar</NavbarLink>
+          <NavbarLink to="/glossary">Glossar</NavbarLink>
           <NavbarLink style={{paddingRight: 0}} to="/notes">
             Merkliste
           </NavbarLink>
