@@ -5,6 +5,7 @@ import MasterDetail from "./MasterDetail";
 const MasterTitle = styled.div`
   font-size: 30px;
   width: 48%;
+  word-break: break-word;
 `;
 
 const MasterCity = styled.div`
@@ -27,11 +28,13 @@ const MasterContainer = styled.div`
     flex-direction: column;
 
     & ${MasterCity} {
+      margin-left: 0;
       width: 100%;
     }
 
     & ${MasterUniversity} {
       width: 100%;
+      margin-left: 0;
       padding-top: 20px;
     }
 

@@ -12,6 +12,19 @@ const MasterDetailContainer = styled.div`
     "master-money-section master-internationality-section";
 
   grid-column-gap: 40px;
+
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "master-title"
+      "master-university"
+      "master-date"
+      "master-university-section"
+      "master-direction-section"
+      "master-money-section"
+      "master-internationality-section";
+  }
 `;
 const MasterDetailSmall = styled.small`
   font-weight: 300;
