@@ -13,6 +13,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: name
+    summary: "{{city}} - {{name}}"
     fields:
       - {label: Name, name: name, widget: string}
       - {label: Stadt, name: city, widget: string}
@@ -33,6 +34,7 @@ collections:
     extension: json
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{university}} - {{name}}"
     fields:
       - {label: Name, name: name, widget: string}
       - label: Bewerbungsfristen
