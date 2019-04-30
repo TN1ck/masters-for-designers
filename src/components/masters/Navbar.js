@@ -7,7 +7,7 @@ const NavbarInformation = styled.div`
 `;
 
 const NavbarLink = styled(Link)`
-  padding-right: 10px;
+  margin-right: 10px;
   color: black;
 `;
 
