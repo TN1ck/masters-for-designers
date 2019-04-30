@@ -28,7 +28,6 @@ const Universities = ({data}) => {
               <li>
                 <h3>{u.name}</h3>
                 <ul>
-                  u
                   {u.masters.map(m => {
                     return (
                       <li>
