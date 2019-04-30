@@ -11,7 +11,7 @@ collections:
     folder: "src/data/schools"
     extension: json
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{university}}-{{slug}}"
     identifier_field: name
     summary: "{{city}} - {{name}}"
     fields:
@@ -102,13 +102,12 @@ collections:
           - label: "Fachliche Zusammensetzung"
             name: functionalComposition
             widget: select
-            multiple: true
             options:
               - {label: "Disziplinär", value: "disciplinary"}
               - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
               - {label: "Gestalterisch & nicht-gestalterisch", value: "artAndNonArt"}
           - label: "Zugelassene Disziplinen Tags"
-            name: allowedDisciplinesTags
+            name: allowedDisciplinesTag
             widget: select
             multiple: true
             options:

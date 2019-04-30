@@ -145,7 +145,7 @@ schools.forEach(school => {
   fs.writeFileSync(`schools/${filename}`, JSON.stringify(school));
 });
 
-masters.forEach((transformed, i) => {
-  const filename = `2019-04-27-${slugify(transformed.name)}-${i}.json`;
-  fs.writeFileSync(`masters/${filename}`, JSON.stringify(transformed));
+_.sortBy(masters, m => m.university).forEach((m, i) => {
+  const filename = `${slugify(m.university)}-${slugify(m.name)}.json`;
+  fs.writeFileSync(`masters/${filename}`, JSON.stringify(m));
 });

@@ -104,6 +104,7 @@ const MasterDetailItem = ({dt, dd}) => {
 
 const MasterDetail = ({master, university}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
+  console.log(master);
   return (
     <MasterDetailContainer>
       <MasterDetailTitle>
@@ -155,6 +156,8 @@ const MasterDetail = ({master, university}) => {
             ["Mastertyp", master.direction.masterType],
             ["Ausrichtung", master.direction.direction.join(" & ")],
             ["Inhaltlicher Fokus", master.topicAndFocus.topicFocus],
+            ["Disziplinäre Zusammensetzung", master.topicAndFocus.functionalComposition],
+            ["Disziplinen", master.topicAndFocus.allowedDisciplinesTag.join(", ")],
           ]}
         />
       </MasterDetailDirectionSection>

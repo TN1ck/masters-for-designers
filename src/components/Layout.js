@@ -8,7 +8,7 @@ import useSiteMetadata from "./SiteMetadata";
 // import "./all.sass";
 import Fonts from "./Fonts";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   body, html {
     font-family: L10;
     padding: 0;
