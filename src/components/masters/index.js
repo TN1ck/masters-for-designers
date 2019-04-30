@@ -6,9 +6,9 @@ import Container from "../../components/Container";
 import {StaticQuery} from "gatsby";
 import Master from "./Master";
 import {graphql} from "gatsby";
-import {Masthead} from "./Masthead";
-import {Headline} from "./Headline";
-import {SubHeadline} from "./SubHeadline";
+import {Masthead} from "../Masthead";
+import {Headline} from "../Headline";
+import {SubHeadline} from "../SubHeadline";
 import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
 import {sortAndGroupMasters} from "./sortAndGroupMasters";
@@ -177,6 +177,7 @@ const SortOption = styled.div`
 `;
 
 const GroupHeader = styled.h3`
+  color: #9acafe;
   top: 0;
   position: sticky;
   background: white;

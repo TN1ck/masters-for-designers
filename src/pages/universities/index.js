@@ -3,10 +3,9 @@ import Layout from "../../components/Layout";
 import {StaticQuery, graphql} from "gatsby";
 import {enhanceUniversities} from "../../components/masters";
 import Container from "../../components/Container";
-import {Masthead} from "../../components/masters/Masthead";
-import Navbar from "../../components/masters/Navbar";
-import {Headline} from "../../components/masters/Headline";
-import {SubHeadline} from "../../components/masters/SubHeadline";
+import {Masthead} from "../../components/Masthead";
+import {Headline} from "../../components/Headline";
+import {SubHeadline} from "../../components/SubHeadline";
 
 const Universities = ({data}) => {
   const masters = data.masters.edges.map(n => n.node);
@@ -16,7 +15,6 @@ const Universities = ({data}) => {
     <Layout>
       <Masthead>
         <Container>
-          <Navbar universityCount={universities.length} masterCount={masters.length} />
           <Headline>{"Universities"}</Headline>
           <SubHeadline>{"Hier kannst du alle Universitäten sehen."}</SubHeadline>
         </Container>
@@ -28,6 +26,7 @@ const Universities = ({data}) => {
               <li>
                 <h3>{u.name}</h3>
                 <ul>
+                  u
                   {u.masters.map(m => {
                     return (
                       <li>
