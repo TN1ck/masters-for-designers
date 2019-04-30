@@ -136,16 +136,19 @@ const MasterDetail = ({master, university}) => {
         >
           <MasterDetailSectionTitle>{"Andere Masterstudiengänge"}</MasterDetailSectionTitle>
           <MasterDetailSectionDescription>
-            {mastersSameUniversity.length > 0
-              ? mastersSameUniversity.map(m => {
+            {mastersSameUniversity.length > 0 ? (
+              <ul>
+                {mastersSameUniversity.map(m => {
                   return (
-                    <span key={m.name}>
-                      <a href={`/#${m.name}`}>{`${m.name} ${m.direction.degree}`}</a>
-                      {", "}
-                    </span>
+                    <li key={m.name}>
+                      <a href={`/#${m.name}`}>{`${m.name} - ${m.direction.degree}`}</a>
+                    </li>
                   );
-                })
-              : "-"}
+                })}
+              </ul>
+            ) : (
+              "-"
+            )}
           </MasterDetailSectionDescription>
         </MasterDetailSection>
       </MasterDetailUniversitySection>
