@@ -172,7 +172,7 @@ collections:
         name: metadata
         widget: object
         fields:
-        - {label: Website, name: webseite, widget: string}
+        - {label: Website, name: website, widget: string}
         - {label: Facebook, name: facebook, widget: string}
         - {label: Instagram, name: instagram, widget: string}
         - {label: Twitter, name: twitter, widget: string}
