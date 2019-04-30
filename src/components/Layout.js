@@ -14,6 +14,17 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-weight: 300;
+    line-height: 1.4;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a, a:visited, a:focus {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
   }
 `;
 
