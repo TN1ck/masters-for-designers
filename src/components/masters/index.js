@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import Layout from "../../components/Layout";
 import Navbar from "./Navbar";
 import Container from "../../components/Container";
@@ -116,7 +116,34 @@ const FilterButton = styled.button`
 `;
 
 const FilterText = styled.div`
-  padding-right: 40px;
+  color: white;
+  position: relative;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+
+  &:after {
+    transition: transform 200ms ease-out;
+    position: absolute;
+    content: "";
+    right: -20px;
+    top: 9px;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    transform: rotate(-90deg);
+    transform-origin: 5px 4px;
+
+    ${p =>
+      p.active &&
+      css`
+        transform: rotate(0);
+      `}
+  }
 `;
 
 const FilterButtonSection = styled.div`
@@ -129,11 +156,14 @@ const SortSection = styled.div`
   position: relative;
 
   &:hover {
-    text-decoration: underline;
+    ${FilterText} {
+      border-bottom: 1px solid white;
+    }
   }
 `;
 
 const SortText = styled.div`
+  color: white;
   padding-right: 10px;
 `;
 
@@ -318,18 +348,21 @@ class Masters extends React.Component {
           <Container>
             <FilterHeader>
               <FilterButtonSection>
-                <FilterText>{"Filter: "}</FilterText>
-                <FilterButton onClick={this.toggleShow}>{this.state.show ? "hide all" : "show all"}</FilterButton>
+                <FilterText active={this.state.show} onClick={this.toggleShow}>
+                  {"Filter"}
+                </FilterText>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
                 <SortText>{"Sortieren: "}</SortText>
-                {
+                <FilterText active={true} style={{marginRight: 20}}>
                   {
-                    alphabet: "Studiengang",
-                    city: "Studienort",
-                    deadline: "Bewerbungsfrist",
-                  }[this.state.sort]
-                }
+                    {
+                      alphabet: "Studiengang",
+                      city: "Studienort",
+                      deadline: "Bewerbungsfrist",
+                    }[this.state.sort]
+                  }
+                </FilterText>
                 {this.state.showSort && (
                   <SortOptions>
                     <SortOption onClick={() => this.setSort("alphabet")}>{"Studiengang"}</SortOption>
