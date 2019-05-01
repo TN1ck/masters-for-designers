@@ -199,7 +199,7 @@ const GroupLetter = styled.h2`
 const Group = styled.section`
   padding-top: 20px;
   padding-bottom: 40px;
-  border-top: 1px solid black;
+  border-top: ${p => (p.noBorderTop ? "none" : "1px solid black")};
 
   letter-spacing: 0.01em;
   line-height: 1.6;
@@ -239,9 +239,10 @@ class Glossar extends React.Component {
           </Masthead>
           <Container>
             <GroupContainer>
-              {GroupedByLetter.map(([letter, list]) => {
+              {GroupedByLetter.map(([letter, list], i) => {
+                const noBorderTop = i <= 1;
                 return (
-                  <Group key={letter}>
+                  <Group key={letter} noBorderTop={noBorderTop}>
                     <GroupLetter>{letter}</GroupLetter>
                     {list.map((d, i) => {
                       return (

@@ -7,6 +7,7 @@ import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
+import Container from "./Container";
 
 const FooterContainer = styled.div`
   background: black;
@@ -16,7 +17,11 @@ const FooterContainer = styled.div`
 
 const Footer = class extends React.Component {
   render() {
-    return <FooterContainer>{"Master for Designers"}</FooterContainer>;
+    return (
+      <FooterContainer>
+        <Container>{"Master for Designers"}</Container>
+      </FooterContainer>
+    );
   }
 };
 
