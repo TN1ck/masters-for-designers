@@ -1,5 +1,6 @@
 import styled from "styled-components";
+import THEME from "../theme";
 export const Masthead = styled.header`
-  background-color: rgb(255, 105, 58);
+  background-color: ${THEME.colors.orange};
   padding-bottom: 20px;
 `;

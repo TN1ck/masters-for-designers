@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import {Link} from "gatsby";
+import THEME from "../theme";
+import Container from "./Container";
 
 const NavbarInformation = styled.div`
   display: flex;
@@ -11,9 +13,15 @@ const NavbarLink = styled(Link)`
   color: black;
 `;
 
-const NavbarLinks = styled.div``;
+const NavbarLinks = styled.div`
+  margin-right: -10px;
+`;
 
 const NavbarContainer = styled.nav`
+  z-index: 100;
+  background: ${THEME.colors.orange};
+  top: 0;
+  position: sticky;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -33,15 +41,18 @@ const Navbar = class extends React.Component {
     return (
       <NavbarContainer role="navigation" aria-label="main-navigation">
         <NavbarInformation>
-          <NavbarLink to="/">{`Studiengänge ${masterCount}`}</NavbarLink>
-          <NavbarLink to="/universities">{`Hochschulen ${universityCount}`}</NavbarLink>
+          <Container>
+            <NavbarLink to="/">{`Studiengänge ${masterCount} / Hochschulen ${universityCount}`}</NavbarLink>
+          </Container>
         </NavbarInformation>
         <NavbarLinks>
-          <NavbarLink to="/about">About</NavbarLink>
-          <NavbarLink to="/glossary">Glossar</NavbarLink>
-          <NavbarLink style={{paddingRight: 0}} to="/notes">
-            Merkliste
-          </NavbarLink>
+          <Container>
+            <NavbarLink to="/about">About</NavbarLink>
+            <NavbarLink to="/glossary">Glossar</NavbarLink>
+            <NavbarLink style={{paddingRight: 0}} to="/notes">
+              Merkliste
+            </NavbarLink>
+          </Container>
         </NavbarLinks>
       </NavbarContainer>
     );

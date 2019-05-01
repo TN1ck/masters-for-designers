@@ -1,7 +1,7 @@
 import React from "react";
 import styled, {css} from "styled-components";
 import Layout from "../../components/Layout";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 import Container from "../../components/Container";
 import {StaticQuery} from "gatsby";
 import Master from "./Master";
@@ -12,6 +12,7 @@ import {SubHeadline} from "../SubHeadline";
 import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
 import {sortAndGroupMasters} from "./sortAndGroupMasters";
+import THEME from "../../theme";
 
 export const mastersQuery = graphql`
   fragment Masters on MastersJsonConnection {
@@ -170,7 +171,7 @@ const SortText = styled.div`
 const FilterHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 `;
 
 const FilterSection = styled.div`
@@ -207,12 +208,12 @@ const SortOption = styled.div`
 `;
 
 const GroupHeader = styled.h3`
-  color: #9acafe;
-  top: 0;
+  color: ${THEME.colors.blue};
+  top: 40px;
   position: sticky;
   background: white;
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid black;
 `;
 
@@ -327,9 +328,9 @@ class Masters extends React.Component {
 
     return (
       <Layout>
+        <Navbar universityCount={universities.length} masterCount={masters.length} />
         <Masthead>
           <Container>
-            <Navbar universityCount={universities.length} masterCount={masters.length} />
             <Headline>
               <i>{"M"}</i>
               {"asters for"}

@@ -7,9 +7,10 @@ import {Headline} from "../components/Headline";
 import {SubHeadline} from "../components/SubHeadline";
 import {groupBy} from "../utils/groupBy";
 import {pairs} from "../utils/pairs";
-import Navbar from "../components/masters/Navbar";
+import Navbar from "../components/Navbar";
 import {StaticQuery, graphql} from "gatsby";
 import {sortBy} from "../utils/sortBy";
+import THEME from "../theme";
 
 const GLOSSARY = [
   {
@@ -178,7 +179,7 @@ const GLOSSARY = [
 ];
 
 const GlossarContainer = styled.main`
-  background: #9acafe;
+  background: ${THEME.colors.blue};
 `;
 
 const GroupedByLetter = sortBy(pairs(groupBy(GLOSSARY, d => d.title[0])), d => d[0]);
@@ -191,7 +192,7 @@ const GroupContainer = styled.div`
 
 const GroupLetter = styled.h2`
   font-size: 60px;
-  color: rgb(255, 105, 58);
+  color: ${THEME.colors.orange};
   margin: 0;
 `;
 
@@ -225,10 +226,10 @@ class Glossar extends React.Component {
     const universities = data.universities.edges.map(n => n.node);
     return (
       <Layout>
+        <Navbar universityCount={universities.length} masterCount={masters.length} />
         <GlossarContainer>
           <Masthead>
             <Container>
-              <Navbar universityCount={universities.length} masterCount={masters.length} />
               <Headline>GLOSSAR</Headline>
               <SubHeadline>
                 Hier werden themenspezifische Fachbegriffe, im Kontext ihrer Verwendung auf dieser Website erklärt, um

@@ -7,10 +7,11 @@ import Container from "../../components/Container";
 import {Masthead} from "../../components/Masthead";
 import {Headline} from "../../components/Headline";
 import {SubHeadline} from "../../components/SubHeadline";
-import Navbar from "../../components/masters/Navbar";
+import Navbar from "../../components/Navbar";
+import THEME from "../../theme";
 
 const AboutContainer = styled.div`
-  background: rgb(255, 105, 58);
+  background: ${THEME.colors.orange};
   padding-bottom: 80px;
   word-break: break-word;
 
@@ -57,9 +58,9 @@ const Universities = ({data}) => {
   const universityMap = enhanceUniversities(universities, masters);
   return (
     <Layout>
+      <Navbar universityCount={universities.length} masterCount={masters.length} />
       <Masthead>
         <Container>
-          <Navbar universityCount={universities.length} masterCount={masters.length} />
           <Headline>{"About"}</Headline>
           <SubHeadline>
             Masters for Designers (MD) ist die erste Plattform, die alle für Designer zugänglichen Masterstudiengänge
