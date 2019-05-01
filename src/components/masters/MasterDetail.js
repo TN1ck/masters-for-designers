@@ -8,6 +8,10 @@ function formatDate(d) {
   return `${date.getFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
 }
 
+function formatMoney(n) {
+  return `${n} €`;
+}
+
 const allowedDisciplinesTagTranslation = {
   digital: "Digitale Medien",
   filmAndPhotograpy: "Film/Fotografie",
@@ -17,6 +21,64 @@ const allowedDisciplinesTagTranslation = {
   room: "Raum",
   jewelry: "Schmuck",
   visualCommunication: "Visuelle Kommunikation",
+};
+
+const masterTranslation = {
+  ma: "MA",
+  msc: "MSc",
+  mfa: "MFA",
+};
+
+const universityTypeTranslation = {
+  university: "Universität",
+  artCollege: "Kunsthochschule",
+  college: "Fachhochschule",
+};
+
+const functionalCompositionTranslation = {
+  disciplinary: "Disziplinär",
+  interdisciplinaryArt: "Interdisziplinär gestalterisch",
+  artAndNonArt: "Gestalterisch & nicht-gestalterisch",
+};
+
+const masterTypeTranslation = {
+  consecutive: "Konsekutiv",
+  notConsecutive: "Nicht Konsekutiv",
+  studyingFurther: "Weiterbildend",
+};
+
+const masterDirectionTranslation = {
+  practical: "Praktisch",
+  theoretical: "Theoretisch",
+};
+
+const mainLanguagesTranslation = {
+  german: "Deutsch",
+  english: "Englisch",
+};
+
+const topicAndFocusTranslation = {
+  fachspezifisch: "Fachspezifisch",
+  fachuebergreifend: "Fachübergreifend",
+  thematisch: "Thematisch",
+};
+
+const semesterTypeTranslation = {
+  summer: "Sommer",
+  winter: "Winter",
+};
+
+const allowedFormsTranslation = {
+  fullTime: "Vollzeit",
+  partTime: "Teilzeit",
+  extraOccupational: "Berufsbegleitend",
+  remote: "Ferstudium",
+};
+
+const semesterAbroadTranslation = {
+  yes: "Ja",
+  no: "Nein",
+  choose: "Wahlweise",
 };
 
 const MasterDetailContainer = styled.div`
@@ -97,6 +159,7 @@ const MasterDetailSectionDescription = styled.dd`
   margin: 0;
   padding-top: 5px;
   padding-bottom: 20px;
+  text-transform: capitalize;
 `;
 const MasterDetailSection = ({headline, listItems, children}) => {
   return (
@@ -125,7 +188,7 @@ const MasterDetail = ({master, university}) => {
   return (
     <MasterDetailContainer>
       <MasterDetailTitle>
-        <MasterDetailDegree>{master.direction.degree}</MasterDetailDegree>
+        <MasterDetailDegree>{masterTranslation[master.direction.degree]}</MasterDetailDegree>
         {master.name}
       </MasterDetailTitle>
       <MasterDetailUniversity>
@@ -139,7 +202,7 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Hochschule"}
           listItems={[
-            ["Hochschultyp", university.type],
+            ["Hochschultyp", universityTypeTranslation[university.type]],
             ["Fachbereich", master.department],
             ["Hochschulübergreifend", master.otherUniversity],
           ]}
@@ -151,7 +214,7 @@ const MasterDetail = ({master, university}) => {
                 {mastersSameUniversity.map(m => {
                   return (
                     <li key={m.name}>
-                      <a href={`/#${m.name}`}>{`${m.name} - ${m.direction.degree}`}</a>
+                      <a href={`/#${m.name}`}>{`${m.name} - ${masterTranslation[m.direction.degree]}`}</a>
                     </li>
                   );
                 })}
@@ -166,10 +229,13 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Ausrichtung"}
           listItems={[
-            ["Mastertyp", master.direction.masterType],
-            ["Ausrichtung", master.direction.direction.join(" & ")],
-            ["Inhaltlicher Fokus", master.topicAndFocus.topicFocus],
-            ["Disziplinäre Zusammensetzung", master.topicAndFocus.functionalComposition],
+            ["Mastertyp", masterTypeTranslation[master.direction.masterType]],
+            ["Ausrichtung", master.direction.direction.map(d => masterDirectionTranslation[d]).join(" & ")],
+            ["Inhaltlicher Fokus", topicAndFocusTranslation[master.topicAndFocus.topicFocus]],
+            [
+              "Disziplinäre Zusammensetzung",
+              functionalCompositionTranslation[master.topicAndFocus.functionalComposition],
+            ],
             [
               "Disziplinen",
               master.topicAndFocus.allowedDisciplinesTag
@@ -185,10 +251,10 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Zeit und Geld"}
           listItems={[
-            ["Studienform", master.timeAndMoney.allowedForms.join(" & ")],
+            ["Studienform", master.timeAndMoney.allowedForms.map(d => allowedFormsTranslation[d]).join(" & ")],
             ["Regelstudienzeit", master.timeAndMoney.semester],
-            ["Zulassungssemester", master.applicationDeadlines.map(d => d.type).join(" & ")],
-            ["Gebühren", master.timeAndMoney.costs],
+            ["Zulassungssemester", master.applicationDeadlines.map(d => semesterTypeTranslation[d.type]).join(" & ")],
+            ["Gebühren", master.timeAndMoney.costs === 0 ? "Nein" : formatMoney(master.timeAndMoney.costs)],
           ]}
         />
       </MasterDetailMoneySection>
@@ -196,8 +262,11 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Internationalität"}
           listItems={[
-            ["Hauptunterrichtssprache", master.internationality.mainLanguages.join(" & ")],
-            ["Integriertes Auslandssemester", master.internationality.semesterAbroad],
+            [
+              "Hauptunterrichtssprache",
+              master.internationality.mainLanguages.map(d => mainLanguagesTranslation[d]).join(" & "),
+            ],
+            ["Integriertes Auslandssemester", semesterAbroadTranslation[master.internationality.semesterAbroad]],
             ["Doppelter Abschluss", master.internationality.doubleDegree ? "Ja" : "Nein"],
           ]}
         />
