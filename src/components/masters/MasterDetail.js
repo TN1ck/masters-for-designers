@@ -64,8 +64,8 @@ const topicAndFocusTranslation = {
 };
 
 const semesterTypeTranslation = {
-  summer: "Sommer",
-  winter: "Winter",
+  summer: "Sommersemester",
+  winter: "Wintersemester",
 };
 
 const allowedFormsTranslation = {
@@ -254,7 +254,7 @@ const MasterDetail = ({master, university}) => {
             ["Studienform", master.timeAndMoney.allowedForms.map(d => allowedFormsTranslation[d]).join(" & ")],
             ["Regelstudienzeit", master.timeAndMoney.semester],
             ["Zulassungssemester", master.applicationDeadlines.map(d => semesterTypeTranslation[d.type]).join(" & ")],
-            ["Gebühren", master.timeAndMoney.costs === 0 ? "Nein" : formatMoney(master.timeAndMoney.costs)],
+            ["Gebühren", master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs)],
           ]}
         />
       </MasterDetailMoneySection>
