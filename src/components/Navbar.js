@@ -22,9 +22,12 @@ const NavbarContainer = styled.nav`
   background: ${THEME.colors.orange};
   top: 0;
   position: sticky;
-  padding: 10px 0;
+`;
+
+const NavbarInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
 
   @media (max-width: 550px) {
     flex-direction: column;
@@ -40,20 +43,20 @@ const Navbar = class extends React.Component {
     const {universityCount, masterCount} = this.props;
     return (
       <NavbarContainer role="navigation" aria-label="main-navigation">
-        <NavbarInformation>
-          <Container>
-            <NavbarLink to="/">{`Studiengänge ${masterCount} / Hochschulen ${universityCount}`}</NavbarLink>
-          </Container>
-        </NavbarInformation>
-        <NavbarLinks>
-          <Container>
-            <NavbarLink to="/about">About</NavbarLink>
-            <NavbarLink to="/glossary">Glossar</NavbarLink>
-            <NavbarLink style={{paddingRight: 0}} to="/notes">
-              Merkliste
-            </NavbarLink>
-          </Container>
-        </NavbarLinks>
+        <Container>
+          <NavbarInnerContainer>
+            <NavbarInformation>
+              <NavbarLink to="/">{`Studiengänge ${masterCount} / Hochschulen ${universityCount}`}</NavbarLink>
+            </NavbarInformation>
+            <NavbarLinks>
+              <NavbarLink to="/about">About</NavbarLink>
+              <NavbarLink to="/glossary">Glossar</NavbarLink>
+              <NavbarLink style={{paddingRight: 0}} to="/notes">
+                Merkliste
+              </NavbarLink>
+            </NavbarLinks>
+          </NavbarInnerContainer>
+        </Container>
       </NavbarContainer>
     );
   }
