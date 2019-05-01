@@ -8,6 +8,17 @@ function formatDate(d) {
   return `${date.getFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
 }
 
+const allowedDisciplinesTagTranslation = {
+  digital: "Digitale Medien",
+  filmAndPhotograpy: "Film/Fotografie",
+  illustrations: "Illustrationen",
+  fashion: "Mode/Textil",
+  product: "Produkt/Industrie",
+  room: "Raum",
+  jewelry: "Schmuck",
+  visualCommunication: "Visuelle Kommunikation",
+};
+
 const MasterDetailContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -121,7 +132,9 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSmall>{university.city}</MasterDetailSmall>
         {university.name}
       </MasterDetailUniversity>
-      <MasterDetailDeadlines>{master.applicationDeadlines.map(formatDate).join(" & ")}</MasterDetailDeadlines>
+      <MasterDetailDeadlines>
+        {master.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
+      </MasterDetailDeadlines>
       <MasterDetailUniversitySection>
         <MasterDetailSection
           headline={"Hochschule"}
@@ -157,7 +170,14 @@ const MasterDetail = ({master, university}) => {
             ["Ausrichtung", master.direction.direction.join(" & ")],
             ["Inhaltlicher Fokus", master.topicAndFocus.topicFocus],
             ["Disziplinäre Zusammensetzung", master.topicAndFocus.functionalComposition],
-            ["Disziplinen", master.topicAndFocus.allowedDisciplinesTag.join(", ")],
+            [
+              "Disziplinen",
+              master.topicAndFocus.allowedDisciplinesTag
+                .map(d => {
+                  return allowedDisciplinesTagTranslation[d];
+                })
+                .join(", "),
+            ],
           ]}
         />
       </MasterDetailDirectionSection>
