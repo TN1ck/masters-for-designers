@@ -1,5 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+
+function formatDate(d) {
+  const date = new Date(d);
+  const month = date.getMonth() + 1;
+  const day = date.getDay() + 1;
+  return `${date.getFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
+}
+
 const MasterDetailContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -26,6 +34,7 @@ const MasterDetailContainer = styled.div`
       "master-internationality-section";
   }
 `;
+
 const MasterDetailSmall = styled.small`
   font-weight: 300;
   display: block;
@@ -98,9 +107,6 @@ const MasterDetailSection = ({headline, listItems, children}) => {
     </MasterDetailSectionContainer>
   );
 };
-const MasterDetailItem = ({dt, dd}) => {
-  return <MasterDetailSectionTitle />;
-};
 
 const MasterDetail = ({master, university}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
@@ -115,16 +121,7 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSmall>{university.city}</MasterDetailSmall>
         {university.name}
       </MasterDetailUniversity>
-      <MasterDetailDeadlines>
-        {master.applicationDeadlines
-          .map(d => {
-            const date = new Date(d.date);
-            const month = date.getMonth() + 1;
-            const day = date.getDay() + 1;
-            return `${date.getFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
-          })
-          .join(" & ")}
-      </MasterDetailDeadlines>
+      <MasterDetailDeadlines>{master.applicationDeadlines.map(formatDate).join(" & ")}</MasterDetailDeadlines>
       <MasterDetailUniversitySection>
         <MasterDetailSection
           headline={"Hochschule"}
