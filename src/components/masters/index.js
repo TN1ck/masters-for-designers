@@ -89,8 +89,7 @@ export const enhanceUniversities = (universities, masters) => {
   return universityMap;
 };
 
-const FilterContainer = styled.div`
-  padding-top: 20px;
+const FilterMain = styled.div`
   background: #9dc9fb;
 `;
 
@@ -117,9 +116,14 @@ const FilterButton = styled.button`
 `;
 
 const FilterText = styled.div`
-  color: white;
+  display: block;
   position: relative;
   border-bottom: 1px solid transparent;
+  &,
+  &:visited,
+  &:focus {
+    color: white;
+  }
 
   &:hover {
     cursor: pointer;
@@ -169,9 +173,17 @@ const SortText = styled.div`
 `;
 
 const FilterHeader = styled.div`
+  background: #9dc9fb;
+  z-index: 10;
+  position: sticky;
+  top: 40px;
+`;
+
+const FilterHeaderInner = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 `;
 
 const FilterSection = styled.div`
@@ -209,10 +221,10 @@ const SortOption = styled.div`
 
 const GroupHeader = styled.h3`
   color: ${THEME.colors.blue};
-  top: 40px;
+  top: 83px;
   position: sticky;
-  background: white;
   margin: 0;
+  background: white;
   padding: 10px 0;
   border-bottom: 1px solid black;
 `;
@@ -324,7 +336,7 @@ class Masters extends React.Component {
       );
     };
 
-    const groupedAndSortedMasters = sortAndGroupMasters(masters, this.state.sort, universityMap);
+    const groupedAndSortedMasters = sortAndGroupMasters(filteredMasters, this.state.sort, universityMap);
 
     return (
       <Layout>
@@ -345,9 +357,9 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
-        <FilterContainer>
+        <FilterHeader>
           <Container>
-            <FilterHeader>
+            <FilterHeaderInner>
               <FilterButtonSection>
                 <FilterText active={this.state.show} onClick={this.toggleShow}>
                   {"Filter"}
@@ -372,7 +384,11 @@ class Masters extends React.Component {
                   </SortOptions>
                 )}
               </SortSection>
-            </FilterHeader>
+            </FilterHeaderInner>
+          </Container>
+        </FilterHeader>
+        <FilterMain>
+          <Container>
             <div style={{display: this.state.show ? "block" : "none"}}>
               <FilterSection>
                 <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
@@ -413,7 +429,7 @@ class Masters extends React.Component {
               </FilterSection>
             </div>
           </Container>
-        </FilterContainer>
+        </FilterMain>
         <Container>
           {groupedAndSortedMasters.map(([group, name, masters]) => {
             return (

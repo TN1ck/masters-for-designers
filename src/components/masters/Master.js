@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MasterDetail from "./MasterDetail";
+import {slugify} from "../../utils/slugify";
 
 const MasterTitle = styled.div`
   font-size: 30px;
@@ -19,6 +20,7 @@ const MasterUniversity = styled.div`
 `;
 
 const MasterContainer = styled.div`
+  display: block;
   padding-top: 20px;
   padding-bottom: 40px;
   border-top: 1px solid black;
@@ -53,16 +55,21 @@ class Master extends React.Component {
   state = {
     open: false,
   };
-  toggle = () => {
+  toggle = id => {
+    const element = document.getElementById(id);
+    const position = element.getBoundingClientRect();
+    const top = position.top + window.scrollY - 120;
+    window.scrollTo(0, top);
     this.setState({
       open: !this.state.open,
     });
   };
   render() {
     const {master, university} = this.props;
+    const id = `master-${slugify(master.university)}-${slugify(master.name)}`;
     return (
       <div>
-        <MasterContainer onClick={this.toggle}>
+        <MasterContainer id={id} onClick={() => this.toggle(id)}>
           <MasterTitle>{master.name}</MasterTitle>
           <MasterUniversity>{master.university}</MasterUniversity>
           <MasterCity>{university.city}</MasterCity>
