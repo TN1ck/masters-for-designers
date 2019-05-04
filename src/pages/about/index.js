@@ -114,7 +114,7 @@ const Universities = ({data}) => {
               </p>
             </ColumnFull>
           </Row>
-          <h3>Impressum</h3>
+          <h3 id="impressum">Impressum</h3>
           <h5 style={{padding: 0, marginTop: 0, marginBottom: 20}}>Angaben gemäß §5 TMG:</h5>
           <Row>
             <ColumnHalf>
@@ -196,7 +196,7 @@ const Universities = ({data}) => {
           <h3>Datenschutz</h3>
           <Row>
             <ColumnHalf>
-              <h5>Datenschutz</h5>
+              <h5 id="privacy">Datenschutz</h5>
 
               <p>
                 Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
