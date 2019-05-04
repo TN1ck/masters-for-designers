@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 function formatDate(d) {
   const date = new Date(d);
-  const month = date.getMonth() + 1;
-  const day = date.getDay() + 1;
-  return `${date.getFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
+  const month = date.getUTCMonth() + 1;
+  const day = date.getUTCDate();
+  console.log(date, d, month, day);
+  return `${date.getUTCFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
 }
 
 function formatMoney(n) {
