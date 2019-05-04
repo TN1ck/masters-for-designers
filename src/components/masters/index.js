@@ -352,7 +352,7 @@ class Masters extends React.Component {
 
     return (
       <Layout>
-        <Navbar universityCount={universities.length} masterCount={masters.length} />
+        <Navbar universityCount={universities.length} masterCount={filteredMasters.length} />
         <Masthead>
           <Container>
             <Headline>
