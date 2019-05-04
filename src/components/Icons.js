@@ -18,7 +18,7 @@ const Icon = styled.a`
 const createLinkIcon = (src, alt) => {
   return props => {
     return props.href.includes("http") ? (
-      <Icon {...props}>
+      <Icon target="_blank" rel="nofollow" {...props}>
         <img src={src} alt={alt} />
       </Icon>
     ) : null;
