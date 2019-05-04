@@ -47,7 +47,7 @@ collections:
             options:
               - { label: "Sommersemester", value: "summer" }
               - { label: "Wintersemester", value: "winter" }
-          - {label: Datum, name: date, widget: date, dateFormat: "YYYY.MM.DD"}
+          - {label: Datum, name: date, widget: date, dateFormat: "DD.MM.YYYY"}
           - {label: International, name: international, widget: boolean, default: false}
       - label: "Hochschule"
         name: "university"

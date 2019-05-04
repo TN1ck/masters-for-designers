@@ -5,8 +5,8 @@ function formatDate(d) {
   const date = new Date(d);
   const month = date.getUTCMonth() + 1;
   const day = date.getUTCDate();
-  console.log(date, d, month, day);
-  return `${date.getUTCFullYear()}.${month < 10 ? "0" + month : month}.${day < 10 ? "0" + day : day}`;
+  const year = date.getUTCFullYear();
+  return `${day < 10 ? "0" + day : day}.${month < 10 ? "0" + month : month}.${year}`;
 }
 
 function formatMoney(n) {
