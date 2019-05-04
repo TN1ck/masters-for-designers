@@ -273,9 +273,21 @@ class Masters extends React.Component {
     };
   };
   toggleShow = () => {
-    this.setState({
-      show: !this.state.show,
-    });
+    const main = document.getElementById("masters-main");
+    const position = main.getBoundingClientRect();
+    const scroll = window.scrollY;
+    if (position.top < 60) {
+      const filterMain = document.getElementById("filter-main");
+      const top = filterMain.getBoundingClientRect().top + scroll;
+      window.scrollTo(0, top - 80);
+      this.setState({
+        show: true,
+      });
+    } else {
+      this.setState({
+        show: !this.state.show,
+      });
+    }
   };
   sortShow = () => {
     this.setState({
@@ -387,7 +399,7 @@ class Masters extends React.Component {
             </FilterHeaderInner>
           </Container>
         </FilterHeader>
-        <FilterMain>
+        <FilterMain id="filter-main">
           <Container>
             <div style={{display: this.state.show ? "block" : "none"}}>
               <FilterSection>
@@ -430,7 +442,7 @@ class Masters extends React.Component {
             </div>
           </Container>
         </FilterMain>
-        <Container>
+        <Container id="masters-main">
           {groupedAndSortedMasters.map(([group, name, masters]) => {
             return (
               <React.Fragment key={group}>
