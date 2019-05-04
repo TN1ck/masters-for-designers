@@ -71,14 +71,14 @@ const NavbarInnerContainer = styled.div`
 
 const HideMobile = styled.div`
   display: none;
-  @media (min-width: 621px) {
+  @media (min-width: 641px) {
     display: block;
   }
 `;
 
 const ShowMobile = styled.div`
   display: none;
-  @media (max-width: 620px) {
+  @media (max-width: 640px) {
     display: block;
   }
 `;

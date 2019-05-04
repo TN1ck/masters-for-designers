@@ -13,6 +13,7 @@ import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
 import {sortAndGroupMasters} from "./sortAndGroupMasters";
 import THEME from "../../theme";
+import {slugify} from "../../utils/slugify";
 
 export const mastersQuery = graphql`
   fragment Masters on MastersJsonConnection {
@@ -234,6 +235,7 @@ class Masters extends React.Component {
     show: false,
     showSort: false,
     sort: "alphabet",
+    masterId: "",
     filters: {
       universityType: [],
       masterType: [],
@@ -279,7 +281,7 @@ class Masters extends React.Component {
     if (position.top < 60) {
       const filterMain = document.getElementById("filter-main");
       const top = filterMain.getBoundingClientRect().top + scroll;
-      window.scrollTo(0, top - 80);
+      window.scrollTo({left: 0, top: top - 80, behavior: "smooth"});
       this.setState({
         show: true,
       });
@@ -304,8 +306,50 @@ class Masters extends React.Component {
       sort,
     });
   };
+  toggleMaster = id => {
+    if (this.state.masterId === id) {
+      this.setState({
+        masterId: "",
+      });
+      return;
+    }
+
+    // because we close old masters again, we have to do a lot more
+    // for smooth scrolling
+    const element = document.getElementById(id);
+    const positionOld = element.getBoundingClientRect();
+    const oldMasterId = this.state.masterId;
+    this.setState(
+      {
+        masterId: id,
+      },
+      () => {
+        if (oldMasterId !== "") {
+          const element = document.getElementById(id);
+          const positionNew = element.getBoundingClientRect();
+          const offset = positionOld.top - positionNew.top;
+          console.log("offset", offset);
+          const quicklyScrollTo = window.scrollY - offset;
+          window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
+          console.log("quicly scroll to", quicklyScrollTo);
+        }
+        setTimeout(() => {
+          const position = element.getBoundingClientRect();
+          const top = position.top + window.scrollY - 120;
+          console.log("slowly scroll to", top);
+          window.scrollTo({left: 0, top: top, behavior: "smooth"});
+        });
+      },
+    );
+  };
   render() {
-    const masters = this.props.data.masters.edges.map(n => n.node);
+    const masters = this.props.data.masters.edges
+      .map(n => n.node)
+      .map(m => {
+        const id = `master-${slugify(m.university)}-${slugify(m.name)}`;
+        m.id = id;
+        return m;
+      });
     const universities = this.props.data.universities.edges.map(n => n.node);
     const universityMap = enhanceUniversities(universities, masters);
 
@@ -449,7 +493,16 @@ class Masters extends React.Component {
                 <GroupHeader>{name}</GroupHeader>
                 {masters.map((master, i) => {
                   const university = universityMap[master.university];
-                  return <Master key={i} master={master} university={university} />;
+                  const active = master.id === this.state.masterId;
+                  return (
+                    <Master
+                      active={active}
+                      onClick={() => this.toggleMaster(master.id)}
+                      key={i}
+                      master={master}
+                      university={university}
+                    />
+                  );
                 })}
               </React.Fragment>
             );
