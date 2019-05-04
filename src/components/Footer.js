@@ -33,7 +33,7 @@ const Footer = class extends React.Component {
         </Container>
         <Container>
           <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/glossar">Glossar</FooterLink>
+          <FooterLink to="/glossary">Glossar</FooterLink>
           <FooterLink to="/about#impressum">Impressum</FooterLink>
           <FooterLink to="/about#privacy">Datenschutz</FooterLink>
         </Container>
