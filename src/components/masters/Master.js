@@ -22,7 +22,7 @@ const MasterUniversity = styled.div`
 const MasterContainer = styled.div`
   display: block;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   border-top: 1px solid black;
   display: flex;
 
@@ -47,7 +47,9 @@ const MasterContainer = styled.div`
 
   &:hover {
     cursor: pointer;
-    background: #eaeaea;
+    ${MasterTitle} {
+      font-style: italic;
+    }
   }
 `;
 

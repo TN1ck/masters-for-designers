@@ -226,9 +226,9 @@ class Glossar extends React.Component {
     const universities = data.universities.edges.map(n => n.node);
     return (
       <Layout>
-        <Navbar universityCount={universities.length} masterCount={masters.length} />
+        <Navbar background={THEME.colors.blue} universityCount={universities.length} masterCount={masters.length} />
         <GlossarContainer>
-          <Masthead>
+          <Masthead background={THEME.colors.blue}>
             <Container>
               <Headline>GLOSSAR</Headline>
               <SubHeadline>

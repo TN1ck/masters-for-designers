@@ -10,7 +10,7 @@ const NavbarInformation = styled.div`
 
 const NavbarContainer = styled.nav`
   z-index: 100;
-  background: ${THEME.colors.orange};
+  background: ${p => p.background || THEME.colors.orange};
   top: 0;
   position: sticky;
 `;
@@ -34,13 +34,21 @@ const NavbarLink = styled(Link)`
   text-decoration: none;
   border: none;
 
+  &.active {
+    ${Circle} {
+      background: white;
+      color: black;
+    }
+  }
+
   &:hover,
   &:focus {
-    color: #333333;
+    // color: #333333;
     border: none;
 
     ${Circle} {
-      background: #333333;
+      background: white;
+      color: black;
     }
   }
   text-transform: uppercase;
@@ -77,9 +85,9 @@ const ShowMobile = styled.div`
 
 const Navbar = class extends React.Component {
   render() {
-    const {universityCount, masterCount} = this.props;
+    const {universityCount, masterCount, background} = this.props;
     return (
-      <NavbarContainer role="navigation" aria-label="main-navigation">
+      <NavbarContainer background={background} role="navigation" aria-label="main-navigation">
         <Container>
           <HideMobile>
             <NavbarInnerContainer>
@@ -90,13 +98,13 @@ const Navbar = class extends React.Component {
                 </MainNavbarLink>
               </NavbarInformation>
               <NavbarLinks>
-                <NavbarLink to="/about">
+                <NavbarLink to="/about" activeClassName="active">
                   About<Circle>{"i"}</Circle>
                 </NavbarLink>
-                <NavbarLink to="/glossary">
+                <NavbarLink to="/glossary" activeClassName="active">
                   Glossar<Circle>{"?"}</Circle>
                 </NavbarLink>
-                <NavbarLink style={{paddingRight: 0}} to="/notes">
+                <NavbarLink style={{paddingRight: 0}} to="/notes" activeClassName="active">
                   Merkliste
                   <Circle>{"0"}</Circle>
                 </NavbarLink>
@@ -112,13 +120,13 @@ const Navbar = class extends React.Component {
                 </MainNavbarLink>
               </NavbarInformation>
               <NavbarLinks>
-                <NavbarLink to="/about">
+                <NavbarLink to="/about" activeClassName="active">
                   <Circle>{"i"}</Circle>
                 </NavbarLink>
-                <NavbarLink to="/glossary">
+                <NavbarLink to="/glossary" activeClassName="active">
                   <Circle>{"?"}</Circle>
                 </NavbarLink>
-                <NavbarLink style={{paddingRight: 0}} to="/notes">
+                <NavbarLink style={{paddingRight: 0}} to="/notes" activeClassName="active">
                   <Circle>{"0"}</Circle>
                 </NavbarLink>
               </NavbarLinks>
