@@ -104,10 +104,10 @@ const Navbar = class extends React.Component {
                 <NavbarLink to="/glossary" activeClassName="active">
                   Glossar<Circle>{"?"}</Circle>
                 </NavbarLink>
-                <NavbarLink style={{paddingRight: 0}} to="/notes" activeClassName="active">
+                {/* <NavbarLink style={{paddingRight: 0}} to="/notes" activeClassName="active">
                   Merkliste
                   <Circle>{"0"}</Circle>
-                </NavbarLink>
+                </NavbarLink> */}
               </NavbarLinks>
             </NavbarInnerContainer>
           </HideMobile>
