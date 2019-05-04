@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Untitled 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="6.65809785 13.9214773 6.65809785 0 0 3.17416355e-15 0 13.9214773 6.65809785 13.9214773"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/facebook">
+            <circle id="Oval-Copy" fill="#000000" cx="14.5" cy="14.5" r="14.5"></circle>
+            <g id="Group-5" stroke-width="1" transform="translate(10.875000, 7.250000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M1.4391236,4.7964735 L0,4.7964735 L0,7.23379858 L1.4391236,7.23379858 L1.4391236,13.9214773 L4.39492568,13.9214773 L4.39492568,7.23379858 L6.37872147,7.23379858 C6.37872147,7.23379858 6.56445088,6.06516911 6.65452183,4.78753902 L4.40610074,4.78753902 L4.40610074,3.12148259 C4.40610074,2.87243407 4.72928333,2.53783794 5.0471019,2.53783794 L6.65809785,2.53783794 L6.65809785,0 L4.46778704,0 C1.36559174,0 1.4391236,2.43978206 1.4391236,2.8036386 L1.4391236,4.7964735 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

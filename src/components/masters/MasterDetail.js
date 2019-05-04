@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
 
 function formatDate(d) {
   const date = new Date(d);
@@ -89,7 +90,7 @@ const MasterDetailContainer = styled.div`
   grid-template-areas:
     "master-title master-title"
     ". master-university"
-    "master-date ."
+    "master-date master-links"
     "master-university-section master-direction-section"
     "master-money-section master-internationality-section";
 
@@ -102,6 +103,7 @@ const MasterDetailContainer = styled.div`
       "master-title"
       "master-university"
       "master-date"
+      "master-links"
       "master-university-section"
       "master-direction-section"
       "master-money-section"
@@ -133,6 +135,9 @@ const MasterDetailUniversity = styled(MasterDetailHeadline)`
 `;
 const MasterDetailDeadlines = styled(MasterDetailHeadline)`
   grid-area: master-date;
+`;
+const MasterDetailLinks = styled(MasterDetailHeadline)`
+  grid-area: master-links;
 `;
 const MasterDetailUniversitySection = styled.div`
   grid-area: master-university-section;
@@ -199,6 +204,12 @@ const MasterDetail = ({master, university}) => {
       <MasterDetailDeadlines>
         {master.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
       </MasterDetailDeadlines>
+      <MasterDetailLinks>
+        <HouseIcon href={master.metadata.website} style={{marginRight: 20}} />
+        <TwitterIcon href={master.metadata.twitter} style={{marginRight: 10}} />
+        <InstagramIcon href={master.metadata.instagram} style={{marginRight: 10}} />
+        <FacebookIcon href={master.metadata.facebook} style={{marginRight: 10}} />
+      </MasterDetailLinks>
       <MasterDetailUniversitySection>
         <MasterDetailSection
           headline={"Hochschule"}
