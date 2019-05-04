@@ -174,7 +174,7 @@ const Universities = ({data}) => {
                 umgehend entfernen.
               </p>
             </ColumnHalf>
-            <ColumnHalf class="col-md-6 right">
+            <ColumnHalf>
               <h5>Urheberrecht</h5>
               <p>
                 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen

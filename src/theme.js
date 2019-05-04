@@ -1,7 +1,7 @@
 const THEME = {
   colors: {
-    orange: "rgb(255, 105, 58)",
-    blue: "#9acafe",
+    orange: "#FF5B3A",
+    blue: "#A9CAFE",
   },
 };
 

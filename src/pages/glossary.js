@@ -250,11 +250,11 @@ class Glossar extends React.Component {
                           <h3>{d.title}</h3>
                           <p>{d.content}</p>
                           {d.sections &&
-                            d.sections.map(({subtitle, content}) => (
-                              <>
+                            d.sections.map(({subtitle, content}, j) => (
+                              <React.Fragment key={j}>
                                 <h4>{subtitle}</h4>
                                 <p>{content}</p>
-                              </>
+                              </React.Fragment>
                             ))}
                         </React.Fragment>
                       );
