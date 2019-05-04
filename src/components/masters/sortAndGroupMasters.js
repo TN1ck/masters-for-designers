@@ -2,24 +2,32 @@ import {pairs} from "../../utils/pairs";
 import {groupBy} from "../../utils/groupBy";
 import {sortBy} from "../../utils/sortBy";
 
-export function sortAndGroupMasters(masters, sortKey, universityMap) {
-  const monthNamesMapping = {
-    0: "Januar",
-    1: "Februar",
-    2: "März",
-    3: "April",
-    4: "Mai",
-    5: "Juni",
-    6: "Juli",
-    7: "August",
-    8: "September",
-    9: "Oktober",
-    10: "Nomeber",
-    11: "Dezember",
-  };
+export const MONTH_NAME_MAPPING = {
+  0: "Januar",
+  1: "Februar",
+  2: "März",
+  3: "April",
+  4: "Mai",
+  5: "Juni",
+  6: "Juli",
+  7: "August",
+  8: "September",
+  9: "Oktober",
+  10: "Nomeber",
+  11: "Dezember",
+};
 
+export const SORT_NAME_MAPPING = {
+  alphabet: "Studiengang",
+  city: "Studienort",
+  university: "Hochschule",
+  deadline: "Bewerbungsfrist",
+};
+
+export function sortAndGroupMasters(masters, sortKey, universityMap) {
   const groupers = {
     alphabet: masters => pairs(groupBy(masters, d => d.name[0])).map(([key, list]) => [key, key, list]),
+    university: masters => pairs(groupBy(masters, d => d.university)).map(([key, list]) => [key, key, list]),
     city: masters =>
       pairs(groupBy(masters, d => universityMap[d.university].city)).map(([key, list]) => [key, key, list]),
     deadline: masters => {
@@ -42,7 +50,7 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
       const paired = pairs(groupBy(masterWithDates, d => d[1]));
       return paired.map(([key, list]) => [
         Number(key),
-        monthNamesMapping[list[0][2].getUTCMonth()],
+        MONTH_NAME_MAPPING[list[0][2].getUTCMonth()],
         list.map(d => d[0]),
       ]);
     },

@@ -11,7 +11,7 @@ import {Headline} from "../Headline";
 import {SubHeadline} from "../SubHeadline";
 import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
-import {sortAndGroupMasters} from "./sortAndGroupMasters";
+import {sortAndGroupMasters, SORT_NAME_MAPPING} from "./sortAndGroupMasters";
 import THEME from "../../theme";
 import {slugify} from "../../utils/slugify";
 
@@ -91,7 +91,7 @@ export const enhanceUniversities = (universities, masters) => {
 };
 
 const FilterMain = styled.div`
-  background: #9dc9fb;
+  background: ${THEME.colors.blue};
 `;
 
 const FilterButton = styled.button`
@@ -169,12 +169,12 @@ const SortSection = styled.div`
 `;
 
 const SortText = styled.div`
-  color: white;
+  color: black;
   padding-right: 10px;
 `;
 
 const FilterHeader = styled.div`
-  background: #9dc9fb;
+  background: ${THEME.colors.blue};
   z-index: 10;
   position: sticky;
   top: 40px;
@@ -206,17 +206,18 @@ const FilterSectionButtons = styled.div`
 
 const SortOptions = styled.div`
   position: absolute;
-  width: 160px;
+  width: 180px;
   border: 1px solid black;
   top: 22px;
   z-index: 99;
+  background: ${THEME.colors.blue};
 `;
 const SortOption = styled.div`
   padding: 15px;
-  background: white;
+  color: ${p => (p.active ? "white" : "black")};
 
   &:hover {
-    background: #eaeaea;
+    color: white;
   }
 `;
 
@@ -424,19 +425,20 @@ class Masters extends React.Component {
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
                 <SortText>{"Sortieren: "}</SortText>
                 <FilterText active={true} style={{marginRight: 20}}>
-                  {
-                    {
-                      alphabet: "Studiengang",
-                      city: "Studienort",
-                      deadline: "Bewerbungsfrist",
-                    }[this.state.sort]
-                  }
+                  {SORT_NAME_MAPPING[this.state.sort]}
                 </FilterText>
                 {this.state.showSort && (
                   <SortOptions>
-                    <SortOption onClick={() => this.setSort("alphabet")}>{"Studiengang"}</SortOption>
-                    <SortOption onClick={() => this.setSort("city")}>{"Studienort"}</SortOption>
-                    <SortOption onClick={() => this.setSort("deadline")}>{"Bewerbungsfrist"}</SortOption>
+                    {[{value: "alphabet"}, {value: "city"}, {value: "university"}, {value: "deadline"}].map(
+                      ({value}) => {
+                        const active = this.state.sort === value;
+                        return (
+                          <SortOption key={value} active={active} onClick={() => this.setSort(value)}>
+                            {SORT_NAME_MAPPING[value]}
+                          </SortOption>
+                        );
+                      },
+                    )}
                   </SortOptions>
                 )}
               </SortSection>
