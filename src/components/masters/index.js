@@ -226,6 +226,7 @@ const GroupHeader = styled.h3`
   top: 83px;
   position: sticky;
   margin: 0;
+  margin-top: 70px;
   background: white;
   padding: 10px 0;
   border-bottom: 1px solid black;

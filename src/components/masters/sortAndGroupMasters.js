@@ -26,7 +26,8 @@ export const SORT_NAME_MAPPING = {
 
 export function sortAndGroupMasters(masters, sortKey, universityMap) {
   const groupers = {
-    alphabet: masters => pairs(groupBy(masters, d => d.name[0])).map(([key, list]) => [key, key, list]),
+    alphabet: masters =>
+      pairs(groupBy(masters, d => d.name[0])).map(([key, list]) => [key, key, sortBy(list, d => d.name)]),
     university: masters => pairs(groupBy(masters, d => d.university)).map(([key, list]) => [key, key, list]),
     city: masters =>
       pairs(groupBy(masters, d => universityMap[d.university].city)).map(([key, list]) => [key, key, list]),

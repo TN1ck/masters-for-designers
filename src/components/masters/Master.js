@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MasterDetail from "./MasterDetail";
 
 const MasterTitle = styled.div`
-  font-size: 30px;
+  font-size: 24px;
   width: 48%;
   word-break: break-word;
 `;

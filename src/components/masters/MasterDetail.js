@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
+import {Link} from "gatsby";
 
 function formatDate(d) {
   const date = new Date(d);
@@ -225,8 +226,8 @@ const MasterDetail = ({master, university}) => {
               <ul>
                 {mastersSameUniversity.map(m => {
                   return (
-                    <li key={m.name}>
-                      <a href={`/#${m.name}`}>{`${m.name} - ${masterTranslation[m.direction.degree]}`}</a>
+                    <li key={m.id}>
+                      <Link to={`/#${m.id}`}>{`${m.name} - ${masterTranslation[m.direction.degree]}`}</Link>
                     </li>
                   );
                 })}
