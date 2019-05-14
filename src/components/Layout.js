@@ -10,7 +10,7 @@ import Fonts from "./Fonts";
 
 export const GlobalStyle = createGlobalStyle`
   body, html {
-    font-family: L10;
+    font-family: L10, Helvetica Neue, Helvetica, Arial, Sans-Serif;
     padding: 0;
     margin: 0;
     font-weight: 300;

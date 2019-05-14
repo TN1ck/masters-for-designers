@@ -96,7 +96,6 @@ const FilterMain = styled.div`
 
 const FilterButton = styled.button`
   position: relative;
-  font-family: "L10";
   font-weight: 400;
   font-size: 12px;
   background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
