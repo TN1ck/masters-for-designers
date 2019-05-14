@@ -20,7 +20,7 @@ import L10BoldItalicWoff from "../../fonts/L10-BoldItalic.woff";
 const Fonts = createGlobalStyle`
   @font-face {
     font-family: "L10";
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     font-display: fallback;
     src: url(${L10RegularWoff2}) format("woff2"), url(${L10RegularWoff}) format("woff");
@@ -28,7 +28,7 @@ const Fonts = createGlobalStyle`
 
   @font-face {
     font-family: "L10";
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
     font-display: fallback;
     src: url(${L10RegularItalicWoff}) format("woff");
@@ -52,7 +52,7 @@ const Fonts = createGlobalStyle`
 
   @font-face {
     font-family: "L10";
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
     font-display: fallback;
     src: url(${L10MediumItalicWoff}) format("woff");
@@ -60,7 +60,7 @@ const Fonts = createGlobalStyle`
 
   @font-face {
     font-family: "L10";
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-display: fallback;
     src:url(${L10MediumWoff2}) format("woff2"), url(${L10MediumWoff}) format("woff");

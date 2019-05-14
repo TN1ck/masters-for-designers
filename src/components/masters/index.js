@@ -96,7 +96,7 @@ const FilterMain = styled.div`
 
 const FilterButton = styled.button`
   position: relative;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 12px;
   background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
   transition: background-color 100ms ease-out;

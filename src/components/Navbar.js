@@ -56,7 +56,7 @@ const NavbarLink = styled(Link)`
 
 const MainNavbarLink = styled(NavbarLink)`
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 const NavbarLinks = styled.div`

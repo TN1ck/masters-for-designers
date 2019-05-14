@@ -113,12 +113,10 @@ const MasterDetailContainer = styled.div`
 `;
 
 const MasterDetailSmall = styled.small`
-  font-weight: 300;
   display: block;
   font-size: 12px;
 `;
 const MasterDetailHeadline = styled.h3`
-  font-weight: 400;
   font-size: 24px;
   margin: 0;
   padding: 0;
@@ -159,7 +157,7 @@ const MasterDetailSectionContainer = styled.div`
 `;
 const MasterDetailSectionList = styled.dl``;
 const MasterDetailSectionTitle = styled.dt`
-  font-weight: 400;
+  font-weight: 500;
 `;
 const MasterDetailSectionDescription = styled.dd`
   padding: 0;

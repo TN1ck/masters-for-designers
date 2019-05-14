@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: L10, Helvetica Neue, Helvetica, Arial, Sans-Serif;
     padding: 0;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.4;
     // scroll-behavior: smooth;
   }
