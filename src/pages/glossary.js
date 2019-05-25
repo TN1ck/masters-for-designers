@@ -191,15 +191,15 @@ const GroupContainer = styled.div`
 `;
 
 const GroupLetter = styled.h2`
-  font-size: 60px;
+  font-size: 40px;
   color: ${THEME.colors.orange};
+  border-bottom: 1px solid black;
   margin: 0;
 `;
 
 const Group = styled.section`
   padding-top: 20px;
   padding-bottom: 40px;
-  border-top: ${p => (p.noBorderTop ? "none" : "1px solid black")};
 
   letter-spacing: 0.01em;
   line-height: 1.6;
@@ -237,15 +237,15 @@ class Glossar extends React.Component {
             </Container>
           </Masthead>
           <Container>
-            <GroupContainer>
-              {GroupedByLetter.map(([letter, list], i) => {
-                const noBorderTop = i <= 1;
-                return (
-                  <Group key={letter} noBorderTop={noBorderTop}>
-                    <GroupLetter>{letter}</GroupLetter>
+            {GroupedByLetter.map(([letter, list], i) => {
+              const noBorderTop = i <= 1;
+              return (
+                <div>
+                  <GroupLetter>{letter}</GroupLetter>
+                  <GroupContainer>
                     {list.map((d, i) => {
                       return (
-                        <React.Fragment key={i}>
+                        <Group key={i} noBorderTop>
                           <h3>{d.title}</h3>
                           <p>{d.content}</p>
                           {d.sections &&
@@ -255,13 +255,13 @@ class Glossar extends React.Component {
                                 <p>{content}</p>
                               </React.Fragment>
                             ))}
-                        </React.Fragment>
+                        </Group>
                       );
                     })}
-                  </Group>
-                );
-              })}
-            </GroupContainer>
+                  </GroupContainer>
+                </div>
+              );
+            })}
           </Container>
         </GlossarContainer>
       </Layout>
