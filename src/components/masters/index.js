@@ -102,8 +102,14 @@ const FilterButton = styled.button`
   font-size: 12px;
   background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
   transition: background-color 100ms ease-out;
+  border-radius: 20px;
   border: 1px solid black;
   padding: 10px 20px;
+
+  &:focus {
+    outline: none;
+    background-color: ${p => (p.active ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.3)")};
+  }
 
   &:disabled {
     opacity: 0.3;
