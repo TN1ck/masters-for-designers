@@ -224,7 +224,7 @@ const MasterDetail = ({master, university}) => {
                 {mastersSameUniversity.map(m => {
                   return (
                     <li key={m.id}>
-                      <Link to={`/#${m.id}`}>{`${m.name} - ${masterTranslation[m.university.direction.degree]}`}</Link>
+                      <Link to={`/#${m.id}`}>{`${m.name} - ${masterTranslation[m.direction.degree]}`}</Link>
                     </li>
                   );
                 })}
