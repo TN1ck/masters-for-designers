@@ -36,58 +36,50 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{university}} - {{name}}"
     fields:
-      - {label: Name, name: name, widget: string}
-      - label: Bewerbungsfristen
-        name: applicationDeadlines
-        widget: list
-        fields:
-          - label: Zulassungssemester
-            name: type
-            widget: "select"
-            options:
-              - { label: "Sommersemester", value: "summer" }
-              - { label: "Wintersemester", value: "winter" }
-          - {label: Datum, name: date, widget: date, dateFormat: "DD.MM.YYYY"}
-          - {label: International, name: international, widget: boolean, default: false}
+      - {label: Studiengang, name: name, widget: string}
       - label: "Hochschule"
         name: "university"
-        widget: "relation"
-        collection: "universities"
-        searchFields: ["name", "city"]
-        valueField: "name"
-        displayFields: ["name", "city"]
-      - label: "Hochschulübergreifend"
-        name: otherUniversity
-        widget: text
-        default: "nein"
-      - label: "Fachbereich"
-        name: department
-        widget: text
-      - label: Ausrichtung
-        name: direction
         widget: object
         fields:
-          - label: Abschluss
-            name: degree
-            widget: select
-            options:
-              - {label: "Master of Arts (MA)", value: ma}
-              - {label: "Master of Fine Arts (MFA)", value: mfa}
-              - {label: "Master of Science (MSc)", value: msc}
-          - label: Ausrichtung
-            name: direction
-            widget: select
-            multiple: true
-            options:
-              - {label: Praktisch, value: practical}
-              - {label: Theoretisch, value: theoretical}
-          - label: Mastertyp
-            name: masterType
-            widget: select
-            options:
-              - {label: Konsekutiv, value: consecutive}
-              - {label: "Nicht Konsekutiv", value: notConsecutive}
-              - {label: "Weiterbildend", value: studyingFurther}
+        - label: "Hochschule"
+          name: "name"
+          widget: "relation"
+          collection: "universities"
+          searchFields: ["name", "city"]
+          valueField: "name"
+          displayFields: ["name", "city"]
+        - label: "Hochschulübergreifend"
+          name: otherUniversity
+          widget: text
+          default: "nein"
+        - label: "Fachbereich"
+          name: department
+          widget: text
+        - label: Ausrichtung
+          name: direction
+          widget: object
+          fields:
+            - label: Abschluss
+              name: degree
+              widget: select
+              options:
+                - {label: "Master of Arts (MA)", value: ma}
+                - {label: "Master of Fine Arts (MFA)", value: mfa}
+                - {label: "Master of Science (MSc)", value: msc}
+            - label: Ausrichtung
+              name: direction
+              widget: select
+              multiple: true
+              options:
+                - {label: Praktisch, value: practical}
+                - {label: Theoretisch, value: theoretical}
+            - label: Mastertyp
+              name: masterType
+              widget: select
+              options:
+                - {label: Konsekutiv, value: consecutive}
+                - {label: "Nicht Konsekutiv", value: notConsecutive}
+                - {label: "Weiterbildend", value: studyingFurther}
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
         widget: object
@@ -99,13 +91,16 @@ collections:
               - {label: Fachspezifisch, value: fachspezifisch}
               - {label: Fachübergreifend, value: fachuebergreifend}
               - {label: Thematisch, value: thematisch}
-          - label: "Fachliche Zusammensetzung"
+          - label: "Disziplinäre Zusammensetzung"
             name: functionalComposition
             widget: select
             options:
               - {label: "Disziplinär", value: "disciplinary"}
               - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
               - {label: "Gestalterisch & nicht-gestalterisch", value: "artAndNonArt"}
+          - label: "Zugelassene Disziplinen"
+            name: allowedDisciplines
+            widget: string
           - label: "Zugelassene Disziplinen Tags"
             name: allowedDisciplinesTag
             widget: select
@@ -119,13 +114,22 @@ collections:
               - {label: "Raum", value: room}
               - {label: "Schmuck", value: jewelry}
               - {label: "Visuelle Kommunikation", value: "visualCommunication"}
-          - label: "Zugelassene Disziplinen"
-            name: allowedDisciplines
-            widget: string
       - label: "Zeit und Geld"
         name: timeAndMoney
         widget: object
         fields:
+          - label: Bewerbungsfristen
+            name: applicationDeadlines
+            widget: list
+            fields:
+              - label: Zulassungssemester
+                name: type
+                widget: "select"
+                options:
+                  - { label: "Sommersemester", value: "summer" }
+                  - { label: "Wintersemester", value: "winter" }
+              - {label: Datum, name: date, widget: date, dateFormat: "DD.MM.YYYY"}
+              - {label: International, name: international, widget: boolean, default: false}
           - label: Studienformen
             name: allowedForms
             widget: select
@@ -149,7 +153,7 @@ collections:
         name: internationality
         widget: object
         fields:
-          - label: Hauptunterrichtssprachen
+          - label: Hauptunterrichtssprache
             name: mainLanguages
             widget: select
             multiple: true
@@ -163,7 +167,7 @@ collections:
               - {label: "Ja", value: "yes"}
               - {label: "Nein", value: "no"}
               - {label: "Wahlweise", value: "choose"}
-          - label: "Doppelter Abschluss"
+          - label: "Doppelabschluss"
             name: "doubleDegree"
             widget: boolean
             default: false

@@ -20,13 +20,15 @@ export const mastersQuery = graphql`
     edges {
       node {
         name
-        university
-        department
-        otherUniversity
-        applicationDeadlines {
-          date
-          international
-          type
+        university {
+          name
+          department
+          otherUniversity
+          direction {
+            degree
+            masterType
+            direction
+          }
         }
         internationality {
           semesterAbroad
@@ -37,11 +39,11 @@ export const mastersQuery = graphql`
           costs
           semester
           allowedForms
-        }
-        direction {
-          degree
-          masterType
-          direction
+          applicationDeadlines {
+            date
+            international
+            type
+          }
         }
         topicAndFocus {
           topicFocus
@@ -84,7 +86,7 @@ export const enhanceUniversities = (universities, masters) => {
   }
 
   for (const master of masters) {
-    const university = universityMap[master.university];
+    const university = universityMap[master.university.name];
     university.masters.push(master);
   }
   return universityMap;
@@ -347,7 +349,7 @@ class Masters extends React.Component {
     const masters = this.props.data.masters.edges
       .map(n => n.node)
       .map(m => {
-        const id = `master-${slugify(m.university)}-${slugify(m.name)}`;
+        const id = `master-${slugify(m.university.name)}-${slugify(m.name)}`;
         m.id = id;
         return m;
       });
@@ -369,7 +371,7 @@ class Masters extends React.Component {
       let count = 0;
       if (isEmpty || !active) {
         count = isEmpty
-          ? filteredMasters.filter(m => filter(m, universityMap[m.university])).length
+          ? filteredMasters.filter(m => filter(m, universityMap[m.university.name])).length
           : filterMasters(masters, filtersWithCurrent, universityMap).length - filteredMasters.length;
       }
 
@@ -494,7 +496,7 @@ class Masters extends React.Component {
               <React.Fragment key={group}>
                 <GroupHeader>{name}</GroupHeader>
                 {masters.map((master, i) => {
-                  const university = universityMap[master.university];
+                  const university = universityMap[master.university.name];
                   const active = master.id === this.state.masterId;
                   return (
                     <Master

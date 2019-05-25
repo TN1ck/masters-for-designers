@@ -189,11 +189,10 @@ const MasterDetailSection = ({headline, listItems, children}) => {
 
 const MasterDetail = ({master, university}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
-  console.log(master);
   return (
     <MasterDetailContainer>
       <MasterDetailTitle>
-        <MasterDetailDegree>{masterTranslation[master.direction.degree]}</MasterDetailDegree>
+        <MasterDetailDegree>{masterTranslation[master.university.direction.degree]}</MasterDetailDegree>
         {master.name}
       </MasterDetailTitle>
       <MasterDetailUniversity>
@@ -201,7 +200,7 @@ const MasterDetail = ({master, university}) => {
         {university.name}
       </MasterDetailUniversity>
       <MasterDetailDeadlines>
-        {master.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
+        {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
       </MasterDetailDeadlines>
       <MasterDetailLinks>
         <HouseIcon href={master.metadata.website} style={{marginRight: 20}} />
@@ -214,8 +213,8 @@ const MasterDetail = ({master, university}) => {
           headline={"Hochschule"}
           listItems={[
             ["Hochschultyp", universityTypeTranslation[university.type]],
-            ["Fachbereich", master.department],
-            ["Hochschulübergreifend", master.otherUniversity],
+            ["Fachbereich", master.university.department],
+            ["Hochschulübergreifend", master.university.otherUniversity],
           ]}
         >
           <MasterDetailSectionTitle>{"Andere Masterstudiengänge"}</MasterDetailSectionTitle>
@@ -225,7 +224,7 @@ const MasterDetail = ({master, university}) => {
                 {mastersSameUniversity.map(m => {
                   return (
                     <li key={m.id}>
-                      <Link to={`/#${m.id}`}>{`${m.name} - ${masterTranslation[m.direction.degree]}`}</Link>
+                      <Link to={`/#${m.id}`}>{`${m.name} - ${masterTranslation[m.university.direction.degree]}`}</Link>
                     </li>
                   );
                 })}
@@ -240,8 +239,8 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Ausrichtung"}
           listItems={[
-            ["Mastertyp", masterTypeTranslation[master.direction.masterType]],
-            ["Ausrichtung", master.direction.direction.map(d => masterDirectionTranslation[d]).join(" & ")],
+            ["Mastertyp", masterTypeTranslation[master.university.direction.masterType]],
+            ["Ausrichtung", master.university.direction.direction.map(d => masterDirectionTranslation[d]).join(" & ")],
             ["Inhaltlicher Fokus", topicAndFocusTranslation[master.topicAndFocus.topicFocus]],
             [
               "Disziplinäre Zusammensetzung",
@@ -257,7 +256,10 @@ const MasterDetail = ({master, university}) => {
           listItems={[
             ["Studienform", master.timeAndMoney.allowedForms.map(d => allowedFormsTranslation[d]).join(" & ")],
             ["Regelstudienzeit", master.timeAndMoney.semester],
-            ["Zulassungssemester", master.applicationDeadlines.map(d => semesterTypeTranslation[d.type]).join(" & ")],
+            [
+              "Zulassungssemester",
+              master.timeAndMoney.applicationDeadlines.map(d => semesterTypeTranslation[d.type]).join(" & "),
+            ],
             ["Gebühren", master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs)],
           ]}
         />

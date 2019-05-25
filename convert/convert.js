@@ -1,35 +1,50 @@
 const fs = require("fs");
 const _ = require("lodash");
-const slugify = require("../src/utils/slugify").slugify;
+
+function slugify(str) {
+  str = str.replace(/^\s+|\s+$/g, "");
+
+  // Make the string lowercase
+  str = str.toLowerCase();
+
+  // Remove accents, swap ñ for n, etc
+  const from = "ÁÄÂÀÃÅČÇĆĎÉĚËÈÊẼĔȆÍÌÎÏŇÑÓÖÒÔÕØŘŔŠŤÚŮÜÙÛÝŸŽáäâàãåčçćďéěëèêẽĕȇíìîïňñóöòôõøðřŕšťúůüùûýÿžþÞĐđßÆa·/_,:;";
+  const to = "AAAAAACCCDEEEEEEEEIIIINNOOOOOORRSTUUUUUYYZaaaaaacccdeeeeeeeeiiiinnooooooorrstuuuuuyyzbBDdBAa------";
+  for (let i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), "g"), to.charAt(i));
+  }
+
+  // Remove invalid chars
+  str = str
+    .replace(/[^a-z0-9 -]/g, "")
+    // Collapse whitespace and replace by -
+    .replace(/\s+/g, "-")
+    // Collapse dashes
+    .replace(/-+/g, "-");
+
+  return str;
+}
+
 const mastersRaw = JSON.parse(fs.readFileSync("excel.json", "utf8"));
 
 const masters = mastersRaw.masters.map(masterRaw => {
   const transformed = {
     name: masterRaw.Studiengang,
-    applicationDeadlines: masterRaw.Bewerbungsfrist.replace(/\[|\]|\s|”|“/g, "")
-      .split(",")
-      .map(d => {
-        const date = new Date(Date.parse(d));
-        const month = date.getMonth();
-        return {
-          date,
-          international: false,
-          type: month < 5 ? "summer" : "winter",
-        };
-      }),
-    university: masterRaw.Name,
-    otherUniversity: masterRaw["Hochschulübergreifend"],
-    department: masterRaw["Fachbereich"],
-    direction: {
-      degree: masterRaw.Abschluss.toLowerCase(),
-      direction: masterRaw.Ausrichtung.replace(/ /g, "")
-        .split(",")
-        .map(d => (d === "praktisch" ? "practical" : "theoretical")),
-      masterType: {
-        konsekutiv: "consecutive",
-        "nicht-konsekutiv": "notConsecutive",
-        weiterbildend: "studyingFurther",
-      }[masterRaw.Mastertyp.toLowerCase()],
+    university: {
+      name: masterRaw.Name,
+      otherUniversity: masterRaw["Hochschulübergreifend"],
+      department: masterRaw["Fachbereich"],
+      direction: {
+        degree: masterRaw.Abschluss.toLowerCase(),
+        direction: masterRaw.Ausrichtung.replace(/ /g, "")
+          .split(",")
+          .map(d => (d === "praktisch" ? "practical" : "theoretical")),
+        masterType: {
+          konsekutiv: "consecutive",
+          "nicht-konsekutiv": "notConsecutive",
+          weiterbildend: "studyingFurther",
+        }[masterRaw.Mastertyp.toLowerCase()],
+      },
     },
     topicAndFocus: {
       topicFocus: {
@@ -75,6 +90,17 @@ const masters = mastersRaw.masters.map(masterRaw => {
       }),
       costs: masterRaw["Gebühren"] === "nein" ? 0 : Number(masterRaw["Gebühren"].match(/[\d\.]+/)[0].replace(".", "")),
       semester: masterRaw["Regelstudienzeit "] + "" || "4",
+      applicationDeadlines: masterRaw.Bewerbungsfrist.replace(/\[|\]|\s|”|“/g, "")
+        .split(",")
+        .map(d => {
+          const date = new Date(Date.parse(d));
+          const month = date.getMonth();
+          return {
+            date,
+            international: false,
+            type: month < 5 ? "summer" : "winter",
+          };
+        }),
     },
     internationality: {
       mainLanguages: masterRaw["Hauptunterrichtssprache"].split(", ").map(d => {
@@ -123,6 +149,6 @@ schools.forEach(school => {
 });
 
 _.sortBy(masters, m => m.university).forEach((m, i) => {
-  const filename = `${slugify(m.university)}-${slugify(m.name)}.json`;
+  const filename = `${slugify(m.university.name)}-${slugify(m.name)}.json`;
   fs.writeFileSync(`masters/${filename}`, JSON.stringify(m));
 });
