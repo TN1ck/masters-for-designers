@@ -49,11 +49,13 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
         return [d, getOffset(nextDate), nextDate];
       });
       const paired = pairs(groupBy(masterWithDates, d => d[1]));
-      return paired.map(([key, list]) => [
-        Number(key),
-        MONTH_NAME_MAPPING[list[0][2].getUTCMonth()],
-        list.map(d => d[0]),
-      ]);
+      return paired.map(([key, list]) => {
+        return [
+          Number(key),
+          MONTH_NAME_MAPPING[list[0][2].getUTCMonth()],
+          sortBy(list, ([master, offset, nextDate]) => nextDate.getUTCDate()).map(d => d[0]),
+        ];
+      });
     },
   };
 
