@@ -104,7 +104,7 @@ const FilterButton = styled.button`
   transition: background-color 100ms ease-out;
   border-radius: 20px;
   border: 1px solid black;
-  padding: 10px 20px;
+  padding: 5px 15px;
 
   &:focus {
     outline: none;
@@ -393,7 +393,7 @@ class Masters extends React.Component {
         >
           {name}{" "}
           {!active && (
-            <span style={{position: "absolute", right: 45, top: 10, transform: "translate(100%)"}}>
+            <span style={{position: "absolute", right: 45, top: 4, transform: "translate(100%)"}}>
               {isEmpty ? `(${count})` : `(+${count})`}
             </span>
           )}
