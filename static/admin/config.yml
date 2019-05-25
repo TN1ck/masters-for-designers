@@ -10,6 +10,7 @@ collections:
     label: "Pages"
     files:
       - label: "Glossar"
+        name: glossary
         file: "src/data/glossary/glossary.json"
         fields:
           - label: Titel

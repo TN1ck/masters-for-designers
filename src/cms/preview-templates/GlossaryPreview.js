@@ -1,10 +1,12 @@
 import React from "react";
-import {Glossary} from "../../pages/glossary";
+import {GlossaryInner} from "../../components/glossary";
 
 const GlossaryPreview = ({entry}) => {
   const json = entry.toJS();
-  console.log(json);
-  return <div>{"test"}</div>;
+  const glossary = json.data.items;
+  const title = json.data.title;
+  const content = json.data.content;
+  return <GlossaryInner glossary={glossary} title={title} content={content} />;
 };
 
 export default GlossaryPreview;
