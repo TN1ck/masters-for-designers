@@ -15,6 +15,10 @@ import {sortAndGroupMasters, SORT_NAME_MAPPING} from "./sortAndGroupMasters";
 import THEME from "../../theme";
 import {slugify} from "../../utils/slugify";
 
+// need to be changed when style changes
+const MAIN_HEADER_HEIGHT = 43;
+const FILTER_HEADER_HEIGHT = 43;
+
 export const mastersQuery = graphql`
   fragment Masters on MastersJsonConnection {
     edges {
@@ -184,7 +188,7 @@ const FilterHeader = styled.div`
   background: ${THEME.colors.blue};
   z-index: 10;
   position: sticky;
-  top: 40px;
+  top: ${MAIN_HEADER_HEIGHT}px;
 `;
 
 const FilterHeaderInner = styled.div`
@@ -311,9 +315,15 @@ class Masters extends React.Component {
     });
   };
   setSort = sort => {
-    this.setState({
-      sort,
-    });
+    if (sort !== this.state.sort) {
+      this.setState({
+        sort,
+      });
+      const position = document.getElementById("masters-main");
+      const offset = FILTER_HEADER_HEIGHT + MAIN_HEADER_HEIGHT + 70; // 70 is a margin
+      const top = position.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({behavior: "auto", left: 0, top});
+    }
   };
   toggleMaster = id => {
     if (this.state.masterId === id) {
@@ -422,7 +432,7 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
-        <FilterHeader>
+        <FilterHeader id="filter-header">
           <Container>
             <FilterHeaderInner>
               <FilterButtonSection>
