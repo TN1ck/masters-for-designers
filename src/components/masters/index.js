@@ -230,8 +230,8 @@ const SortOption = styled.div`
 
 const GroupHeader = styled.h3`
   color: ${THEME.colors.blue};
-  top: 83px;
-  position: sticky;
+  /* top: 83px; */
+  /* position: sticky; */
   margin: 0;
   margin-top: 70px;
   background: white;
