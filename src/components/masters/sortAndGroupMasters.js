@@ -28,9 +28,9 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
   const groupers = {
     alphabet: masters =>
       pairs(groupBy(masters, d => d.name[0])).map(([key, list]) => [key, key, sortBy(list, d => d.name)]),
-    university: masters => pairs(groupBy(masters, d => d.university)).map(([key, list]) => [key, key, list]),
+    university: masters => pairs(groupBy(masters, d => d.universityName)).map(([key, list]) => [key, key, list]),
     city: masters =>
-      pairs(groupBy(masters, d => universityMap[d.university].city)).map(([key, list]) => [key, key, list]),
+      pairs(groupBy(masters, d => universityMap[d.universityName].city)).map(([key, list]) => [key, key, list]),
     deadline: masters => {
       const now = new Date();
       const getOffset = date => {
@@ -38,7 +38,7 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
         return monthOffset < 0 ? monthOffset + 12 : monthOffset;
       };
       const masterWithDates = masters.map(d => {
-        const sorted = d.applicationDeadlines
+        const sorted = d.timeAndMoney.applicationDeadlines
           .map(d => {
             return [getOffset(new Date(d.date)), d];
           })

@@ -124,12 +124,12 @@ const FilterText = styled.div`
   &,
   &:visited,
   &:focus {
-    color: white;
+    color: black;
   }
 
   &:hover {
     cursor: pointer;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
   }
 
   &:after {
@@ -139,7 +139,7 @@ const FilterText = styled.div`
     right: -20px;
     top: 9px;
     border-right: 6px solid transparent;
-    border-top: 6px solid white;
+    border-top: 6px solid black;
     border-bottom: 6px solid transparent;
     border-left: 6px solid transparent;
     transform: rotate(-90deg);
@@ -164,7 +164,7 @@ const SortSection = styled.div`
 
   &:hover {
     ${FilterText} {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid black;
     }
   }
 `;
@@ -208,13 +208,13 @@ const FilterSectionButtons = styled.div`
 const SortOptions = styled.div`
   position: absolute;
   width: 180px;
-  border: 1px solid black;
-  top: 22px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  top: 33px;
   z-index: 99;
   background: ${THEME.colors.blue};
 `;
 const SortOption = styled.div`
-  padding: 15px;
+  padding: 8px 15px;
   color: ${p => (p.active ? "white" : "black")};
 
   &:hover {
@@ -425,7 +425,7 @@ class Masters extends React.Component {
                 </FilterText>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
-                <SortText>{"Sortieren: "}</SortText>
+                {/* <SortText>{"Sortieren: "}</SortText> */}
                 <FilterText active={true} style={{marginRight: 20}}>
                   {SORT_NAME_MAPPING[this.state.sort]}
                 </FilterText>

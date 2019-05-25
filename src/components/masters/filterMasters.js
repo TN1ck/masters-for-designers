@@ -211,7 +211,7 @@ export const FILTERS = {
 
 export function filterMasters(masters, filters, universityMap) {
   const filteredMasters = masters.filter(m => {
-    const university = universityMap[m.university];
+    const university = universityMap[m.universityName];
     const universityType = empty(filters.universityType) || filters.universityType.includes(university.type);
 
     const masterType = empty(filters.masterType) || filters.masterType.includes(m.direction.masterType);
@@ -232,7 +232,8 @@ export function filterMasters(masters, filters, universityMap) {
       empty(filters.allowedForms) || filters.allowedForms.some(d => m.timeAndMoney.allowedForms.includes(d));
 
     const semesterType =
-      empty(filters.semesterType) || filters.semesterType.some(d => m.applicationDeadlines.some(dd => dd.type === d));
+      empty(filters.semesterType) ||
+      filters.semesterType.some(d => m.timeAndMoney.applicationDeadlines.some(dd => dd.type === d));
 
     const english = empty(filters.internationalityEnglish) || m.internationality.mainLanguages.includes("english");
     const semesterAbroad = empty(filters.internationalitySemesterAbroad) || m.internationality.semesterAbroad !== "no";
