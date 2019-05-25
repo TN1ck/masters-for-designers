@@ -59,7 +59,7 @@ class Master extends React.Component {
       <div>
         <MasterContainer id={master.id} onClick={this.props.onClick}>
           <MasterTitle>{master.name}</MasterTitle>
-          <MasterUniversity>{master.university.name}</MasterUniversity>
+          <MasterUniversity>{master.universityName}</MasterUniversity>
           <MasterCity>{university.city}</MasterCity>
         </MasterContainer>
         {this.props.active && <MasterDetail master={master} university={university} />}

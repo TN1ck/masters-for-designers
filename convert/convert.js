@@ -30,8 +30,8 @@ const mastersRaw = JSON.parse(fs.readFileSync("excel.json", "utf8"));
 const masters = mastersRaw.masters.map(masterRaw => {
   const transformed = {
     name: masterRaw.Studiengang,
-    university: {
-      name: masterRaw.Name,
+    universityName: masterRaw.Name,
+    universityDetails: {
       otherUniversity: masterRaw["Hochschulübergreifend"],
       department: masterRaw["Fachbereich"],
       direction: {
@@ -149,6 +149,6 @@ schools.forEach(school => {
 });
 
 _.sortBy(masters, m => m.university).forEach((m, i) => {
-  const filename = `${slugify(m.university.name)}-${slugify(m.name)}.json`;
+  const filename = `${slugify(m.universityName)}-${slugify(m.name)}.json`;
   fs.writeFileSync(`masters/${filename}`, JSON.stringify(m));
 });

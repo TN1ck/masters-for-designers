@@ -20,8 +20,8 @@ export const mastersQuery = graphql`
     edges {
       node {
         name
-        university {
-          name
+        universityName
+        universityDetails {
           department
           otherUniversity
           direction {
@@ -86,7 +86,7 @@ export const enhanceUniversities = (universities, masters) => {
   }
 
   for (const master of masters) {
-    const university = universityMap[master.university.name];
+    const university = universityMap[master.universityName];
     university.masters.push(master);
   }
   return universityMap;
@@ -349,7 +349,7 @@ class Masters extends React.Component {
     const masters = this.props.data.masters.edges
       .map(n => n.node)
       .map(m => {
-        const id = `master-${slugify(m.university.name)}-${slugify(m.name)}`;
+        const id = `master-${slugify(m.universityName)}-${slugify(m.name)}`;
         m.id = id;
         return m;
       });
@@ -371,7 +371,7 @@ class Masters extends React.Component {
       let count = 0;
       if (isEmpty || !active) {
         count = isEmpty
-          ? filteredMasters.filter(m => filter(m, universityMap[m.university.name])).length
+          ? filteredMasters.filter(m => filter(m, universityMap[m.universityName])).length
           : filterMasters(masters, filtersWithCurrent, universityMap).length - filteredMasters.length;
       }
 
@@ -496,7 +496,7 @@ class Masters extends React.Component {
               <React.Fragment key={group}>
                 <GroupHeader>{name}</GroupHeader>
                 {masters.map((master, i) => {
-                  const university = universityMap[master.university.name];
+                  const university = universityMap[master.universityName];
                   const active = master.id === this.state.masterId;
                   return (
                     <Master

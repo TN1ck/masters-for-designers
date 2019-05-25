@@ -34,20 +34,20 @@ collections:
     extension: json
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{university}} - {{name}}"
+    summary: "{{universityName}} - {{name}}"
     fields:
       - {label: Studiengang, name: name, widget: string}
       - label: "Hochschule"
-        name: "university"
+        name: "universityName"
+        widget: "relation"
+        collection: "universities"
+        searchFields: ["name", "city"]
+        valueField: "name"
+        displayFields: ["name", "city"]
+      - label: "Hochschule Details"
+        name: "universityDetails"
         widget: object
         fields:
-        - label: "Hochschule"
-          name: "name"
-          widget: "relation"
-          collection: "universities"
-          searchFields: ["name", "city"]
-          valueField: "name"
-          displayFields: ["name", "city"]
         - label: "Hochschulübergreifend"
           name: otherUniversity
           widget: text

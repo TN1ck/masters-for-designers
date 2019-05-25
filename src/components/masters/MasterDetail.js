@@ -192,7 +192,7 @@ const MasterDetail = ({master, university}) => {
   return (
     <MasterDetailContainer>
       <MasterDetailTitle>
-        <MasterDetailDegree>{masterTranslation[master.university.direction.degree]}</MasterDetailDegree>
+        <MasterDetailDegree>{masterTranslation[master.universityDetails.direction.degree]}</MasterDetailDegree>
         {master.name}
       </MasterDetailTitle>
       <MasterDetailUniversity>
@@ -213,8 +213,8 @@ const MasterDetail = ({master, university}) => {
           headline={"Hochschule"}
           listItems={[
             ["Hochschultyp", universityTypeTranslation[university.type]],
-            ["Fachbereich", master.university.department],
-            ["Hochschulübergreifend", master.university.otherUniversity],
+            ["Fachbereich", master.universityDetails.department],
+            ["Hochschulübergreifend", master.universityDetails.otherUniversity],
           ]}
         >
           <MasterDetailSectionTitle>{"Andere Masterstudiengänge"}</MasterDetailSectionTitle>
@@ -239,8 +239,11 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Ausrichtung"}
           listItems={[
-            ["Mastertyp", masterTypeTranslation[master.university.direction.masterType]],
-            ["Ausrichtung", master.university.direction.direction.map(d => masterDirectionTranslation[d]).join(" & ")],
+            ["Mastertyp", masterTypeTranslation[master.universityDetails.direction.masterType]],
+            [
+              "Ausrichtung",
+              master.universityDetails.direction.direction.map(d => masterDirectionTranslation[d]).join(" & "),
+            ],
             ["Inhaltlicher Fokus", topicAndFocusTranslation[master.topicAndFocus.topicFocus]],
             [
               "Disziplinäre Zusammensetzung",
