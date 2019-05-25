@@ -3,6 +3,7 @@ import React from "react";
 import {StyleSheetManager} from "styled-components";
 
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
+import GlossaryPreview from "./preview-templates/GlossaryPreview";
 import MasterPreview from "./preview-templates/MasterPreview";
 import {GlobalStyle} from "../components/Layout";
 import Fonts from "../components/Fonts";
@@ -45,6 +46,16 @@ CMS.registerPreviewTemplate("master", props => (
       <GlobalStyle />
       <Fonts />
       <MasterPreview {...props} />
+    </div>
+  </CSSInjector>
+));
+
+CMS.registerPreviewTemplate("glossary", props => (
+  <CSSInjector>
+    <div>
+      <GlobalStyle />
+      <Fonts />
+      <GlossaryPreview {...props} />
     </div>
   </CSSInjector>
 ));
