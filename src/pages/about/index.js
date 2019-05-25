@@ -2,54 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../../components/Layout";
 import {StaticQuery, graphql, Link} from "gatsby";
-import {enhanceUniversities} from "../../components/masters";
 import Container from "../../components/Container";
 import {Masthead} from "../../components/Masthead";
 import {Headline} from "../../components/Headline";
 import {SubHeadline} from "../../components/SubHeadline";
 import Navbar from "../../components/Navbar";
-import THEME from "../../theme";
+import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from "../../components/InformationPage";
+import {InstagramLink, FacebookLink} from "../../components/Social";
 
-const AboutContainer = styled.div`
-  background: ${THEME.colors.orange};
-  padding-bottom: 80px;
-  word-break: break-word;
-
-  & p {
-    padding: 0;
-  }
-
-  h3 {
-    margin-top: 40px;
-    margin-bottom: 0;
-    font-size: 30px;
-    letter-spacing: 0.02em;
-  }
-
-  h5 {
-    margin-top: 40px;
-    margin-bottom: 0;
-  }
-`;
-
-const Row = styled.div`
+const SocialIcons = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
-`;
-
-const ColumnHalf = styled.div`
-  width: 50%;
-  padding: 0 20px;
-
-  @media (max-width: 500px) {
-    width: 100%;
-  }
-`;
-
-const ColumnFull = styled.div`
-  width: 100%;
-  padding: 0 20px;
 `;
 
 const About = ({data}) => {
@@ -74,7 +36,7 @@ const About = ({data}) => {
           </SubHeadline>
         </Container>
       </Masthead>
-      <AboutContainer>
+      <InformationPageContainer>
         <Container>
           <Row>
             <ColumnHalf>
@@ -101,10 +63,15 @@ const About = ({data}) => {
                 Eindrücke aus dem Studienalltag der Masterstudierenden, aktuelle Informationen und Updates zu neuen
                 Features findest du hier:
               </p>
+              <SocialIcons>
+                <InstagramLink />
+                <FacebookLink />
+              </SocialIcons>
             </ColumnHalf>
           </Row>
           <Row>
             <ColumnFull>
+              <h5>Quellen</h5>
               <p>
                 Alle Informationen zu den einzelnen Masterstudiengängen sind mit bestem Wissen und Gewissen recherchiert
                 und basieren auf der Analyse der Prüfungs-und Studienordnungen sowie der Selbstdarstellung der
@@ -113,7 +80,7 @@ const About = ({data}) => {
             </ColumnFull>
           </Row>
         </Container>
-      </AboutContainer>
+      </InformationPageContainer>
     </Layout>
   );
 };

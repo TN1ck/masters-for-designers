@@ -8,11 +8,18 @@ const SocialLink = styled.a`
   display: block;
   padding: 0 5px;
   line-height: 0;
+  &,
+  &:hover,
+  &:focus,
+  &:visited {
+    text-decoration: none;
+    border: none;
+  }
 `;
 
 export const FacebookLink = () => {
   return (
-    <SocialLink href={FACEBOOK_LINK}>
+    <SocialLink target="_blank" rel="nofollow" href={FACEBOOK_LINK}>
       <img src={facebookIcon} alt="Facebook Icon" />
     </SocialLink>
   );
@@ -20,7 +27,7 @@ export const FacebookLink = () => {
 
 export const InstagramLink = () => {
   return (
-    <SocialLink href={INSTAGRAM_LINK}>
+    <SocialLink target="_blank" rel="nofollow" href={INSTAGRAM_LINK}>
       <img src={instagramIcon} alt="Instagram Icon" />
     </SocialLink>
   );

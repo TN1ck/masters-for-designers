@@ -6,48 +6,7 @@ import Container from "../components/Container";
 import {Masthead} from "../components/Masthead";
 import {Headline} from "../components/Headline";
 import Navbar from "../components/Navbar";
-
-const AboutContainer = styled.div`
-  background: white;
-  padding-bottom: 80px;
-  word-break: break-word;
-
-  & p {
-    padding: 0;
-  }
-
-  h3 {
-    margin-top: 40px;
-    margin-bottom: 0;
-    font-size: 30px;
-    letter-spacing: 0.02em;
-  }
-
-  h5 {
-    margin-top: 40px;
-    margin-bottom: 0;
-  }
-`;
-
-const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
-`;
-
-const ColumnHalf = styled.div`
-  width: 50%;
-  padding: 0 20px;
-
-  @media (max-width: 500px) {
-    width: 100%;
-  }
-`;
-
-const ColumnFull = styled.div`
-  width: 100%;
-  padding: 0 20px;
-`;
+import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from "../components/InformationPage";
 
 const Privacy = ({data}) => {
   const masters = data.masters.edges.map(n => n.node);
@@ -59,7 +18,7 @@ const Privacy = ({data}) => {
           <Headline>{"Datenschutz"}</Headline>
         </Container>
       </Masthead>
-      <AboutContainer>
+      <InformationPageContainer background="white">
         <Container>
           <Row>
             <ColumnHalf>
@@ -234,7 +193,7 @@ const Privacy = ({data}) => {
             </ColumnHalf>
           </Row>
         </Container>
-      </AboutContainer>
+      </InformationPageContainer>
     </Layout>
   );
 };
