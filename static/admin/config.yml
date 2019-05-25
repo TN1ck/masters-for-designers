@@ -55,31 +55,31 @@ collections:
         - label: "Fachbereich"
           name: department
           widget: text
-        - label: Ausrichtung
-          name: direction
-          widget: object
-          fields:
-            - label: Abschluss
-              name: degree
-              widget: select
-              options:
-                - {label: "Master of Arts (MA)", value: ma}
-                - {label: "Master of Fine Arts (MFA)", value: mfa}
-                - {label: "Master of Science (MSc)", value: msc}
-            - label: Ausrichtung
-              name: direction
-              widget: select
-              multiple: true
-              options:
-                - {label: Praktisch, value: practical}
-                - {label: Theoretisch, value: theoretical}
-            - label: Mastertyp
-              name: masterType
-              widget: select
-              options:
-                - {label: Konsekutiv, value: consecutive}
-                - {label: "Nicht Konsekutiv", value: notConsecutive}
-                - {label: "Weiterbildend", value: studyingFurther}
+      - label: Ausrichtung
+        name: direction
+        widget: object
+        fields:
+          - label: Abschluss
+            name: degree
+            widget: select
+            options:
+              - {label: "Master of Arts (MA)", value: ma}
+              - {label: "Master of Fine Arts (MFA)", value: mfa}
+              - {label: "Master of Science (MSc)", value: msc}
+          - label: Ausrichtung
+            name: direction
+            widget: select
+            multiple: true
+            options:
+              - {label: Praktisch, value: practical}
+              - {label: Theoretisch, value: theoretical}
+          - label: Mastertyp
+            name: masterType
+            widget: select
+            options:
+              - {label: Konsekutiv, value: consecutive}
+              - {label: "Nicht Konsekutiv", value: notConsecutive}
+              - {label: "Weiterbildend", value: studyingFurther}
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
         widget: object

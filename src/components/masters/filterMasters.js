@@ -26,19 +26,19 @@ export const FILTERS = {
       type: "masterType",
       value: "consecutive",
       name: "Konsektutiv",
-      filter: m => m.universityDetails.direction.masterType === "consecutive",
+      filter: m => m.direction.masterType === "consecutive",
     },
     {
       type: "masterType",
       value: "notConsecutive",
       name: "Nicht konsekutiv",
-      filter: m => m.universityDetails.direction.masterType === "notConsecutive",
+      filter: m => m.direction.masterType === "notConsecutive",
     },
     {
       type: "masterType",
       value: "studyingFurther",
       name: "Weiterbildend",
-      filter: m => m.universityDetails.direction.masterType === "studyingFurther",
+      filter: m => m.direction.masterType === "studyingFurther",
     },
   ],
   direction: [
@@ -46,13 +46,13 @@ export const FILTERS = {
       type: "direction",
       value: "practical",
       name: "Praktisch",
-      filter: m => m.universityDetails.direction.direction.includes("practical"),
+      filter: m => m.direction.direction.includes("practical"),
     },
     {
       type: "direction",
       value: "theoretical",
       name: "Theoretisch",
-      filter: m => m.universityDetails.direction.direction.includes("theoretical"),
+      filter: m => m.direction.direction.includes("theoretical"),
     },
   ],
   topicFocus: [

@@ -192,7 +192,7 @@ const MasterDetail = ({master, university}) => {
   return (
     <MasterDetailContainer>
       <MasterDetailTitle>
-        <MasterDetailDegree>{masterTranslation[master.universityDetails.direction.degree]}</MasterDetailDegree>
+        <MasterDetailDegree>{masterTranslation[master.direction.degree]}</MasterDetailDegree>
         {master.name}
       </MasterDetailTitle>
       <MasterDetailUniversity>
@@ -239,11 +239,8 @@ const MasterDetail = ({master, university}) => {
         <MasterDetailSection
           headline={"Ausrichtung"}
           listItems={[
-            ["Mastertyp", masterTypeTranslation[master.universityDetails.direction.masterType]],
-            [
-              "Ausrichtung",
-              master.universityDetails.direction.direction.map(d => masterDirectionTranslation[d]).join(" & "),
-            ],
+            ["Mastertyp", masterTypeTranslation[master.direction.masterType]],
+            ["Ausrichtung", master.direction.direction.map(d => masterDirectionTranslation[d]).join(" & ")],
             ["Inhaltlicher Fokus", topicAndFocusTranslation[master.topicAndFocus.topicFocus]],
             [
               "Disziplinäre Zusammensetzung",

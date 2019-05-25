@@ -34,17 +34,17 @@ const masters = mastersRaw.masters.map(masterRaw => {
     universityDetails: {
       otherUniversity: masterRaw["Hochschulübergreifend"],
       department: masterRaw["Fachbereich"],
-      direction: {
-        degree: masterRaw.Abschluss.toLowerCase(),
-        direction: masterRaw.Ausrichtung.replace(/ /g, "")
-          .split(",")
-          .map(d => (d === "praktisch" ? "practical" : "theoretical")),
-        masterType: {
-          konsekutiv: "consecutive",
-          "nicht-konsekutiv": "notConsecutive",
-          weiterbildend: "studyingFurther",
-        }[masterRaw.Mastertyp.toLowerCase()],
-      },
+    },
+    direction: {
+      degree: masterRaw.Abschluss.toLowerCase(),
+      direction: masterRaw.Ausrichtung.replace(/ /g, "")
+        .split(",")
+        .map(d => (d === "praktisch" ? "practical" : "theoretical")),
+      masterType: {
+        konsekutiv: "consecutive",
+        "nicht-konsekutiv": "notConsecutive",
+        weiterbildend: "studyingFurther",
+      }[masterRaw.Mastertyp.toLowerCase()],
     },
     topicAndFocus: {
       topicFocus: {

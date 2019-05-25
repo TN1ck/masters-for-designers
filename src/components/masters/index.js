@@ -24,11 +24,11 @@ export const mastersQuery = graphql`
         universityDetails {
           department
           otherUniversity
-          direction {
-            degree
-            masterType
-            direction
-          }
+        }
+        direction {
+          degree
+          masterType
+          direction
         }
         internationality {
           semesterAbroad
