@@ -42,8 +42,8 @@ const Footer = class extends React.Component {
           <FoooterRightSide>
             <FooterLink to="/about">About</FooterLink>
             <FooterLink to="/glossary">Glossar</FooterLink>
-            <FooterLink to="/about#impressum">Impressum</FooterLink>
-            <FooterLink to="/about#privacy">Datenschutz</FooterLink>
+            <FooterLink to="/imprint">Impressum</FooterLink>
+            <FooterLink to="/privacy">Datenschutz</FooterLink>
             <InstagramLink />
             <FacebookLink />
           </FoooterRightSide>

@@ -85,7 +85,7 @@ const ShowMobile = styled.div`
 
 const Navbar = class extends React.Component {
   render() {
-    const {universityCount, masterCount, background} = this.props;
+    const {masterCount, background} = this.props;
     return (
       <NavbarContainer background={background} role="navigation" aria-label="main-navigation">
         <Container>

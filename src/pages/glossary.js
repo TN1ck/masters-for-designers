@@ -223,10 +223,9 @@ class Glossar extends React.Component {
   render() {
     const data = this.props.data;
     const masters = data.masters.edges.map(n => n.node);
-    const universities = data.universities.edges.map(n => n.node);
     return (
       <Layout>
-        <Navbar background={THEME.colors.blue} universityCount={universities.length} masterCount={masters.length} />
+        <Navbar background={THEME.colors.blue} masterCount={masters.length} />
         <GlossarContainer>
           <Masthead background={THEME.colors.blue}>
             <Container>
@@ -276,9 +275,6 @@ export default () => (
       query GlossaryQuery {
         masters: allMastersJson {
           ...Masters
-        }
-        universities: allSchoolsJson {
-          ...Universities
         }
       }
     `}
