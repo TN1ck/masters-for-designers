@@ -386,7 +386,9 @@ class Masters extends React.Component {
             </FilterHeaderInner>
           </Container>
         </FilterHeader>
-        <Container id="masters-main">
+        {/* We give it a min-height of 100vh to make sure the footer is not looking broken when the
+        user filters a bit too much */}
+        <Container id="masters-main" style={{minHeight: "100vh"}}>
           {groupedAndSortedMasters.map(([group, name, masters]) => {
             return (
               <React.Fragment key={group}>
