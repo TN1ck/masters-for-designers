@@ -1,8 +1,10 @@
 import React from "react";
+import {navigate} from "gatsby";
 import styled, {css} from "styled-components";
 import MasterDetail from "./MasterDetail";
 import {masterTranslation} from "./translations";
 import iconClose from "../../img/close.svg";
+import THEME from "../../theme";
 
 const MasterTitle = styled.div`
   font-size: 24px;
@@ -38,11 +40,12 @@ const MasterDetailDegree = styled(MasterDetailSmall)`
   transition: opacity 0.3s;
 `;
 
-const MasterContainer = styled.div`
+const MasterContainer = styled.a`
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid black;
+  border-bottom: none !important;
   display: flex;
   position: relative;
 
@@ -63,6 +66,12 @@ const MasterContainer = styled.div`
     & ${MasterTitle} {
       width: 100%;
     }
+  }
+
+  /* transition: color 0.3s; */
+
+  &:visited {
+    color: ${p => (p.active ? "black" : THEME.colors.orange)};
   }
 
   &:hover {
@@ -99,6 +108,12 @@ const MasterClose = styled.button`
 `;
 
 class Master extends React.Component {
+  onClick = e => {
+    e.preventDefault();
+    const scrollPosition = window.scrollY;
+    navigate(`/#${this.props.master.id}`, {replace: true});
+    this.props.onClick();
+  };
   render() {
     const {master, university} = this.props;
     let title = master.name;
@@ -116,7 +131,7 @@ class Master extends React.Component {
     }
     return (
       <div>
-        <MasterContainer id={master.id} onClick={this.props.onClick}>
+        <MasterContainer id={master.id} onClick={this.onClick} href={`/#${master.id}`} active={this.props.active}>
           <MasterTitle bold={this.props.active}>
             <MasterDetailDegree show={this.props.active}>
               {masterTranslation[master.direction.degree]}

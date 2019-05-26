@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-weight: 400;
     line-height: 1.4;
-    // scroll-behavior: smooth;
   }
 
   * {
