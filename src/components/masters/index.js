@@ -297,7 +297,7 @@ class Masters extends React.Component {
         }
         setTimeout(() => {
           const position = element.getBoundingClientRect();
-          const top = position.top + window.scrollY - 120;
+          const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
           console.log("slowly scroll to", top);
           window.scrollTo({left: 0, top: top, behavior: "smooth"});
         });
@@ -323,7 +323,6 @@ class Masters extends React.Component {
     for (const key of Object.keys(this.state.filters)) {
       const filterGroup = this.state.filters[key];
       for (const activeFilter of filterGroup) {
-        console.log(filterGroup, FILTERS[key]);
         const filter = FILTERS[key].find(d => d.value === activeFilter);
         activeFilters.push(filter);
       }

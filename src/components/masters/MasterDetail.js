@@ -2,6 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
 import {Link} from "gatsby";
+import {
+  universityTypeTranslation,
+  masterTypeTranslation,
+  masterDirectionTranslation,
+  allowedFormsTranslation,
+  semesterTypeTranslation,
+  semesterAbroadTranslation,
+  mainLanguagesTranslation,
+  functionalCompositionTranslation,
+  masterTranslation,
+  topicAndFocusTranslation,
+} from "./translations";
 
 function formatDate(d) {
   const date = new Date(d);
@@ -15,82 +27,11 @@ function formatMoney(n) {
   return `${n} €`;
 }
 
-const allowedDisciplinesTagTranslation = {
-  digital: "Digitale Medien",
-  filmAndPhotograpy: "Film/Fotografie",
-  illustrations: "Illustrationen",
-  fashion: "Mode/Textil",
-  product: "Produkt/Industrie",
-  room: "Raum",
-  jewelry: "Schmuck",
-  visualCommunication: "Visuelle Kommunikation",
-};
-
-const masterTranslation = {
-  ma: "MA",
-  msc: "MSc",
-  mfa: "MFA",
-};
-
-const universityTypeTranslation = {
-  university: "Universität",
-  artCollege: "Kunsthochschule",
-  college: "Fachhochschule",
-};
-
-const functionalCompositionTranslation = {
-  disciplinary: "Disziplinär",
-  interdisciplinaryArt: "Interdisziplinär gestalterisch",
-  artAndNonArt: "Gestalterisch & nicht-gestalterisch",
-};
-
-const masterTypeTranslation = {
-  consecutive: "Konsekutiv",
-  notConsecutive: "Nicht Konsekutiv",
-  studyingFurther: "Weiterbildend",
-};
-
-const masterDirectionTranslation = {
-  practical: "Praktisch",
-  theoretical: "Theoretisch",
-};
-
-const mainLanguagesTranslation = {
-  german: "Deutsch",
-  english: "Englisch",
-};
-
-const topicAndFocusTranslation = {
-  fachspezifisch: "Fachspezifisch",
-  fachuebergreifend: "Fachübergreifend",
-  thematisch: "Thematisch",
-};
-
-const semesterTypeTranslation = {
-  summer: "Sommersemester",
-  winter: "Wintersemester",
-};
-
-const allowedFormsTranslation = {
-  fullTime: "Vollzeit",
-  partTime: "Teilzeit",
-  extraOccupational: "Berufsbegleitend",
-  remote: "Ferstudium",
-};
-
-const semesterAbroadTranslation = {
-  yes: "Ja",
-  no: "Nein",
-  choose: "Wahlweise",
-};
-
 const MasterDetailContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "master-title master-title"
-    ". master-university"
     "master-date master-links"
     "master-university-section master-direction-section"
     "master-money-section master-internationality-section";
@@ -101,8 +42,6 @@ const MasterDetailContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "master-title"
-      "master-university"
       "master-date"
       "master-links"
       "master-university-section"
@@ -112,25 +51,11 @@ const MasterDetailContainer = styled.div`
   }
 `;
 
-const MasterDetailSmall = styled.small`
-  display: block;
-  font-size: 12px;
-`;
 const MasterDetailHeadline = styled.h3`
   font-size: 24px;
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-`;
-const MasterDetailDegree = styled(MasterDetailSmall)`
-  text-transform: uppercase;
-  font-style: italic;
-`;
-const MasterDetailTitle = styled(MasterDetailHeadline)`
-  grid-area: master-title;
-`;
-const MasterDetailUniversity = styled(MasterDetailHeadline)`
-  grid-area: master-university;
 `;
 const MasterDetailDeadlines = styled(MasterDetailHeadline)`
   grid-area: master-date;
@@ -187,18 +112,10 @@ const MasterDetailSection = ({headline, listItems, children}) => {
   );
 };
 
-const MasterDetail = ({master, university}) => {
+const MasterDetail = ({master, university, close}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
   return (
     <MasterDetailContainer>
-      <MasterDetailTitle>
-        <MasterDetailDegree>{masterTranslation[master.direction.degree]}</MasterDetailDegree>
-        {master.name}
-      </MasterDetailTitle>
-      <MasterDetailUniversity>
-        <MasterDetailSmall>{university.city}</MasterDetailSmall>
-        {university.name}
-      </MasterDetailUniversity>
       <MasterDetailDeadlines>
         {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
       </MasterDetailDeadlines>

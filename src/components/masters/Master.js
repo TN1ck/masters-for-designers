@@ -1,11 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import MasterDetail from "./MasterDetail";
+import {masterTranslation} from "./translations";
+import iconClose from "../../img/close.svg";
 
 const MasterTitle = styled.div`
   font-size: 24px;
   width: 48%;
+  font-weight: ${p => (p.bold ? "bold" : "normal")};
   word-break: break-word;
+  position: relative;
 `;
 
 const MasterCity = styled.div`
@@ -13,9 +17,25 @@ const MasterCity = styled.div`
   width: 22%;
 `;
 
+const MasterDetailContainer = styled.div``;
+
 const MasterUniversity = styled.div`
   margin-left: 4%;
   width: 22%;
+`;
+
+const MasterDetailSmall = styled.small`
+  display: block;
+  font-size: 12px;
+`;
+
+const MasterDetailDegree = styled(MasterDetailSmall)`
+  top: -12px;
+  position: absolute;
+  text-transform: uppercase;
+  font-style: italic;
+  opacity: ${p => (p.show ? 1 : 0)};
+  transition: opacity 0.3s;
 `;
 
 const MasterContainer = styled.div`
@@ -24,6 +44,7 @@ const MasterContainer = styled.div`
   padding-bottom: 20px;
   border-top: 1px solid black;
   display: flex;
+  position: relative;
 
   @media (max-width: 550px) {
     flex-direction: column;
@@ -47,22 +68,70 @@ const MasterContainer = styled.div`
   &:hover {
     cursor: pointer;
     ${MasterTitle} {
-      font-style: italic;
+      font-weight: bold;
     }
+  }
+`;
+
+const MasterClose = styled.button`
+  border: none;
+  background: none;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  pointer-events: none;
+  ${p =>
+    p.show &&
+    css`
+      opacity: 1;
+      pointer-events: all;
+    `}
+  transition: opacity 0.3s;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
 `;
 
 class Master extends React.Component {
   render() {
     const {master, university} = this.props;
+    let title = master.name;
+    // When there is something in parentheses in the title, we always make a line-break
+    if (title.includes("(")) {
+      const [title1, title2] = title.split("(");
+      title = (
+        <React.Fragment>
+          {title1}
+          <br />
+          {"("}
+          {title2}
+        </React.Fragment>
+      );
+    }
     return (
       <div>
         <MasterContainer id={master.id} onClick={this.props.onClick}>
-          <MasterTitle>{master.name}</MasterTitle>
+          <MasterTitle bold={this.props.active}>
+            <MasterDetailDegree show={this.props.active}>
+              {masterTranslation[master.direction.degree]}
+            </MasterDetailDegree>
+            {title}
+          </MasterTitle>
           <MasterUniversity>{master.universityName}</MasterUniversity>
           <MasterCity>{university.city}</MasterCity>
+          <MasterClose show={this.props.active}>
+            <img src={iconClose} alt="close" />
+          </MasterClose>
         </MasterContainer>
-        {this.props.active && <MasterDetail master={master} university={university} />}
+        <MasterDetailContainer>
+          {this.props.active && <MasterDetail master={master} university={university} close={this.props.onClick} />}
+        </MasterDetailContainer>
       </div>
     );
   }

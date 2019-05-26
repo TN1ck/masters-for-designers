@@ -75,7 +75,7 @@ export const FILTERS = {
       filter: m => m.topicAndFocus.topicFocus === "thematisch",
     },
   ],
-  composition: [
+  functionalComposition: [
     {
       type: "functionalComposition",
       value: "disciplinary",
@@ -94,6 +94,8 @@ export const FILTERS = {
       name: "Gestalterisch & Nicht gestalterisch",
       filter: m => m.topicAndFocus.functionalComposition === "artAndNonArt",
     },
+  ],
+  allowedDisciplinesTag: [
     {
       type: "allowedDisciplinesTag",
       value: "digital",

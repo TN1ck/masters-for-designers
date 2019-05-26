@@ -9,32 +9,12 @@ import {empty} from "../../utils/empty";
 const FilterMain = styled.div`
   position: fixed;
   top: 43px;
-  padding-top: 10px;
   bottom: 0;
   left: 0;
   right: 0;
   background: ${THEME.colors.blue};
   z-index: 99;
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  background: none;
-  border: none;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  line-height: 1;
-
-  &:hover,
-  &:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-  }
+  overflow: scroll;
 `;
 
 const FilterButton = styled.button`
@@ -72,18 +52,39 @@ const FilterButton = styled.button`
   }
 `;
 
-const FilterHeader = styled.div`
-  position: relative;
-  display: flex;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid black;
+const CloseButton = styled.button`
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  line-height: 1;
+  outline: none;
 `;
 
-const FilterSection = styled.div`
+const FilterHeader = styled.div`
+  top: 0;
+  background: ${THEME.colors.blue};
+  position: sticky;
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  z-index: 100;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    ${CloseButton} {
+      outline: none;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
 `;
 
 const FilterSectionTitle = styled.div`
@@ -94,6 +95,20 @@ const FilterSectionButtons = styled.div`
   & ${FilterButton} {
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+`;
+
+const FilterSection = styled.div`
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    ${FilterSectionTitle} {
+      padding-bottom: 10px;
+      flex-basis: 0;
+    }
   }
 `;
 
@@ -153,21 +168,13 @@ export const FilterButtonMore = ({
 export default class FilterOverlay extends React.Component {
   render() {
     const {filters, show, filteredMasters, universityMap, masters, close, toggleFilter} = this.props;
-    const numberOfFilters = [].concat(...Object.values(filters)).length;
 
-    // const activeFilters = [];
-    // for (const key of Object.keys(filters)) {
-    //   const filterGroup = filters[key];
-    //   for (const activeFilter of filterGroup) {
-    //     console.log(filterGroup, FILTERS[key]);
-    //     const filter = FILTERS[key].find(d => d.value === activeFilter);
-    //     activeFilters.push(filter);
-    //   }
-    // }
+    const numberOfFilters = [].concat(...Object.values(filters)).length;
 
     const createButton = ({type, value, name, filter}) => {
       return (
         <FilterButtonMore
+          key={value}
           type={type}
           value={value}
           name={name}
@@ -186,10 +193,10 @@ export default class FilterOverlay extends React.Component {
     return (
       <FilterMain id="filter-main" style={{display: show ? "block" : "none"}}>
         <Container>
-          <FilterHeader>
+          <FilterHeader onClick={close}>
             {`Filter (${numberOfFilters})`}
             {/* <FilterHeaderActive>{activeFilters.map(createButton)}</FilterHeaderActive> */}
-            <CloseButton onClick={close}>
+            <CloseButton>
               <img src={closeIcon} alt="close filters" />
             </CloseButton>
           </FilterHeader>
@@ -211,8 +218,13 @@ export default class FilterOverlay extends React.Component {
           </FilterSection>
           <FilterSection>
             <FilterSectionTitle>{"Disziplinäre Zusammensetzung"}</FilterSectionTitle>
-            <FilterSectionButtons>{FILTERS.composition.map(createButton)}</FilterSectionButtons>
+            <FilterSectionButtons>{FILTERS.functionalComposition.map(createButton)}</FilterSectionButtons>
           </FilterSection>
+          <FilterSection>
+            <FilterSectionTitle>{"Zugelassenene Disziplinen"}</FilterSectionTitle>
+            <FilterSectionButtons>{FILTERS.allowedDisciplinesTag.map(createButton)}</FilterSectionButtons>
+          </FilterSection>
+
           <FilterSection>
             <FilterSectionTitle>{"Studienform"}</FilterSectionTitle>
             <FilterSectionButtons>{FILTERS.allowedForms.map(createButton)}</FilterSectionButtons>
