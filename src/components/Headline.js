@@ -8,4 +8,8 @@ export const Headline = styled.h1`
   text-transform: uppercase;
   letter-spacing: 3.2px;
   margin: 0;
+
+  @media (max-width: 800px) {
+    font-size: 46px;
+  }
 `;

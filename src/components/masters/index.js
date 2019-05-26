@@ -9,11 +9,11 @@ import {graphql} from "gatsby";
 import {Masthead} from "../Masthead";
 import {Headline} from "../Headline";
 import {SubHeadline} from "../SubHeadline";
-import {FILTERS, filterMasters} from "./filterMasters";
-import {empty} from "../../utils/empty";
 import {sortAndGroupMasters, SORT_NAME_MAPPING} from "./sortAndGroupMasters";
+import {FILTERS, filterMasters} from "./filterMasters";
 import THEME from "../../theme";
 import {slugify} from "../../utils/slugify";
+import FilterOverlay from "./FilterOverlay";
 
 // need to be changed when style changes
 const MAIN_HEADER_HEIGHT = 43;
@@ -96,37 +96,6 @@ export const enhanceUniversities = (universities, masters) => {
   return universityMap;
 };
 
-const FilterMain = styled.div`
-  background: ${THEME.colors.blue};
-`;
-
-const FilterButton = styled.button`
-  position: relative;
-  font-weight: 500;
-  font-size: 12px;
-  background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
-  transition: background-color 100ms ease-out;
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 5px 15px;
-
-  &:focus {
-    outline: none;
-    background-color: ${p => (p.active ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.3)")};
-  }
-
-  &:disabled {
-    opacity: 0.3;
-    cursor: default;
-    pointer-events: none;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: ${p => (p.active ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.3)")};
-  }
-`;
-
 const FilterText = styled.div`
   display: block;
   position: relative;
@@ -142,7 +111,7 @@ const FilterText = styled.div`
     border-bottom: 1px solid black;
   }
 
-  &:after {
+  /* &:after {
     transition: transform 200ms ease-out;
     position: absolute;
     content: "";
@@ -160,7 +129,7 @@ const FilterText = styled.div`
       css`
         transform: rotate(0);
       `}
-  }
+  } */
 `;
 
 const FilterButtonSection = styled.div`
@@ -178,12 +147,6 @@ const SortSection = styled.div`
     }
   }
 `;
-
-const SortText = styled.div`
-  color: black;
-  padding-right: 10px;
-`;
-
 const FilterHeader = styled.div`
   background: ${THEME.colors.blue};
   z-index: 10;
@@ -198,25 +161,9 @@ const FilterHeaderInner = styled.div`
   padding-top: 10px;
 `;
 
-const FilterSection = styled.div`
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`;
-
-const FilterSectionTitle = styled.div`
-  flex-basis: 170px;
-  flex-shrink: 0;
-`;
-const FilterSectionButtons = styled.div`
-  & ${FilterButton} {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-`;
-
 const SortOptions = styled.div`
   position: absolute;
+  right: 0;
   width: 180px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   top: 33px;
@@ -280,29 +227,22 @@ class Masters extends React.Component {
         },
       });
     }
+    this.scrollToTop();
   };
-  createToggleFilter = (type, value) => {
-    return e => {
-      e.preventDefault();
-      this.toggleFilter(type, value);
-    };
+  componentWillUnmount() {
+    this.hideOverlay();
+  }
+  showOverlay = () => {
+    this.setState({
+      show: true,
+    });
+    document.body.style.overflow = "hidden";
   };
-  toggleShow = () => {
-    const main = document.getElementById("masters-main");
-    const position = main.getBoundingClientRect();
-    const scroll = window.scrollY;
-    if (position.top < 60) {
-      const filterMain = document.getElementById("filter-main");
-      const top = filterMain.getBoundingClientRect().top + scroll;
-      window.scrollTo({left: 0, top: top - 80, behavior: "smooth"});
-      this.setState({
-        show: true,
-      });
-    } else {
-      this.setState({
-        show: !this.state.show,
-      });
-    }
+  hideOverlay = () => {
+    this.setState({
+      show: false,
+    });
+    document.body.style.overflow = "auto";
   };
   sortShow = () => {
     this.setState({
@@ -314,15 +254,18 @@ class Masters extends React.Component {
       showSort: false,
     });
   };
+  scrollToTop() {
+    const position = document.getElementById("masters-main");
+    const offset = FILTER_HEADER_HEIGHT + MAIN_HEADER_HEIGHT + 70; // 70 is a margin
+    const top = position.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({behavior: "auto", left: 0, top});
+  }
   setSort = sort => {
     if (sort !== this.state.sort) {
       this.setState({
         sort,
       });
-      const position = document.getElementById("masters-main");
-      const offset = FILTER_HEADER_HEIGHT + MAIN_HEADER_HEIGHT + 70; // 70 is a margin
-      const top = position.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({behavior: "auto", left: 0, top});
+      this.scrollToTop();
     }
   };
   toggleMaster = id => {
@@ -373,45 +316,18 @@ class Masters extends React.Component {
     const universityMap = enhanceUniversities(universities, masters);
 
     const filteredMasters = filterMasters(masters, this.state.filters, universityMap);
-
-    const createButton = ({type, value, name, filter}) => {
-      const active = this.state.filters[type].includes(value);
-      const isEmpty = empty(this.state.filters[type]);
-      // when it is not empty, we can find out how mich will be added when clicking the button
-      // for this we clone the current filters and add ourselves to it
-      const filtersWithCurrent = {
-        ...this.state.filters,
-        [type]: [value].concat(this.state.filters[type]),
-      };
-
-      let count = 0;
-      if (isEmpty || !active) {
-        count = isEmpty
-          ? filteredMasters.filter(m => filter(m, universityMap[m.universityName])).length
-          : filterMasters(masters, filtersWithCurrent, universityMap).length - filteredMasters.length;
-      }
-
-      const disable = count === 0 && !active;
-
-      return (
-        <FilterButton
-          disabled={disable}
-          style={{paddingRight: 50}}
-          active={active}
-          key={value}
-          onClick={disable ? () => {} : this.createToggleFilter(type, value)}
-        >
-          {name}{" "}
-          {!active && (
-            <span style={{position: "absolute", right: 45, top: 4, transform: "translate(100%)"}}>
-              {isEmpty ? `(${count})` : `(+${count})`}
-            </span>
-          )}
-        </FilterButton>
-      );
-    };
-
     const groupedAndSortedMasters = sortAndGroupMasters(filteredMasters, this.state.sort, universityMap);
+    const numberOfFilters = [].concat(...Object.values(this.state.filters)).length;
+
+    const activeFilters = [];
+    for (const key of Object.keys(this.state.filters)) {
+      const filterGroup = this.state.filters[key];
+      for (const activeFilter of filterGroup) {
+        console.log(filterGroup, FILTERS[key]);
+        const filter = FILTERS[key].find(d => d.value === activeFilter);
+        activeFilters.push(filter);
+      }
+    }
 
     return (
       <Layout>
@@ -432,16 +348,24 @@ class Masters extends React.Component {
             </SubHeadline>
           </Container>
         </Masthead>
+        <FilterOverlay
+          filters={this.state.filters}
+          show={this.state.show}
+          universityMap={universityMap}
+          masters={masters}
+          filteredMasters={filteredMasters}
+          toggleFilter={this.toggleFilter}
+          close={this.hideOverlay}
+        />
         <FilterHeader id="filter-header">
           <Container>
             <FilterHeaderInner>
               <FilterButtonSection>
-                <FilterText active={this.state.show} onClick={this.toggleShow}>
-                  {"Filter"}
+                <FilterText active={this.state.show} onClick={this.showOverlay}>
+                  {`Filter (${numberOfFilters})`}
                 </FilterText>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
-                {/* <SortText>{"Sortieren: "}</SortText> */}
                 <FilterText active={true} style={{marginRight: 20}}>
                   {SORT_NAME_MAPPING[this.state.sort]}
                 </FilterText>
@@ -463,49 +387,6 @@ class Masters extends React.Component {
             </FilterHeaderInner>
           </Container>
         </FilterHeader>
-        <FilterMain id="filter-main">
-          <Container>
-            <div style={{display: this.state.show ? "block" : "none"}}>
-              <FilterSection>
-                <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.universityType.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Mastertyp"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.masterType.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Ausrichtung"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.direction.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Inhaltlicher Fokus"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.topicFocus.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Disziplinäre Zusammensetzung"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.composition.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Studienform"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.allowedForms.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Zulassungssemester"}</FilterSectionTitle>
-                <FilterSectionButtons>{FILTERS.semesterType.map(createButton)}</FilterSectionButtons>
-              </FilterSection>
-              <FilterSection>
-                <FilterSectionTitle>{"Internationailtät"}</FilterSectionTitle>
-                <FilterSectionButtons>
-                  {FILTERS.internationalityEnglish
-                    .map(createButton)
-                    .concat(FILTERS.internationalitySemesterAbroad.map(createButton))
-                    .concat(FILTERS.internationalityDoubleDegree.map(createButton))}
-                </FilterSectionButtons>
-              </FilterSection>
-            </div>
-          </Container>
-        </FilterMain>
         <Container id="masters-main">
           {groupedAndSortedMasters.map(([group, name, masters]) => {
             return (

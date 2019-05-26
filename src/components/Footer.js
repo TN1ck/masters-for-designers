@@ -10,6 +10,11 @@ const FooterContainer = styled.div`
   text-transform: uppercase;
 `;
 
+const FooterSocialLinks = styled.div`
+  display: flex;
+  align-self: flex-end;
+`;
+
 const FooterInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -18,11 +23,22 @@ const FooterInnerContainer = styled.div`
   padding: 10px 0;
   color: white;
   text-transform: uppercase;
+
+  @media (max-width: 800px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `;
 
 const FoooterRightSide = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
 `;
 
 const FooterLink = styled(Link)`
@@ -51,8 +67,10 @@ const Footer = class extends React.Component {
               <FooterLink to="/glossary">Glossar</FooterLink>
               <FooterLink to="/imprint">Impressum</FooterLink>
               <FooterLink to="/privacy">Datenschutz</FooterLink>
-              <InstagramLink />
-              <FacebookLink />
+              <FooterSocialLinks>
+                <InstagramLink />
+                <FacebookLink />
+              </FooterSocialLinks>
             </FoooterRightSide>
           </FooterInnerContainer>
         </Container>
