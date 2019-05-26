@@ -100,7 +100,7 @@ export default class Glossary extends React.Component {
     const masters = data.masters.edges.map(n => n.node);
     const {items: glossary, title, content} = data.glossary.edges[0].node;
     return (
-      <Layout>
+      <Layout background={THEME.colors.blue}>
         <Navbar background={THEME.colors.blue} masterCount={masters.length} />
         <GlossaryInner glossary={glossary} title={title} content={content} />
       </Layout>

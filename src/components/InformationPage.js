@@ -2,7 +2,6 @@ import styled from "styled-components";
 import THEME from "../theme";
 
 export const Container = styled.div`
-  background: ${p => p.background || THEME.colors.orange};
   padding-bottom: 80px;
   word-break: break-word;
 

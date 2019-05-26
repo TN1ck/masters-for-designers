@@ -11,14 +11,14 @@ import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from
 const Imprint = ({data}) => {
   const masters = data.masters.edges.map(n => n.node);
   return (
-    <Layout>
+    <Layout background={"white"}>
       <Navbar background="white" masterCount={masters.length} />
       <Masthead background="white">
         <Container>
           <Headline>{"Impressum"}</Headline>
         </Container>
       </Masthead>
-      <InformationPageContainer background="white">
+      <InformationPageContainer>
         <Container>
           {/* <h5 style={{padding: 0, marginTop: 0, marginBottom: 20}}>Angaben gemäß §5 TMG:</h5> */}
           <Row>

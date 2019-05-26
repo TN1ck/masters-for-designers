@@ -9,6 +9,7 @@ import {SubHeadline} from "../../components/SubHeadline";
 import Navbar from "../../components/Navbar";
 import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from "../../components/InformationPage";
 import {InstagramLink, FacebookLink} from "../../components/Social";
+import THEME from "../../theme";
 
 const SocialIcons = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const SocialIcons = styled.div`
 const About = ({data}) => {
   const masters = data.masters.edges.map(n => n.node);
   return (
-    <Layout>
+    <Layout background={THEME.colors.orange}>
       <Navbar masterCount={masters.length} />
       <Masthead>
         <Container>

@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({children}) => {
+const Layout = ({children, background}) => {
   const {title, description} = useSiteMetadata();
   return (
     <div>
@@ -52,7 +52,8 @@ const Layout = ({children}) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <div>{children}</div>
+      {/* We give it a min-height of 100vh to make sure the footer is not looking broken, 49 is the desktop height of the footer*/}
+      <div style={{minHeight: "calc(100vh - 49px)", background}}>{children}</div>
       <Footer />
     </div>
   );
