@@ -132,6 +132,19 @@ const FilterText = styled.div`
   } */
 `;
 
+const ResetFilters = styled(FilterText)`
+  margin-left: 20px;
+  opacity: 0;
+  pointer-events: none;
+  ${p =>
+    p.show &&
+    css`
+      opacity: 1;
+      pointer-events: all;
+    `}
+  transition: opacity 0.3s;
+`;
+
 const FilterButtonSection = styled.div`
   display: flex;
 `;
@@ -190,25 +203,27 @@ const GroupHeader = styled.h3`
   border-bottom: 1px solid black;
 `;
 
+const EMPTY_FILTERS = {
+  universityType: [],
+  masterType: [],
+  direction: [],
+  topicFocus: [],
+  functionalComposition: [],
+  allowedDisciplinesTag: [],
+  allowedForms: [],
+  semesterType: [],
+  internationalityEnglish: [],
+  internationalitySemesterAbroad: [],
+  internationalityDoubleDegree: [],
+};
+
 class Masters extends React.Component {
   state = {
     show: false,
     showSort: false,
     sort: "alphabet",
     masterId: "",
-    filters: {
-      universityType: [],
-      masterType: [],
-      direction: [],
-      topicFocus: [],
-      functionalComposition: [],
-      allowedDisciplinesTag: [],
-      allowedForms: [],
-      semesterType: [],
-      internationalityEnglish: [],
-      internationalitySemesterAbroad: [],
-      internationalityDoubleDegree: [],
-    },
+    filters: EMPTY_FILTERS,
   };
   toggleFilter = (type, value) => {
     const active = this.state.filters[type].includes(value);
@@ -227,6 +242,12 @@ class Masters extends React.Component {
         },
       });
     }
+    this.scrollToTop();
+  };
+  resetFilters = () => {
+    this.setState({
+      filters: EMPTY_FILTERS,
+    });
     this.scrollToTop();
   };
   componentWillUnmount() {
@@ -363,6 +384,9 @@ class Masters extends React.Component {
                 <FilterText active={this.state.show} onClick={this.showOverlay}>
                   {`Filter (${numberOfFilters})`}
                 </FilterText>
+                <ResetFilters onClick={this.resetFilters} show={numberOfFilters > 0}>
+                  {"Alle zurücksetzen"}
+                </ResetFilters>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
                 <FilterText active={true} style={{marginRight: 20}}>
