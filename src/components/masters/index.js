@@ -442,6 +442,10 @@ class Masters extends React.Component {
               </React.Fragment>
             );
           })}
+          {/* add one master, so that all classes from styled components are generated */}
+          <div style={{display: "none"}}>
+            <Master active save={() => null} onClick={() => null} master={masters[0]} university={universities[0]} />
+          </div>
         </Container>
       </Layout>
     );
