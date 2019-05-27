@@ -401,9 +401,7 @@ class Masters extends React.Component {
                 </ResetFilters>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
-                <FilterText active={true} style={{marginRight: 20}}>
-                  {SORT_NAME_MAPPING[this.state.sort]}
-                </FilterText>
+                <FilterText active={true}>{SORT_NAME_MAPPING[this.state.sort]}</FilterText>
                 {this.state.showSort && (
                   <SortOptions>
                     {[{value: "alphabet"}, {value: "city"}, {value: "university"}, {value: "deadline"}].map(
