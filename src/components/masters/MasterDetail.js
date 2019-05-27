@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
+import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon, SaveIcon} from "../Icons";
 import {Link} from "gatsby";
 import {formatDate} from "../../utils/formatDate";
 
@@ -16,6 +16,7 @@ import {
   masterTranslation,
   topicAndFocusTranslation,
 } from "./translations";
+import THEME from "../../theme";
 
 function formatMoney(n) {
   return `${n} €`;
@@ -55,6 +56,8 @@ const MasterDetailDeadlines = styled(MasterDetailHeadline)`
   grid-area: master-date;
 `;
 const MasterDetailLinks = styled(MasterDetailHeadline)`
+  display: flex;
+  justify-content: space-between;
   grid-area: master-links;
 `;
 const MasterDetailUniversitySection = styled.div`
@@ -106,7 +109,13 @@ const MasterDetailSection = ({headline, listItems, children}) => {
   );
 };
 
-const MasterDetail = ({master, university, close}) => {
+const SaveIconContainer = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const MasterDetail = ({master, university, save, saved}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
   return (
     <MasterDetailContainer>
@@ -114,10 +123,15 @@ const MasterDetail = ({master, university, close}) => {
         {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
       </MasterDetailDeadlines>
       <MasterDetailLinks>
-        <HouseIcon href={master.metadata.website} style={{marginRight: 20}} />
-        <TwitterIcon href={master.metadata.twitter} style={{marginRight: 10}} />
-        <InstagramIcon href={master.metadata.instagram} style={{marginRight: 10}} />
-        <FacebookIcon href={master.metadata.facebook} style={{marginRight: 10}} />
+        <div>
+          <HouseIcon href={master.metadata.website} style={{marginRight: 20}} />
+          <TwitterIcon href={master.metadata.twitter} style={{marginRight: 10}} />
+          <InstagramIcon href={master.metadata.instagram} style={{marginRight: 10}} />
+          <FacebookIcon href={master.metadata.facebook} style={{marginRight: 10}} />
+        </div>
+        <SaveIconContainer>
+          {/* <SaveIcon onClick={save} fill={saved ? THEME.colors.orange : "black"} /> */}
+        </SaveIconContainer>
       </MasterDetailLinks>
       <MasterDetailUniversitySection>
         <MasterDetailSection

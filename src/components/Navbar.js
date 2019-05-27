@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Link, StaticQuery, graphql} from "gatsby";
 import THEME from "../theme";
 import Container from "./Container";
+import {getSavedMasters} from "../storage";
 
 const NavbarInformation = styled.div`
   display: flex;
@@ -86,6 +87,7 @@ const ShowMobile = styled.div`
 const Navbar = class extends React.Component {
   render() {
     const {masterCount, background} = this.props;
+    const savedMasters = getSavedMasters();
     return (
       <NavbarContainer background={background} role="navigation" aria-label="main-navigation">
         <Container>
@@ -104,10 +106,10 @@ const Navbar = class extends React.Component {
                 <NavbarLink to="/glossary" activeClassName="active">
                   Glossar<Circle>{"?"}</Circle>
                 </NavbarLink>
-                {/* <NavbarLink style={{paddingRight: 0}} to="/notes" activeClassName="active">
+                <NavbarLink style={{paddingRight: 0}} to="/saved-masters" activeClassName="active">
                   Merkliste
-                  <Circle>{"0"}</Circle>
-                </NavbarLink> */}
+                  <Circle>{savedMasters.length}</Circle>
+                </NavbarLink>
               </NavbarLinks>
             </NavbarInnerContainer>
           </HideMobile>
@@ -126,8 +128,8 @@ const Navbar = class extends React.Component {
                 <NavbarLink to="/glossary" activeClassName="active">
                   <Circle>{"?"}</Circle>
                 </NavbarLink>
-                <NavbarLink style={{paddingRight: 0}} to="/notes" activeClassName="active">
-                  <Circle>{"0"}</Circle>
+                <NavbarLink style={{paddingRight: 0}} to="/saved-masters" activeClassName="active">
+                  <Circle>{savedMasters.length}</Circle>
                 </NavbarLink>
               </NavbarLinks>
             </NavbarInnerContainer>

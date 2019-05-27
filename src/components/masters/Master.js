@@ -6,6 +6,7 @@ import {masterTranslation} from "./translations";
 import iconClose from "../../img/close.svg";
 import THEME from "../../theme";
 import {formatDate} from "../../utils/formatDate";
+import {SaveIcon} from "../Icons";
 
 const MasterTitle = styled.div`
   font-size: 24px;
@@ -44,6 +45,20 @@ const MasterDetailDegree = styled(MasterDetailSmall)`
   font-style: italic;
   opacity: ${p => (p.show ? 1 : 0)};
   transition: opacity 0.3s;
+`;
+
+const MasterSave = styled.div`
+  position: absolute;
+  right: 0;
+  top: 17px;
+  display: ${p => (p.saved || p.active ? "block" : "none")};
+  &:hover {
+    cursor: pointer;
+    display: block;
+    & .save-fill {
+      fill: ${THEME.colors.orange};
+    }
+  }
 `;
 
 const MasterClose = styled.button`
@@ -120,6 +135,10 @@ const MasterContainer = styled.a`
     ${MasterTitle} {
       font-weight: bold;
     }
+
+    ${MasterSave} {
+      display: block;
+    }
   }
 `;
 
@@ -130,8 +149,13 @@ class Master extends React.Component {
     navigate(`/#${this.props.master.id}`, {replace: true});
     this.props.onClick();
   };
+  save = e => {
+    e.stopPropagation();
+    e.preventDefault();
+    this.props.save();
+  };
   render() {
-    const {master, university} = this.props;
+    const {master, university, save, saved, active} = this.props;
     let title = master.name;
     // When there is something in parentheses in the title, we always make a line-break
     if (title.includes("(")) {
@@ -159,12 +183,23 @@ class Master extends React.Component {
           <MasterDeadline>
             {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
           </MasterDeadline>
-          <MasterClose show={this.props.active}>
+          <MasterSave saved={saved} onClick={this.save} active={active}>
+            <SaveIcon fill={saved ? THEME.colors.orange : "black"} />
+          </MasterSave>
+          {/* <MasterClose show={active}>
             <img src={iconClose} alt="close" />
-          </MasterClose>
+          </MasterClose> */}
         </MasterContainer>
         <MasterDetailContainer>
-          {this.props.active && <MasterDetail master={master} university={university} close={this.props.onClick} />}
+          {this.props.active && (
+            <MasterDetail
+              saved={saved}
+              save={save}
+              master={master}
+              university={university}
+              close={this.props.onClick}
+            />
+          )}
         </MasterDetailContainer>
       </div>
     );

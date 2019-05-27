@@ -12,8 +12,9 @@ import {SubHeadline} from "../SubHeadline";
 import {sortAndGroupMasters, SORT_NAME_MAPPING} from "./sortAndGroupMasters";
 import {FILTERS, filterMasters} from "./filterMasters";
 import THEME from "../../theme";
-import {slugify} from "../../utils/slugify";
+import {saveMasters, getSavedMasters} from "../../storage";
 import FilterOverlay from "./FilterOverlay";
+import MastersDataEnhancer from "./MastersDataEnhancer";
 
 // need to be changed when style changes
 const MAIN_HEADER_HEIGHT = 43;
@@ -81,20 +82,6 @@ export const universityQuery = graphql`
     }
   }
 `;
-
-export const enhanceUniversities = (universities, masters) => {
-  const universityMap = {};
-  for (const university of universities) {
-    university.masters = [];
-    universityMap[university.name] = university;
-  }
-
-  for (const master of masters) {
-    const university = universityMap[master.universityName];
-    university.masters.push(master);
-  }
-  return universityMap;
-};
 
 const FilterText = styled.div`
   display: block;
@@ -224,7 +211,21 @@ class Masters extends React.Component {
     sort: "alphabet",
     masterId: "",
     filters: EMPTY_FILTERS,
+    saved: getSavedMasters(),
   };
+  componentDidMount() {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      if (hash !== "") {
+        const id = hash.substring(1);
+        const element = document.getElementById(id);
+        const position =
+          element.getBoundingClientRect().top + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
+        this.toggleMaster(id);
+        window.scrollTo({top: position, left: 0, behaviour: "auto"});
+      }
+    }
+  }
   toggleFilter = (type, value) => {
     const active = this.state.filters[type].includes(value);
     if (active) {
@@ -325,6 +326,21 @@ class Masters extends React.Component {
       },
     );
   };
+  save = id => {
+    if (this.state.saved.includes(id)) {
+      const saved = this.state.saved.filter(i => i !== id);
+      this.setState({
+        saved,
+      });
+      saveMasters(saved);
+    } else {
+      const saved = [id].concat(this.state.saved);
+      this.setState({
+        saved,
+      });
+      saveMasters(saved);
+    }
+  };
   render() {
     const {masters, universityMap, universities} = this.props;
     const filteredMasters = filterMasters(masters, this.state.filters, universityMap);
@@ -409,9 +425,13 @@ class Masters extends React.Component {
                 {masters.map((master, i) => {
                   const university = universityMap[master.universityName];
                   const active = master.id === this.state.masterId;
+                  const saved = this.state.saved.includes(master.id);
+                  const save = () => this.save(master.id);
                   return (
                     <Master
                       active={active}
+                      saved={saved}
+                      save={save}
                       onClick={() => this.toggleMaster(master.id)}
                       key={i}
                       master={master}
@@ -428,24 +448,6 @@ class Masters extends React.Component {
   }
 }
 
-class MastersCache extends React.Component {
-  constructor(props) {
-    super(props);
-    this.masters = this.props.data.masters.edges
-      .map(n => n.node)
-      .map(m => {
-        const id = `master-${slugify(m.universityName)}-${slugify(m.name)}`;
-        m.id = id;
-        return m;
-      });
-    this.universities = this.props.data.universities.edges.map(n => n.node);
-    this.universityMap = enhanceUniversities(this.universities, this.masters);
-  }
-  render() {
-    return <Masters masters={this.masters} universities={this.universities} universityMap={this.universityMap} />;
-  }
-}
-
 export default () => (
   <StaticQuery
     query={graphql`
@@ -459,7 +461,13 @@ export default () => (
       }
     `}
     render={data => {
-      return <MastersCache data={data} />;
+      return (
+        <MastersDataEnhancer data={data}>
+          {(masters, universities, universityMap) => (
+            <Masters masters={masters} universities={universities} universityMap={universityMap} />
+          )}
+        </MastersDataEnhancer>
+      );
     }}
   />
 );
