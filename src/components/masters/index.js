@@ -130,6 +130,10 @@ const ResetFilters = styled(FilterText)`
       pointer-events: all;
     `}
   transition: opacity 0.3s;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const FilterButtonSection = styled.div`
@@ -382,6 +386,7 @@ class Masters extends React.Component {
           masters={masters}
           filteredMasters={filteredMasters}
           toggleFilter={this.toggleFilter}
+          resetFilters={this.resetFilters}
           close={this.hideOverlay}
         />
         <FilterHeader id="filter-header">

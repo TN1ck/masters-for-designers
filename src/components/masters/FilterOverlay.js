@@ -1,10 +1,26 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import closeIcon from "../../img/close.svg";
 import Container from "../../components/Container";
 import THEME from "../../theme";
 import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
+
+const ResetFilters = styled.div`
+  opacity: 0;
+  pointer-events: none;
+  ${p =>
+    p.show &&
+    css`
+      opacity: 1;
+      pointer-events: all;
+    `}
+  transition: opacity 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const FilterMain = styled.div`
   position: fixed;
@@ -167,7 +183,7 @@ export const FilterButtonMore = ({
 
 export default class FilterOverlay extends React.Component {
   render() {
-    const {filters, show, filteredMasters, universityMap, masters, close, toggleFilter} = this.props;
+    const {filters, show, filteredMasters, universityMap, masters, close, toggleFilter, resetFilters} = this.props;
 
     const numberOfFilters = [].concat(...Object.values(filters)).length;
 
@@ -200,6 +216,9 @@ export default class FilterOverlay extends React.Component {
               <img src={closeIcon} alt="close filters" />
             </CloseButton>
           </FilterHeader>
+          <ResetFilters onClick={resetFilters} show={numberOfFilters > 0}>
+            {"Alle zurücksetzen"}
+          </ResetFilters>
           <FilterSection>
             <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
             <FilterSectionButtons>{FILTERS.universityType.map(createButton)}</FilterSectionButtons>
