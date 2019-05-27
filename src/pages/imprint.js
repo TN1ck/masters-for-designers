@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../components/Layout";
-import {StaticQuery, graphql, Link} from "gatsby";
 import Container from "../components/Container";
 import {Masthead} from "../components/Masthead";
 import {Headline} from "../components/Headline";
@@ -9,10 +7,9 @@ import Navbar from "../components/Navbar";
 import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from "../components/InformationPage";
 
 const Imprint = ({data}) => {
-  const masters = data.masters.edges.map(n => n.node);
   return (
     <Layout background={"white"}>
-      <Navbar background="white" masterCount={masters.length} />
+      <Navbar background="white" />
       <Masthead background="white">
         <Container>
           <Headline>{"Impressum"}</Headline>
@@ -104,15 +101,4 @@ const Imprint = ({data}) => {
   );
 };
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query ImprintQuery {
-        masters: allMastersJson {
-          ...Masters
-        }
-      }
-    `}
-    render={data => <Imprint data={data} />}
-  />
-);
+export default Imprint;

@@ -5,6 +5,7 @@ import MasterDetail from "./MasterDetail";
 import {masterTranslation} from "./translations";
 import iconClose from "../../img/close.svg";
 import THEME from "../../theme";
+import {formatDate} from "../../utils/formatDate";
 
 const MasterTitle = styled.div`
   font-size: 24px;
@@ -16,7 +17,12 @@ const MasterTitle = styled.div`
 
 const MasterCity = styled.div`
   margin-left: 4%;
-  width: 22%;
+  width: 12%;
+`;
+
+const MasterDeadline = styled.div`
+  margin-left: 4%;
+  width: 9%;
 `;
 
 const MasterDetailContainer = styled.div``;
@@ -40,49 +46,10 @@ const MasterDetailDegree = styled(MasterDetailSmall)`
   transition: opacity 0.3s;
 `;
 
-const MasterContainer = styled.a`
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid black;
-  border-bottom: none !important;
-  display: flex;
-  position: relative;
-
-  @media (max-width: 550px) {
-    flex-direction: column;
-
-    & ${MasterCity} {
-      margin-left: 0;
-      width: 100%;
-    }
-
-    & ${MasterUniversity} {
-      width: 100%;
-      margin-left: 0;
-      padding-top: 20px;
-    }
-
-    & ${MasterTitle} {
-      width: 100%;
-    }
-  }
-
-  /* transition: color 0.3s; */
-
-  &:visited {
-    color: ${p => (p.active ? "black" : THEME.colors.orange)};
-  }
-
-  &:hover {
-    cursor: pointer;
-    ${MasterTitle} {
-      font-weight: bold;
-    }
-  }
-`;
-
 const MasterClose = styled.button`
+  position: absolute;
+  right: 0;
+  top: 17px;
   border: none;
   background: none;
   line-height: 1;
@@ -104,6 +71,55 @@ const MasterClose = styled.button`
     outline: none;
     background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
+  }
+`;
+
+const MasterContainer = styled.a`
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 60px;
+  border-top: 1px solid black;
+  border-bottom: none !important;
+  display: flex;
+  position: relative;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+
+    & ${MasterCity} {
+      margin-left: 0;
+      width: 100%;
+      display: none;
+    }
+
+    & ${MasterUniversity} {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 5px;
+    }
+
+    & ${MasterTitle} {
+      width: 100%;
+    }
+
+    & ${MasterDeadline} {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  /* transition: color 0.3s; */
+
+  &:visited {
+    color: ${p => (p.active ? "black" : THEME.colors.orange)};
+  }
+
+  &:hover {
+    cursor: pointer;
+    ${MasterTitle} {
+      font-weight: bold;
+    }
   }
 `;
 
@@ -140,6 +156,9 @@ class Master extends React.Component {
           </MasterTitle>
           <MasterUniversity>{master.universityName}</MasterUniversity>
           <MasterCity>{university.city}</MasterCity>
+          <MasterDeadline>
+            {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
+          </MasterDeadline>
           <MasterClose show={this.props.active}>
             <img src={iconClose} alt="close" />
           </MasterClose>

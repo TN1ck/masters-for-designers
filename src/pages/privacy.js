@@ -1,18 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../components/Layout";
-import {StaticQuery, graphql, Link} from "gatsby";
 import Container from "../components/Container";
 import {Masthead} from "../components/Masthead";
 import {Headline} from "../components/Headline";
 import Navbar from "../components/Navbar";
-import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from "../components/InformationPage";
+import {Row, ColumnHalf, Container as InformationPageContainer} from "../components/InformationPage";
 
 const Privacy = ({data}) => {
-  const masters = data.masters.edges.map(n => n.node);
   return (
     <Layout>
-      <Navbar background="white" masterCount={masters.length} />
+      <Navbar background="white" />
       <Masthead background="white">
         <Container>
           <Headline>{"Datenschutz"}</Headline>
@@ -198,15 +195,4 @@ const Privacy = ({data}) => {
   );
 };
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query PrivacyQuery {
-        masters: allMastersJson {
-          ...Masters
-        }
-      }
-    `}
-    render={data => <Privacy data={data} />}
-  />
-);
+export default Privacy;

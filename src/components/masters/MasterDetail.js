@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
 import {Link} from "gatsby";
+import {formatDate} from "../../utils/formatDate";
+
 import {
   universityTypeTranslation,
   masterTypeTranslation,
@@ -14,14 +16,6 @@ import {
   masterTranslation,
   topicAndFocusTranslation,
 } from "./translations";
-
-function formatDate(d) {
-  const date = new Date(d);
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
-  const year = date.getUTCFullYear();
-  return `${day < 10 ? "0" + day : day}.${month < 10 ? "0" + month : month}.${year}`;
-}
 
 function formatMoney(n) {
   return `${n} €`;

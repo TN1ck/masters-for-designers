@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import THEME from "../theme";
 
 export const Container = styled.div`
   padding-bottom: 80px;

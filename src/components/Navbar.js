@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from "gatsby";
+import {Link, StaticQuery, graphql} from "gatsby";
 import THEME from "../theme";
 import Container from "./Container";
 
@@ -138,4 +138,17 @@ const Navbar = class extends React.Component {
   }
 };
 
-export default Navbar;
+export default ({masterCount, background}) => (
+  <StaticQuery
+    query={graphql`
+      query NavbarQuery {
+        masters: allMastersJson {
+          totalCount
+        }
+      }
+    `}
+    render={data => {
+      return <Navbar masterCount={masterCount || data.masters.totalCount} background={background} />;
+    }}
+  />
+);

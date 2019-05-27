@@ -326,16 +326,7 @@ class Masters extends React.Component {
     );
   };
   render() {
-    const masters = this.props.data.masters.edges
-      .map(n => n.node)
-      .map(m => {
-        const id = `master-${slugify(m.universityName)}-${slugify(m.name)}`;
-        m.id = id;
-        return m;
-      });
-    const universities = this.props.data.universities.edges.map(n => n.node);
-    const universityMap = enhanceUniversities(universities, masters);
-
+    const {masters, universityMap, universities} = this.props;
     const filteredMasters = filterMasters(masters, this.state.filters, universityMap);
     const groupedAndSortedMasters = sortAndGroupMasters(filteredMasters, this.state.sort, universityMap);
     const numberOfFilters = [].concat(...Object.values(this.state.filters)).length;
@@ -351,7 +342,7 @@ class Masters extends React.Component {
 
     return (
       <Layout>
-        <Navbar universityCount={universities.length} masterCount={filteredMasters.length} />
+        <Navbar masterCount={filteredMasters.length} />
         <Masthead>
           <Container>
             <Headline>
@@ -449,6 +440,17 @@ export default () => (
         }
       }
     `}
-    render={data => <Masters data={data} />}
+    render={data => {
+      const masters = data.masters.edges
+        .map(n => n.node)
+        .map(m => {
+          const id = `master-${slugify(m.universityName)}-${slugify(m.name)}`;
+          m.id = id;
+          return m;
+        });
+      const universities = data.universities.edges.map(n => n.node);
+      const universityMap = enhanceUniversities(universities, masters);
+      return <Masters masters={masters} universities={universities} universityMap={universityMap} />;
+    }}
   />
 );

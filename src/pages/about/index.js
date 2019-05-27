@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../../components/Layout";
-import {StaticQuery, graphql, Link} from "gatsby";
+import {Link} from "gatsby";
 import Container from "../../components/Container";
 import {Masthead} from "../../components/Masthead";
 import {Headline} from "../../components/Headline";
@@ -16,10 +16,9 @@ const SocialIcons = styled.div`
 `;
 
 const About = ({data}) => {
-  const masters = data.masters.edges.map(n => n.node);
   return (
     <Layout background={THEME.colors.orange}>
-      <Navbar masterCount={masters.length} />
+      <Navbar />
       <Masthead>
         <Container>
           <Headline>{"About"}</Headline>
@@ -86,15 +85,4 @@ const About = ({data}) => {
   );
 };
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query AboutQuery {
-        masters: allMastersJson {
-          ...Masters
-        }
-      }
-    `}
-    render={data => <About data={data} />}
-  />
-);
+export default About;

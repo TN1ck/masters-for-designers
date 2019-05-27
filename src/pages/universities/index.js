@@ -14,7 +14,7 @@ const Universities = ({data}) => {
   const universityMap = enhanceUniversities(universities, masters);
   return (
     <Layout>
-      <Navbar universityCount={universities.length} masterCount={masters.length} />
+      <Navbar universityCount={universities.length} />
       <Masthead>
         <Container>
           <Headline>{"Universities"}</Headline>

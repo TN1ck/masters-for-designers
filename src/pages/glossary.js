@@ -6,9 +6,6 @@ export default () => (
   <StaticQuery
     query={graphql`
       query GlossaryQuery {
-        masters: allMastersJson {
-          ...Masters
-        }
         glossary: allGlossaryJson {
           edges {
             node {

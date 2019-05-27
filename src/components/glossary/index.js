@@ -97,11 +97,10 @@ export const GlossaryInner = ({glossary, title, content}) => {
 export default class Glossary extends React.Component {
   render() {
     const data = this.props.data;
-    const masters = data.masters.edges.map(n => n.node);
     const {items: glossary, title, content} = data.glossary.edges[0].node;
     return (
       <Layout background={THEME.colors.blue}>
-        <Navbar background={THEME.colors.blue} masterCount={masters.length} />
+        <Navbar background={THEME.colors.blue} />
         <GlossaryInner glossary={glossary} title={title} content={content} />
       </Layout>
     );
