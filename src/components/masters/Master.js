@@ -9,7 +9,7 @@ import {formatDate} from "../../utils/formatDate";
 
 const MasterTitle = styled.div`
   font-size: 24px;
-  width: 48%;
+  width: 50%;
   font-weight: ${p => (p.bold ? "bold" : "normal")};
   word-break: break-word;
   position: relative;
@@ -17,7 +17,7 @@ const MasterTitle = styled.div`
 
 const MasterCity = styled.div`
   margin-left: 4%;
-  width: 12%;
+  width: 10%;
 `;
 
 const MasterDeadline = styled.div`

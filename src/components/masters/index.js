@@ -428,6 +428,24 @@ class Masters extends React.Component {
   }
 }
 
+class MastersCache extends React.Component {
+  constructor(props) {
+    super(props);
+    this.masters = this.props.data.masters.edges
+      .map(n => n.node)
+      .map(m => {
+        const id = `master-${slugify(m.universityName)}-${slugify(m.name)}`;
+        m.id = id;
+        return m;
+      });
+    this.universities = this.props.data.universities.edges.map(n => n.node);
+    this.universityMap = enhanceUniversities(this.universities, this.masters);
+  }
+  render() {
+    return <Masters masters={this.masters} universities={this.universities} universityMap={this.universityMap} />;
+  }
+}
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -441,16 +459,7 @@ export default () => (
       }
     `}
     render={data => {
-      const masters = data.masters.edges
-        .map(n => n.node)
-        .map(m => {
-          const id = `master-${slugify(m.universityName)}-${slugify(m.name)}`;
-          m.id = id;
-          return m;
-        });
-      const universities = data.universities.edges.map(n => n.node);
-      const universityMap = enhanceUniversities(universities, masters);
-      return <Masters masters={masters} universities={universities} universityMap={universityMap} />;
+      return <MastersCache data={data} />;
     }}
   />
 );
