@@ -8,27 +8,34 @@ import {SaveIcon} from "../Icons";
 
 const MasterTitle = styled.div`
   font-size: 24px;
-  width: 50%;
   word-break: break-word;
   position: relative;
+  width: 50%;
+  padding-right: 20px;
+`;
+
+const MasterNonTitleContainer = styled.div`
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const MasterCity = styled.div`
-  margin-left: 4%;
-  width: 10%;
+  width: 30%;
+  padding-right: 10%;
 `;
 
 const MasterDeadline = styled.div`
-  margin-left: 4%;
-  width: 9%;
+  width: 20%;
 `;
-
-const MasterDetailContainer = styled.div``;
 
 const MasterUniversity = styled.div`
-  margin-left: 4%;
-  width: 22%;
+  padding-right: 10%;
+  width: 50%;
 `;
+const MasterDetailContainer = styled.div``;
 
 const MasterDetailSmall = styled.small`
   display: block;
@@ -57,28 +64,58 @@ const MasterSave = styled.div`
   transition: transform 0.2s;
 `;
 
+const makeBold = css`
+  ${MasterTitle} {
+    font-weight: bold;
+    letter-spacing: -0.2px;
+  }
+
+  ${MasterCity} {
+    font-weight: bold;
+    letter-spacing: -0.2px;
+  }
+
+  ${MasterUniversity} {
+    font-weight: bold;
+    letter-spacing: -0.2px;
+  }
+
+  ${MasterDeadline} {
+    font-weight: bold;
+    letter-spacing: -0.2px;
+  }
+
+  ${MasterSave} {
+    display: block;
+  }
+`;
+
 const MasterContainer = styled.a`
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 60px;
   border-top: 1px solid black;
   border-bottom: none !important;
   display: flex;
   position: relative;
 
-  @media (max-width: 550px) {
+  @media (max-width: 800px) {
     flex-direction: column;
 
+    & ${MasterNonTitleContainer} {
+      display: block;
+      padding: 0;
+    }
+
     & ${MasterCity} {
-      margin-left: 0;
+      padding-right: 0;
       width: 100%;
       display: none;
     }
 
     & ${MasterUniversity} {
       width: 100%;
-      margin-left: 0;
+      padding-right: 0;
       padding-top: 5px;
     }
 
@@ -87,7 +124,6 @@ const MasterContainer = styled.a`
     }
 
     & ${MasterDeadline} {
-      margin-left: 0;
       width: 100%;
     }
   }
@@ -98,51 +134,10 @@ const MasterContainer = styled.a`
     color: ${p => (p.active ? "black" : THEME.colors.orange)};
   }
 
-  ${p =>
-    p.active &&
-    css`
-      ${MasterTitle} {
-        font-weight: bold;
-      }
-
-      ${MasterCity} {
-        font-weight: bold;
-      }
-
-      ${MasterUniversity} {
-        font-weight: bold;
-      }
-
-      ${MasterDeadline} {
-        font-weight: bold;
-      }
-
-      ${MasterSave} {
-        display: block;
-      }
-    `}
+  ${p => p.active && makeBold}
 
   &:hover {
-    cursor: pointer;
-    ${MasterTitle} {
-      font-weight: bold;
-    }
-
-    ${MasterCity} {
-      font-weight: bold;
-    }
-
-    ${MasterUniversity} {
-      font-weight: bold;
-    }
-
-    ${MasterDeadline} {
-      font-weight: bold;
-    }
-
-    ${MasterSave} {
-      display: block;
-    }
+    ${makeBold}
   }
 `;
 
@@ -182,11 +177,13 @@ class Master extends React.Component {
             </MasterDetailDegree>
             {title}
           </MasterTitle>
-          <MasterUniversity>{master.universityName}</MasterUniversity>
-          <MasterCity>{university.city}</MasterCity>
-          <MasterDeadline>
-            {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
-          </MasterDeadline>
+          <MasterNonTitleContainer>
+            <MasterUniversity>{master.universityName}</MasterUniversity>
+            <MasterCity>{university.city}</MasterCity>
+            <MasterDeadline>
+              {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
+            </MasterDeadline>
+          </MasterNonTitleContainer>
           <MasterSave saved={saved} onClick={this.save} active={active}>
             <SaveIcon fill={saved ? THEME.colors.orange : "black"} />
           </MasterSave>
