@@ -82,7 +82,6 @@ const MasterDetailSectionDescription = styled.dd`
   margin: 0;
   padding-top: 5px;
   padding-bottom: 20px;
-  text-transform: capitalize;
 `;
 const MasterDetailSection = ({headline, listItems, children}) => {
   return (
