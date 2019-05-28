@@ -208,8 +208,6 @@ export default class FilterOverlay extends React.Component {
       );
     };
 
-    // console.log(activeFilters);
-
     return (
       <FilterMain id="filter-main" style={{display: show ? "block" : "none"}}>
         <Container>

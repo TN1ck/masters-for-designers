@@ -40,19 +40,16 @@ class SavedMasters extends React.Component {
       });
       return;
     }
-
-    // because we close old masters again, we have to do a lot more
-    // for smooth scrolling
-    const element = document.getElementById(id);
     this.setState(
       {
         masterIds: [id].concat(this.state.masterIds),
       },
       () => {
         setTimeout(() => {
-          // const position = element.getBoundingClientRect();
-          // const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT;
-          // scrollTo(top);
+          const element = document.getElementById(id);
+          const position = element.getBoundingClientRect();
+          const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT;
+          scrollTo(top);
         });
       },
     );

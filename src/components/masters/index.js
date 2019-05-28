@@ -293,7 +293,6 @@ class Masters extends React.Component {
 
     // because we close old masters again, we have to do a lot more
     // for smooth scrolling
-    const element = document.getElementById(id);
     this.setState(
       {
         masterIds: [id].concat(this.state.masterIds),
@@ -310,6 +309,7 @@ class Masters extends React.Component {
         //   window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
         // }
         setTimeout(() => {
+          const element = document.getElementById(id);
           const position = element.getBoundingClientRect();
           const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
           scrollTo(top);
@@ -338,14 +338,14 @@ class Masters extends React.Component {
     const groupedAndSortedMasters = sortAndGroupMasters(filteredMasters, this.state.sort, universityMap);
     const numberOfFilters = [].concat(...Object.values(this.state.filters)).length;
 
-    const activeFilters = [];
-    for (const key of Object.keys(this.state.filters)) {
-      const filterGroup = this.state.filters[key];
-      for (const activeFilter of filterGroup) {
-        const filter = FILTERS[key].find(d => d.value === activeFilter);
-        activeFilters.push(filter);
-      }
-    }
+    // const activeFilters = [];
+    // for (const key of Object.keys(this.state.filters)) {
+    //   const filterGroup = this.state.filters[key];
+    //   for (const activeFilter of filterGroup) {
+    //     const filter = FILTERS[key].find(d => d.value === activeFilter);
+    //     activeFilters.push(filter);
+    //   }
+    // }
 
     return (
       <Layout>
