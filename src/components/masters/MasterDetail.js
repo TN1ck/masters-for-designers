@@ -27,7 +27,7 @@ const MasterDetailContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "master-date master-links"
+    "master-links ."
     "master-university-section master-direction-section"
     "master-money-section master-internationality-section";
 
@@ -37,7 +37,6 @@ const MasterDetailContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "master-date"
       "master-links"
       "master-university-section"
       "master-direction-section"
@@ -51,9 +50,6 @@ const MasterDetailHeadline = styled.h3`
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-`;
-const MasterDetailDeadlines = styled(MasterDetailHeadline)`
-  grid-area: master-date;
 `;
 const MasterDetailLinks = styled(MasterDetailHeadline)`
   display: flex;
@@ -119,9 +115,6 @@ const MasterDetail = ({master, university, save, saved}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
   return (
     <MasterDetailContainer>
-      <MasterDetailDeadlines>
-        {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
-      </MasterDetailDeadlines>
       <MasterDetailLinks>
         <div>
           <HouseIcon href={master.metadata.website} style={{marginRight: 20}} />

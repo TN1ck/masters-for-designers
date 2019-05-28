@@ -9,7 +9,6 @@ import {SaveIcon} from "../Icons";
 const MasterTitle = styled.div`
   font-size: 24px;
   width: 50%;
-  font-weight: ${p => (p.bold ? "bold" : "normal")};
   word-break: break-word;
   position: relative;
 `;
@@ -99,9 +98,45 @@ const MasterContainer = styled.a`
     color: ${p => (p.active ? "black" : THEME.colors.orange)};
   }
 
+  ${p =>
+    p.active &&
+    css`
+      ${MasterTitle} {
+        font-weight: bold;
+      }
+
+      ${MasterCity} {
+        font-weight: bold;
+      }
+
+      ${MasterUniversity} {
+        font-weight: bold;
+      }
+
+      ${MasterDeadline} {
+        font-weight: bold;
+      }
+
+      ${MasterSave} {
+        display: block;
+      }
+    `}
+
   &:hover {
     cursor: pointer;
     ${MasterTitle} {
+      font-weight: bold;
+    }
+
+    ${MasterCity} {
+      font-weight: bold;
+    }
+
+    ${MasterUniversity} {
+      font-weight: bold;
+    }
+
+    ${MasterDeadline} {
       font-weight: bold;
     }
 
@@ -135,7 +170,7 @@ class Master extends React.Component {
     return (
       <div>
         <MasterContainer id={master.id} onClick={this.props.onClick} href={`/#${master.id}`} active={this.props.active}>
-          <MasterTitle bold={this.props.active}>
+          <MasterTitle>
             <MasterDetailDegree show={this.props.active}>
               {masterTranslation[master.direction.degree]}
             </MasterDetailDegree>
