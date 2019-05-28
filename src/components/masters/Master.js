@@ -153,7 +153,7 @@ class Master extends React.Component {
     this.props.save();
   };
   render() {
-    const {master, university, save, saved, active} = this.props;
+    const {master, university, save, saved, active, className} = this.props;
     let title = master.name;
     // When there is something in parentheses in the title, we always make a line-break
     if (title.includes("(")) {
@@ -169,7 +169,13 @@ class Master extends React.Component {
     }
     return (
       <div>
-        <MasterContainer id={master.id} onClick={this.props.onClick} href={`/#${master.id}`} active={this.props.active}>
+        <MasterContainer
+          className={className}
+          id={master.id}
+          onClick={this.props.onClick}
+          href={`/#${master.id}`}
+          active={this.props.active}
+        >
           <MasterTitle>
             <MasterDetailDegree show={this.props.active}>
               {masterTranslation[master.direction.degree]}

@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Layout from "../components/Layout";
 import {StaticQuery, graphql} from "gatsby";
 import Container from "../components/Container";
@@ -11,6 +12,12 @@ import Master from "../components/masters/Master";
 import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
 import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
+
+const StyledMaster = styled(Master)`
+  &:visited {
+    color: black;
+  }
+`;
 
 class SavedMasters extends React.Component {
   constructor(props) {
@@ -91,7 +98,7 @@ class SavedMasters extends React.Component {
                     this.toggleMaster(master.id);
                   };
                   return (
-                    <Master
+                    <StyledMaster
                       active={active}
                       saved
                       save={unsave}
