@@ -12,6 +12,7 @@ import Master from "../components/masters/Master";
 import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
 import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
+import scrollTo from "../utils/scrollTo";
 
 const StyledMaster = styled(Master)`
   &:visited {
@@ -23,7 +24,7 @@ class SavedMasters extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterId: "",
+      masterIds: [],
       savedMasters: getSavedMasters(),
     };
   }
@@ -33,9 +34,9 @@ class SavedMasters extends React.Component {
     });
   }
   toggleMaster = id => {
-    if (this.state.masterId === id) {
+    if (this.state.masterIds.includes(id)) {
       this.setState({
-        masterId: "",
+        masterIds: this.state.masterIds.filter(i => i !== id),
       });
       return;
     }
@@ -43,24 +44,15 @@ class SavedMasters extends React.Component {
     // because we close old masters again, we have to do a lot more
     // for smooth scrolling
     const element = document.getElementById(id);
-    const positionOld = element.getBoundingClientRect();
-    const oldMasterId = this.state.masterId;
     this.setState(
       {
-        masterId: id,
+        masterIds: [id].concat(this.state.masterIds),
       },
       () => {
-        if (oldMasterId !== "") {
-          const element = document.getElementById(id);
-          const positionNew = element.getBoundingClientRect();
-          const offset = positionOld.top - positionNew.top;
-          const quicklyScrollTo = window.scrollY - offset;
-          window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
-        }
         setTimeout(() => {
           const position = element.getBoundingClientRect();
           const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT;
-          window.scrollTo({left: 0, top: top, behavior: "smooth"});
+          scrollTo(top);
         });
       },
     );
@@ -91,7 +83,7 @@ class SavedMasters extends React.Component {
                 <GroupHeader>{name}</GroupHeader>
                 {masters.map((master, i) => {
                   const university = universityMap[master.universityName];
-                  const active = this.state.masterId === master.id;
+                  const active = this.state.masterIds.includes(master.id);
                   const unsave = () => this.unsave(master.id);
                   const onClick = e => {
                     e.preventDefault();

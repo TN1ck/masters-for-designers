@@ -16,6 +16,7 @@ import {saveMasters, getSavedMasters} from "../../storage";
 import FilterOverlay from "./FilterOverlay";
 import MastersDataEnhancer from "./MastersDataEnhancer";
 import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "./styles";
+import scrollTo from "../../utils/scrollTo";
 
 export const mastersQuery = graphql`
   fragment Masters on MastersJsonConnection {
@@ -201,7 +202,7 @@ class Masters extends React.Component {
     show: false,
     showSort: false,
     sort: "alphabet",
-    masterId: "",
+    masterIds: [],
     filters: EMPTY_FILTERS,
     saved: getSavedMasters(),
   };
@@ -283,9 +284,9 @@ class Masters extends React.Component {
     }
   };
   toggleMaster = id => {
-    if (this.state.masterId === id) {
+    if (this.state.masterIds.includes(id)) {
       this.setState({
-        masterId: "",
+        masterIds: this.state.masterIds.filter(i => i !== id),
       });
       return;
     }
@@ -293,24 +294,25 @@ class Masters extends React.Component {
     // because we close old masters again, we have to do a lot more
     // for smooth scrolling
     const element = document.getElementById(id);
-    const positionOld = element.getBoundingClientRect();
-    const oldMasterId = this.state.masterId;
     this.setState(
       {
-        masterId: id,
+        masterIds: [id].concat(this.state.masterIds),
       },
       () => {
-        if (oldMasterId !== "") {
-          const element = document.getElementById(id);
-          const positionNew = element.getBoundingClientRect();
-          const offset = positionOld.top - positionNew.top;
-          const quicklyScrollTo = window.scrollY - offset;
-          window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
-        }
+        // deactivate for now, it's problematic in a lot of ways
+        // const positionOld = element.getBoundingClientRect();
+        // const oldMasterId = this.state.masterId;
+        // if (oldMasterId !== "") {
+        //   const element = document.getElementById(id);
+        //   const positionNew = element.getBoundingClientRect();
+        //   const offset = positionOld.top - positionNew.top;
+        //   const quicklyScrollTo = window.scrollY - offset;
+        //   window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
+        // }
         setTimeout(() => {
           const position = element.getBoundingClientRect();
           const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
-          window.scrollTo({left: 0, top: top, behavior: "smooth"});
+          scrollTo(top);
         });
       },
     );
@@ -412,7 +414,7 @@ class Masters extends React.Component {
                 <GroupHeader>{name}</GroupHeader>
                 {masters.map((master, i) => {
                   const university = universityMap[master.universityName];
-                  const active = master.id === this.state.masterId;
+                  const active = this.state.masterIds.includes(master.id);
                   const saved = this.state.saved.includes(master.id);
                   const save = () => this.save(master.id);
                   const onClick = e => {
