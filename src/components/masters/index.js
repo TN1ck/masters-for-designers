@@ -142,9 +142,11 @@ const SortSection = styled.div`
   display: flex;
   position: relative;
 
-  &:hover {
-    ${FilterText} {
-      border-bottom: 1px solid black;
+  @media not all and (hover: none) {
+    &:hover {
+      ${FilterText} {
+        border-bottom: 1px solid black;
+      }
     }
   }
 `;

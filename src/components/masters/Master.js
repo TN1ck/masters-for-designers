@@ -56,10 +56,12 @@ const MasterSave = styled.div`
   right: 0;
   top: 17px;
   display: ${p => (p.saved || p.active ? "block" : "none")};
-  &:hover {
-    cursor: pointer;
-    display: block;
-    transform: scale(1.2);
+  @media not all and (hover: none) {
+    &:hover {
+      cursor: pointer;
+      display: block;
+      transform: scale(1.2);
+    }
   }
   transition: transform 0.2s;
 `;
@@ -136,8 +138,10 @@ const MasterContainer = styled.a`
 
   ${p => p.active && makeBold}
 
-  &:hover {
-    ${makeBold}
+  @media not all and (hover: none) {
+    &:hover {
+      ${makeBold}
+    }
   }
 `;
 
