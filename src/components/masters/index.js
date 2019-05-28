@@ -95,7 +95,7 @@ const FilterText = styled.div`
     border-bottom: 1px solid black;
   }
 
-  /* &:after {
+  &:after {
     transition: transform 200ms ease-out;
     position: absolute;
     content: "";
@@ -105,15 +105,15 @@ const FilterText = styled.div`
     border-top: 6px solid black;
     border-bottom: 6px solid transparent;
     border-left: 6px solid transparent;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     transform-origin: 5px 4px;
-
+/*
     ${p =>
       p.active &&
       css`
-        transform: rotate(0);
-      `}
-  } */
+        transform: rotate(90);
+      `} */
+  }
 `;
 
 const ResetFilters = styled(FilterText)`
