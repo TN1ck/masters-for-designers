@@ -50,9 +50,9 @@ class SavedMasters extends React.Component {
       },
       () => {
         setTimeout(() => {
-          const position = element.getBoundingClientRect();
-          const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT;
-          scrollTo(top);
+          // const position = element.getBoundingClientRect();
+          // const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT;
+          // scrollTo(top);
         });
       },
     );

@@ -151,6 +151,9 @@ class Master extends React.Component {
     e.preventDefault();
     this.props.save();
   };
+  shouldComponentUpdate(props) {
+    return props.saved !== this.props.saved || props.active !== this.props.active;
+  }
   render() {
     const {master, university, save, saved, active, className} = this.props;
     let title = master.name;

@@ -62,9 +62,11 @@ const FilterButton = styled.button`
     pointer-events: none;
   }
 
-  &:hover {
-    cursor: pointer;
-    background-color: ${p => (p.active ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.3)")};
+  @media not all and (hover: none) {
+    &:hover {
+      cursor: pointer;
+      background-color: ${p => (p.active ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0.3)")};
+    }
   }
 `;
 
@@ -93,12 +95,14 @@ const FilterHeader = styled.div`
   border-bottom: 1px solid black;
   z-index: 100;
 
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    ${CloseButton} {
-      outline: none;
-      background: rgba(255, 255, 255, 0.3);
+  @media not all and (hover: none) {
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      ${CloseButton} {
+        outline: none;
+        background: rgba(255, 255, 255, 0.3);
+      }
     }
   }
 `;
