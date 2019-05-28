@@ -67,7 +67,7 @@ const MasterSave = styled.div`
 const makeBold = css`
   ${MasterTitle} {
     font-weight: bold;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.35px;
   }
 
   ${MasterCity} {
