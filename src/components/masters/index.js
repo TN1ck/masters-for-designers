@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 import Layout from "../../components/Layout";
 import Navbar from "../Navbar";
 import Container from "../../components/Container";
-import {StaticQuery} from "gatsby";
+import {StaticQuery, navigate} from "gatsby";
 import Master from "./Master";
 import {graphql} from "gatsby";
 import {Masthead} from "../Masthead";
@@ -15,10 +15,7 @@ import THEME from "../../theme";
 import {saveMasters, getSavedMasters} from "../../storage";
 import FilterOverlay from "./FilterOverlay";
 import MastersDataEnhancer from "./MastersDataEnhancer";
-
-// need to be changed when style changes
-const MAIN_HEADER_HEIGHT = 43;
-const FILTER_HEADER_HEIGHT = 43;
+import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "./styles";
 
 export const mastersQuery = graphql`
   fragment Masters on MastersJsonConnection {
@@ -183,17 +180,6 @@ const SortOption = styled.div`
   }
 `;
 
-const GroupHeader = styled.h3`
-  color: ${THEME.colors.blue};
-  /* top: 83px; */
-  /* position: sticky; */
-  margin: 0;
-  margin-top: 70px;
-  background: white;
-  padding: 10px 0;
-  border-bottom: 1px solid black;
-`;
-
 const EMPTY_FILTERS = {
   universityType: [],
   masterType: [],
@@ -316,15 +302,12 @@ class Masters extends React.Component {
           const element = document.getElementById(id);
           const positionNew = element.getBoundingClientRect();
           const offset = positionOld.top - positionNew.top;
-          console.log("offset", offset);
           const quicklyScrollTo = window.scrollY - offset;
           window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
-          console.log("quicly scroll to", quicklyScrollTo);
         }
         setTimeout(() => {
           const position = element.getBoundingClientRect();
           const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
-          console.log("slowly scroll to", top);
           window.scrollTo({left: 0, top: top, behavior: "smooth"});
         });
       },
@@ -430,12 +413,17 @@ class Masters extends React.Component {
                   const active = master.id === this.state.masterId;
                   const saved = this.state.saved.includes(master.id);
                   const save = () => this.save(master.id);
+                  const onClick = e => {
+                    e.preventDefault();
+                    navigate(`/#${master.id}`, {replace: true});
+                    this.toggleMaster(master.id);
+                  };
                   return (
                     <Master
                       active={active}
                       saved={saved}
                       save={save}
-                      onClick={() => this.toggleMaster(master.id)}
+                      onClick={onClick}
                       key={i}
                       master={master}
                       university={university}
