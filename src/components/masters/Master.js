@@ -63,6 +63,9 @@ const MasterSave = styled.div`
       transform: scale(1.2);
     }
   }
+  @media (hover: none) {
+    display: block;
+  }
   transition: transform 0.2s;
 `;
 
