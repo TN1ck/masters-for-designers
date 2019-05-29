@@ -6,7 +6,7 @@ import Container from "../components/Container";
 import {Masthead} from "../components/Masthead";
 import {Headline} from "../components/Headline";
 import Navbar from "../components/Navbar";
-import {getSavedMasters} from "../storage";
+import {getSavedMasters, saveMasters} from "../storage";
 import MastersDataEnhancer from "../components/masters/MastersDataEnhancer";
 import Master from "../components/masters/Master";
 import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
@@ -29,9 +29,11 @@ class SavedMasters extends React.Component {
     };
   }
   unsave(id) {
+    const savedMasters = this.state.savedMasters.filter(i => i !== id);
     this.setState({
-      savedMasters: this.state.savedMasters.filter(i => i !== id),
+      savedMasters,
     });
+    saveMasters(savedMasters);
   }
   toggleMaster = id => {
     if (this.state.masterIds.includes(id)) {
@@ -64,7 +66,7 @@ class SavedMasters extends React.Component {
 
     return (
       <Layout background={"white"}>
-        <Navbar />
+        <Navbar savedMastersCount={this.state.savedMasters.length} />
         <Masthead>
           <Container>
             <Headline>{"Merkliste"}</Headline>

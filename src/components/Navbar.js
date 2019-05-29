@@ -87,7 +87,7 @@ const ShowMobile = styled.div`
 const Navbar = class extends React.Component {
   render() {
     const {masterCount, background} = this.props;
-    const savedMasters = getSavedMasters();
+    const savedMastersCount = this.props.savedMastersCount || getSavedMasters().length;
     return (
       <NavbarContainer background={background} role="navigation" aria-label="main-navigation">
         <Container>
@@ -108,7 +108,7 @@ const Navbar = class extends React.Component {
                 </NavbarLink>
                 <NavbarLink style={{paddingRight: 0}} to="/saved-masters" activeClassName="active">
                   Merkliste
-                  <Circle>{savedMasters.length}</Circle>
+                  <Circle>{savedMastersCount}</Circle>
                 </NavbarLink>
               </NavbarLinks>
             </NavbarInnerContainer>
@@ -129,7 +129,7 @@ const Navbar = class extends React.Component {
                   <Circle>{"?"}</Circle>
                 </NavbarLink>
                 <NavbarLink style={{paddingRight: 0}} to="/saved-masters" activeClassName="active">
-                  <Circle>{savedMasters.length}</Circle>
+                  <Circle>{savedMastersCount}</Circle>
                 </NavbarLink>
               </NavbarLinks>
             </NavbarInnerContainer>

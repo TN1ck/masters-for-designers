@@ -349,7 +349,7 @@ class Masters extends React.Component {
 
     return (
       <Layout>
-        <Navbar masterCount={filteredMasters.length} />
+        <Navbar masterCount={filteredMasters.length} saveMastersCount={this.state.saved.length} />
         <Masthead>
           <Container>
             <Headline>
