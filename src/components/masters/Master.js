@@ -44,6 +44,7 @@ const MasterDetailSmall = styled.small`
 
 const MasterDetailDegree = styled(MasterDetailSmall)`
   top: -12px;
+  width: 50px;
   position: absolute;
   text-transform: uppercase;
   font-style: italic;
