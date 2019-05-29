@@ -116,7 +116,7 @@ const MasterDetail = ({master, university, save, saved}) => {
     <MasterDetailContainer>
       <MasterDetailLinks>
         <div>
-          <HouseIcon href={master.metadata.website} style={{marginRight: 20}} />
+          <HouseIcon href={master.metadata.website} style={{marginRight: 10}} />
           <TwitterIcon href={master.metadata.twitter} style={{marginRight: 10}} />
           <InstagramIcon href={master.metadata.instagram} style={{marginRight: 10}} />
           <FacebookIcon href={master.metadata.facebook} style={{marginRight: 10}} />
