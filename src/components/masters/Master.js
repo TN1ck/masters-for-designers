@@ -111,6 +111,7 @@ const MasterContainer = styled.a`
     & ${MasterNonTitleContainer} {
       display: block;
       padding: 0;
+      width: 100%;
     }
 
     & ${MasterCity} {
