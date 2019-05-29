@@ -166,7 +166,7 @@ const FilterHeaderInner = styled.div`
 
 const SortOptions = styled.div`
   position: absolute;
-  right: 0;
+  right: -20px;
   width: 180px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   top: 38px;
