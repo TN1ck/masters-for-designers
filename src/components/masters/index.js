@@ -15,7 +15,7 @@ import THEME from "../../theme";
 import {saveMasters, getSavedMasters} from "../../storage";
 import FilterOverlay from "./FilterOverlay";
 import MastersDataEnhancer from "./MastersDataEnhancer";
-import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "./styles";
+import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT, GroupsContainer} from "./styles";
 import scrollTo from "../../utils/scrollTo";
 import TextContainer from "../TextContainer";
 
@@ -417,35 +417,37 @@ class Masters extends React.Component {
           </Container>
         </FilterHeader>
         <Container id="masters-main">
-          {groupedAndSortedMasters.map(([group, name, masters]) => {
-            return (
-              <React.Fragment key={group}>
-                <GroupHeader>{name}</GroupHeader>
-                {masters.map((master, i) => {
-                  const university = universityMap[master.universityName];
-                  const active = this.state.masterIds.includes(master.id);
-                  const saved = this.state.saved.includes(master.id);
-                  const save = () => this.save(master.id);
-                  const onClick = e => {
-                    e.preventDefault();
-                    navigate(`/#${master.id}`, {replace: true});
-                    this.toggleMaster(master.id);
-                  };
-                  return (
-                    <Master
-                      active={active}
-                      saved={saved}
-                      save={save}
-                      onClick={onClick}
-                      key={i}
-                      master={master}
-                      university={university}
-                    />
-                  );
-                })}
-              </React.Fragment>
-            );
-          })}
+          <GroupsContainer>
+            {groupedAndSortedMasters.map(([group, name, masters]) => {
+              return (
+                <React.Fragment key={group}>
+                  <GroupHeader>{name}</GroupHeader>
+                  {masters.map((master, i) => {
+                    const university = universityMap[master.universityName];
+                    const active = this.state.masterIds.includes(master.id);
+                    const saved = this.state.saved.includes(master.id);
+                    const save = () => this.save(master.id);
+                    const onClick = e => {
+                      e.preventDefault();
+                      navigate(`/#${master.id}`, {replace: true});
+                      this.toggleMaster(master.id);
+                    };
+                    return (
+                      <Master
+                        active={active}
+                        saved={saved}
+                        save={save}
+                        onClick={onClick}
+                        key={i}
+                        master={master}
+                        university={university}
+                      />
+                    );
+                  })}
+                </React.Fragment>
+              );
+            })}
+          </GroupsContainer>
           {/* add one master, so that all classes from styled components are generated */}
           <div style={{display: "none"}}>
             <Master active save={() => null} onClick={() => null} master={masters[0]} university={universities[0]} />

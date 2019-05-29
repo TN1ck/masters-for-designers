@@ -15,3 +15,8 @@ export const GroupHeader = styled.h3`
   padding: 10px 0;
   border-bottom: 1px solid black;
 `;
+
+export const GroupsContainer = styled.div`
+  width: 100%;
+  margin-bottom: 80px;
+`;

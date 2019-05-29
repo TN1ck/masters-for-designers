@@ -10,7 +10,7 @@ import {getSavedMasters, saveMasters} from "../storage";
 import MastersDataEnhancer from "../components/masters/MastersDataEnhancer";
 import Master from "../components/masters/Master";
 import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
-import {GroupHeader, MAIN_HEADER_HEIGHT} from "../components/masters/styles";
+import {GroupHeader, MAIN_HEADER_HEIGHT, GroupsContainer} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
 import scrollTo from "../utils/scrollTo";
 import TextContainer from "../components/TextContainer";
@@ -88,36 +88,38 @@ class SavedMasters extends React.Component {
               <SubHeadline>{"Du hast noch keinen Studiengang auf deine Merkliste gesetzt."}</SubHeadline>
             </React.Fragment>
           )}
-          {groupedAndSortedMasters.map(([group, name, masters]) => {
-            return (
-              <React.Fragment key={group}>
-                <GroupHeader>{name}</GroupHeader>
-                {masters.map((master, i) => {
-                  const university = universityMap[master.universityName];
-                  const active = this.state.masterIds.includes(master.id);
-                  const unsave = () => this.unsave(master.id);
-                  const onClick = e => {
-                    e.preventDefault();
-                    this.toggleMaster(master.id);
-                  };
-                  return (
-                    <StyledMaster
-                      active={active}
-                      saved
-                      save={unsave}
-                      onClick={onClick}
-                      key={i}
-                      master={master}
-                      university={university}
-                    />
-                  );
-                })}
-              </React.Fragment>
-            );
-          })}
-          <BackToMainListContainer>
-            <Link to="/">{"Zurück zur Gesamtübersicht"}</Link>
-          </BackToMainListContainer>
+          <GroupsContainer>
+            {groupedAndSortedMasters.map(([group, name, masters]) => {
+              return (
+                <React.Fragment key={group}>
+                  <GroupHeader>{name}</GroupHeader>
+                  {masters.map((master, i) => {
+                    const university = universityMap[master.universityName];
+                    const active = this.state.masterIds.includes(master.id);
+                    const unsave = () => this.unsave(master.id);
+                    const onClick = e => {
+                      e.preventDefault();
+                      this.toggleMaster(master.id);
+                    };
+                    return (
+                      <StyledMaster
+                        active={active}
+                        saved
+                        save={unsave}
+                        onClick={onClick}
+                        key={i}
+                        master={master}
+                        university={university}
+                      />
+                    );
+                  })}
+                </React.Fragment>
+              );
+            })}
+            <BackToMainListContainer>
+              <Link to="/">{"Zurück zur Gesamtübersicht"}</Link>
+            </BackToMainListContainer>
+          </GroupsContainer>
         </Container>
       </Layout>
     );
