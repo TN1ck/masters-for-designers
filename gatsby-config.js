@@ -2,8 +2,10 @@ var proxy = require("http-proxy-middleware");
 
 module.exports = {
   siteMetadata: {
-    title: "Masters for Designers",
-    description: "Masters for Designers.",
+    title: "MASTERS FOR DESIGNERS",
+    siteUrl: "https://www.mastersfordesigners.com",
+    description:
+      "Masters for Designers hat es sich zum Ziel gesetzt jedem interessierten Designer die Möglichkeit zu geben den individuell passenden Studiengang zu finden.",
   },
   plugins: [
     {

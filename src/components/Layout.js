@@ -8,6 +8,7 @@ import useSiteMetadata from "./SiteMetadata";
 // import "./all.sass";
 import Fonts from "./Fonts";
 import CookieBanner from "./CookieBanner";
+import THEME from "../theme";
 
 export const GlobalStyle = createGlobalStyle`
   body, html {
@@ -29,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({children, background}) => {
+const Layout = ({children, background, siteUrl}) => {
   const {title, description} = useSiteMetadata();
   return (
     <div>
@@ -45,13 +46,13 @@ const Layout = ({children, background}) => {
         <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
 
-        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
-        <meta name="theme-color" content="#fff" />
+        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color={THEME.colors.orange} />
+        <meta name="theme-color" content={THEME.colors.orange} />
 
-        <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content="/img/mastersfordesigners.png" />
       </Helmet>
       {/* We give it a min-height of 100vh to make sure the footer is not looking broken, 49 is the desktop height of the footer*/}
       <div style={{minHeight: "calc(100vh - 49px)", background}}>{children}</div>
