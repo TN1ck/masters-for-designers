@@ -11,7 +11,7 @@ const MasterTitle = styled.div`
   word-break: break-word;
   position: relative;
   width: 50%;
-  padding-right: 20px;
+  padding-right: ${20 + 80}px;
 `;
 
 const MasterNonTitleContainer = styled.div`
@@ -37,19 +37,22 @@ const MasterUniversity = styled.div`
 `;
 const MasterDetailContainer = styled.div``;
 
-const MasterDetailSmall = styled.small`
-  display: block;
-  font-size: 13px;
-`;
-
-const MasterDetailDegree = styled(MasterDetailSmall)`
-  top: -12px;
+const MasterDetailDegree = styled.div`
+  /* top: -12px;
   width: 50px;
-  position: absolute;
+  position: absolute; */
+  padding-left: 5px;
+  display: inline-block;
   text-transform: uppercase;
   font-style: italic;
   opacity: ${p => (p.show ? 1 : 0)};
   transition: opacity 0.3s;
+  width: 0;
+  overflow: visible;
+`;
+
+const MasterDetailDegreeInner = styled.div`
+  width: 80px;
 `;
 
 const MasterSave = styled.div`
@@ -73,7 +76,7 @@ const MasterSave = styled.div`
 const makeBold = css`
   ${MasterTitle} {
     font-weight: bold;
-    letter-spacing: -0.19px;
+    letter-spacing: -0.17px;
   }
 
   ${MasterCity} {
@@ -128,6 +131,7 @@ const MasterContainer = styled.a`
 
     & ${MasterTitle} {
       width: 100%;
+      padding-right: 20px;
     }
 
     & ${MasterDeadline} {
@@ -173,7 +177,7 @@ class Master extends React.Component {
         <React.Fragment>
           {title1}
           <br />
-          {"("}
+          {" ("}
           {title2}
         </React.Fragment>
       );
@@ -188,10 +192,12 @@ class Master extends React.Component {
           active={this.props.active}
         >
           <MasterTitle>
-            <MasterDetailDegree show={this.props.active}>
-              {masterTranslation[master.direction.degree]}
-            </MasterDetailDegree>
             {title}
+            <MasterDetailDegree show={this.props.active}>
+              <MasterDetailDegreeInner>
+                {" (" + masterTranslation[master.direction.degree] + ")"}
+              </MasterDetailDegreeInner>
+            </MasterDetailDegree>
           </MasterTitle>
           <MasterNonTitleContainer>
             <MasterUniversity>{master.universityName.normalize()}</MasterUniversity>
