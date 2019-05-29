@@ -20,6 +20,10 @@ const StyledMaster = styled(Master)`
   }
 `;
 
+const BackToMainListContainer = styled.div`
+  margin-top: 40px;
+`;
+
 class SavedMasters extends React.Component {
   constructor(props) {
     super(props);
@@ -79,7 +83,6 @@ class SavedMasters extends React.Component {
           {savedMasters.length === 0 && (
             <React.Fragment>
               <SubHeadline>{"Du hast noch keinen Studiengang auf deine Merkliste gesetzt."}</SubHeadline>
-              <Link to="/">{"Zurück zur Gesamtübersicht"}</Link>
             </React.Fragment>
           )}
           {groupedAndSortedMasters.map(([group, name, masters]) => {
@@ -109,6 +112,9 @@ class SavedMasters extends React.Component {
               </React.Fragment>
             );
           })}
+          <BackToMainListContainer>
+            <Link to="/">{"Zurück zur Gesamtübersicht"}</Link>
+          </BackToMainListContainer>
         </Container>
       </Layout>
     );
