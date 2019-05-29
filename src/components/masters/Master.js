@@ -159,7 +159,7 @@ class Master extends React.Component {
   }
   render() {
     const {master, university, save, saved, active, className} = this.props;
-    let title = master.name;
+    let title = master.name.normalize();
     // When there is something in parentheses in the title, we always make a line-break
     if (title.includes("(")) {
       const [title1, title2] = title.split("(");
@@ -188,8 +188,8 @@ class Master extends React.Component {
             {title}
           </MasterTitle>
           <MasterNonTitleContainer>
-            <MasterUniversity>{master.universityName}</MasterUniversity>
-            <MasterCity>{university.city}</MasterCity>
+            <MasterUniversity>{master.universityName.normalize()}</MasterUniversity>
+            <MasterCity>{university.city.normalize()}</MasterCity>
             <MasterDeadline>
               {master.timeAndMoney.applicationDeadlines.map(d => formatDate(d.date)).join(" & ")}
             </MasterDeadline>
