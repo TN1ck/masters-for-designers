@@ -34,24 +34,26 @@ const GroupLetter = styled.h2`
 `;
 
 const Group = styled.section`
-  padding-top: 20px;
+  /* padding-top: 20px; */
   padding-bottom: 40px;
 
   letter-spacing: 0.01em;
   line-height: 1.6;
 
   p {
-    padding-top: 20px;
+    /* it's less than on the information pages */
+    padding-top: 6px;
     margin: 0;
   }
 
   h3 {
     margin: 0;
+    padding-bottom: 6px;
     padding-top: 40px;
   }
   h4 {
     margin: 0;
-    padding-top: 20px;
+    padding-top: 25px;
   }
 `;
 
