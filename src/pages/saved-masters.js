@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
-import {StaticQuery, graphql} from "gatsby";
+import {StaticQuery, graphql, Link} from "gatsby";
 import Container from "../components/Container";
 import {Masthead} from "../components/Masthead";
 import {Headline} from "../components/Headline";
@@ -10,7 +10,7 @@ import {getSavedMasters, saveMasters} from "../storage";
 import MastersDataEnhancer from "../components/masters/MastersDataEnhancer";
 import Master from "../components/masters/Master";
 import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
-import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "../components/masters/styles";
+import {GroupHeader, MAIN_HEADER_HEIGHT} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
 import scrollTo from "../utils/scrollTo";
 
@@ -57,7 +57,7 @@ class SavedMasters extends React.Component {
     );
   };
   render() {
-    const {masters, universities, universityMap} = this.props;
+    const {masters, universityMap} = this.props;
     const savedMastersIds = this.state.savedMasters;
     const savedMasters = savedMastersIds.map(id => {
       return masters.find(m => m.id === id);
@@ -76,6 +76,12 @@ class SavedMasters extends React.Component {
           </Container>
         </Masthead>
         <Container>
+          {savedMasters.length === 0 && (
+            <React.Fragment>
+              <SubHeadline>{"Du hast noch keinen Studiengang auf deine Merkliste gesetzt."}</SubHeadline>
+              <Link to="/">{"Zurück zur Gesamtübersicht"}</Link>
+            </React.Fragment>
+          )}
           {groupedAndSortedMasters.map(([group, name, masters]) => {
             return (
               <React.Fragment key={group}>
