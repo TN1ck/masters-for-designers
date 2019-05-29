@@ -82,6 +82,16 @@ const MasterDetailSectionDescription = styled.dd`
   margin: 0;
   padding-top: 5px;
   padding-bottom: 20px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding-bottom: 5px;
+    }
+  }
 `;
 const MasterDetailSection = ({headline, listItems, children}) => {
   return (
