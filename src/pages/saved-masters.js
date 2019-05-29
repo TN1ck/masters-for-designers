@@ -13,6 +13,7 @@ import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
 import {GroupHeader, MAIN_HEADER_HEIGHT} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
 import scrollTo from "../utils/scrollTo";
+import TextContainer from "../components/TextContainer";
 
 const StyledMaster = styled(Master)`
   &:visited {
@@ -74,9 +75,11 @@ class SavedMasters extends React.Component {
         <Masthead>
           <Container>
             <Headline>{"Merkliste"}</Headline>
-            <SubHeadline>
-              {"Die Platform für Designer, um einen individuell passenden Masterstudiengang zu finden."}
-            </SubHeadline>
+            <TextContainer>
+              <SubHeadline>
+                {"Die Platform für Designer, um einen individuell passenden Masterstudiengang zu finden."}
+              </SubHeadline>
+            </TextContainer>
           </Container>
         </Masthead>
         <Container>

@@ -17,6 +17,7 @@ import FilterOverlay from "./FilterOverlay";
 import MastersDataEnhancer from "./MastersDataEnhancer";
 import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "./styles";
 import scrollTo from "../../utils/scrollTo";
+import TextContainer from "../TextContainer";
 
 export const mastersQuery = graphql`
   fragment Masters on MastersJsonConnection {
@@ -363,11 +364,13 @@ class Masters extends React.Component {
               <i>{"D"}</i>
               {"esigners"}
             </Headline>
-            <SubHeadline>
-              {
-                "Der Überblick aller für Designer zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
-              }
-            </SubHeadline>
+            <TextContainer>
+              <SubHeadline>
+                {
+                  "Der Überblick aller für Designer zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
+                }
+              </SubHeadline>
+            </TextContainer>
           </Container>
         </Masthead>
         <FilterOverlay

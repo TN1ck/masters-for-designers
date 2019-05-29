@@ -10,6 +10,7 @@ import {pairs} from "../../utils/pairs";
 import Navbar from "../Navbar";
 import {sortBy} from "../../utils/sortBy";
 import THEME from "../../theme";
+import TextContainer from "../TextContainer";
 
 const GlossarContainer = styled.main`
   background: ${THEME.colors.blue};
@@ -61,7 +62,9 @@ export const GlossaryInner = ({glossary, title, content}) => {
       <Masthead background={THEME.colors.blue}>
         <Container>
           <Headline>{title}</Headline>
-          <SubHeadline>{content}</SubHeadline>
+          <TextContainer>
+            <SubHeadline>{content}</SubHeadline>
+          </TextContainer>
         </Container>
       </Masthead>
       <Container>

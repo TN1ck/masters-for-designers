@@ -15,6 +15,11 @@ const SocialLink = styled.a`
     text-decoration: none;
     border: none;
   }
+
+  img {
+    width: 26px;
+    height: 26px;
+  }
 `;
 
 export const FacebookLink = () => {

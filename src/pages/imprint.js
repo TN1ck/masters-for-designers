@@ -38,10 +38,11 @@ const Imprint = ({data}) => {
               <br />
               von <a href="http://www.stephaniebrenner.com">Stephanie Brenner</a>
               <br />
-              <br />
-              Programmierung
-              <br />
-              <a href="https://tomnick.org">Tom Nick</a>
+              <p>
+                Programmierung
+                <br />
+                <a href="https://tomnick.org">Tom Nick</a>
+              </p>
             </ColumnHalf>
           </Row>
           <h3>Haftungshinweise</h3>

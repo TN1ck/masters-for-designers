@@ -6,12 +6,14 @@ export const Container = styled.div`
 
   & p {
     padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 
   h3 {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 0;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 0.02em;
   }
 
