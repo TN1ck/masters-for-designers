@@ -9,6 +9,7 @@ import {MAIN_HEADER_HEIGHT} from "./styles";
 
 const ResetFilters = styled.div`
   opacity: 0;
+  font-size: 13px;
   pointer-events: none;
   ${p =>
     p.show &&

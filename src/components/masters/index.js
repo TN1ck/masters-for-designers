@@ -119,6 +119,8 @@ const FilterText = styled.div`
 
 const ResetFilters = styled(FilterText)`
   margin-left: 20px;
+  font-size: 13px;
+  line-height: 1;
   opacity: 0;
   pointer-events: none;
   ${p =>
@@ -136,6 +138,7 @@ const ResetFilters = styled(FilterText)`
 
 const FilterButtonSection = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const SortSection = styled.div`
@@ -160,6 +163,7 @@ const FilterHeader = styled.div`
 
 const FilterHeaderInner = styled.div`
   display: flex;
+  align-content: center;
   justify-content: space-between;
   padding-bottom: 16px;
   padding-top: 16px;
