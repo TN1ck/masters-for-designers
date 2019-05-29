@@ -1,1 +1,8 @@
-{"name":"Hochschule Trier","city":"Trier","address":"Irminenfreihof 8, 54290 Trier","type":"college","longitude":6.632041,"latitude":49.758924}
+{
+    "name": "Hochschule Trier",
+    "city": "Trier",
+    "address": "Irminenfreihof 8, 54290 Trier",
+    "type": "college",
+    "longitude": 6.632041,
+    "latitude": 49.758924
+}

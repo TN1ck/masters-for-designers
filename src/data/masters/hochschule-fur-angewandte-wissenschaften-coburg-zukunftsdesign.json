@@ -1,1 +1,62 @@
-{"name":"ZukunftsDesign","universityName":"Hochschule für angewandte Wissenschaften Coburg","universityDetails":{"otherUniversity":"nein","department":"—"},"direction":{"degree":"ma","direction":["theoretical"]},"topicAndFocus":{"topicFocus":"thematisch","functionalComposition":"artAndNonArt","allowedDisciplines":"alle Fachrichtungen","allowedDisciplinesTag":["room","visualCommunication","digital","filmAndPhotograpy","product","fashion","illustrations","jewelry"]},"timeAndMoney":{"allowedForms":["partTime","extraOccupational"],"costs":0,"semester":"5","applicationDeadlines":[{"date":"2017-10-01T00:00:00.000Z","international":false,"type":"winter"},{"date":"2018-03-15T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.hs-coburg.de/studium/master/interdisziplinaer/zukunftsdesign.html","facebook":"https://www.facebook.com/hscoburg","instagram":"—","twitter":"https://twitter.com/hs_coburg"}}
+{
+    "name": "ZukunftsDesign",
+    "universityName": "Hochschule für angewandte Wissenschaften Coburg",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "—"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "theoretical"
+        ]
+    },
+    "topicAndFocus": {
+        "topicFocus": "thematisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "alle Fachrichtungen",
+        "allowedDisciplinesTag": [
+            "room",
+            "visualCommunication",
+            "digital",
+            "filmAndPhotograpy",
+            "product",
+            "fashion",
+            "illustrations",
+            "jewelry"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "partTime",
+            "extraOccupational"
+        ],
+        "costs": 0,
+        "semester": "5",
+        "applicationDeadlines": [
+            {
+                "date": "2017-10-01T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            },
+            {
+                "date": "2018-03-15T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.hs-coburg.de/studium/master/interdisziplinaer/zukunftsdesign.html",
+        "facebook": "https://www.facebook.com/hscoburg",
+        "instagram": "—",
+        "twitter": "https://twitter.com/hs_coburg"
+    }
+}

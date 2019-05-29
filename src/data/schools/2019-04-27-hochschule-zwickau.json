@@ -1,1 +1,8 @@
-{"name":"Hochschule Zwickau","city":"Zwickau","address":"Goethestraße 1, 08289 Schneeberg","type":"college","longitude":12.64298,"latitude":50.60253}
+{
+    "name": "Hochschule Zwickau",
+    "city": "Zwickau",
+    "address": "Goethestraße 1, 08289 Schneeberg",
+    "type": "college",
+    "longitude": 12.64298,
+    "latitude": 50.60253
+}

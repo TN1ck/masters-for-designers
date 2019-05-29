@@ -1,1 +1,50 @@
-{"name":"Spatial Strategies (Raumstrategien) ","universityName":"Muthesius Kunsthochschule Kiel","universityDetails":{"otherUniversity":"nein","department":"Raumstrategien"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"artAndNonArt","allowedDisciplines":"Design, Innenarchitektur, Architektur","allowedDisciplinesTag":["room"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"4","applicationDeadlines":[{"date":"2018-05-15T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://muthesius-kunsthochschule.de/raumstrategien/spatial-strategies/","facebook":"https://www.facebook.com/MuthesiusKunsthochschule/?fref=ts","instagram":null,"twitter":"https://twitter.com/muthesiuskh"}}
+{
+    "name": "Spatial Strategies (Raumstrategien) ",
+    "universityName": "Muthesius Kunsthochschule Kiel",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Raumstrategien"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Design, Innenarchitektur, Architektur",
+        "allowedDisciplinesTag": [
+            "room"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2018-05-15T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://muthesius-kunsthochschule.de/raumstrategien/spatial-strategies/",
+        "facebook": "https://www.facebook.com/MuthesiusKunsthochschule/?fref=ts",
+        "instagram": null,
+        "twitter": "https://twitter.com/muthesiuskh"
+    }
+}

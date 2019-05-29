@@ -1,1 +1,8 @@
-{"name":"Hochschule Düsseldorf","city":"Düsseldorf","address":"Georg-Glock-Straße 15, 40474 Düsseldorf","type":"college","longitude":6.76872,"latitude":51.249739}
+{
+    "name": "Hochschule Düsseldorf",
+    "city": "Düsseldorf",
+    "address": "Georg-Glock-Straße 15, 40474 Düsseldorf",
+    "type": "college",
+    "longitude": 6.76872,
+    "latitude": 51.249739
+}

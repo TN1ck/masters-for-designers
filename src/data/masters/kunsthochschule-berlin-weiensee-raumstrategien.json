@@ -1,1 +1,53 @@
-{"name":"Raumstrategien","universityName":"Kunsthochschule Berlin-Weißensee","universityDetails":{"otherUniversity":"nein","department":"Kunst"},"direction":{"degree":"ma","direction":["practical","theoretical"],"masterType":"studyingFurther"},"topicAndFocus":{"topicFocus":"thematisch","functionalComposition":"artAndNonArt","allowedDisciplines":"Design, Bildende Kunst, Architektur, Geisteswissenschaften und Soziologie","allowedDisciplinesTag":["room"]},"timeAndMoney":{"allowedForms":["fullTime","partTime"],"costs":1250,"semester":"4","applicationDeadlines":[{"date":"2018-04-30T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german","english"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"http://www.kh-berlin.de/studium/fachgebiete/ma-raumstrategien/ma-raumstrategien.html","facebook":"https://www.facebook.com/Raumstrategien","instagram":"—","twitter":"https://twitter.com/khb_weissensee?lang=de"}}
+{
+    "name": "Raumstrategien",
+    "universityName": "Kunsthochschule Berlin-Weißensee",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Kunst"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical",
+            "theoretical"
+        ],
+        "masterType": "studyingFurther"
+    },
+    "topicAndFocus": {
+        "topicFocus": "thematisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Design, Bildende Kunst, Architektur, Geisteswissenschaften und Soziologie",
+        "allowedDisciplinesTag": [
+            "room"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime",
+            "partTime"
+        ],
+        "costs": 1250,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2018-04-30T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german",
+            "english"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "http://www.kh-berlin.de/studium/fachgebiete/ma-raumstrategien/ma-raumstrategien.html",
+        "facebook": "https://www.facebook.com/Raumstrategien",
+        "instagram": "—",
+        "twitter": "https://twitter.com/khb_weissensee?lang=de"
+    }
+}

@@ -1,1 +1,8 @@
-{"name":"Universität Siegen","city":"Siegen","address":"Herrengarten 3, 57068 Siegen","type":"university","longitude":0,"latitude":0}
+{
+    "name": "Universität Siegen",
+    "city": "Siegen",
+    "address": "Herrengarten 3, 57068 Siegen",
+    "type": "university",
+    "longitude": 0,
+    "latitude": 0
+}

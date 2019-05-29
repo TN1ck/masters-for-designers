@@ -1,1 +1,57 @@
-{"name":"Coop Design Research","universityName":"Hochschule Anhalt","universityDetails":{"otherUniversity":"nein","department":"Architektur, Facility Management und Geoinformation"},"direction":{"degree":"msc","direction":["theoretical"],"masterType":"studyingFurther"},"topicAndFocus":{"topicFocus":"thematisch","functionalComposition":"artAndNonArt","allowedDisciplines":"Design, Architektur, Kulturwissenschaften","allowedDisciplinesTag":["room","visualCommunication","digital","filmAndPhotograpy","product","fashion","illustrations","jewelry"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":1250,"semester":"2","applicationDeadlines":[{"date":"2018-04-15T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["english"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://coopdesignresearch.de","facebook":"https://www.facebook.com/coopdesignresearch.de","instagram":"—","twitter":"—"}}
+{
+    "name": "Coop Design Research",
+    "universityName": "Hochschule Anhalt",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Architektur, Facility Management und Geoinformation"
+    },
+    "direction": {
+        "degree": "msc",
+        "direction": [
+            "theoretical"
+        ],
+        "masterType": "studyingFurther"
+    },
+    "topicAndFocus": {
+        "topicFocus": "thematisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Design, Architektur, Kulturwissenschaften",
+        "allowedDisciplinesTag": [
+            "room",
+            "visualCommunication",
+            "digital",
+            "filmAndPhotograpy",
+            "product",
+            "fashion",
+            "illustrations",
+            "jewelry"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 1250,
+        "semester": "2",
+        "applicationDeadlines": [
+            {
+                "date": "2018-04-15T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "english"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://coopdesignresearch.de",
+        "facebook": "https://www.facebook.com/coopdesignresearch.de",
+        "instagram": "—",
+        "twitter": "—"
+    }
+}

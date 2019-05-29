@@ -1,1 +1,54 @@
-{"name":"Kunst- und Designwissenschaft","universityName":"Folkwang Universität der Künste Essen","universityDetails":{"otherUniversity":"mit der Universität Duisburg-Essen ","department":"Gestaltung"},"direction":{"degree":"ma","direction":["theoretical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"artAndNonArt","allowedDisciplines":"Industrial Design, Fotografie, Kommunikationsdesign, Kunstpädagogik, Sozial- und Geisteswissenschaften","allowedDisciplinesTag":["digital","filmAndPhotograpy","illustrations","product","visualCommunication"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"4","applicationDeadlines":[{"date":"2019-05-31T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"http://www.folkwang-uni.de/home/wissenschaft/institut-fuer-kunst-und-designwissenschaft/kunst-und-designwissenschaft-ma/","facebook":"https://www.facebook.com/folkwang","instagram":"https://www.instagram.com/folkwangist/","twitter":"—"}}
+{
+    "name": "Kunst- und Designwissenschaft",
+    "universityName": "Folkwang Universität der Künste Essen",
+    "universityDetails": {
+        "otherUniversity": "mit der Universität Duisburg-Essen ",
+        "department": "Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "theoretical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Industrial Design, Fotografie, Kommunikationsdesign, Kunstpädagogik, Sozial- und Geisteswissenschaften",
+        "allowedDisciplinesTag": [
+            "digital",
+            "filmAndPhotograpy",
+            "illustrations",
+            "product",
+            "visualCommunication"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2019-05-31T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "http://www.folkwang-uni.de/home/wissenschaft/institut-fuer-kunst-und-designwissenschaft/kunst-und-designwissenschaft-ma/",
+        "facebook": "https://www.facebook.com/folkwang",
+        "instagram": "https://www.instagram.com/folkwangist/",
+        "twitter": "—"
+    }
+}

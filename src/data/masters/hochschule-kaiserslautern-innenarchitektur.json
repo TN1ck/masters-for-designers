@@ -1,1 +1,55 @@
-{"name":"Innenarchitektur","universityName":"Hochschule Kaiserslautern","universityDetails":{"otherUniversity":"nein","department":"Bauen und Gestaltung"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"artAndNonArt","allowedDisciplines":"Innenarchitektur, Architektur","allowedDisciplinesTag":["room"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"3","applicationDeadlines":[{"date":"2017-07-15T00:00:00.000Z","international":false,"type":"winter"},{"date":"2018-01-15T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.hs-kl.de/bauen-und-gestalten/studiengaenge-fachbereich-bauen-und-gestalten/innenarchitektur/master-innenarchitektur/","facebook":"https://www.facebook.com/Fachbereich-Bauen-und-Gestalten-Hochschule-Kaiserslautern-144785519029013/","instagram":"—","twitter":"https://twitter.com/Hochschule_KL"}}
+{
+    "name": "Innenarchitektur",
+    "universityName": "Hochschule Kaiserslautern",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Bauen und Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Innenarchitektur, Architektur",
+        "allowedDisciplinesTag": [
+            "room"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "3",
+        "applicationDeadlines": [
+            {
+                "date": "2017-07-15T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            },
+            {
+                "date": "2018-01-15T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.hs-kl.de/bauen-und-gestalten/studiengaenge-fachbereich-bauen-und-gestalten/innenarchitektur/master-innenarchitektur/",
+        "facebook": "https://www.facebook.com/Fachbereich-Bauen-und-Gestalten-Hochschule-Kaiserslautern-144785519029013/",
+        "instagram": "—",
+        "twitter": "https://twitter.com/Hochschule_KL"
+    }
+}

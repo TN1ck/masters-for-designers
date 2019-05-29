@@ -1,1 +1,55 @@
-{"name":"Zeitbasierte Medien","universityName":"Hochschule Mainz","universityDetails":{"otherUniversity":"nein","department":"Gestaltung"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"disciplinary","allowedDisciplines":"Gestalterische und künstlerische Disziplinen mit fundierten Kenntnissen auf dem Gebiet zeitbasierter Medien","allowedDisciplinesTag":["digital"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"4","applicationDeadlines":[{"date":"2017-12-01T00:00:00.000Z","international":false,"type":"winter"},{"date":"2018-06-01T00:00:00.000Z","international":false,"type":"winter"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.hs-mainz.de/gestaltung/mediendesign/zeitbasierte-medien-master-vollzeit/index.html","facebook":"https://www.facebook.com/gestaltung.hsmainz/","instagram":"—","twitter":"https://twitter.com/HS_Mainz"}}
+{
+    "name": "Zeitbasierte Medien",
+    "universityName": "Hochschule Mainz",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "disciplinary",
+        "allowedDisciplines": "Gestalterische und künstlerische Disziplinen mit fundierten Kenntnissen auf dem Gebiet zeitbasierter Medien",
+        "allowedDisciplinesTag": [
+            "digital"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2017-12-01T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            },
+            {
+                "date": "2018-06-01T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.hs-mainz.de/gestaltung/mediendesign/zeitbasierte-medien-master-vollzeit/index.html",
+        "facebook": "https://www.facebook.com/gestaltung.hsmainz/",
+        "instagram": "—",
+        "twitter": "https://twitter.com/HS_Mainz"
+    }
+}

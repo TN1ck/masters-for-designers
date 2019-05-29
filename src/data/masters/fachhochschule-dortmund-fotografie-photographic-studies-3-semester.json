@@ -1,1 +1,50 @@
-{"name":"Fotografie/Photographic Studies (3 Semester)","universityName":"Fachhochschule Dortmund","universityDetails":{"otherUniversity":"nein","department":"Design"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"disciplinary","allowedDisciplines":"Fotografie","allowedDisciplinesTag":["filmAndPhotograpy"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"3","applicationDeadlines":[{"date":"2019-07-15T00:00:00.000Z","international":false,"type":"winter"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.fh-dortmund.de/de/fb/2/studium/studiengaenge/ma_photo/ma_photo3/index.php","facebook":"https://www.facebook.com/FhDortmundFachbereichDesign/","instagram":"https://www.instagram.com/fhdortmund/","twitter":"https://twitter.com/fh_dortmund"}}
+{
+    "name": "Fotografie/Photographic Studies (3 Semester)",
+    "universityName": "Fachhochschule Dortmund",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Design"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "disciplinary",
+        "allowedDisciplines": "Fotografie",
+        "allowedDisciplinesTag": [
+            "filmAndPhotograpy"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "3",
+        "applicationDeadlines": [
+            {
+                "date": "2019-07-15T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.fh-dortmund.de/de/fb/2/studium/studiengaenge/ma_photo/ma_photo3/index.php",
+        "facebook": "https://www.facebook.com/FhDortmundFachbereichDesign/",
+        "instagram": "https://www.instagram.com/fhdortmund/",
+        "twitter": "https://twitter.com/fh_dortmund"
+    }
+}

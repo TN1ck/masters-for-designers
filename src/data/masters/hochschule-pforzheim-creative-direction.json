@@ -1,1 +1,58 @@
-{"name":"Creative Direction","universityName":"Hochschule Pforzheim","universityDetails":{"otherUniversity":"nein","department":"Gestaltung"},"direction":{"degree":"ma","direction":["practical","theoretical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"thematisch","functionalComposition":"interdisciplinaryArt","allowedDisciplines":"Design","allowedDisciplinesTag":["room","visualCommunication","digital","filmAndPhotograpy","product","fashion","illustrations","jewelry"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"3","applicationDeadlines":[{"date":"2018-04-30T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://designpf.hs-pforzheim.de/master/creative_direction/","facebook":"https://www.facebook.com/hs.pforzheim","instagram":"https://www.instagram.com/hspforzheim/","twitter":"https://twitter.com/hs_pforzheim"}}
+{
+    "name": "Creative Direction",
+    "universityName": "Hochschule Pforzheim",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical",
+            "theoretical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "thematisch",
+        "functionalComposition": "interdisciplinaryArt",
+        "allowedDisciplines": "Design",
+        "allowedDisciplinesTag": [
+            "room",
+            "visualCommunication",
+            "digital",
+            "filmAndPhotograpy",
+            "product",
+            "fashion",
+            "illustrations",
+            "jewelry"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "3",
+        "applicationDeadlines": [
+            {
+                "date": "2018-04-30T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://designpf.hs-pforzheim.de/master/creative_direction/",
+        "facebook": "https://www.facebook.com/hs.pforzheim",
+        "instagram": "https://www.instagram.com/hspforzheim/",
+        "twitter": "https://twitter.com/hs_pforzheim"
+    }
+}

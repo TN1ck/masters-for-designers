@@ -1,1 +1,51 @@
-{"name":"Kommunikation im Raum","universityName":"Hochschule Mainz","universityDetails":{"otherUniversity":"nein","department":"Gestaltung"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"artAndNonArt","allowedDisciplines":"Design, Innenarchitektur, Architektur","allowedDisciplinesTag":["room","visualCommunication"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"3","applicationDeadlines":[{"date":"2018-06-15T00:00:00.000Z","international":false,"type":"winter"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.hs-mainz.de/gestaltung/innenarchitektur/ma-kommunikation-im-raum/index.html","facebook":"https://www.facebook.com/gestaltung.hsmainz/","instagram":"—","twitter":"https://twitter.com/HS_Mainz"}}
+{
+    "name": "Kommunikation im Raum",
+    "universityName": "Hochschule Mainz",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Design, Innenarchitektur, Architektur",
+        "allowedDisciplinesTag": [
+            "room",
+            "visualCommunication"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "3",
+        "applicationDeadlines": [
+            {
+                "date": "2018-06-15T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.hs-mainz.de/gestaltung/innenarchitektur/ma-kommunikation-im-raum/index.html",
+        "facebook": "https://www.facebook.com/gestaltung.hsmainz/",
+        "instagram": "—",
+        "twitter": "https://twitter.com/HS_Mainz"
+    }
+}

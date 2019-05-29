@@ -1,1 +1,50 @@
-{"name":"Illustration (Visuelle Kommunikation)","universityName":"Universität der Künste Berlin","universityDetails":{"otherUniversity":"nein","department":"Gestaltung"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"disciplinary","allowedDisciplines":"Visuelle Kommunikation oder eine vergleichbare Disziplin","allowedDisciplinesTag":["illustrations"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"2","applicationDeadlines":[{"date":"2019-03-15T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.udk-berlin.de/studium/visuelle-kommunikation/illustration/","facebook":"—","instagram":"—","twitter":"—"}}
+{
+    "name": "Illustration (Visuelle Kommunikation)",
+    "universityName": "Universität der Künste Berlin",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "disciplinary",
+        "allowedDisciplines": "Visuelle Kommunikation oder eine vergleichbare Disziplin",
+        "allowedDisciplinesTag": [
+            "illustrations"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "2",
+        "applicationDeadlines": [
+            {
+                "date": "2019-03-15T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.udk-berlin.de/studium/visuelle-kommunikation/illustration/",
+        "facebook": "—",
+        "instagram": "—",
+        "twitter": "—"
+    }
+}

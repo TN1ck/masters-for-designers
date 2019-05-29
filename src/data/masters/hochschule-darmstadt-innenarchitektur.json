@@ -1,1 +1,50 @@
-{"name":"Innenarchitektur","universityName":"Hochschule Darmstadt","universityDetails":{"otherUniversity":"nein","department":"Architektur, Medien und Design"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","functionalComposition":"disciplinary","allowedDisciplines":"Innenarchitektur","allowedDisciplinesTag":["room"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"4","applicationDeadlines":[{"date":"2017-07-01T00:00:00.000Z","international":false,"type":"winter"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"https://www.h-da.de/studium/studienangebot/studiengaenge/architektur-medien-und-design/innenarchitektur-ma/","facebook":"https://www.facebook.com/fachbereicharchitekturhda","instagram":"—","twitter":"https://twitter.com/h_da?lang=de"}}
+{
+    "name": "Innenarchitektur",
+    "universityName": "Hochschule Darmstadt",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Architektur, Medien und Design"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "functionalComposition": "disciplinary",
+        "allowedDisciplines": "Innenarchitektur",
+        "allowedDisciplinesTag": [
+            "room"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2017-07-01T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "https://www.h-da.de/studium/studienangebot/studiengaenge/architektur-medien-und-design/innenarchitektur-ma/",
+        "facebook": "https://www.facebook.com/fachbereicharchitekturhda",
+        "instagram": "—",
+        "twitter": "https://twitter.com/h_da?lang=de"
+    }
+}

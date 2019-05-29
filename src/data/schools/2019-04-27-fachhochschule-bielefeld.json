@@ -1,1 +1,8 @@
-{"name":"Fachhochschule Bielefeld","city":"Bielefeld","address":"Lampingstrasse 3, 33615 Bielefeld","type":"college","longitude":8.51157,"latitude":52.02805}
+{
+    "name": "Fachhochschule Bielefeld",
+    "city": "Bielefeld",
+    "address": "Lampingstrasse 3, 33615 Bielefeld",
+    "type": "college",
+    "longitude": 8.51157,
+    "latitude": 52.02805
+}

@@ -1,1 +1,8 @@
-{"name":"Hochschule Furtwangen","city":"Furtwangen","address":"Robert-Gerwig-Platz 1, 78120 Furtwangen","type":"college","longitude":8.208378,"latitude":48.05104}
+{
+    "name": "Hochschule Furtwangen",
+    "city": "Furtwangen",
+    "address": "Robert-Gerwig-Platz 1, 78120 Furtwangen",
+    "type": "college",
+    "longitude": 8.208378,
+    "latitude": 48.05104
+}

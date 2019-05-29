@@ -1,1 +1,8 @@
-{"name":"Hochschule für bildende Künste Saar","city":"Saarbrücken","address":"Keplerstraße 3-5, 66117 Saarbrücken","type":"artCollege","longitude":6.98494,"latitude":49.23252}
+{
+    "name": "Hochschule für bildende Künste Saar",
+    "city": "Saarbrücken",
+    "address": "Keplerstraße 3-5, 66117 Saarbrücken",
+    "type": "artCollege",
+    "longitude": 6.98494,
+    "latitude": 49.23252
+}

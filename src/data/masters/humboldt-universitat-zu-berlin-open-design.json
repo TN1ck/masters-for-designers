@@ -1,1 +1,57 @@
-{"name":"Open Design","universityName":"Humboldt-Universität zu Berlin","universityDetails":{"otherUniversity":"mit Universidad de Buenos Aires","department":"Kultur- , Sozial- und Bildungswissenschaften"},"direction":{"degree":"ma","direction":["theoretical"],"masterType":"studyingFurther"},"topicAndFocus":{"topicFocus":"fachuebergreifend","functionalComposition":"artAndNonArt","allowedDisciplines":"alle Fachrichtungen","allowedDisciplinesTag":["room","visualCommunication","digital","filmAndPhotograpy","product","fashion","illustrations","jewelry"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":1100,"semester":"4","applicationDeadlines":[{"date":"2017-09-30T00:00:00.000Z","international":false,"type":"winter"}]},"internationality":{"mainLanguages":["english"],"semesterAbroad":"yes","doubleDegree":true},"metadata":{"website":"https://master-open-design.org/","facebook":"https://www.facebook.com/opendesignmaster/","instagram":"—","twitter":"https://twitter.com/HumboldtUni"}}
+{
+    "name": "Open Design",
+    "universityName": "Humboldt-Universität zu Berlin",
+    "universityDetails": {
+        "otherUniversity": "mit Universidad de Buenos Aires",
+        "department": "Kultur- , Sozial- und Bildungswissenschaften"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "theoretical"
+        ],
+        "masterType": "studyingFurther"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachuebergreifend",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "alle Fachrichtungen",
+        "allowedDisciplinesTag": [
+            "room",
+            "visualCommunication",
+            "digital",
+            "filmAndPhotograpy",
+            "product",
+            "fashion",
+            "illustrations",
+            "jewelry"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 1100,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2017-09-30T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "english"
+        ],
+        "semesterAbroad": "yes",
+        "doubleDegree": true
+    },
+    "metadata": {
+        "website": "https://master-open-design.org/",
+        "facebook": "https://www.facebook.com/opendesignmaster/",
+        "instagram": "—",
+        "twitter": "https://twitter.com/HumboldtUni"
+    }
+}

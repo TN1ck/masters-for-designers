@@ -1,1 +1,8 @@
-{"name":"Universität Bremen","city":"Bremen","address":"Bibliothekstraße 1, 28359 Bremen ","type":"university","longitude":0,"latitude":0}
+{
+    "name": "Universität Bremen",
+    "city": "Bremen",
+    "address": "Bibliothekstraße 1, 28359 Bremen ",
+    "type": "university",
+    "longitude": 0,
+    "latitude": 0
+}

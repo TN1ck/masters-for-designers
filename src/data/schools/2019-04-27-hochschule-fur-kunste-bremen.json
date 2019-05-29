@@ -1,1 +1,8 @@
-{"name":"Hochschule für Künste Bremen","city":"Bremen","address":"Am Speicher XI 8, 28217 Bremen","type":"artCollege","longitude":8.769141,"latitude":53.097625}
+{
+    "name": "Hochschule für Künste Bremen",
+    "city": "Bremen",
+    "address": "Am Speicher XI 8, 28217 Bremen",
+    "type": "artCollege",
+    "longitude": 8.769141,
+    "latitude": 53.097625
+}

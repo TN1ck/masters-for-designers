@@ -1,1 +1,8 @@
-{"name":"Hochschule Niederrhein","city":"Krefeld","address":"Frankenring 20, 47798 Krefeld","type":"college","longitude":6.554321,"latitude":51.325155}
+{
+    "name": "Hochschule Niederrhein",
+    "city": "Krefeld",
+    "address": "Frankenring 20, 47798 Krefeld",
+    "type": "college",
+    "longitude": 6.554321,
+    "latitude": 51.325155
+}

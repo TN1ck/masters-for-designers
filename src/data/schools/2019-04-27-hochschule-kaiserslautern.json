@@ -1,1 +1,8 @@
-{"name":"Hochschule Kaiserslautern","city":"Kaiserslautern","address":"Morlauterer Straße 31, 67657 Kaiserslautern","type":"college","longitude":7.764054,"latitude":49.451763}
+{
+    "name": "Hochschule Kaiserslautern",
+    "city": "Kaiserslautern",
+    "address": "Morlauterer Straße 31, 67657 Kaiserslautern",
+    "type": "college",
+    "longitude": 7.764054,
+    "latitude": 49.451763
+}

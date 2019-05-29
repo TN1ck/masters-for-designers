@@ -1,1 +1,8 @@
-{"name":"Hochschule Rhein Main","city":"Wiesbaden","address":"Unter den Eichen 5, 65195 Wiesbaden","type":"college","longitude":8.215839,"latitude":50.098223}
+{
+    "name": "Hochschule Rhein Main",
+    "city": "Wiesbaden",
+    "address": "Unter den Eichen 5, 65195 Wiesbaden",
+    "type": "college",
+    "longitude": 8.215839,
+    "latitude": 50.098223
+}

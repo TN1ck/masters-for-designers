@@ -1,1 +1,54 @@
-{"name":"International MediaArchitecture Master Studies (MediaArchitecture)","universityName":"Bauhaus-Universität Weimar","universityDetails":{"otherUniversity":"mit SUNY, University at Buffalo","department":"Architektur und Urbanistik"},"direction":{"degree":"msc","direction":["practical","theoretical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachuebergreifend","functionalComposition":"artAndNonArt","allowedDisciplines":"Architektur, Medien, verwandte Disziplinen mit wissenschaftlicher und/oder künstlerisch-gestalterischer Ausrichtung","allowedDisciplinesTag":["digital","room","visualCommunication"]},"timeAndMoney":{"allowedForms":["fullTime"],"costs":0,"semester":"4","applicationDeadlines":[{"date":"2019-07-15T00:00:00.000Z","international":false,"type":"winter"}]},"internationality":{"mainLanguages":["german","english"],"semesterAbroad":"yes","doubleDegree":true},"metadata":{"website":"https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/dual-masters-degree/start/","facebook":"https://www.facebook.com/bauhausuni","instagram":"https://www.instagram.com/bauhaus_uni/","twitter":"https://twitter.com/bauhaus_uni"}}
+{
+    "name": "International MediaArchitecture Master Studies (MediaArchitecture)",
+    "universityName": "Bauhaus-Universität Weimar",
+    "universityDetails": {
+        "otherUniversity": "mit SUNY, University at Buffalo",
+        "department": "Architektur und Urbanistik"
+    },
+    "direction": {
+        "degree": "msc",
+        "direction": [
+            "practical",
+            "theoretical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachuebergreifend",
+        "functionalComposition": "artAndNonArt",
+        "allowedDisciplines": "Architektur, Medien, verwandte Disziplinen mit wissenschaftlicher und/oder künstlerisch-gestalterischer Ausrichtung",
+        "allowedDisciplinesTag": [
+            "digital",
+            "room",
+            "visualCommunication"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime"
+        ],
+        "costs": 0,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2019-07-15T00:00:00.000Z",
+                "international": false,
+                "type": "winter"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german",
+            "english"
+        ],
+        "semesterAbroad": "yes",
+        "doubleDegree": true
+    },
+    "metadata": {
+        "website": "https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/dual-masters-degree/start/",
+        "facebook": "https://www.facebook.com/bauhausuni",
+        "instagram": "https://www.instagram.com/bauhaus_uni/",
+        "twitter": "https://twitter.com/bauhaus_uni"
+    }
+}

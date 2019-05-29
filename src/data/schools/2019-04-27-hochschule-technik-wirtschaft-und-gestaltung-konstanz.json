@@ -1,1 +1,8 @@
-{"name":"Hochschule Technik Wirtschaft und Gestaltung Konstanz","city":"Konstanz","address":"Brauneggerstr. 55, 78462 Konstanz","type":"college","longitude":9.1718,"latitude":47.66765}
+{
+    "name": "Hochschule Technik Wirtschaft und Gestaltung Konstanz",
+    "city": "Konstanz",
+    "address": "Brauneggerstr. 55, 78462 Konstanz",
+    "type": "college",
+    "longitude": 9.1718,
+    "latitude": 47.66765
+}

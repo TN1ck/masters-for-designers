@@ -1,1 +1,8 @@
-{"name":"Muthesius Kunsthochschule Kiel","city":"Kiel","address":"Legienstr. 35, 24103 Kiel","type":"artCollege","longitude":10.12935,"latitude":54.32772}
+{
+    "name": "Muthesius Kunsthochschule Kiel",
+    "city": "Kiel",
+    "address": "Legienstr. 35, 24103 Kiel",
+    "type": "artCollege",
+    "longitude": 10.12935,
+    "latitude": 54.32772
+}

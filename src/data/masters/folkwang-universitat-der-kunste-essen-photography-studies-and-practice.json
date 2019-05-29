@@ -1,1 +1,52 @@
-{"name":"Photography Studies and Practice","universityName":"Folkwang Universität der Künste Essen","universityDetails":{"otherUniversity":"nein","department":"Gestaltung"},"direction":{"degree":"ma","direction":["practical"],"masterType":"consecutive"},"topicAndFocus":{"topicFocus":"fachspezifisch","allowedDisciplines":"Gestalterische und künstlerische Disziplinen, wie Fotografie, Kommunikationsdesign, Kunst und weiteren angrenzende Bereiche","allowedDisciplinesTag":["visualCommunication","digital","filmAndPhotograpy"]},"timeAndMoney":{"allowedForms":["fullTime","partTime"],"costs":0,"semester":"4","applicationDeadlines":[{"date":"2018-03-15T00:00:00.000Z","international":false,"type":"summer"}]},"internationality":{"mainLanguages":["german"],"semesterAbroad":"no","doubleDegree":false},"metadata":{"website":"http://www.folkwang-uni.de/home/gestaltung/studiengaenge/fotografie/photography-studies-and-practice-ma/","facebook":"https://www.facebook.com/folkwang","instagram":"https://www.instagram.com/photographystudiesfolkwang/","twitter":"—"}}
+{
+    "name": "Photography Studies and Practice",
+    "universityName": "Folkwang Universität der Künste Essen",
+    "universityDetails": {
+        "otherUniversity": "nein",
+        "department": "Gestaltung"
+    },
+    "direction": {
+        "degree": "ma",
+        "direction": [
+            "practical"
+        ],
+        "masterType": "consecutive"
+    },
+    "topicAndFocus": {
+        "topicFocus": "fachspezifisch",
+        "allowedDisciplines": "Gestalterische und künstlerische Disziplinen, wie Fotografie, Kommunikationsdesign, Kunst und weiteren angrenzende Bereiche",
+        "allowedDisciplinesTag": [
+            "visualCommunication",
+            "digital",
+            "filmAndPhotograpy"
+        ]
+    },
+    "timeAndMoney": {
+        "allowedForms": [
+            "fullTime",
+            "partTime"
+        ],
+        "costs": 0,
+        "semester": "4",
+        "applicationDeadlines": [
+            {
+                "date": "2018-03-15T00:00:00.000Z",
+                "international": false,
+                "type": "summer"
+            }
+        ]
+    },
+    "internationality": {
+        "mainLanguages": [
+            "german"
+        ],
+        "semesterAbroad": "no",
+        "doubleDegree": false
+    },
+    "metadata": {
+        "website": "http://www.folkwang-uni.de/home/gestaltung/studiengaenge/fotografie/photography-studies-and-practice-ma/",
+        "facebook": "https://www.facebook.com/folkwang",
+        "instagram": "https://www.instagram.com/photographystudiesfolkwang/",
+        "twitter": "—"
+    }
+}

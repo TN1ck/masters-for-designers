@@ -1,1 +1,8 @@
-{"name":"Hochschule Hannover","city":"Hannover","address":"Expo Plaza 2, 30539 Hannover","type":"college","longitude":9.81536,"latitude":52.31967}
+{
+    "name": "Hochschule Hannover",
+    "city": "Hannover",
+    "address": "Expo Plaza 2, 30539 Hannover",
+    "type": "college",
+    "longitude": 9.81536,
+    "latitude": 52.31967
+}

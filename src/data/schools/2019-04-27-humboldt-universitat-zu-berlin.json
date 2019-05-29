@@ -1,1 +1,8 @@
-{"name":"Humboldt-Universität zu Berlin","city":"Berlin","address":"Sophienstraße 22a, 10178 Berlin","type":"university","longitude":13.4008,"latitude":52.52636}
+{
+    "name": "Humboldt-Universität zu Berlin",
+    "city": "Berlin",
+    "address": "Sophienstraße 22a, 10178 Berlin",
+    "type": "university",
+    "longitude": 13.4008,
+    "latitude": 52.52636
+}

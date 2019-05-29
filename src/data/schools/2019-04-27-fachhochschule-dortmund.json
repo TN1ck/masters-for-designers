@@ -1,1 +1,8 @@
-{"name":"Fachhochschule Dortmund","city":"Dortmund","address":"Max-Ophüls-Platz 2, 44139 Dortmund","type":"college","longitude":7.453252,"latitude":51.498387}
+{
+    "name": "Fachhochschule Dortmund",
+    "city": "Dortmund",
+    "address": "Max-Ophüls-Platz 2, 44139 Dortmund",
+    "type": "college",
+    "longitude": 7.453252,
+    "latitude": 51.498387
+}

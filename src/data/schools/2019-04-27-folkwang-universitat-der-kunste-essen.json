@@ -1,1 +1,8 @@
-{"name":"Folkwang Universität der Künste Essen","city":"Essen","address":"Universitätsstr. 12, 45141 Essen","type":"university","longitude":7.00949,"latitude":51.46323}
+{
+    "name": "Folkwang Universität der Künste Essen",
+    "city": "Essen",
+    "address": "Universitätsstr. 12, 45141 Essen",
+    "type": "university",
+    "longitude": 7.00949,
+    "latitude": 51.46323
+}

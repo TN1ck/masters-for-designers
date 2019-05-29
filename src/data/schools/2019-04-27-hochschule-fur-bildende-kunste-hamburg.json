@@ -1,1 +1,8 @@
-{"name":"Hochschule für Bildende Künste Hamburg","city":"Hamburg","address":"Lerchenfeld 2, 22081 Hamburg","type":"artCollege","longitude":10.031557,"latitude":53.567454}
+{
+    "name": "Hochschule für Bildende Künste Hamburg",
+    "city": "Hamburg",
+    "address": "Lerchenfeld 2, 22081 Hamburg",
+    "type": "artCollege",
+    "longitude": 10.031557,
+    "latitude": 53.567454
+}

@@ -1,1 +1,8 @@
-{"name":"Bergische Universität Wuppertal","city":"Wuppertal","address":"Fuhlrottstr. 10, 42119 Wuppertal","type":"university","longitude":7.15122,"latitude":51.2446}
+{
+    "name": "Bergische Universität Wuppertal",
+    "city": "Wuppertal",
+    "address": "Fuhlrottstr. 10, 42119 Wuppertal",
+    "type": "university",
+    "longitude": 7.15122,
+    "latitude": 51.2446
+}
