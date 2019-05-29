@@ -110,16 +110,10 @@ const FilterText = styled.div`
         border-top: 6px solid black;
         border-bottom: 6px solid transparent;
         border-left: 6px solid transparent;
-        transform: rotate(0deg);
-        transform-origin: 5px 4px;
-    /*
-        ${p =>
-          p.active &&
-          css`
-            transform: rotate(90);
-          `} */
+        transform: ${p => (p.withRotation && p.active ? "rotate(180deg)" : "rotate(0deg)")};
+        transform-origin: 5px 2px;
       }
-  `}
+    `}
 `;
 
 const ResetFilters = styled(FilterText)`
@@ -175,7 +169,7 @@ const SortOptions = styled.div`
   right: 0;
   width: 180px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  top: 33px;
+  top: 38px;
   z-index: 99;
   background: ${THEME.colors.blue};
 `;
@@ -393,7 +387,7 @@ class Masters extends React.Component {
                 </ResetFilters>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
-                <FilterText showArrow active={true}>
+                <FilterText withRotation showArrow active={this.state.showSort}>
                   {SORT_NAME_MAPPING[this.state.sort]}
                 </FilterText>
                 {this.state.showSort && (
