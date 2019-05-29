@@ -38,7 +38,7 @@ const FilterButton = styled.button`
   position: relative;
   font-weight: 400;
   font-size: 12px;
-  background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
+  background-color: ${p => (p.active ? "rgba(255, 255, 255, 1)" : " rgba(255, 255, 255, 0)")};
   transition: background-color 100ms ease-out;
   border-radius: 20px;
   border: 1px solid black;
