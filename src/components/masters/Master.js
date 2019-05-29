@@ -133,6 +133,10 @@ const MasterContainer = styled.a`
     & ${MasterDeadline} {
       width: 100%;
     }
+
+    ${MasterSave} {
+      top: 25px;
+    }
   }
 
   /* transition: color 0.3s; */
