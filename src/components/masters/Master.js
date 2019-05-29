@@ -39,7 +39,7 @@ const MasterDetailContainer = styled.div``;
 
 const MasterDetailSmall = styled.small`
   display: block;
-  font-size: 12px;
+  font-size: 13px;
 `;
 
 const MasterDetailDegree = styled(MasterDetailSmall)`
