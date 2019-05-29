@@ -96,25 +96,30 @@ const FilterText = styled.div`
     border-bottom: 1px solid black;
   }
 
-  &:after {
-    transition: transform 200ms ease-out;
-    position: absolute;
-    content: "";
-    right: -20px;
-    top: 9px;
-    border-right: 6px solid transparent;
-    border-top: 6px solid black;
-    border-bottom: 6px solid transparent;
-    border-left: 6px solid transparent;
-    transform: rotate(0deg);
-    transform-origin: 5px 4px;
-/*
-    ${p =>
-      p.active &&
-      css`
-        transform: rotate(90);
-      `} */
-  }
+  ${p =>
+    p.showArrow &&
+    css`
+      margin-right: 20px;
+      &:after {
+        transition: transform 200ms ease-out;
+        position: absolute;
+        content: "";
+        right: -20px;
+        top: 9px;
+        border-right: 6px solid transparent;
+        border-top: 6px solid black;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid transparent;
+        transform: rotate(0deg);
+        transform-origin: 5px 4px;
+    /*
+        ${p =>
+          p.active &&
+          css`
+            transform: rotate(90);
+          `} */
+      }
+  `}
 `;
 
 const ResetFilters = styled(FilterText)`
@@ -380,7 +385,7 @@ class Masters extends React.Component {
           <Container>
             <FilterHeaderInner>
               <FilterButtonSection>
-                <FilterText active={this.state.show} onClick={this.showOverlay}>
+                <FilterText showArrow onClick={this.showOverlay}>
                   {`Filter (${numberOfFilters})`}
                 </FilterText>
                 <ResetFilters onClick={this.resetFilters} show={numberOfFilters > 0}>
@@ -388,7 +393,9 @@ class Masters extends React.Component {
                 </ResetFilters>
               </FilterButtonSection>
               <SortSection onClick={this.state.showSort ? this.sortHide : this.sortShow}>
-                <FilterText active={true}>{SORT_NAME_MAPPING[this.state.sort]}</FilterText>
+                <FilterText showArrow active={true}>
+                  {SORT_NAME_MAPPING[this.state.sort]}
+                </FilterText>
                 {this.state.showSort && (
                   <SortOptions>
                     {[{value: "alphabet"}, {value: "city"}, {value: "university"}, {value: "deadline"}].map(

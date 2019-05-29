@@ -19,6 +19,7 @@ const ResetFilters = styled.div`
 
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 `;
 
@@ -35,7 +36,7 @@ const FilterMain = styled.div`
 
 const FilterButton = styled.button`
   position: relative;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 12px;
   background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
   transition: background-color 100ms ease-out;
