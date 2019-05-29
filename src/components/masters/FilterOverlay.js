@@ -91,7 +91,7 @@ const FilterHeader = styled.div`
   background: ${THEME.colors.blue};
   position: sticky;
   display: flex;
-  padding-top: 10px;
+  padding-top: 16px;
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid black;
