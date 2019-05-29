@@ -85,6 +85,7 @@ const FilterText = styled.div`
   display: block;
   position: relative;
   border-bottom: 1px solid transparent;
+  font-weight: ${p => (p.active ? "bold" : "400")};
   &,
   &:visited,
   &:focus {
