@@ -75,7 +75,7 @@ const MasterDetailSectionContainer = styled.div`
 `;
 const MasterDetailSectionList = styled.dl``;
 const MasterDetailSectionTitle = styled.dt`
-  font-weight: 500;
+  font-weight: bold;
 `;
 const MasterDetailSectionDescription = styled.dd`
   padding: 0;
@@ -175,7 +175,9 @@ const MasterDetail = ({master, university, save, saved}) => {
             ["Regelstudienzeit", master.timeAndMoney.semester],
             [
               "Zulassungssemester",
-              master.timeAndMoney.applicationDeadlines.map(d => semesterTypeTranslation[d.type]).join(" & "),
+              master.timeAndMoney.applicationDeadlines.length >= 2
+                ? semesterTypeTranslation.summerwinter
+                : semesterTypeTranslation[master.timeAndMoney.applicationDeadlines[0].type],
             ],
             ["Gebühren", master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs)],
           ]}
@@ -190,7 +192,7 @@ const MasterDetail = ({master, university, save, saved}) => {
               master.internationality.mainLanguages.map(d => mainLanguagesTranslation[d]).join(" & "),
             ],
             ["Integriertes Auslandssemester", semesterAbroadTranslation[master.internationality.semesterAbroad]],
-            ["Doppelter Abschluss", master.internationality.doubleDegree ? "Ja" : "Nein"],
+            ["Doppelabschluss", master.internationality.doubleDegree ? "Ja" : "Nein"],
           ]}
         />
       </MasterDetailInternationalitySection>

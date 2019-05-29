@@ -361,7 +361,7 @@ class Masters extends React.Component {
             </Headline>
             <SubHeadline>
               {
-                "MD bietet einen Überblick über alle für Designer zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
+                "Der Überblick aller für Designer zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
               }
             </SubHeadline>
           </Container>

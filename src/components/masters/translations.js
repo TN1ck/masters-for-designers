@@ -4,7 +4,7 @@ export const allowedDisciplinesTagTranslation = {
   illustrations: "Illustrationen",
   fashion: "Mode/Textil",
   product: "Produkt/Industrie",
-  room: "Raum",
+  room: "Innenarchitektur",
   jewelry: "Schmuck",
   visualCommunication: "Visuelle Kommunikation",
 };
@@ -24,12 +24,12 @@ export const universityTypeTranslation = {
 export const functionalCompositionTranslation = {
   disciplinary: "Disziplinär",
   interdisciplinaryArt: "Interdisziplinär gestalterisch",
-  artAndNonArt: "Gestalterisch & nicht-gestalterisch",
+  artAndNonArt: "Gestalterisch & Nicht-gestalterisch",
 };
 
 export const masterTypeTranslation = {
   consecutive: "Konsekutiv",
-  notConsecutive: "Nicht Konsekutiv",
+  notConsecutive: "Nicht-konsekutiv",
   studyingFurther: "Weiterbildend",
 };
 
@@ -52,6 +52,7 @@ export const topicAndFocusTranslation = {
 export const semesterTypeTranslation = {
   summer: "Sommersemester",
   winter: "Wintersemester",
+  summerwinter: "Sommer- und Wintersemester",
 };
 
 export const allowedFormsTranslation = {

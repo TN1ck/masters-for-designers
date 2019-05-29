@@ -25,13 +25,13 @@ export const FILTERS = {
     {
       type: "masterType",
       value: "consecutive",
-      name: "Konsektutiv",
+      name: "Konsekutiv",
       filter: m => m.direction.masterType === "consecutive",
     },
     {
       type: "masterType",
       value: "notConsecutive",
-      name: "Nicht konsekutiv",
+      name: "Nicht-konsekutiv",
       filter: m => m.direction.masterType === "notConsecutive",
     },
     {
@@ -91,7 +91,7 @@ export const FILTERS = {
     {
       type: "functionalComposition",
       value: "artAndNonArt",
-      name: "Gestalterisch & Nicht gestalterisch",
+      name: "Gestalterisch & Nicht-gestalterisch",
       filter: m => m.topicAndFocus.functionalComposition === "artAndNonArt",
     },
   ],
@@ -129,7 +129,7 @@ export const FILTERS = {
     {
       type: "allowedDisciplinesTag",
       value: "room",
-      name: "Raum",
+      name: "Innenarchitektur",
       filter: m => m.topicAndFocus.allowedDisciplinesTag.includes("room"),
     },
     {
@@ -205,7 +205,7 @@ export const FILTERS = {
     {
       type: "internationalityDoubleDegree",
       value: "doubleDegree",
-      name: "Doppelter Abschluss",
+      name: "Doppelabschluss",
       filter: m => m.internationality.doubleDegree,
     },
   ],

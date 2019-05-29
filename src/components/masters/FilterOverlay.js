@@ -35,7 +35,7 @@ const FilterMain = styled.div`
 
 const FilterButton = styled.button`
   position: relative;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 12px;
   background-color: ${p => (p.active ? "rgba(255, 255, 255. 1)" : " rgba(255, 255, 255, 0)")};
   transition: background-color 100ms ease-out;
@@ -255,7 +255,7 @@ export default class FilterOverlay extends React.Component {
             <FilterSectionButtons>{FILTERS.semesterType.map(createButton)}</FilterSectionButtons>
           </FilterSection>
           <FilterSection>
-            <FilterSectionTitle>{"Internationailtät"}</FilterSectionTitle>
+            <FilterSectionTitle>{"Internationalität"}</FilterSectionTitle>
             <FilterSectionButtons>
               {FILTERS.internationalityEnglish
                 .map(createButton)

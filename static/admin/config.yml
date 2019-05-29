@@ -111,7 +111,7 @@ collections:
             widget: select
             options:
               - {label: Konsekutiv, value: consecutive}
-              - {label: "Nicht Konsekutiv", value: notConsecutive}
+              - {label: "Nicht-konsekutiv", value: notConsecutive}
               - {label: "Weiterbildend", value: studyingFurther}
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
@@ -130,7 +130,7 @@ collections:
             options:
               - {label: "Disziplinär", value: "disciplinary"}
               - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
-              - {label: "Gestalterisch & nicht-gestalterisch", value: "artAndNonArt"}
+              - {label: "Gestalterisch & Nicht-gestalterisch", value: "artAndNonArt"}
           - label: "Zugelassene Disziplinen"
             name: allowedDisciplines
             widget: string
@@ -144,7 +144,7 @@ collections:
               - {label: "Illustrationen", value: "illustrations"}
               - {label: "Mode/Textil", value: "fashion"}
               - {label: "Produkt/Industrie", value: "product"}
-              - {label: "Raum", value: room}
+              - {label: "Innenarchitektur", value: room}
               - {label: "Schmuck", value: jewelry}
               - {label: "Visuelle Kommunikation", value: "visualCommunication"}
       - label: "Zeit und Geld"
