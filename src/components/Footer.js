@@ -35,6 +35,7 @@ const FoooterRightSide = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: 800px) {
+    margin-top: 10px;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -42,7 +43,7 @@ const FoooterRightSide = styled.div`
 `;
 
 const FooterLink = styled(Link)`
-  margin-right: 10px;
+  margin-right: 24px;
   &,
   &:hover,
   &:visited {
