@@ -12,10 +12,23 @@ const IconLink = styled.a`
   &:focus {
     border: none;
   }
+
+  img {
+    height: 26px;
+    width: 26px;
+  }
 `;
 
 const Icon = styled.div`
   display: inline-block;
+
+  height: 26px;
+  width: 26px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const createLinkIcon = (src, alt) => {
@@ -38,7 +51,7 @@ export const HouseIcon = createLinkIcon(house, "house icon");
 
 export const SaveIcon = props => (
   <Icon {...props}>
-    <svg width="29" height="29" xmlns="http://www.w3.org/2000/svg">
+    <svg width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <g fill="none" fillRule="evenodd">
         <circle className="save-fill" fill={props.fill || "#000"} cx="14.5" cy="14.5" r="14.5" />
         <path
