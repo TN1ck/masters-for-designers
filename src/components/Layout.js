@@ -7,6 +7,7 @@ import useSiteMetadata from "./SiteMetadata";
 
 // import "./all.sass";
 import Fonts from "./Fonts";
+import CookieBanner from "./CookieBanner";
 
 export const GlobalStyle = createGlobalStyle`
   body, html {
@@ -34,6 +35,7 @@ const Layout = ({children, background}) => {
     <div>
       <GlobalStyle />
       <Fonts />
+      <CookieBanner />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
