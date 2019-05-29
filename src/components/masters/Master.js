@@ -72,22 +72,22 @@ const MasterSave = styled.div`
 const makeBold = css`
   ${MasterTitle} {
     font-weight: bold;
-    letter-spacing: -0.35px;
+    letter-spacing: -0.19px;
   }
 
   ${MasterCity} {
     font-weight: bold;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
   }
 
   ${MasterUniversity} {
     font-weight: bold;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
   }
 
   ${MasterDeadline} {
     font-weight: bold;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
   }
 
   ${MasterSave} {

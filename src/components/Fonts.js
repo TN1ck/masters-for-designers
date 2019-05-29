@@ -34,7 +34,7 @@ const Fonts = createGlobalStyle`
     src: url(${L10RegularItalicWoff}) format("woff");
   }
 
-  @font-face {
+  /* @font-face {
     font-family: "L10";
     font-weight: 700;
     font-style: normal;
@@ -48,11 +48,11 @@ const Fonts = createGlobalStyle`
     font-style: italic;
     font-display: fallback;
     src: url(${L10BoldItalicWoff}) format("woff");
-  }
+  } */
 
   @font-face {
     font-family: "L10";
-    font-weight: 500;
+    font-weight: 700;
     font-style: italic;
     font-display: fallback;
     src: url(${L10MediumItalicWoff}) format("woff");
@@ -60,7 +60,7 @@ const Fonts = createGlobalStyle`
 
   @font-face {
     font-family: "L10";
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-display: fallback;
     src:url(${L10MediumWoff2}) format("woff2"), url(${L10MediumWoff}) format("woff");
