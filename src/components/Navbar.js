@@ -61,10 +61,7 @@ const NavbarLink = styled(Link)`
 
 const MainNavbarLink = styled(NavbarLink)`
   font-size: 18px;
-  font-weight: bold;
-  @media (max-width: 700px) {
-    font-weight: 400;
-  }
+  font-weight: 400;
 `;
 
 const NavbarLinks = styled.div`
