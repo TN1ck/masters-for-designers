@@ -11,7 +11,7 @@ const MasterTitle = styled.div`
   word-break: break-word;
   position: relative;
   width: 50%;
-  padding-right: ${20 + 80}px;
+  padding-right: 20px;
 `;
 
 const MasterNonTitleContainer = styled.div`
@@ -47,12 +47,7 @@ const MasterDetailDegree = styled.div`
   font-style: italic;
   opacity: ${p => (p.show ? 1 : 0)};
   transition: opacity 0.3s;
-  width: 0;
   overflow: visible;
-`;
-
-const MasterDetailDegreeInner = styled.div`
-  width: 80px;
 `;
 
 const MasterSave = styled.div`
@@ -194,9 +189,7 @@ class Master extends React.Component {
           <MasterTitle>
             {title}
             <MasterDetailDegree show={this.props.active}>
-              <MasterDetailDegreeInner>
-                {" (" + masterTranslation[master.direction.degree] + ")"}
-              </MasterDetailDegreeInner>
+              {" (" + masterTranslation[master.direction.degree] + ")"}
             </MasterDetailDegree>
           </MasterTitle>
           <MasterNonTitleContainer>
