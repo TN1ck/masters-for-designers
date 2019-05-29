@@ -5,6 +5,7 @@ import Container from "../../components/Container";
 import THEME from "../../theme";
 import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
+import {MAIN_HEADER_HEIGHT} from "./styles";
 
 const ResetFilters = styled.div`
   opacity: 0;
@@ -25,7 +26,7 @@ const ResetFilters = styled.div`
 
 const FilterMain = styled.div`
   position: fixed;
-  top: 43px;
+  top: ${MAIN_HEADER_HEIGHT}px;
   bottom: 0;
   left: 0;
   right: 0;

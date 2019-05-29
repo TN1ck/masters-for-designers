@@ -2,8 +2,8 @@ import styled from "styled-components";
 import THEME from "../../theme";
 
 // need to be changed when style changes
-export const MAIN_HEADER_HEIGHT = 43;
-export const FILTER_HEADER_HEIGHT = 43;
+export const MAIN_HEADER_HEIGHT = 55;
+export const FILTER_HEADER_HEIGHT = 55;
 
 export const GroupHeader = styled.h3`
   color: ${THEME.colors.blue};

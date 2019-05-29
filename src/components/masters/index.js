@@ -166,8 +166,8 @@ const FilterHeader = styled.div`
 const FilterHeaderInner = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 `;
 
 const SortOptions = styled.div`

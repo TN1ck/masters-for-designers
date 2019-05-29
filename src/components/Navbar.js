@@ -30,7 +30,7 @@ const Circle = styled.span`
 `;
 
 const NavbarLink = styled(Link)`
-  margin-right: 10px;
+  margin-right: 24px;
   color: black;
   text-decoration: none;
   border: none;
@@ -53,6 +53,10 @@ const NavbarLink = styled(Link)`
     }
   }
   text-transform: uppercase;
+
+  @media (max-width: 700px) {
+    margin-right: 10px;
+  }
 `;
 
 const MainNavbarLink = styled(NavbarLink)`
@@ -61,25 +65,29 @@ const MainNavbarLink = styled(NavbarLink)`
 `;
 
 const NavbarLinks = styled.div`
-  margin-right: -10px;
+  margin-right: -24px;
+
+  @media (max-width: 700px) {
+    margin-right: -10px;
+  }
 `;
 
 const NavbarInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 16px 0;
 `;
 
 const HideMobile = styled.div`
   display: none;
-  @media (min-width: 641px) {
+  @media (min-width: 701px) {
     display: block;
   }
 `;
 
 const ShowMobile = styled.div`
   display: none;
-  @media (max-width: 640px) {
+  @media (max-width: 700px) {
     display: block;
   }
 `;
@@ -95,8 +103,8 @@ const Navbar = class extends React.Component {
             <NavbarInnerContainer>
               <NavbarInformation>
                 <MainNavbarLink to="/">
-                  {`${masterCount} `}
                   <i>M</i>asters for <i>D</i>esigners
+                  {` (${masterCount})`}
                 </MainNavbarLink>
               </NavbarInformation>
               <NavbarLinks>
@@ -117,8 +125,8 @@ const Navbar = class extends React.Component {
             <NavbarInnerContainer>
               <NavbarInformation>
                 <MainNavbarLink to="/">
-                  {`${masterCount} `}
-                  <i>MD</i>
+                  <i>M</i>asters
+                  {` (${masterCount})`}
                 </MainNavbarLink>
               </NavbarInformation>
               <NavbarLinks>
