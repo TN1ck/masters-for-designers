@@ -1,14 +1,14 @@
 {
   "title": "Glossar",
-  "content": "Hier werden themenspezifische Fachbegriffe, im Kontext ihrer Verwendung auf dieser Website erklärt, um so ein besseres Verständnis der unterschiedlichen Eigenschaften der Masterstudiengänge zu ermöglichen.",
+  "content": "Für ein besseres Verständnis der unterschiedlichen Eigenschaften der Masterstudiengänge werden hier themenspezifische Fachbegriffe im Kontext ihrer Verwendung auf dieser Website erklärt.\nEbenso werden weitere Begriffe erläutert, die auch abseits dieser Seite häufig im Zusammenhang mit einem Masterstudium auftauchen und zu einer besseren Einordnung verhelfen sollen.",
   "items": [
     {
       "title": "Ausrichtung",
-      "content": "Die angebotenen Masterstudiengänge umfassen grundsätzlich sowohl wissenschaftliche,\n forschungsorientierte als auch entwurfspraktische, praxisorientierte Anteile. Je nach Konzept der\n Studiengänge wird die Ausrichtung jedoch verstärkt auf einen der beiden Bereiche gelegt.",
+      "content": "Die angebotenen Masterstudiengänge umfassen grundsätzlich sowohl wissenschaftliche, forschungsorientierte als auch entwurfspraktische, praxisorientierte Anteile. Je nach Konzept der Studiengänge wird die Ausrichtung jedoch verstärkt auf einen der beiden Bereiche gelegt. ",
       "sections": [
         {
           "subtitle": "praktisch",
-          "content": "Die meisten Masterstudiengänge für Designer zeichnen sich durch ein entwurfspraktisches Studium aus,\n welches auch mit einer solchen Masterarbeit abschließt. An diese gliedert sich meist zusätzlich eine\n theoretische Reflexion."
+          "content": "Die meisten Masterstudiengänge für Designer zeichnen sich durch ein entwurfspraktisches Studium aus, welches ebenso mit einer solchen Masterarbeit abschließt. An diese gliedert sich meist zusätzlich eine theoretische Reflexion."
         },
         {
           "subtitle": "theoretisch",
@@ -21,8 +21,8 @@
       "content": "Im Rahmen von Double-Degree-Programmen absolvieren Studierende in der Regel die Hälfte ihrer\n Studienzeit im Ausland. Sie erwerben dadurch sowohl einen Abschluss an einer deutschen Hochschule als\n auch an der ausländischen Partnerhochschule."
     },
     {
-      "title": "Fachliche Zusammensetzung",
-      "content": "\n Die Zusammensetzung gibt Auskunft über die fachliche Herkunft der Studierenden innerhalb eines\n Studiengangs.",
+      "title": "Disziplinäre Zusammensetzung",
+      "content": "\nDie Zusammensetzung gibt Auskunft über die fachliche Herkunft der Studierenden innerhalb eines Studiengangs.",
       "sections": [
         {
           "subtitle": "disziplinär",
@@ -33,7 +33,7 @@
           "content": "Studierende verschiedener gestalterischer Fachrichtungen studieren zusammen."
         },
         {
-          "subtitle": "interdisziplinär gestalterisch/nicht-gestalterisch",
+          "subtitle": "Gestalterisch & Nicht-gestalterisch",
           "content": "Designer studieren gemeinsam mit Studierenden aus nicht-gestalterischen Fachrichtungen."
         }
       ]
@@ -44,7 +44,7 @@
     },
     {
       "title": "Inhaltlicher Fokus",
-      "content": "Basierend auf der Tatsache, dass im Masterstudium Studierende aus verschiedenen Fachrichtungen\n zusammen treffen können, ergeben sich auch auf inhaltlicher Ebene neue Möglichkeiten das Studium zu\n konzipieren. Die gelisteten Studiengänge lassen sich diesbezüglich in drei verschiedene Bereiche\n unterteilen:",
+      "content": "Basierend auf der Tatsache, dass im Masterstudium Studierende aus verschiedenen Fachrichtungen zusammen treffen können, ergeben sich auch auf inhaltlicher Ebene neue Möglichkeiten das Studium zu konzipieren.\nDie Recherche aller Studiengänge hat gezeigt, dass sie sich diesbezüglich in drei verschiedene Bereiche unterteilen lassen:",
       "sections": [
         {
           "subtitle": "fachspezifisch",
@@ -52,17 +52,17 @@
         },
         {
           "subtitle": "fächerübergreifend",
-          "content": "Interdisziplinarität bezieht sich hier nicht nur auf die fachliche Herkunft der Studierenden, vielmehr\n liegt der inhaltliche Fokus auf der Zusammenarbeit der verschiedenen Fachrichtungen. Durch ein\n speziell entwickeltes Modell fördern manche Studiengänge dabei sogar gezielt das Verständnis für die\n jeweils andere Disziplin zu Beginn des Studiums, indem sie die Basics der anderen Disziplin in extra\n dafür vorgesehenen Modulen lehren."
+          "content": "Interdisziplinarität bezieht sich hier nicht nur auf die disziplinäre Herkunft der Studierenden, vielmehr liegt der inhaltliche Fokus auf der Zusammenarbeit der verschiedenen Fachrichtungen.\nDurch ein speziell entwickeltes Modell fördern manche Studiengänge dabei sogar gezielt das Verständnis für die jeweils andere Disziplin zu Beginn des Studiums, indem sie die Basics der anderen Disziplin in extra dafür vorgesehenen Modulen lehren."
         },
         {
           "subtitle": "thematisch",
-          "content": "Einige Masterstudiengänge konzentrieren sich ausschließlich auf eine bestimmte Thematik. Diese kann\n teilweise von Masterjahrgang zu Masterjahrgang wechseln."
+          "content": "Einige Masterstudiengänge konzentrieren sich ausschließlich auf eine bestimmte Thematik. Diese kann teilweise von Masterjahrgang zu Masterjahrgang wechseln."
         }
       ]
     },
     {
       "title": "Integriertes Auslandssemester",
-      "content": "Bestimmte Studiengänge beinhalten ein integriertes Auslandssemester. Dabei ist fester Bestandteil des\n Studiums, ein Semester an einer ausländischen Hochschule zu absolvieren. Verstärkt international\n ausgerichtete Master lassen sich daran erkennen."
+      "content": "Bestimmte Studiengänge beinhalten ein integriertes Auslandssemester. Dabei ist fester Bestandteil des Studiums, ein Semester an einer ausländischen Hochschule zu absolvieren. Verstärkt international ausgerichtete Master lassen sich daran erkennen."
     },
     {
       "title": "Internationalität",
@@ -88,7 +88,7 @@
     },
     {
       "title": "Regelstudienzeit",
-      "content": "Die Dauer eines Bachelorstudiums variiert zwischen sechs, sieben oder acht Semestern für ein\n Vollzeitstudium. Bei konsekutiven Studiengängen richtet sich die Regelstudienzeit des Masterstudiums\n an der des Bachelorstudiums aus und beträgt zwei, drei oder vier Semester. Insgesamt soll die\n Regelstudienzeit von Bachelor- und Masterstudium zehn Semester (300 Credits) ergeben.",
+      "content": "Die Dauer eines Bachelorstudiums variiert zwischen sechs, sieben oder acht Semestern für ein\n Vollzeitstudium. Bei konsekutiven Studiengängen richtet sich die Regelstudienzeit des Masterstudiums\n an der des Bachelorstudiums aus und beträgt zwei, drei oder vier Semester. Insgesamt sollte die\n Regelstudienzeit von Bachelor- und Masterstudium zehn Semester (300 Credits) ergeben.",
       "sections": [
         {
           "subtitle": "Anpassungssemester",
