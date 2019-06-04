@@ -30,8 +30,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({children, background, siteUrl}) => {
-  const {title, description} = useSiteMetadata();
+const Layout = ({children, background}) => {
+  const {title, description, siteUrl} = useSiteMetadata();
   return (
     <div>
       <GlobalStyle />
