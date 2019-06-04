@@ -1,6 +1,7 @@
 import {pairs} from "../../utils/pairs";
 import {groupBy} from "../../utils/groupBy";
 import {sortBy} from "../../utils/sortBy";
+import { flatten } from "../../utils/flatten";
 
 export const MONTH_NAME_MAPPING = {
   0: "Januar",
@@ -42,15 +43,33 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
         const monthOffset = new Date(date).getUTCMonth() - now.getMonth();
         return monthOffset < 0 ? monthOffset + 12 : monthOffset;
       };
-      const masterWithDates = masters.map(d => {
-        const sorted = d.timeAndMoney.applicationDeadlines
-          .map(d => {
-            return [getOffset(new Date(d.date)), d];
-          })
-          .sort((a, b) => {
-            return a[0] - b[0];
-          });
-        const nextDate = new Date(sorted[0][1].date);
+      const mastersMultipleTimes = flatten(masters.map(m => {
+        return m.timeAndMoney.applicationDeadlines.map(d => {
+          return {
+            ...m,
+            timeAndMoney: {
+              ...m.timeAndMoney,
+              // we still put the other dates in as well to not confuse the user
+              applicationDeadlines: [d].concat(m.timeAndMoney.applicationDeadlines.filter(dd => d != dd)),
+            },
+          };
+        });
+      }));
+
+
+      const masterWithDates = mastersMultipleTimes.map(d => {
+        // We don't need to sort, as we have all the masters there multiple times
+        // 
+        // const sorted = d.timeAndMoney.applicationDeadlines
+        //   .map(d => {
+        //     return [getOffset(new Date(d.date)), d];
+        //   })
+        //   .sort((a, b) => {
+        //     return a[0] - b[0];
+        //   });
+
+        // The date we want to use is at index [0]
+        const nextDate = new Date(d.timeAndMoney.applicationDeadlines[0].date);
         return [d, getOffset(nextDate), nextDate];
       });
       const paired = pairs(groupBy(masterWithDates, d => d[1]));
