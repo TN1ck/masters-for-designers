@@ -1,57 +1,58 @@
 {
-    "name": "Integrated Design (International)",
-    "universityName": "Hochschule Anhalt",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachuebergreifend",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Architektur, Kunst, Kunstgeschichte",
-        "allowedDisciplinesTag": [
-            "visualCommunication",
-            "digital",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2017-10-31T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-04-30T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "english"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.design.hs-anhalt.de/master-of-arts-ma-maid",
-        "facebook": "https://www.facebook.com/Fachbereich-Design-Dessau-Department-of-Design-157046407723342/",
-        "instagram": "https://www.instagram.com/dessau_department_of_design/",
-        "twitter": "—"
-    }
+  "name": "Integrated Design (International)",
+  "universityName": "Hochschule Anhalt",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachuebergreifend",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Architektur, Kunst oder Kunstgeschichte",
+    "allowedDisciplinesTag": [
+      "visualCommunication",
+      "digital",
+      "product",
+      "filmAndPhotograpy"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-10-30T23:00:00.000Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-04-29T22:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hs-anhalt.de/nc/studieren/orientierung/studienangebot/detail/integrated-design-master-of-arts.html",
+    "facebook": "https://www.facebook.com/Fachbereich-Design-Dessau-Department-of-Design-157046407723342/",
+    "instagram": "https://www.instagram.com/dessau_department_of_design/",
+    "twitter": "—"
+  }
 }
