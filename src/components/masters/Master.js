@@ -163,7 +163,7 @@ class Master extends React.Component {
     return props.saved !== this.props.saved || props.active !== this.props.active;
   }
   render() {
-    const {master, university, save, saved, active, className} = this.props;
+    const {master, university, save, saved, active, className, goToMaster, goToMasterText} = this.props;
     let title = master.name.normalize();
     // When there is something in parentheses in the title, we always make a line-break
     if (title.includes("(")) {
@@ -206,6 +206,8 @@ class Master extends React.Component {
         <MasterDetailContainer>
           {this.props.active && (
             <MasterDetail
+              goToMasterText={goToMasterText}
+              goToMaster={goToMaster}
               saved={saved}
               save={save}
               master={master}

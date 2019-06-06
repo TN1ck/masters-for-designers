@@ -432,13 +432,23 @@ class Masters extends React.Component {
                       navigate(`/#${master.id}`, {replace: true});
                       this.toggleMaster(master.id);
                     };
+                    const goToMaster = (e, id) => {
+                      e.preventDefault();
+                      this.resetFilters();
+                      navigate(`/#${id}`, {replace: true});
+                      this.toggleMaster(id);
+                    };
                     return (
                       <Master
+                        goToMasterText={
+                          numberOfFilters > 0 ? "Clicking the link resets the filters." : "Jump to the master."
+                        }
+                        goToMaster={goToMaster}
                         active={active}
                         saved={saved}
                         save={save}
                         onClick={onClick}
-                        key={i}
+                        key={master.id}
                         master={master}
                         university={university}
                       />
@@ -450,7 +460,14 @@ class Masters extends React.Component {
           </GroupsContainer>
           {/* add one master, so that all classes from styled components are generated */}
           <div style={{display: "none"}}>
-            <Master active save={() => null} onClick={() => null} master={masters[0]} university={universities[0]} />
+            <Master
+              goToMasterText={""}
+              active
+              save={() => null}
+              onClick={() => null}
+              master={masters[0]}
+              university={universities[0]}
+            />
           </div>
         </Container>
       </Layout>

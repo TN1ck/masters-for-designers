@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon, SaveIcon} from "../Icons";
 import {Link} from "gatsby";
-import {formatDate} from "../../utils/formatDate";
+import Tippy from "@tippy.js/react";
 
 import {
   universityTypeTranslation,
@@ -121,7 +121,7 @@ const SaveIconContainer = styled.div`
   }
 `;
 
-const MasterDetail = ({master, university, save, saved}) => {
+const MasterDetail = ({master, university, goToMaster, goToMasterText, save, saved}) => {
   const mastersSameUniversity = university.masters.filter(d => d.name !== master.name);
   return (
     <MasterDetailContainer>
@@ -152,7 +152,11 @@ const MasterDetail = ({master, university, save, saved}) => {
                 {mastersSameUniversity.map(m => {
                   return (
                     <li key={m.id}>
-                      <Link to={`/#${m.id}`}>{`${m.name} - ${masterTranslation[m.direction.degree]}`}</Link>
+                      <Tippy content={goToMasterText}>
+                        <Link onClick={e => goToMaster(e, m.id)} to={`/#${m.id}`}>{`${m.name} - ${
+                          masterTranslation[m.direction.degree]
+                        }`}</Link>
+                      </Tippy>
                     </li>
                   );
                 })}
