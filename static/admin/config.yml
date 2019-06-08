@@ -88,12 +88,14 @@ collections:
         - label: "Fachbereich"
           name: department
           widget: text
+          default: ""
       - label: Ausrichtung
         name: direction
         widget: object
         fields:
           - label: Abschluss
             name: degree
+            default: "ma"
             widget: select
             options:
               - {label: "Master of Arts (MA)", value: ma}
@@ -103,12 +105,14 @@ collections:
             name: direction
             widget: select
             multiple: true
+            default: []
             options:
               - {label: Praktisch, value: practical}
               - {label: Theoretisch, value: theoretical}
           - label: Mastertyp
             name: masterType
             widget: select
+            default: "consecutive"
             options:
               - {label: Konsekutiv, value: consecutive}
               - {label: "Nicht-konsekutiv", value: notConsecutive}
@@ -120,6 +124,7 @@ collections:
           - label: "Inhaltlicher Fokus"
             widget: select
             name: topicFocus
+            default: "fachspezifisch"
             options:
               - {label: Fachspezifisch, value: fachspezifisch}
               - {label: Fachübergreifend, value: fachuebergreifend}
@@ -127,6 +132,7 @@ collections:
           - label: "Disziplinäre Zusammensetzung"
             name: functionalComposition
             widget: select
+            default: "artAndNonArt"
             options:
               - {label: "Disziplinär", value: "disciplinary"}
               - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
@@ -134,10 +140,12 @@ collections:
           - label: "Zugelassene Disziplinen"
             name: allowedDisciplines
             widget: string
+            default: ""
           - label: "Zugelassene Disziplinen Tags"
             name: allowedDisciplinesTag
             widget: select
             multiple: true
+            default: []
             options:
               - {label: "Digitale Medien", value: "digital"}
               - {label: "Film/Fotografie", value: "filmAndPhotograpy"}
@@ -167,6 +175,7 @@ collections:
             name: allowedForms
             widget: select
             multiple: true
+            default: []
             options:
             - {label: Vollzeit, value: fullTime}
             - {label: Teilzeit, value: partTime}
@@ -190,6 +199,7 @@ collections:
             name: mainLanguages
             widget: select
             multiple: true
+            default: ["german"]
             options:
               - {label: deutsch, value: german}
               - {label: english, value: english}

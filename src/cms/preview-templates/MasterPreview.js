@@ -3,6 +3,7 @@ import MasterDetail from "../../components/masters/MasterDetail";
 
 const MasterPreview = ({entry}) => {
   const json = entry.toJS();
+  console.log(json.data);
   return (
     <MasterDetail
       master={json.data}
