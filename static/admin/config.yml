@@ -69,10 +69,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{universityName}} - {{name}}"
     fields:
-      - {label: Studiengang, name: name, widget: string}
+      - {label: Studiengang, name: name, widget: string, default: "Neuer Master"}
       - label: "Hochschule"
         name: "universityName"
         widget: "relation"
+        default: ""
         collection: "universities"
         searchFields: ["name", "city"]
         valueField: "name"
@@ -162,6 +163,7 @@ collections:
           - label: Bewerbungsfristen
             name: applicationDeadlines
             widget: list
+            default: []
             fields:
               - label: Zulassungssemester
                 name: type

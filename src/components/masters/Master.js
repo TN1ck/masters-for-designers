@@ -160,7 +160,7 @@ class Master extends React.Component {
     this.props.save();
   };
   shouldComponentUpdate(props) {
-    return props.saved !== this.props.saved || props.active !== this.props.active;
+    return props.previewMode || props.saved !== this.props.saved || props.active !== this.props.active;
   }
   render() {
     const {master, university, save, saved, active, className, goToMaster, goToMasterText} = this.props;

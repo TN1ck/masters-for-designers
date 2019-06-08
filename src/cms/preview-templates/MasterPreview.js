@@ -1,13 +1,19 @@
 import React from "react";
-import MasterDetail from "../../components/masters/MasterDetail";
+import Master from "../../components/masters/Master";
 
 const MasterPreview = ({entry}) => {
   const json = entry.toJS();
-  console.log(json.data);
   return (
-    <MasterDetail
+    <Master
+      previewMode
       master={json.data}
       university={{name: json.data.university, city: "Leider hier nicht zu sehen", masters: []}}
+      goToMasterText={"Jump to the master."}
+      goToMaster={() => {}}
+      active
+      saved={false}
+      save={() => null}
+      onClick={() => null}
     />
   );
 };
