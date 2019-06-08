@@ -192,7 +192,9 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
               "Zulassungssemester",
               master.timeAndMoney.applicationDeadlines.length >= 2
                 ? semesterTypeTranslation.summerwinter
-                : semesterTypeTranslation[master.timeAndMoney.applicationDeadlines[0].type],
+                : master.timeAndMoney.applicationDeadlines.length > 0
+                ? semesterTypeTranslation[master.timeAndMoney.applicationDeadlines[0].type]
+                : "",
             ],
             ["Gebühren", master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs)],
           ]}
