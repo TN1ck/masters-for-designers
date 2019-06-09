@@ -1,0 +1,50 @@
+{
+  "name": "Test-master",
+  "universityName": "Bauhaus-Universität Weimar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Test"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Teau",
+    "allowedDisciplinesTag": [
+      "fashion"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-06-09T16:48:19.177Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "partTime"
+    ],
+    "costs": 0,
+    "semester": 4
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://test.com",
+    "facebook": "https://test.com",
+    "instagram": "https://test.com",
+    "twitter": "https://test.com"
+  }
+}
