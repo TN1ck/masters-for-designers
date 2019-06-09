@@ -24,13 +24,13 @@
   "timeAndMoney": {
     "applicationDeadlines": [
       {
-        "type": "winter",
-        "date": "2019-07-31T22:00:00.000Z",
+        "type": "summer",
+        "date": "2019-02-01T14:32:12.285Z",
         "international": false
       },
       {
-        "type": "summer",
-        "date": "2019-01-31T23:00:00.000Z",
+        "type": "winter",
+        "date": "2019-08-01T13:32:27.377Z",
         "international": false
       }
     ],
