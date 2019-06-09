@@ -1,0 +1,56 @@
+{
+  "name": "International Media Cultural Work",
+  "universityName": "Hochschule Darmstadt",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Media"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Digitalen Medien, Medienkulturwissenschaften, Medienpädagogik, Animation and Game, Interactive Media Design, Motion Pictures, Sound and Music Production, Online-Kommunikation",
+    "allowedDisciplinesTag": [
+      "digital",
+      "filmAndPhotograpy"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-02-01T14:33:23.713Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-08-01T13:34:29.354Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": 3
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.h-da.de/studium/studienangebot/studiengaenge/architektur-medien-und-design/international-media-cultural-work-imc-ma/",
+    "facebook": "https://www.facebook.com/International-Media-Cultural-Work-IMC-1205668819443669/",
+    "instagram": "—",
+    "twitter": "https://twitter.com/mediencampus"
+  }
+}
