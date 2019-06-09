@@ -1,59 +1,60 @@
 {
-    "name": "Gestaltung ",
-    "universityName": "Hochschule für angewandte Wissenschaft und Kunst Hildesheim",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachuebergreifend",
-        "functionalComposition": "interdisciplinaryArt",
-        "allowedDisciplines": "Design",
-        "allowedDisciplinesTag": [
-            "room",
-            "visualCommunication",
-            "digital",
-            "filmAndPhotograpy",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2017-10-31T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-04-30T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.hawk-hhg.de/gestaltung/148294.php",
-        "facebook": "https://www.facebook.com/hawkgestaltung/?fref=ts",
-        "instagram": "—",
-        "twitter": "—"
-    }
+  "name": "Gestaltung ",
+  "universityName": "Hochschule für angewandte Wissenschaft und Kunst Hildesheim",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachuebergreifend",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Design",
+    "allowedDisciplinesTag": [
+      "room",
+      "visualCommunication",
+      "digital",
+      "filmAndPhotograpy",
+      "product",
+      "illustrations"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-04-30T17:24:30.945Z",
+        "international": false
+      },
+      {
+        "type": "summer",
+        "date": "2019-10-30T18:24:53.371Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "http://www.hawk-hhg.de/gestaltung/148294.php",
+    "facebook": "https://www.facebook.com/hawkgestaltung/?fref=ts",
+    "instagram": "https://www.instagram.com/hawk.gestaltung/",
+    "twitter": "https://twitter.com/NewsRoom_HAWK"
+  }
 }
