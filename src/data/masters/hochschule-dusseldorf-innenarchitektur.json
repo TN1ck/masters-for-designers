@@ -3,7 +3,7 @@
   "universityName": "Hochschule Düsseldorf",
   "universityDetails": {
     "otherUniversity": "nein",
-    "department": "Architektur und Design"
+    "department": "Architektur"
   },
   "direction": {
     "degree": "ma",
@@ -14,8 +14,8 @@
   },
   "topicAndFocus": {
     "topicFocus": "fachspezifisch",
-    "functionalComposition": "artAndNonArt",
-    "allowedDisciplines": "Innenarchitektur, Architektur",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Innenarchitektur",
     "allowedDisciplinesTag": [
       "room"
     ]
