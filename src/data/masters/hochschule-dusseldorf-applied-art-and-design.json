@@ -1,52 +1,52 @@
 {
-    "name": "Applied Art and Design",
-    "universityName": "Hochschule Düsseldorf",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Architektur und Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "interdisciplinaryArt",
-        "allowedDisciplines": "Schmuck, Objekt, Mode, Accessoires, Produkt und Gegenständen der Alltagskultur sowie artverwandte Bereiche der Kunst und des Designs mit Bezug zum menschlichen Umfeld",
-        "allowedDisciplinesTag": [
-            "jewelry",
-            "product",
-            "fashion"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2018-05-01T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://pbsa.hs-duesseldorf.de/studium/studiengaenge/ma_aad",
-        "facebook": "https://www.facebook.com/aad.hsd/?fref=ts",
-        "instagram": "https://www.instagram.com/hsduesseldorf/",
-        "twitter": "https://twitter.com/hsduesseldorf"
-    }
+  "name": "Applied Art and Design",
+  "universityName": "Hochschule Düsseldorf",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Architektur und Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Schmuck, Objekt, Mode, Accessoires, Produkt und Gegenständen der Alltagskultur sowie artverwandte Bereiche der Kunst und des Designs mit Bezug zum menschlichen Umfeld",
+    "allowedDisciplinesTag": [
+      "jewelry",
+      "product",
+      "fashion"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-01T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://pbsa.hs-duesseldorf.de/studium/studiengaenge/ma_aad",
+    "facebook": "https://www.facebook.com/aad.hsd/?fref=ts",
+    "instagram": "https://www.instagram.com/myaad.duesseldorf/",
+    "twitter": "https://twitter.com/hsduesseldorf"
+  }
 }
