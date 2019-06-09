@@ -66,7 +66,7 @@ collections:
     folder: "src/data/masters"
     extension: json
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{universityName}}-{{name}}"
     summary: "{{universityName}} - {{name}}"
     fields:
       - {label: Studiengang, name: name, widget: string, default: "Neuer Master"}
@@ -168,6 +168,7 @@ collections:
               - label: Zulassungssemester
                 name: type
                 widget: "select"
+                default: "summer"
                 options:
                   - { label: "Sommersemester", value: "summer" }
                   - { label: "Wintersemester", value: "winter" }
@@ -190,9 +191,8 @@ collections:
             default: 0
           - label: Regelstudienzeit (Semester)
             name: semester
-            widget: number
-            valueType: int
-            default: 4
+            widget: string
+            default: "4"
       - label: Internationalität
         name: internationality
         widget: object
