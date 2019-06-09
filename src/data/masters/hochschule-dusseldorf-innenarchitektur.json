@@ -1,50 +1,50 @@
 {
-    "name": "Innenarchitektur",
-    "universityName": "Hochschule Düsseldorf",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Architektur und Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Innenarchitektur, Architektur",
-        "allowedDisciplinesTag": [
-            "room"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2018-04-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://pbsa.hs-duesseldorf.de/studium/studiengaenge/ma_ia",
-        "facebook": "https://www.facebook.com/hsduesseldorf/?fref=ts",
-        "instagram": "https://www.instagram.com/hsduesseldorf/",
-        "twitter": "https://twitter.com/hsduesseldorf"
-    }
+  "name": "Innenarchitektur",
+  "universityName": "Hochschule Düsseldorf",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Architektur und Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Innenarchitektur, Architektur",
+    "allowedDisciplinesTag": [
+      "room"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-04-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://pbsa.hs-duesseldorf.de/studium/studiengaenge/ma_ia",
+    "facebook": "https://www.facebook.com/hsduesseldorf/?fref=ts",
+    "instagram": "https://www.instagram.com/hsduesseldorf/",
+    "twitter": "https://twitter.com/hsduesseldorf"
+  }
 }
