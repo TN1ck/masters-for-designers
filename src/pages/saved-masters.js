@@ -91,11 +91,11 @@ class SavedMasters extends React.Component {
         <Masthead>
           <Container>
             <Headline>{"Merkliste"}</Headline>
-            <TextContainer>
+            {/* <TextContainer>
               <SubHeadline>
                 {"Die Platform für Designer, um einen individuell passenden Masterstudiengang zu finden."}
               </SubHeadline>
-            </TextContainer>
+            </TextContainer> */}
           </Container>
         </Masthead>
         <Container>
