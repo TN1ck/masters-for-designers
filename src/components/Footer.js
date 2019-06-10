@@ -11,34 +11,26 @@ const FooterContainer = styled.div`
 `;
 
 const FooterSocialLinks = styled.div`
+  grid-area: footer-social-links;
   display: flex;
-  align-self: flex-end;
+  justify-content: flex-end;
 `;
 
 const FooterInnerContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto 72px;
+  grid-template-rows: auto;
+  grid-template-areas: "footer-header footer-links footer-social-links";
+
   background: black;
   padding: 10px 0;
   color: white;
   text-transform: uppercase;
 
   @media (max-width: 800px) {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-`;
-
-const FoooterRightSide = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: 800px) {
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "footer-header footer-social-links" "footer-links footer-links";
   }
 `;
 
@@ -54,25 +46,52 @@ const FooterLink = styled(Link)`
   text-transform: uppercase;
 `;
 
+const FooterHeader = styled(FooterLink)`
+  font-size: 18px;
+  grid-area: footer-header;
+`;
+
+const FooterLinks = styled.div`
+  grid-area: footer-links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media (max-width: 800px) {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    & ${FooterLink} {
+      margin-top: 5px;
+    }
+  }
+`;
+
 const Footer = class extends React.Component {
   render() {
     return (
       <FooterContainer>
         <Container>
           <FooterInnerContainer>
-            <FooterLink to="/">
+            <FooterHeader to="/">
               <i>M</i>aster for <i>D</i>esigners
-            </FooterLink>
-            <FoooterRightSide>
+            </FooterHeader>
+            <FooterLinks>
               <FooterLink to="/about">About</FooterLink>
               <FooterLink to="/glossary">Glossar</FooterLink>
               <FooterLink to="/imprint">Impressum</FooterLink>
               <FooterLink to="/privacy">Datenschutz</FooterLink>
-              <FooterSocialLinks>
-                <InstagramLink />
-                <FacebookLink />
-              </FooterSocialLinks>
-            </FoooterRightSide>
+            </FooterLinks>
+            <FooterSocialLinks>
+              <InstagramLink />
+              <FacebookLink />
+            </FooterSocialLinks>
           </FooterInnerContainer>
         </Container>
       </FooterContainer>
