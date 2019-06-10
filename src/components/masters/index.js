@@ -363,8 +363,7 @@ class Masters extends React.Component {
             <Headline>
               <i>{"M"}</i>
               {"asters for"}
-              <br />
-              <i>{"D"}</i>
+              <i>{" D"}</i>
               {"esigners"}
             </Headline>
             <TextContainer>
