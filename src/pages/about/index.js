@@ -20,7 +20,7 @@ const SocialIcons = styled.div`
 const About = ({data}) => {
   return (
     <Layout background={THEME.colors.orange}>
-      <Navbar />
+      <Navbar showBorder />
       <Masthead>
         <Container>
           <Headline>{"About"}</Headline>
@@ -60,11 +60,11 @@ const About = ({data}) => {
                 </h3>
                 <p>
                   Ein Projekt von <a href="http://www.stephaniebrenner.com">Stephanie Brenner</a>
-                  <p>
-                    Programmierung
-                    <br />
-                    <a href="https://tomnick.org">Tom Nick</a>
-                  </p>
+                </p>
+                <p>
+                  Programmierung
+                  <br />
+                  <a href="https://tomnick.org">Tom Nick</a>
                 </p>
               </ColumnHalf>
               <ColumnHalf>

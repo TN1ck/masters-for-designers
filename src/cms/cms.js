@@ -2,7 +2,6 @@ import CMS from "netlify-cms";
 import React from "react";
 import {StyleSheetManager} from "styled-components";
 
-import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import GlossaryPreview from "./preview-templates/GlossaryPreview";
 import MasterPreview from "./preview-templates/MasterPreview";
 import {GlobalStyle} from "../components/Layout";
@@ -35,11 +34,6 @@ class CSSInjector extends React.Component {
   }
 }
 
-CMS.registerPreviewTemplate("about", props => (
-  <CSSInjector>
-    <AboutPagePreview {...props} />
-  </CSSInjector>
-));
 CMS.registerPreviewTemplate("master", props => (
   <CSSInjector>
     <div>

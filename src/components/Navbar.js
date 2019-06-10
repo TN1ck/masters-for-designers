@@ -11,6 +11,7 @@ const NavbarInformation = styled.div`
 
 const NavbarContainer = styled.nav`
   z-index: 100;
+  border-bottom: ${p => (p.showBorder ? "1px solid black" : "none")};
   background: ${p => p.background || THEME.colors.orange};
   top: 0;
   position: sticky;
@@ -94,10 +95,10 @@ const ShowMobile = styled.div`
 
 const Navbar = class extends React.Component {
   render() {
-    const {masterCount, background} = this.props;
+    const {masterCount, background, showBorder} = this.props;
     const savedMastersCount = this.props.savedMastersCount || getSavedMasters().length;
     return (
-      <NavbarContainer background={background} role="navigation" aria-label="main-navigation">
+      <NavbarContainer showBorder={showBorder} background={background} role="navigation" aria-label="main-navigation">
         <Container>
           <HideMobile>
             <NavbarInnerContainer>
@@ -148,7 +149,7 @@ const Navbar = class extends React.Component {
   }
 };
 
-export default ({masterCount, background}) => (
+export default ({masterCount, background, showBorder}) => (
   <StaticQuery
     query={graphql`
       query NavbarQuery {
@@ -158,7 +159,9 @@ export default ({masterCount, background}) => (
       }
     `}
     render={data => {
-      return <Navbar masterCount={masterCount || data.masters.totalCount} background={background} />;
+      return (
+        <Navbar showBorder={showBorder} masterCount={masterCount || data.masters.totalCount} background={background} />
+      );
     }}
   />
 );

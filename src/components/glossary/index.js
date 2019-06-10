@@ -105,7 +105,7 @@ export default class Glossary extends React.Component {
     const {items: glossary, title, content} = data.glossary.edges[0].node;
     return (
       <Layout background={THEME.colors.blue}>
-        <Navbar background={THEME.colors.blue} />
+        <Navbar showBorder background={THEME.colors.blue} />
         <GlossaryInner glossary={glossary} title={title} content={content} />
       </Layout>
     );
