@@ -145,6 +145,7 @@ const FilterButtonSection = styled.div`
 const SortSection = styled.div`
   cursor: pointer;
   display: flex;
+  align-items: center;
   position: relative;
 
   @media not all and (hover: none) {
@@ -166,8 +167,7 @@ const FilterHeaderInner = styled.div`
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding-bottom: 16px;
-  padding-top: 16px;
+  height: ${FILTER_HEADER_HEIGHT}px;
 `;
 
 const SortOptions = styled.div`
@@ -175,7 +175,7 @@ const SortOptions = styled.div`
   right: -20px;
   width: 180px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  top: 38px;
+  top: ${FILTER_HEADER_HEIGHT}px;
   z-index: 99;
   background: ${THEME.colors.blue};
 `;

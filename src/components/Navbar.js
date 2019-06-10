@@ -4,6 +4,7 @@ import {Link, StaticQuery, graphql} from "gatsby";
 import THEME from "../theme";
 import Container from "./Container";
 import {getSavedMasters} from "../storage";
+import {MAIN_HEADER_HEIGHT} from "./masters/styles";
 
 const NavbarInformation = styled.div`
   display: flex;
@@ -76,7 +77,8 @@ const NavbarLinks = styled.div`
 const NavbarInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  height: ${MAIN_HEADER_HEIGHT}px;
+  align-items: center;
 `;
 
 const HideMobile = styled.div`
