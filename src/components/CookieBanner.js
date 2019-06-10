@@ -80,7 +80,6 @@ export default class CookieBanner extends React.Component {
     return false;
   }
   componentDidMount() {
-    console.log("did mount");
     // for development
     if (typeof window !== "undefined" && !window.consentCodeExecuted) {
       const script = document.createElement("script");
@@ -92,7 +91,6 @@ export default class CookieBanner extends React.Component {
     window.consentCodeExecuted = false;
   }
   render() {
-    console.log("render");
     return (
       <CookieBannerContainer id="cookie-banner">
         <CloseButton id="cookie-banner-close">
