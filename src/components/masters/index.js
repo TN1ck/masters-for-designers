@@ -296,27 +296,30 @@ class Masters extends React.Component {
       return;
     }
 
-    // because we close old masters again, we have to do a lot more
-    // for smooth scrolling
+    const closePreviousMasterAndQuickJump = this.state.masterIds.length > 0;
+
+    let positionOldTop = 0;
+    const element = document.getElementById(id);
+    if (closePreviousMasterAndQuickJump) {
+      positionOldTop = element.getBoundingClientRect().top;
+    }
+
     this.setState(
       {
-        masterIds: [id].concat(this.state.masterIds),
+        // we only show one master at a time
+        masterIds: [id],
       },
       () => {
-        // deactivate for now, it's problematic in a lot of ways
-        // const positionOld = element.getBoundingClientRect();
-        // const oldMasterId = this.state.masterId;
-        // if (oldMasterId !== "") {
-        //   const element = document.getElementById(id);
-        //   const positionNew = element.getBoundingClientRect();
-        //   const offset = positionOld.top - positionNew.top;
-        //   const quicklyScrollTo = window.scrollY - offset;
-        //   window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
-        // }
+        // we close the old master, so the whole list acts like an accordion
+        if (closePreviousMasterAndQuickJump) {
+          const positionNewTop = element.getBoundingClientRect().top;
+          const offset = positionOldTop - positionNewTop;
+          const quicklyScrollTo = window.scrollY - offset;
+          window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
+        }
         setTimeout(() => {
-          const element = document.getElementById(id);
-          const position = element.getBoundingClientRect();
-          const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
+          const positionTop = element.getBoundingClientRect().top;
+          const top = positionTop + window.scrollY - MAIN_HEADER_HEIGHT - FILTER_HEADER_HEIGHT;
           scrollTo(top);
         });
       },
