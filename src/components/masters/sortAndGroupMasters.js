@@ -1,7 +1,7 @@
 import {pairs} from "../../utils/pairs";
 import {groupBy} from "../../utils/groupBy";
 import {sortBy} from "../../utils/sortBy";
-import { flatten } from "../../utils/flatten";
+import {flatten} from "../../utils/flatten";
 
 export const MONTH_NAME_MAPPING = {
   0: "Januar",
@@ -14,7 +14,7 @@ export const MONTH_NAME_MAPPING = {
   7: "August",
   8: "September",
   9: "Oktober",
-  10: "Nomeber",
+  10: "November",
   11: "Dezember",
 };
 
@@ -43,23 +43,24 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
         const monthOffset = new Date(date).getUTCMonth() - now.getMonth();
         return monthOffset < 0 ? monthOffset + 12 : monthOffset;
       };
-      const mastersMultipleTimes = flatten(masters.map(m => {
-        return m.timeAndMoney.applicationDeadlines.map(d => {
-          return {
-            ...m,
-            timeAndMoney: {
-              ...m.timeAndMoney,
-              // we still put the other dates in as well to not confuse the user
-              applicationDeadlines: [d].concat(m.timeAndMoney.applicationDeadlines.filter(dd => d != dd)),
-            },
-          };
-        });
-      }));
-
+      const mastersMultipleTimes = flatten(
+        masters.map(m => {
+          return m.timeAndMoney.applicationDeadlines.map(d => {
+            return {
+              ...m,
+              timeAndMoney: {
+                ...m.timeAndMoney,
+                // we still put the other dates in as well to not confuse the user
+                applicationDeadlines: [d].concat(m.timeAndMoney.applicationDeadlines.filter(dd => d != dd)),
+              },
+            };
+          });
+        }),
+      );
 
       const masterWithDates = mastersMultipleTimes.map(d => {
         // We don't need to sort, as we have all the masters there multiple times
-        // 
+        //
         // const sorted = d.timeAndMoney.applicationDeadlines
         //   .map(d => {
         //     return [getOffset(new Date(d.date)), d];
