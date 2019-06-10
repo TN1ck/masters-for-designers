@@ -153,9 +153,9 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
                   return (
                     <li key={m.id}>
                       <Tippy content={goToMasterText}>
-                        <Link onClick={e => goToMaster(e, m.id)} to={`/#${m.id}`}>{`${m.name} - ${
-                          masterTranslation[m.direction.degree]
-                        }`}</Link>
+                        <Link onClick={e => goToMaster(e, m.id)} to={`/#${m.id}`}>
+                          {m.name} - <i>{masterTranslation[m.direction.degree]}</i>
+                        </Link>
                       </Tippy>
                     </li>
                   );
