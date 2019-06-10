@@ -47,15 +47,31 @@ class SavedMasters extends React.Component {
       });
       return;
     }
+
+    const closePreviousMasterAndQuickJump = this.state.masterIds.length > 0;
+
+    let positionOldTop = 0;
+    const element = document.getElementById(id);
+    if (closePreviousMasterAndQuickJump) {
+      positionOldTop = element.getBoundingClientRect().top;
+    }
+
     this.setState(
       {
-        masterIds: [id].concat(this.state.masterIds),
+        // we only show one master at a time
+        masterIds: [id],
       },
       () => {
+        // we close the old master, so the whole list acts like an accordion
+        if (closePreviousMasterAndQuickJump) {
+          const positionNewTop = element.getBoundingClientRect().top;
+          const offset = positionOldTop - positionNewTop;
+          const quicklyScrollTo = window.scrollY - offset;
+          window.scrollTo({behavior: "auto", left: 0, top: quicklyScrollTo});
+        }
         setTimeout(() => {
-          const element = document.getElementById(id);
-          const position = element.getBoundingClientRect();
-          const top = position.top + window.scrollY - MAIN_HEADER_HEIGHT;
+          const positionTop = element.getBoundingClientRect().top;
+          const top = positionTop + window.scrollY - MAIN_HEADER_HEIGHT;
           scrollTo(top);
         });
       },
