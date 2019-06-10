@@ -70,7 +70,7 @@ const MasterDetailInternationalitySection = styled.div`
 `;
 const MasterDetailSectionContainer = styled.div`
   & > h4 {
-    line-height: 26px;
+    padding-bottom: 8px;
     border-bottom: 1px solid black;
   }
 `;
