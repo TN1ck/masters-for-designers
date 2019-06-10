@@ -1,50 +1,51 @@
 {
-    "name": "Illustration (Design)",
-    "universityName": "Hochschule für angewandte Wissenschaften Hamburg",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "disciplinary",
-        "allowedDisciplines": "Illustration",
-        "allowedDisciplinesTag": [
-            "illustrations"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2017-07-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://bewerbung.design.haw-hamburg.de/studiengang/ma-design-illu/",
-        "facebook": "https://www.facebook.com/HAW.DMI/",
-        "instagram": "—",
-        "twitter": "https://twitter.com/HAW_Hamburg"
-    }
+  "name": "Illustration (Design)",
+  "universityName": "Hochschule für angewandte Wissenschaften Hamburg",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Design",
+    "allowedDisciplinesTag": [
+      "illustrations",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-24T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://design.haw-hamburg.de/illu-studieninformationen/#headlineNr2",
+    "facebook": "https://www.facebook.com/HAW.DMI/",
+    "instagram": "https://www.instagram.com/haw_dmi/",
+    "twitter": "https://twitter.com/HAW_Hamburg"
+  }
 }
