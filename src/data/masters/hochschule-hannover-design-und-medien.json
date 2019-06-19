@@ -1,55 +1,57 @@
 {
-    "name": "Design und Medien",
-    "universityName": "Hochschule Hannover",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Medien Information und Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "interdisciplinaryArt",
-        "allowedDisciplines": "Design",
-        "allowedDisciplinesTag": [
-            "visualCommunication",
-            "digital",
-            "product",
-            "fashion",
-            "filmAndPhotograpy",
-            "room"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "2",
-        "applicationDeadlines": [
-            {
-                "date": "2018-04-29T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://master-dm.de/",
-        "facebook": "https://www.facebook.com/mdm.hannover",
-        "instagram": "https://www.instagram.com/ma_designundmedien/",
-        "twitter": "—"
-    }
+  "name": "Design und Medien",
+  "universityName": "Hochschule Hannover",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Medien Information und Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Produktdesign, Modedesign, Innenarchitektur, Visuelle Kommunikation, Mediendesign, Fotojournalismus/Dokumentarfotografie oder Szenografie-Kostüm ",
+    "allowedDisciplinesTag": [
+      "visualCommunication",
+      "digital",
+      "product",
+      "fashion",
+      "filmAndPhotograpy",
+      "room",
+      "illustrations",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-04-29T16:52:46.791Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "2"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "http://master-dm.de/",
+    "facebook": "https://www.facebook.com/mdm.hannover",
+    "instagram": "https://www.instagram.com/ma_designundmedien/",
+    "twitter": "—"
+  }
 }
