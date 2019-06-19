@@ -23,18 +23,7 @@
     ]
   },
   "timeAndMoney": {
-    "applicationDeadlines": [
-      {
-        "type": "winter",
-        "date": "2017-11-15T00:00:00.000Z",
-        "international": false
-      },
-      {
-        "type": "summer",
-        "date": "2018-05-15T00:00:00.000Z",
-        "international": false
-      }
-    ],
+    "applicationDeadlines": [],
     "allowedForms": [
       "fullTime"
     ],
