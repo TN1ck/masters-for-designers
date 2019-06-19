@@ -23,7 +23,13 @@
     ]
   },
   "timeAndMoney": {
-    "applicationDeadlines": [],
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-15T14:32:21.313Z",
+        "international": false
+      }
+    ],
     "allowedForms": [
       "fullTime"
     ],
