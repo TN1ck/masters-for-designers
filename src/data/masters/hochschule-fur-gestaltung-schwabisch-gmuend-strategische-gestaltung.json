@@ -1,57 +1,57 @@
 {
-    "name": "Strategische Gestaltung",
-    "universityName": "Hochschule für Gestaltung Schwäbisch Gmuend",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": " —"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "interdisciplinaryArt",
-        "allowedDisciplines": "Kommunikationsdesign, Produktdesign, Interaktionsdesign",
-        "allowedDisciplinesTag": [
-            "visualCommunication",
-            "digital",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2017-11-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-05-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.hfg-gmuend.de/Strategische_Gestaltung.html",
-        "facebook": "https://www.facebook.com/StrategischeGestaltung/?fref=ts",
-        "instagram": "—",
-        "twitter": "https://twitter.com/hfggmuend"
-    }
+  "name": "Strategische Gestaltung",
+  "universityName": "Hochschule für Gestaltung Schwäbisch Gmuend",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": " —"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Kommunikationsdesign, Produktdesign, Interaktionsdesign",
+    "allowedDisciplinesTag": [
+      "visualCommunication",
+      "digital",
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2017-11-15T00:00:00.000Z",
+        "international": false
+      },
+      {
+        "type": "summer",
+        "date": "2018-05-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hfg-gmuend.de/Strategische_Gestaltung.html",
+    "facebook": "https://www.facebook.com/StrategischeGestaltung",
+    "instagram": "https://www.instagram.com/hfg.gmuend/",
+    "twitter": "https://twitter.com/hfggmuend"
+  }
 }
