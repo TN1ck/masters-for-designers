@@ -1,55 +1,55 @@
 {
-    "name": "Engineering Design",
-    "universityName": "Hochschule Magdeburg/Stendal",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Ingenieurwissenschaften und Industriedesign"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachuebergreifend",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Industriedesign, Ingenieurwissenschaften",
-        "allowedDisciplinesTag": [
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2017-11-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-05-31T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.hs-magdeburg.de/studium/master/engineering-design.html",
-        "facebook": "https://www.facebook.com/hsmagdeburg",
-        "instagram": "https://www.instagram.com/hsmagdeburgstendal/",
-        "twitter": "https://twitter.com/hs_magdeburg"
-    }
+  "name": "Engineering Design",
+  "universityName": "Hochschule Magdeburg/Stendal",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Ingenieurwissenschaften und Industriedesign"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachuebergreifend",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Industriedesign bzw. relevante Ingenieurwissenschaften",
+    "allowedDisciplinesTag": [
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-31T17:51:53.410Z",
+        "international": false
+      },
+      {
+        "type": "summer",
+        "date": "2019-11-30T18:52:32.437Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hs-magdeburg.de/studium/master/engineering-design.html",
+    "facebook": "https://www.facebook.com/hsmagdeburg",
+    "instagram": "https://www.instagram.com/hsmagdeburgstendal/",
+    "twitter": "https://twitter.com/hs_magdeburg"
+  }
 }
