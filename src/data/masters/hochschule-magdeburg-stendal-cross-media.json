@@ -1,0 +1,59 @@
+{
+  "name": "Cross Media",
+  "universityName": "Hochschule Magdeburg/Stendal",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Ingenieurwissenschaften und Industriedesign"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "theoretical"
+    ],
+    "masterType": "studyingFurther"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachuebergreifend",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Journalismus, Publizistik, Medienmanagement, Geistes- und Sozialwissenschaften, Psychologie, Betriebswirtschaft, Informatik",
+    "allowedDisciplinesTag": [
+      "digital",
+      "filmAndPhotograpy",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-02-15T20:08:42.015Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-07-15T19:09:11.050Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "partTime",
+      "extraOccupational"
+    ],
+    "costs": 1635,
+    "semester": "7"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german",
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hs-magdeburg.de/studium/weiterbildung/cross-media.html",
+    "facebook": "https://www.facebook.com/groups/225635219252/",
+    "instagram": "https://www.instagram.com/crossmediamaster/",
+    "twitter": "https://twitter.com/ma_crossmedia/"
+  }
+}
