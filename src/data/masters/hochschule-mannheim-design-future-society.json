@@ -1,57 +1,59 @@
 {
-    "name": "Design Future Society",
-    "universityName": "Hochschule Mannheim",
-    "universityDetails": {
-        "otherUniversity": "mit School of Design der University of Leeds",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "thematisch",
-        "functionalComposition": "interdisciplinaryArt",
-        "allowedDisciplines": "Design",
-        "allowedDisciplinesTag": [
-            "room",
-            "visualCommunication",
-            "digital",
-            "filmAndPhotograpy",
-            "product",
-            "fashion",
-            "illustrations",
-            "jewelry"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2017-11-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "english"
-        ],
-        "semesterAbroad": "yes",
-        "doubleDegree": true
-    },
-    "metadata": {
-        "website": "https://www.hs-mannheim.de/studieninteressierte/studienangebot/masterstudiengaenge/kommunikationsdesign.html",
-        "facebook": "https://www.facebook.com/Fakultaet.für.Gestaltung/?fref=ts",
-        "instagram": "—",
-        "twitter": "https://twitter.com/hs_mannheim"
-    }
+  "name": "Design Future Society",
+  "universityName": "Hochschule Mannheim",
+  "universityDetails": {
+    "otherUniversity": "mit School of Design der University of Leeds",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical",
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "thematisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design oder aus anderen Disziplinen, wie z.B. Sozial Wissenschaft, Philosophie, Architektur, Politikwissenschaft, Anthropolgie, Soziologie, Produkt und Industrial Design, Media and Communications und Bildende Kunst",
+    "allowedDisciplinesTag": [
+      "room",
+      "visualCommunication",
+      "digital",
+      "filmAndPhotograpy",
+      "product",
+      "fashion",
+      "illustrations",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-11-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german",
+      "english"
+    ],
+    "semesterAbroad": "yes",
+    "doubleDegree": true
+  },
+  "metadata": {
+    "website": "https://www.hs-mannheim.de/studieninteressierte/studienangebot/masterstudiengaenge/kommunikationsdesign.html",
+    "facebook": "https://www.facebook.com/fakultaetfuergestaltung",
+    "instagram": "https://www.instagram.com/fakultaetfuergestaltung/",
+    "twitter": "https://twitter.com/HsMaNews"
+  }
 }
