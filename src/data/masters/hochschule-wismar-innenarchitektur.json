@@ -1,56 +1,55 @@
 {
-    "name": "Innenarchitektur",
-    "universityName": "Hochschule Wismar",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Innenarchitektur, Architektur",
-        "allowedDisciplinesTag": [
-            "room",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2017-07-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-01-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.hs-wismar.de/was/studium/studiengaenge/innenarchitektur-1/",
-        "facebook": "https://www.facebook.com/HochschuleWismar",
-        "instagram": null,
-        "twitter": "https://twitter.com/HSWismarPresse"
-    }
+  "name": "Innenarchitektur",
+  "universityName": "Hochschule Wismar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Innenarchitektur, Architektur",
+    "allowedDisciplinesTag": [
+      "room"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-01-14T23:03:26.259Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-07-14T22:03:40.007Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://fg.hs-wismar.de/studium/studienangebot/innenarchitektur/master/",
+    "facebook": "https://www.facebook.com/gestaltungwismar",
+    "instagram": "https://www.instagram.com/fg.wismar/",
+    "twitter": "https://twitter.com/DIAWismar"
+  }
 }
