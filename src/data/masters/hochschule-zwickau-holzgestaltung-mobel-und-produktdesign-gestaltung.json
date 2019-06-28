@@ -1,50 +1,50 @@
 {
-    "name": "Holzgestaltung, Möbel- und Produktdesign (Gestaltung) ",
-    "universityName": "Hochschule Zwickau",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Angewandte Kunst"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "disciplinary",
-        "allowedDisciplines": "Holzgestaltung",
-        "allowedDisciplinesTag": [
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "2",
-        "applicationDeadlines": [
-            {
-                "date": "2018-05-31T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.fh-zwickau.de/aks/studium/gestaltung-ma/",
-        "facebook": "https://www.facebook.com/Angewandte-Kunst-Schneeberg-163414037051896/?fref=pb&hc_location=profile_browser",
-        "instagram": "https://www.instagram.com/hochschulezwickau/",
-        "twitter": "—"
-    }
+  "name": "Holzgestaltung, Möbel- und Produktdesign (Gestaltung) ",
+  "universityName": "Hochschule Zwickau",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Angewandte Kunst"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Produkt- und Objektdesign",
+    "allowedDisciplinesTag": [
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-31T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "2"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.fh-zwickau.de/aks/studium/gestaltung-ma/",
+    "facebook": "https://www.facebook.com/AngewandteKunstSchneeberg/",
+    "instagram": "https://www.instagram.com/wooddesign_schneeberg/",
+    "twitter": "https://twitter.com/WHZ_Zwickau"
+  }
 }
