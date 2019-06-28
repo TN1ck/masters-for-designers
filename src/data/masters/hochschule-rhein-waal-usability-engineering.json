@@ -1,57 +1,56 @@
 {
-    "name": "Usability Engineering",
-    "universityName": "Hochschule Rhein-Waal",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Kommunikation und Umwelt"
-    },
-    "direction": {
-        "degree": "msc",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Informatik, Psychologie",
-        "allowedDisciplinesTag": [
-            "visualCommunication",
-            "digital",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2017-07-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-01-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "english"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.hochschule-rhein-waal.de/de/fakultaeten/kommunikation-und-umwelt/studienangebot/masterstudiengaenge/usability-engineering-msc",
-        "facebook": "https://www.facebook.com/hochschulerheinwaal/?fref=ts",
-        "instagram": "—",
-        "twitter": "https://twitter.com/search?q=rhein-waal%20hochschule&src=typd"
-    }
+  "name": "Usability Engineering",
+  "universityName": "Hochschule Rhein-Waal",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Kommunikation und Umwelt"
+  },
+  "direction": {
+    "degree": "msc",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design mit softwaretechnischer Umsetzungserfahrung, Informatik, Psychologie",
+    "allowedDisciplinesTag": [
+      "visualCommunication",
+      "digital"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-01-15T00:00:00.000Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-07-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hochschule-rhein-waal.de/de/fakultaeten/kommunikation-und-umwelt/studienangebot/masterstudiengaenge/usability-engineering-msc",
+    "facebook": "https://www.facebook.com/hochschulerheinwaal",
+    "instagram": "—",
+    "twitter": "https://twitter.com/search?q=rhein-waal%20hochschule&src=typd"
+  }
 }
