@@ -1,0 +1,52 @@
+{
+  "name": "Möbeldesign (Innenarchitektur und Möbeldesign)",
+  "universityName": "Technische Hochschule Rosenheim",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Innenarchitektur, Architektur, Holztechnik",
+    "allowedDisciplinesTag": [
+      "product",
+      "room",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-06-15T18:36:15.351Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "http://www.fh-rosenheim.de/gestaltung/innenarchitektur-und-moebeldesign-master/",
+    "facebook": "https://www.facebook.com/THRosenheim/",
+    "instagram": "https://www.instagram.com/throsenheim/",
+    "twitter": "—"
+  }
+}
