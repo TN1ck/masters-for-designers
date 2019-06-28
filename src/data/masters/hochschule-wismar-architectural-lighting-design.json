@@ -1,51 +1,52 @@
 {
-    "name": "Architectural Lighting Design",
-    "universityName": "Hochschule Wismar",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Innenarchitektur, Architektur",
-        "allowedDisciplinesTag": [
-            "room",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2018-05-01T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "english"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.hs-wismar.de/was/studium/studiengaenge/architectural-lighting-design/",
-        "facebook": "https://www.facebook.com/HochschuleWismar",
-        "instagram": null,
-        "twitter": "https://twitter.com/HSWismarPresse"
-    }
+  "name": "Architectural Lighting Design",
+  "universityName": "Hochschule Wismar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Architektur, Innenarchitektur, Design, Produktdesign, Kommunikationsdesign, Lichtgestaltung oder allgemeine Gestaltung",
+    "allowedDisciplinesTag": [
+      "room",
+      "product",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-01T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "choose",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://fg.hs-wismar.de/studium/studienangebot/architectural-lighting-design/",
+    "facebook": "https://www.facebook.com/gestaltungwismar",
+    "instagram": "https://www.instagram.com/fg.wismar/",
+    "twitter": "https://twitter.com/DIAWismar"
+  }
 }
