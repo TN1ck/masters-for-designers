@@ -1,51 +1,52 @@
 {
-    "name": "Innenarchitektur",
-    "universityName": "Hochschule Rosenheim",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Innenarchitektur, Architektur",
-        "allowedDisciplinesTag": [
-            "room",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2018-06-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.fh-rosenheim.de/gestaltung/innenarchitektur-und-moebeldesign-master/",
-        "facebook": "https://www.facebook.com/HochschuleRosenheim/?fref=ts",
-        "instagram": "—",
-        "twitter": "—"
-    }
+  "name": "Raum (Innenarchitektur und Möbeldesign)",
+  "universityName": "Hochschule Rosenheim",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Innenarchitektur, Architektur, Holztechnik",
+    "allowedDisciplinesTag": [
+      "room",
+      "product",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-06-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "http://www.fh-rosenheim.de/gestaltung/innenarchitektur-und-moebeldesign-master/",
+    "facebook": "https://www.facebook.com/THRosenheim/",
+    "instagram": "https://www.instagram.com/throsenheim/",
+    "twitter": "—"
+  }
 }
