@@ -1,0 +1,59 @@
+{
+  "name": "Crossmedia Spaces",
+  "universityName": "Hochschule Rhein Main",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design Informatik Medien"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "thematisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Kommunikationsdesign oder vergleichbar künstlerisch-gestalterische Disziplin",
+    "allowedDisciplinesTag": [
+      "digital",
+      "filmAndPhotograpy",
+      "illustrations",
+      "room",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "date": "2019-01-15T15:12:00.931Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-07-15T14:15:33.630Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hs-rm.de/de/fachbereiche/design-informatik-medien/studiengaenge/crossmedia-spaces-ma/",
+    "facebook": "https://www.facebook.com/HSRheinMain",
+    "instagram": "—",
+    "twitter": "—"
+  }
+}
