@@ -1,52 +1,52 @@
 {
-    "name": "Architectural Lighting and Design Management",
-    "universityName": "Hochschule Wismar",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "studyingFurther"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Innenarchitektur, Architektur, Elektrotechnik",
-        "allowedDisciplinesTag": [
-            "room",
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "remote",
-            "partTime"
-        ],
-        "costs": 3900,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2017-08-30T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "english"
-        ],
-        "semesterAbroad": "yes",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.wings.hs-wismar.de/de/fernstudium_master/lighting_design",
-        "facebook": "https://www.facebook.com/WingsFernstudium",
-        "instagram": null,
-        "twitter": "https://twitter.com/WingsStudium"
-    }
+  "name": "Architectural Lighting and Design Management",
+  "universityName": "Hochschule Wismar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "studyingFurther"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Innenarchitektur, Architektur, Elektrotechnik",
+    "allowedDisciplinesTag": [
+      "room",
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-08-31T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "remote",
+      "partTime"
+    ],
+    "costs": 3900,
+    "semester": "5"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "yes",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://fg.hs-wismar.de/studium/fernstudium/architectural-lighting-and-design-management/",
+    "facebook": "https://www.facebook.com/gestaltungwismar",
+    "instagram": "https://www.instagram.com/fg.wismar/",
+    "twitter": "https://twitter.com/DIAWismar"
+  }
 }
