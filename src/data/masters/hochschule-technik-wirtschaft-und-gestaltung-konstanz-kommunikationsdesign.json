@@ -1,50 +1,50 @@
 {
-    "name": "Kommunikationsdesign",
-    "universityName": "Hochschule Technik Wirtschaft und Gestaltung Konstanz",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Architektur und Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "disciplinary",
-        "allowedDisciplines": "Kommunikationsdesign",
-        "allowedDisciplinesTag": [
-            "visualCommunication"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2018-06-01T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.htwg-konstanz.de/Studium.1457.0.html",
-        "facebook": "https://www.facebook.com/studiengangekd.htwgkonstanz/",
-        "instagram": "—",
-        "twitter": "https://twitter.com/Design_in_KN"
-    }
+  "name": "Kommunikationsdesign",
+  "universityName": "Hochschule Technik Wirtschaft und Gestaltung Konstanz",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Architektur und Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Kommunikationsdesign oder eine verwandte Fachrichtung",
+    "allowedDisciplinesTag": [
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-06-01T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.htwg-konstanz.de/master/kommunikationsdesign/news/",
+    "facebook": "https://www.facebook.com/studiengangekd.htwgkonstanz/",
+    "instagram": "https://www.instagram.com/design_in_konstanz/",
+    "twitter": "https://twitter.com/Design_in_KN"
+  }
 }
