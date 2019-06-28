@@ -1,52 +1,52 @@
 {
-    "name": "Integrative StadtLand-Entwicklung ",
-    "universityName": "Hochschule Wismar",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "msc",
-        "direction": [
-            "theoretical"
-        ],
-        "masterType": "studyingFurther"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Kommunikationsdesign, Architektur, Stadt- bzw. Raumplanung, Landschafts- und Umweltplanung, Geografie, Wirtschaftswissenschaften, Ingenieurwissenschaften, Verwaltungsrecht",
-        "allowedDisciplinesTag": [
-            "room",
-            "visualCommunication"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "remote",
-            "extraOccupational"
-        ],
-        "costs": 2000,
-        "semester": "5",
-        "applicationDeadlines": [
-            {
-                "date": "2017-07-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.wings.hs-wismar.de/de/fernstudium_master/integrative_stadtland_entwicklung",
-        "facebook": "https://www.facebook.com/WingsFernstudium",
-        "instagram": "—",
-        "twitter": "https://twitter.com/WingsStudium"
-    }
+  "name": "Integrative StadtLand-Entwicklung ",
+  "universityName": "Hochschule Wismar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "msc",
+    "direction": [
+      "theoretical"
+    ],
+    "masterType": "studyingFurther"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Kommunikationsdesign, Architektur, Stadt- bzw. Raumplanung, Landschafts- und Umweltplanung, Geografie, Wirtschaftswissenschaften, Ingenieurwissenschaften, Verwaltungsrecht",
+    "allowedDisciplinesTag": [
+      "room",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-08-31T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "remote",
+      "extraOccupational"
+    ],
+    "costs": 2000,
+    "semester": "5"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://fg.hs-wismar.de/studium/fernstudium/integrative-stadtland-entwicklung/",
+    "facebook": "https://www.facebook.com/gestaltungwismar",
+    "instagram": "https://www.instagram.com/fg.wismar/",
+    "twitter": "https://twitter.com/DIAWismar"
+  }
 }
