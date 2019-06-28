@@ -1,0 +1,55 @@
+{
+  "name": "Gemstones and Jewellery",
+  "universityName": "Hochschule Trier",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "mfa",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Schmuckdesign",
+    "allowedDisciplinesTag": [
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-01T20:39:36.459Z",
+        "international": false
+      },
+      {
+        "type": "summer",
+        "date": "2019-11-01T21:41:12.977Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hochschule-trier.de/en/gestaltung/es/study/courses/master/",
+    "facebook": "https://www.facebook.com/Idar-OberSTEIN-Campus-1396538100623800",
+    "instagram": "https://www.instagram.com/hochschule_trier/",
+    "twitter": "https://twitter.com/hochschuletrier"
+  }
+}
