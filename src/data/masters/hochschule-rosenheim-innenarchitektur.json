@@ -18,8 +18,7 @@
     "allowedDisciplines": "Design, Innenarchitektur, Architektur, Holztechnik",
     "allowedDisciplinesTag": [
       "room",
-      "product",
-      "visualCommunication"
+      "product"
     ]
   },
   "timeAndMoney": {
