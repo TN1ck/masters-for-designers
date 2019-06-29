@@ -1,55 +1,56 @@
 {
-    "name": "Medical Design (Industriedesign)",
-    "universityName": "Muthesius Kunsthochschule Kiel",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "disciplinary",
-        "allowedDisciplines": "Industriedesign",
-        "allowedDisciplinesTag": [
-            "product"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2017-11-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2018-05-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://muthesius-kunsthochschule.de/industriedesign-medical-design-m-a/",
-        "facebook": "https://www.facebook.com/MuthesiusKunsthochschule/?fref=ts",
-        "instagram": null,
-        "twitter": "https://twitter.com/muthesiuskh"
-    }
+  "name": "Medical Design (Industriedesign)",
+  "universityName": "Muthesius Kunsthochschule Kiel",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Interface Design, Produktdesign",
+    "allowedDisciplinesTag": [
+      "product",
+      "digital"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-15T10:11:13.733Z",
+        "international": false
+      },
+      {
+        "type": "summer",
+        "date": "2019-11-15T11:11:24.841Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://muthesius-kunsthochschule.de/industriedesign-medical-design-m-a/",
+    "facebook": "https://www.facebook.com/MuthesiusKunsthochschule/",
+    "instagram": "https://www.instagram.com/muthesius_kunsthochschule/",
+    "twitter": "https://twitter.com/muthesiuskh"
+  }
 }
