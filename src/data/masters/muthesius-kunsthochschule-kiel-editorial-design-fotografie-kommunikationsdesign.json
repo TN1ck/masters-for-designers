@@ -14,10 +14,11 @@
   },
   "topicAndFocus": {
     "topicFocus": "fachspezifisch",
-    "functionalComposition": "disciplinary",
-    "allowedDisciplines": "Fotografie ",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Kommunikationsdesign oder weitere Bereiche, die auf die Vertiefungsrichtung abzielt",
     "allowedDisciplinesTag": [
-      "filmAndPhotograpy"
+      "filmAndPhotograpy",
+      "visualCommunication"
     ]
   },
   "timeAndMoney": {
