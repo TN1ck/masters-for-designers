@@ -14,6 +14,8 @@ export const GroupHeader = styled.h3`
   background: white;
   padding: 10px 0;
   border-bottom: 1px solid black;
+  font-size: 24px;
+  font-weight: normal;
 `;
 
 export const GroupsContainer = styled.div`
