@@ -11,7 +11,7 @@ const MasterTitle = styled.div`
   word-break: break-word;
   position: relative;
   width: 50%;
-  padding-right: 20px;
+  padding-right: 30px;
 `;
 
 const MasterNonTitleContainer = styled.div`
@@ -126,7 +126,7 @@ const MasterContainer = styled.a`
 
     & ${MasterTitle} {
       width: 100%;
-      padding-right: 20px;
+      padding-right: 34px;
     }
 
     & ${MasterDeadline} {
