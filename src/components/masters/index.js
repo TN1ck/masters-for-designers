@@ -443,7 +443,9 @@ class Masters extends React.Component {
                     return (
                       <Master
                         goToMasterText={
-                          numberOfFilters > 0 ? "Clicking the link resets the filters." : "Jump to the master."
+                          numberOfFilters > 0
+                            ? "Wenn du den Studiengang direkt anschauen magst, werden die Filter zurückgesetzt."
+                            : "Master direkt anschauen."
                         }
                         goToMaster={goToMaster}
                         active={active}

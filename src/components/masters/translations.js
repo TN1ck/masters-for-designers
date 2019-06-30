@@ -34,7 +34,7 @@ export const masterTypeTranslation = {
 };
 
 export const masterDirectionTranslation = {
-  practical: "Praktisch",
+  practical: "Entwurfspraktisch",
   theoretical: "Theoretisch",
 };
 
@@ -59,7 +59,7 @@ export const allowedFormsTranslation = {
   fullTime: "Vollzeit",
   partTime: "Teilzeit",
   extraOccupational: "Berufsbegleitend",
-  remote: "Ferstudium",
+  remote: "Fernstudium",
 };
 
 export const semesterAbroadTranslation = {

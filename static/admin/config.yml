@@ -108,7 +108,7 @@ collections:
             multiple: true
             default: []
             options:
-              - {label: Praktisch, value: practical}
+              - {label: Entwurfspraktisch, value: practical}
               - {label: Theoretisch, value: theoretical}
           - label: Mastertyp
             name: masterType

@@ -45,7 +45,7 @@ export const FILTERS = {
     {
       type: "direction",
       value: "practical",
-      name: "Praktisch",
+      name: "Entwurfspraktisch",
       filter: m => m.direction.direction.includes("practical"),
     },
     {
