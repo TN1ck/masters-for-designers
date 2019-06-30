@@ -11,18 +11,15 @@ import Navbar from "../Navbar";
 import {sortBy} from "../../utils/sortBy";
 import THEME from "../../theme";
 import TextContainer from "../TextContainer";
+import {Row, ColumnHalf, Container as InformationPageContainer} from "../InformationPage";
 
 const GlossarContainer = styled.main`
   background: ${THEME.colors.blue};
-`;
 
-const GroupContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
-
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr;
+  ${ColumnHalf} {
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 `;
 
@@ -31,31 +28,10 @@ const GroupLetter = styled.h2`
   color: ${THEME.colors.orange};
   border-bottom: 1px solid black;
   margin: 0;
+  margin-top: 60px;
 `;
 
-const Group = styled.section`
-  /* padding-top: 20px; */
-  padding-bottom: 40px;
-
-  letter-spacing: 0.01em;
-  line-height: 1.6;
-
-  p {
-    /* it's less than on the information pages */
-    padding-top: 6px;
-    margin: 0;
-  }
-
-  h3 {
-    margin: 0;
-    padding-bottom: 6px;
-    padding-top: 40px;
-  }
-  h4 {
-    margin: 0;
-    padding-top: 25px;
-  }
-`;
+const Group = styled.div``;
 
 export const GlossaryInner = ({glossary, title, content}) => {
   const groupedByLetter = sortBy(pairs(groupBy(glossary, d => d.title[0])), d => d[0]);
@@ -70,30 +46,34 @@ export const GlossaryInner = ({glossary, title, content}) => {
         </Container>
       </Masthead>
       <Container>
-        {groupedByLetter.map(([letter, list], i) => {
-          return (
-            <div key={i}>
-              <GroupLetter>{letter}</GroupLetter>
-              <GroupContainer>
-                {list.map((d, i) => {
-                  return (
-                    <Group key={i}>
-                      <h3>{d.title}</h3>
-                      <p>{d.content}</p>
-                      {d.sections &&
-                        d.sections.map(({subtitle, content}, j) => (
-                          <React.Fragment key={j}>
-                            <h4>{subtitle}</h4>
-                            <p>{content}</p>
-                          </React.Fragment>
-                        ))}
-                    </Group>
-                  );
-                })}
-              </GroupContainer>
-            </div>
-          );
-        })}
+        <InformationPageContainer>
+          {groupedByLetter.map(([letter, list], i) => {
+            return (
+              <React.Fragment key={i}>
+                <GroupLetter>{letter}</GroupLetter>
+                <Group>
+                  <Row>
+                    {list.map((d, i) => {
+                      return (
+                        <ColumnHalf key={i}>
+                          <h3>{d.title}</h3>
+                          <p>{d.content}</p>
+                          {d.sections &&
+                            d.sections.map(({subtitle, content}, j) => (
+                              <React.Fragment key={j}>
+                                <h4>{subtitle}</h4>
+                                <p>{content}</p>
+                              </React.Fragment>
+                            ))}
+                        </ColumnHalf>
+                      );
+                    })}
+                  </Row>
+                </Group>
+              </React.Fragment>
+            );
+          })}
+        </InformationPageContainer>
       </Container>
     </GlossarContainer>
   );
