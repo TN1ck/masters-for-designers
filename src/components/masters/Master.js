@@ -103,6 +103,10 @@ const MasterContainer = styled.a`
   display: flex;
   position: relative;
 
+  &:focus {
+    outline: none;
+  }
+
   @media (max-width: 800px) {
     flex-direction: column;
 
