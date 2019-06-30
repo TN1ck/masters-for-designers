@@ -5,11 +5,59 @@ import Container from "../../components/Container";
 import THEME from "../../theme";
 import {FILTERS, filterMasters} from "./filterMasters";
 import {empty} from "../../utils/empty";
-import {MAIN_HEADER_HEIGHT} from "./styles";
+import {MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT} from "./styles";
 
-const ResetFilters = styled.div`
-  opacity: 0;
+export const FilterText = styled.div`
+  display: block;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  font-weight: ${p => (p.active ? "bold" : "400")};
+  &,
+  &:visited,
+  &:focus {
+    color: black;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid black;
+  }
+
+  ${p =>
+    p.showArrow &&
+    css`
+      margin-right: 20px;
+      &:after {
+        transition: transform 200ms ease-out;
+        position: absolute;
+        content: "";
+        right: -20px;
+        top: 9px;
+        border-right: 6px solid transparent;
+        border-top: 6px solid black;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid transparent;
+        transform: ${p => (p.withRotation && p.active ? "rotate(180deg)" : "rotate(0deg)")};
+        transform-origin: 5px 2px;
+      }
+    `}
+`;
+
+const FilterButtonSection = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 500px) {
+    justify-content: space-between;
+  }
+`;
+
+export const ResetFilters = styled(FilterText)`
+  margin-left: 20px;
   font-size: 13px;
+  line-height: 1;
+  opacity: 0;
   pointer-events: none;
   ${p =>
     p.show &&
@@ -19,10 +67,13 @@ const ResetFilters = styled.div`
     `}
   transition: opacity 0.3s;
 
-  &:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+  ${p =>
+    p.hideOnMobile &&
+    css`
+      @media (max-width: 800px) {
+        display: none;
+      }
+    `}
 `;
 
 const FilterMain = styled.div`
@@ -73,41 +124,21 @@ const FilterButton = styled.button`
   }
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  right: 0px;
-  top: 10px;
-  background: none;
-  border: none;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  line-height: 1;
-  outline: none;
-`;
-
 const FilterHeader = styled.div`
   top: 0;
   background: ${THEME.colors.blue};
+  height: ${FILTER_HEADER_HEIGHT}px;
   position: sticky;
-  display: flex;
-  padding-top: 16px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
   border-bottom: 1px solid black;
   z-index: 100;
+`;
 
-  @media not all and (hover: none) {
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      ${CloseButton} {
-        outline: none;
-        background: rgba(255, 255, 255, 0.3);
-      }
-    }
-  }
+export const FilterHeaderInner = styled.div`
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: ${FILTER_HEADER_HEIGHT}px;
 `;
 
 const FilterSectionTitle = styled.div`
@@ -214,16 +245,19 @@ export default class FilterOverlay extends React.Component {
     return (
       <FilterMain id="filter-main" style={{display: show ? "block" : "none"}}>
         <Container>
-          <FilterHeader onClick={close}>
-            {`Filter (${numberOfFilters})`}
-            {/* <FilterHeaderActive>{activeFilters.map(createButton)}</FilterHeaderActive> */}
-            <CloseButton>
-              <img src={closeIcon} alt="close filters" />
-            </CloseButton>
+          <FilterHeader>
+            <FilterHeaderInner>
+              <FilterButtonSection>
+                <FilterText showArrow onClick={close} withRotation active={show}>
+                  {`Filter (${numberOfFilters})`}
+                </FilterText>
+                <ResetFilters onClick={resetFilters} show={numberOfFilters > 0}>
+                  {"Alle zurücksetzen"}
+                </ResetFilters>
+              </FilterButtonSection>
+              {/* <FilterHeaderActive>{activeFilters.map(createButton)}</FilterHeaderActive> */}
+            </FilterHeaderInner>
           </FilterHeader>
-          <ResetFilters onClick={resetFilters} show={numberOfFilters > 0}>
-            {"Alle zurücksetzen"}
-          </ResetFilters>
           <FilterSection>
             <FilterSectionTitle>{"Hochschule"}</FilterSectionTitle>
             <FilterSectionButtons>{FILTERS.universityType.map(createButton)}</FilterSectionButtons>

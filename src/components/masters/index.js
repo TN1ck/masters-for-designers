@@ -13,7 +13,7 @@ import {sortAndGroupMasters, SORT_NAME_MAPPING} from "./sortAndGroupMasters";
 import {FILTERS, filterMasters} from "./filterMasters";
 import THEME from "../../theme";
 import {saveMasters, getSavedMasters} from "../../storage";
-import FilterOverlay from "./FilterOverlay";
+import FilterOverlay, {FilterText, ResetFilters, FilterHeaderInner} from "./FilterOverlay";
 import MastersDataEnhancer from "./MastersDataEnhancer";
 import {GroupHeader, MAIN_HEADER_HEIGHT, FILTER_HEADER_HEIGHT, GroupsContainer} from "./styles";
 import scrollTo from "../../utils/scrollTo";
@@ -82,61 +82,6 @@ export const universityQuery = graphql`
   }
 `;
 
-const FilterText = styled.div`
-  display: block;
-  position: relative;
-  border-bottom: 1px solid transparent;
-  font-weight: ${p => (p.active ? "bold" : "400")};
-  &,
-  &:visited,
-  &:focus {
-    color: black;
-  }
-
-  &:hover {
-    cursor: pointer;
-    border-bottom: 1px solid black;
-  }
-
-  ${p =>
-    p.showArrow &&
-    css`
-      margin-right: 20px;
-      &:after {
-        transition: transform 200ms ease-out;
-        position: absolute;
-        content: "";
-        right: -20px;
-        top: 9px;
-        border-right: 6px solid transparent;
-        border-top: 6px solid black;
-        border-bottom: 6px solid transparent;
-        border-left: 6px solid transparent;
-        transform: ${p => (p.withRotation && p.active ? "rotate(180deg)" : "rotate(0deg)")};
-        transform-origin: 5px 2px;
-      }
-    `}
-`;
-
-const ResetFilters = styled(FilterText)`
-  margin-left: 20px;
-  font-size: 13px;
-  line-height: 1;
-  opacity: 0;
-  pointer-events: none;
-  ${p =>
-    p.show &&
-    css`
-      opacity: 1;
-      pointer-events: all;
-    `}
-  transition: opacity 0.3s;
-
-  @media (max-width: 800px) {
-    display: none;
-  }
-`;
-
 const FilterButtonSection = styled.div`
   display: flex;
   align-items: center;
@@ -163,19 +108,12 @@ const FilterHeader = styled.div`
   top: ${MAIN_HEADER_HEIGHT}px;
 `;
 
-const FilterHeaderInner = styled.div`
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  height: ${FILTER_HEADER_HEIGHT}px;
-`;
-
 const SortOptions = styled.div`
   position: absolute;
   right: -20px;
   width: 180px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  top: ${FILTER_HEADER_HEIGHT}px;
+  top: ${FILTER_HEADER_HEIGHT - 17}px;
   z-index: 99;
   background: ${THEME.colors.blue};
 `;
@@ -389,10 +327,10 @@ class Masters extends React.Component {
           <Container>
             <FilterHeaderInner>
               <FilterButtonSection>
-                <FilterText showArrow onClick={this.showOverlay}>
+                <FilterText showArrow onClick={this.showOverlay} withRotation active={this.state.show}>
                   {`Filter (${numberOfFilters})`}
                 </FilterText>
-                <ResetFilters onClick={this.resetFilters} show={numberOfFilters > 0}>
+                <ResetFilters hideOnMobile onClick={this.resetFilters} show={numberOfFilters > 0}>
                   {"Alle zurücksetzen"}
                 </ResetFilters>
               </FilterButtonSection>
