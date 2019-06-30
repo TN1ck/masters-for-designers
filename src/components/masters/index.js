@@ -110,12 +110,16 @@ const FilterHeader = styled.div`
 
 const SortOptions = styled.div`
   position: absolute;
-  right: -20px;
+  left: -15px;
   width: 180px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   top: ${FILTER_HEADER_HEIGHT - 17}px;
   z-index: 99;
   background: ${THEME.colors.blue};
+
+  @media (max-width: 500px) {
+    right: -20px;
+  }
 `;
 const SortOption = styled.div`
   padding: 8px 15px;
