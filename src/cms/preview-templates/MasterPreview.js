@@ -8,7 +8,7 @@ const MasterPreview = ({entry}) => {
       previewMode
       master={json.data}
       university={{name: json.data.university, city: "Leider hier nicht zu sehen", masters: []}}
-      goToMasterText={"Jump to the master."}
+      goToMasterText={"Master direkt anschauen."}
       goToMaster={() => {}}
       active
       saved={false}

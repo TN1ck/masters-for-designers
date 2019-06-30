@@ -119,7 +119,7 @@ class SavedMasters extends React.Component {
                     };
                     return (
                       <StyledMaster
-                        goToMasterText={"Clicking this will open the master on the main page."}
+                        goToMasterText={"Dieser Link öffnet den Master auf der Hauptseite."}
                         goToMaster={() => {}}
                         active={active}
                         saved
