@@ -47,14 +47,6 @@ const About = ({data}) => {
           <TextContainer>
             <Row>
               <ColumnHalf>
-                <h3>Schreib uns</h3>
-                <p>Du möchtest uns Feedback geben, hast eine Frage oder Anregungen?</p>
-                <p>
-                  Dann schreibe uns eine Email - wir freuen uns von dir zu hören.
-                  <a href="mailto:hello@mastersfordesigners.com">hello@mastersfordesigners.com</a>
-                </p>
-              </ColumnHalf>
-              <ColumnHalf>
                 <h3>
                   <i>M</i>ASTERS FOR <i>D</i>ESIGNERS
                 </h3>
@@ -68,11 +60,19 @@ const About = ({data}) => {
                 </p>
               </ColumnHalf>
               <ColumnHalf>
+                <h3>Kontakt</h3>
+                <p>Du möchtest uns Feedback geben, hast eine Frage oder Anregungen?</p>
+                <p>
+                  Schreibe uns eine Email - wir freuen uns von dir zu hören.
+                  <br />
+                  <a href="mailto:hello@mastersfordesigners.com">hello@mastersfordesigners.com</a>
+                </p>
+              </ColumnHalf>
+              <ColumnHalf>
                 <h3>Partner</h3>
                 <p>
-                  Ein besonderes Dankeschön geht an <a href="http://www.ortype.is">ortype</a>.
-                  <br />
-                  Deren großartige Schrift L10 wir verwenden dürfen.
+                  Ein besonderes Dankeschön geht an <a href="http://www.ortype.is">ortype</a>, deren großartige Schrift
+                  L10 wir verwenden dürfen.
                 </p>
               </ColumnHalf>
               <ColumnHalf>
