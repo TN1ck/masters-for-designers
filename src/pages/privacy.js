@@ -9,7 +9,7 @@ import {Row, ColumnHalf, Container as InformationPageContainer} from "../compone
 const Privacy = ({data}) => {
   return (
     <Layout>
-      <Navbar background="white" />
+      <Navbar showBorder background="white" />
       <Masthead background="white">
         <Container>
           <Headline>{"Datenschutz"}</Headline>

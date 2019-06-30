@@ -9,7 +9,7 @@ import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from
 const Imprint = ({data}) => {
   return (
     <Layout background={"white"}>
-      <Navbar background="white" />
+      <Navbar showBorder background="white" />
       <Masthead background="white">
         <Container>
           <Headline>{"Impressum"}</Headline>
