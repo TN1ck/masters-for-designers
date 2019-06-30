@@ -172,7 +172,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
           headline={"Ausrichtung"}
           listItems={[
             ["Mastertyp", masterTypeTranslation[master.direction.masterType]],
-            ["Ausrichtung", master.direction.direction.map(d => masterDirectionTranslation[d]).join(" & ")],
+            ["Ausrichtung", master.direction.direction.map(d => masterDirectionTranslation[d]).join(", ")],
             ["Inhaltlicher Fokus", topicAndFocusTranslation[master.topicAndFocus.topicFocus]],
             [
               "Disziplinäre Zusammensetzung",
@@ -186,7 +186,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
         <MasterDetailSection
           headline={"Zeit und Geld"}
           listItems={[
-            ["Studienform", master.timeAndMoney.allowedForms.map(d => allowedFormsTranslation[d]).join(" & ")],
+            ["Studienform", master.timeAndMoney.allowedForms.map(d => allowedFormsTranslation[d]).join(", ")],
             ["Regelstudienzeit", master.timeAndMoney.semester],
             [
               "Zulassungssemester",
@@ -196,7 +196,10 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
                 ? semesterTypeTranslation[master.timeAndMoney.applicationDeadlines[0].type]
                 : "",
             ],
-            ["Gebühren", master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs)],
+            [
+              "Gebühren",
+              master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs) + " pro Semester",
+            ],
           ]}
         />
       </MasterDetailMoneySection>
@@ -206,7 +209,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
           listItems={[
             [
               "Hauptunterrichtssprache",
-              master.internationality.mainLanguages.map(d => mainLanguagesTranslation[d]).join(" & "),
+              master.internationality.mainLanguages.map(d => mainLanguagesTranslation[d]).join(", "),
             ],
             ["Integriertes Auslandssemester", semesterAbroadTranslation[master.internationality.semesterAbroad]],
             ["Doppelabschluss", master.internationality.doubleDegree ? "Ja" : "Nein"],

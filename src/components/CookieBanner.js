@@ -100,7 +100,7 @@ export default class CookieBanner extends React.Component {
           <p>
             MD verwendet Cookies. Mit der Nutzung der Webseite erklärst du dich damit einverstanden.
             <Link to="/privacy" id="cookie-banner-link">
-              {"Erfahre Mehr"}
+              {"Erfahre mehr"}
             </Link>
           </p>
         </CookieBannerContainerInner>
