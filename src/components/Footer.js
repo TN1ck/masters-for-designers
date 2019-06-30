@@ -7,7 +7,6 @@ import {FacebookLink, InstagramLink} from "./Social";
 const FooterContainer = styled.div`
   background: black;
   color: white;
-  text-transform: uppercase;
 `;
 
 const FooterSocialLinks = styled.div`
@@ -25,7 +24,6 @@ const FooterInnerContainer = styled.div`
   background: black;
   padding: 10px 0;
   color: white;
-  text-transform: uppercase;
 
   @media (max-width: 800px) {
     grid-template-columns: auto auto;
@@ -43,12 +41,12 @@ const FooterLink = styled(Link)`
     border: none;
   }
   text-decoration: none;
-  text-transform: uppercase;
 `;
 
 const FooterHeader = styled(FooterLink)`
-  font-size: 18px;
+  font-size: 22px;
   grid-area: footer-header;
+  text-transform: uppercase;
 `;
 
 const FooterLinks = styled.div`

@@ -54,7 +54,6 @@ const NavbarLink = styled(Link)`
       color: black;
     }
   }
-  text-transform: uppercase;
 
   @media (max-width: 700px) {
     margin-right: 10px;
@@ -62,7 +61,8 @@ const NavbarLink = styled(Link)`
 `;
 
 const MainNavbarLink = styled(NavbarLink)`
-  font-size: 18px;
+  font-size: 22px;
+  text-transform: uppercase;
   font-weight: 400;
 `;
 
