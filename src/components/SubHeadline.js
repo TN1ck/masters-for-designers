@@ -4,4 +4,8 @@ export const SubHeadline = styled.h3`
   color: black;
   font-weight: 400;
   line-height: 1.5;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;

@@ -10,6 +10,8 @@ export const Headline = styled.h1`
   margin: 0;
 
   @media (max-width: 800px) {
-    font-size: 46px;
+    font-size: 40px;
+    letter-spacings: 2px;
+    line-height: 1.1;
   }
 `;
