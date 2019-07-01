@@ -1,50 +1,50 @@
 {
-    "name": "Visuelle Systeme (Visuelle Kommunikation)",
-    "universityName": "Universität der Künste Berlin",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "disciplinary",
-        "allowedDisciplines": "Visuelle Kommunikation oder eine vergleichbare Disziplin",
-        "allowedDisciplinesTag": [
-            "visualCommunication"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "2",
-        "applicationDeadlines": [
-            {
-                "date": "2019-03-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.udk-berlin.de/studium/visuelle-kommunikation/visuelle-systeme/",
-        "facebook": "https://www.facebook.com/visuellesysteme/?fref=ts",
-        "instagram": "—",
-        "twitter": "—"
-    }
+  "name": "Visuelle Systeme (Visuelle Kommunikation)",
+  "universityName": "Universität der Künste Berlin",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Visuelle Kommunikation oder eine vergleichbare Disziplin",
+    "allowedDisciplinesTag": [
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-03-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "2"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.udk-berlin.de/studium/visuelle-kommunikation/visuelle-systeme/",
+    "facebook": "https://www.facebook.com/visuellesysteme",
+    "instagram": "https://www.instagram.com/klassevisuellesysteme/",
+    "twitter": "—"
+  }
 }
