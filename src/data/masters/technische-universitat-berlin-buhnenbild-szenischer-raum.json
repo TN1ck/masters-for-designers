@@ -1,57 +1,57 @@
 {
-    "name": "Bühnenbild_Szenischer Raum",
-    "universityName": "Technische Universität Berlin",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Planen Bauen Umwelt"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "studyingFurther"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Innenarchitektur, Architektur, freie Kunst, Bühnenbild, Kostüm, Theater- und Kulturwissenschaften, Regie, Kulturmanagement",
-        "allowedDisciplinesTag": [
-            "room",
-            "visualCommunication",
-            "digital",
-            "filmAndPhotograpy",
-            "product",
-            "fashion",
-            "illustrations",
-            "jewelry"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 2200,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2018-06-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.tu-buehnenbild.de/",
-        "facebook": "https://www.facebook.com/studiengang.raum?fref=ts",
-        "instagram": "https://www.instagram.com/tu_buehnenbild/",
-        "twitter": "https://twitter.com/tu_bbsr"
-    }
+  "name": "Bühnenbild_Szenischer Raum",
+  "universityName": "Technische Universität Berlin",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Planen Bauen Umwelt"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "studyingFurther"
+  },
+  "topicAndFocus": {
+    "topicFocus": "thematisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Innenarchitektur, Architektur, freie Kunst, Bühnenbild, Kostüm, Theater- und Kulturwissenschaften, Regie, Kulturmanagement",
+    "allowedDisciplinesTag": [
+      "room",
+      "visualCommunication",
+      "digital",
+      "filmAndPhotograpy",
+      "product",
+      "fashion",
+      "illustrations",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2018-06-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 2200,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "http://www.tu-buehnenbild.de/",
+    "facebook": "https://www.facebook.com/studiengang.raum?fref=ts",
+    "instagram": "https://www.instagram.com/tu_buehnenbild/",
+    "twitter": "https://twitter.com/tu_bbsr"
+  }
 }
