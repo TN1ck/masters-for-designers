@@ -1,57 +1,57 @@
 {
-    "name": "Gesellschafts- und Wirtschaftskommunikation",
-    "universityName": "Universität der Künste Berlin",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "theoretical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Gesellschafts- und Wirtschaftskommunikation oder ein Studiengang mit hinreichend Überschneidung des B.A. GWK",
-        "allowedDisciplinesTag": [
-            "room",
-            "visualCommunication",
-            "digital",
-            "filmAndPhotograpy",
-            "product",
-            "fashion",
-            "illustrations",
-            "jewelry"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2019-04-01T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.udk-berlin.de/studium/gesellschafts-und-wirtschaftskommunikation/",
-        "facebook": "https://www.facebook.com/udk.gwk/?fref=ts",
-        "instagram": "—",
-        "twitter": "—"
-    }
+  "name": "Gesellschafts- und Wirtschaftskommunikation",
+  "universityName": "Universität der Künste Berlin",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Gesellschafts- und Wirtschaftskommunikation oder ein Studiengang mit hinreichend Überschneidung des B.A. GWK",
+    "allowedDisciplinesTag": [
+      "room",
+      "visualCommunication",
+      "digital",
+      "filmAndPhotograpy",
+      "product",
+      "fashion",
+      "illustrations",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-04-01T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.udk-berlin.de/studium/gesellschafts-und-wirtschaftskommunikation/",
+    "facebook": "https://www.facebook.com/udk.gwk/",
+    "instagram": "https://www.instagram.com/gwkudk/",
+    "twitter": "—"
+  }
 }
