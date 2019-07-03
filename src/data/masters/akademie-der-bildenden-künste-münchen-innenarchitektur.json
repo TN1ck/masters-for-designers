@@ -1,0 +1,51 @@
+{
+  "name": "Innenarchitektur",
+  "universityName": "Akademie der Bildenden Künste München",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "—"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Innenarchitektur, Architektur, Landschaftsarchitektur, Design ",
+    "allowedDisciplinesTag": [
+      "room",
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-15T17:23:06.693Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.adbk.de/de/lehrangebot/innenarchitektur.html",
+    "facebook": "—",
+    "instagram": "—",
+    "twitter": "—"
+  }
+}
