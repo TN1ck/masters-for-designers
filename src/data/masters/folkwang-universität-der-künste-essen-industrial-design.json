@@ -1,0 +1,50 @@
+{
+  "name": "Industrial Design ",
+  "universityName": "Folkwang Universität der Künste Essen",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachuebergreifend",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Industrial Design oder auch gestaltungsnahes Fach der Ingenieurs-, Sozial- und Geisteswissenschaften",
+    "allowedDisciplinesTag": [
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-03-15T18:57:13.550Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/industrial-design-ma/",
+    "facebook": "https://www.facebook.com/folkwang",
+    "instagram": "https://www.instagram.com/folkwang_uni/",
+    "twitter": "https://twitter.com/FolkwangUni"
+  }
+}
