@@ -1,53 +1,51 @@
 {
-    "name": "Kuratieren und Ausstellungswesen",
-    "universityName": "Hochschule für bildende Künste Saar",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "—"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "notConsecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Künstlerisch-gestalterische und wissenschaftliche Disziplinen",
-        "allowedDisciplinesTag": [
-            "room",
-            "visualCommunication",
-            "digital",
-            "filmAndPhotograpy"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "2",
-        "applicationDeadlines": [
-            {
-                "date": "2018-05-31T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "http://www.hbksaar.de/studium/masterstudiengaenge/",
-        "facebook": "https://www.facebook.com/HBKsaar",
-        "instagram": "—",
-        "twitter": "https://twitter.com/hbksaar?lang=de"
-    }
+  "name": "Kuratieren und Ausstellungswesen",
+  "universityName": "Hochschule für bildende Künste Saar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "—"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Künstlerisch-gestalterische und wissenschaftliche Disziplinen",
+    "allowedDisciplinesTag": [
+      "room",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-31T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "2"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hbksaar.de/studiengaenge/master-studiengaenge",
+    "facebook": "https://www.facebook.com/HBKsaar",
+    "instagram": "https://www.instagram.com/hbksaar/",
+    "twitter": "https://twitter.com/hbksaar"
+  }
 }
