@@ -1,0 +1,51 @@
+{
+  "name": "Digital Arts and Experiment (Gestaltung)",
+  "universityName": "Fachhochschule Bielefeld",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Gestalterische Disziplinen",
+    "allowedDisciplinesTag": [
+      "digital",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-07-15T17:26:10.535Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "http://www.gestaltung-bielefeld.de/pages/studium/studienrichtung-digital.php",
+    "facebook": "https://www.facebook.com/FHBielefeldGestaltung/",
+    "instagram": "https://www.instagram.com/digital_fhbielefeld/",
+    "twitter": "—"
+  }
+}
