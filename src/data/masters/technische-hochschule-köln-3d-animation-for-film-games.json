@@ -1,0 +1,54 @@
+{
+  "name": "3D Animation for Film & Games",
+  "universityName": "Technische Hochschule Köln",
+  "universityDetails": {
+    "otherUniversity": "mit fs internationale filmschule köln",
+    "department": "Kulturwissenschaften"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Film, Games, Architektur mit Kenntnissen in den Bereichen Modellierung, Texturierung, Beleuchtung und Animation",
+    "allowedDisciplinesTag": [
+      "digital",
+      "illustrations",
+      "filmAndPhotograpy",
+      "room"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-05-31T18:24:40.326Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "partTime",
+      "extraOccupational"
+    ],
+    "costs": 1500,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.th-koeln.de/studium/3d-animation-for-film--games-master_51678.php",
+    "facebook": "https://www.facebook.com/technischehochschulekoeln",
+    "instagram": "https://www.instagram.com/th_koeln/",
+    "twitter": "https://twitter.com/th_koeln"
+  }
+}
