@@ -1,0 +1,53 @@
+{
+  "name": "Kommunikationsdesign",
+  "universityName": "Folkwang Universität der Künste Essen",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical",
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Kommunikationsdesign oder auch gestaltungsnahes Fach der Ingenieurs-, Sozial- und Geisteswissenschaften",
+    "allowedDisciplinesTag": [
+      "visualCommunication",
+      "digital",
+      "illustrations"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-03-15T19:00:14.456Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/kommunikationsdesign-ma/",
+    "facebook": "https://www.facebook.com/folkwang",
+    "instagram": "https://www.instagram.com/folkwang_uni/",
+    "twitter": "https://twitter.com/FolkwangUni"
+  }
+}
