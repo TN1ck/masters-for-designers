@@ -8,14 +8,14 @@
   "direction": {
     "degree": "ma",
     "direction": [
-      "practical"
+      "theoretical"
     ],
     "masterType": "notConsecutive"
   },
   "topicAndFocus": {
     "topicFocus": "fachspezifisch",
     "functionalComposition": "artAndNonArt",
-    "allowedDisciplines": "Modedesign, Wirtschaftswissenschaften, Textilmanagement und -technik",
+    "allowedDisciplines": "Modedesign, Wirtschaftswissenschaften, Bekleidungstechnik, Textilmanagement",
     "allowedDisciplinesTag": [
       "fashion"
     ]
