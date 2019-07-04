@@ -1,57 +1,57 @@
 {
-    "name": "Interaktive Mediensysteme",
-    "universityName": "Fachhochschule Augsburg",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Gestaltung, Informatik"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "notConsecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Mediendesign- und Kommunikationsdesign, Medieninformatik oder vergleichbare Disziplinen",
-        "allowedDisciplinesTag": [
-            "digital",
-            "visualCommunication"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "3",
-        "applicationDeadlines": [
-            {
-                "date": "2019-06-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            },
-            {
-                "date": "2019-12-15T00:00:00.000Z",
-                "international": false,
-                "type": "winter"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german",
-            "english"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.hs-augsburg.de/Gestaltung/Interactive-Media/Interaktive-Mediensysteme.htmlhttps://www.hs-augsburg.de/Gestaltung/Interactive-Media/Interaktive-Mediensysteme.html",
-        "facebook": "https://www.facebook.com/HSA.Gestaltung",
-        "instagram": "https://www.instagram.com/hochschuleaugsburg/",
-        "twitter": "https://twitter.com/hs_augsburg"
-    }
+  "name": "Interaktive Mediensysteme",
+  "universityName": "Fachhochschule Augsburg",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung, Informatik"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "notConsecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Mediendesign- und Kommunikationsdesign, Medieninformatik oder vergleichbare Disziplinen",
+    "allowedDisciplinesTag": [
+      "digital",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-06-15T00:00:00.000Z",
+        "international": false
+      },
+      {
+        "type": "winter",
+        "date": "2019-12-15T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german",
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hs-augsburg.de/Gestaltung/Interactive-Media/IMS.html",
+    "facebook": "https://www.facebook.com/HSA.Gestaltung",
+    "instagram": "https://www.instagram.com/hochschuleaugsburg/",
+    "twitter": "https://twitter.com/hs_augsburg"
+  }
 }
