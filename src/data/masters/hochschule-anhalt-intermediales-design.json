@@ -8,12 +8,12 @@
   "direction": {
     "degree": "ma",
     "direction": [
-      "theoretical"
+      "practical"
     ],
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "thematisch",
+    "topicFocus": "fachuebergreifend",
     "functionalComposition": "artAndNonArt",
     "allowedDisciplines": "Design, Architektur, Kunst oder Kunstgeschichte",
     "allowedDisciplinesTag": [
