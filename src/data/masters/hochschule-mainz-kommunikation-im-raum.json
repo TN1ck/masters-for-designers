@@ -14,8 +14,8 @@
   },
   "topicAndFocus": {
     "topicFocus": "fachspezifisch",
-    "functionalComposition": "disciplinary",
-    "allowedDisciplines": "Innenarchitektur",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Innenarchitektur, Architektur oder Design",
     "allowedDisciplinesTag": [
       "room"
     ]
