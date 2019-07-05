@@ -1,5 +1,5 @@
 {
-  "name": "Illustration (Kommunikationsdesign)",
+  "name": "Kommunikationsdesign",
   "universityName": "Muthesius Kunsthochschule Kiel",
   "universityDetails": {
     "otherUniversity": "nein",
@@ -15,10 +15,12 @@
   "topicAndFocus": {
     "topicFocus": "fachspezifisch",
     "functionalComposition": "interdisciplinaryArt",
-    "allowedDisciplines": "Kommunikationsdesign oder weitere Bereiche, die auf die Vertiefungsrichtung abzielen",
+    "allowedDisciplines": "Kunst, Design, (Innen)Architektur oder weitere Bereiche, die auf die Vertiefungsrichtung abzielen",
     "allowedDisciplinesTag": [
       "illustrations",
-      "visualCommunication"
+      "visualCommunication",
+      "digital",
+      "filmAndPhotograpy"
     ]
   },
   "timeAndMoney": {
