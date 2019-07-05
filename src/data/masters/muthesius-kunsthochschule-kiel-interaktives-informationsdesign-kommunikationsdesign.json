@@ -15,12 +15,10 @@
   "topicAndFocus": {
     "topicFocus": "fachspezifisch",
     "functionalComposition": "interdisciplinaryArt",
-    "allowedDisciplines": "Kommunikationsdesign, Digitale Medien, Fotografie, Industriedesign",
+    "allowedDisciplines": "Kunst, Design, (Innen)Architektur oder weitere Bereiche, die auf die Vertiefungsrichtung abzielen",
     "allowedDisciplinesTag": [
       "digital",
-      "visualCommunication",
-      "filmAndPhotograpy",
-      "product"
+      "visualCommunication"
     ]
   },
   "timeAndMoney": {
