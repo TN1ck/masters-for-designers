@@ -13,7 +13,7 @@
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "fachspezifisch",
+    "topicFocus": "thematisch",
     "functionalComposition": "artAndNonArt",
     "allowedDisciplines": "Digital Media, Media Design, Animation and Game, Interactive Media Design, Motion Pictures, Sound and Music Production, Computer Science, Media Management, Media Studies mit praktischer Erfahrung in Media Production",
     "allowedDisciplinesTag": [
@@ -50,7 +50,7 @@
   "metadata": {
     "website": "https://lci.mediencampus.h-da.de/",
     "facebook": "https://www.facebook.com/hda.lci",
-    "instagram": "—",
+    "instagram": "https://www.instagram.com/mediencampus.hda/",
     "twitter": "https://twitter.com/mediencampus"
   }
 }
