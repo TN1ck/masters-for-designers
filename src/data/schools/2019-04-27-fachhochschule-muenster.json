@@ -1,8 +1,8 @@
 {
-    "name": "Fachhochschule Muenster",
-    "city": "Münster",
-    "address": "Leonardo-Campus 6, 48149 Münster",
-    "type": "college",
-    "longitude": 7.599927,
-    "latitude": 51.974393
+  "name": "Fachhochschule Münster",
+  "city": "Münster",
+  "address": "Leonardo-Campus 6, 48149 Münster",
+  "type": "college",
+  "longitude": 7.599927,
+  "latitude": 51.974393
 }
