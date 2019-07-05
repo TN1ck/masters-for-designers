@@ -13,13 +13,11 @@
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "thematisch",
+    "topicFocus": "fachspezifisch",
     "functionalComposition": "interdisciplinaryArt",
     "allowedDisciplines": "Kommunikationsdesign oder vergleichbar künstlerisch-gestalterische Disziplin",
     "allowedDisciplinesTag": [
       "digital",
-      "filmAndPhotograpy",
-      "illustrations",
       "room",
       "visualCommunication"
     ]
