@@ -86,6 +86,8 @@ module.exports = {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "UA-58665819-7",
+        anonymize: true,
+        respectDNT: true,
       },
     },
     "gatsby-plugin-netlify", // make sure to keep it last in the array
