@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/browser";
 import React from "react";
 import {createGlobalStyle} from "styled-components";
 import Helmet from "react-helmet";
@@ -9,6 +10,8 @@ import useSiteMetadata from "./SiteMetadata";
 import Fonts from "./Fonts";
 import CookieBanner from "./CookieBanner";
 import THEME from "../theme";
+
+Sentry.init({dsn: "https://23dd6c59639548449a21fd6c8984504c@sentry.io/1499779"});
 
 export const GlobalStyle = createGlobalStyle`
   body, html {

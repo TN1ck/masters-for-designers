@@ -71,6 +71,17 @@ const FooterLinks = styled.div`
   }
 `;
 
+const TestSentry = styled.div`
+  display: none;
+  &:hover {
+    background: red;
+  }
+`;
+
+const throwError = () => {
+  window.doesNotExist();
+};
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -92,6 +103,7 @@ const Footer = class extends React.Component {
             </FooterSocialLinks>
           </FooterInnerContainer>
         </Container>
+        <TestSentry onClick={throwError}>Test Sentry!</TestSentry>
       </FooterContainer>
     );
   }
