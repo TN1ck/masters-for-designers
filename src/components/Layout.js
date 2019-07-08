@@ -55,8 +55,8 @@ const Layout = ({children, background}) => {
         <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:image" content={`${siteUrl}/img/mastersfordesigners.png`} />
-        <meta property="twitter:image" content={`${siteUrl}/img/mastersfordesigners.png`} />
+        <meta property="og:image" content={`${siteUrl}/mastersfordesigners.png`} />
+        <meta property="twitter:image" content={`${siteUrl}/mastersfordesigners.png`} />
       </Helmet>
       {/* We give it a min-height of 100vh to make sure the footer is not looking broken, 49 is the desktop height of the footer*/}
       <div style={{minHeight: "calc(100vh - 49px)", background}}>{children}</div>
