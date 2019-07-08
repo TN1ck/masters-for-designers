@@ -23,11 +23,9 @@ const Imprint = ({data}) => {
             <ColumnHalf>
               Stephanie Brenner
               <br />
-              Urbanstraße 71
+              Fuldastraße 6
               <br />
-              Hof 3, TRH 4 D
-              <br />
-              10967 Berlin
+              12043 Berlin
               <br />
               <br />
               <a href="tel:+49 176 66 893 941">+49 176 66 893 941</a>
