@@ -1,0 +1,57 @@
+{
+  "name": "Entrepreneurship and Digital Transformation ",
+  "universityName": "Hochschule München",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design; Maschinenbau, Fahrzeugtechnik, Flugzeugtechnik Versorgungs- und Gebäudetechnik; Verfahrenstechnik Papier und Verpackung; Druck- und Medientechnik; Informatik und Mathematik; Wirtschaftsingenieurwesen; Betriebswirtschaft"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "thematisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Alle Fachrichtungen",
+    "allowedDisciplinesTag": [
+      "digital",
+      "product",
+      "visualCommunication",
+      "fashion",
+      "filmAndPhotograpy",
+      "illustrations",
+      "room",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-06-15T18:07:19.029Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.hm.edu/en/course_offerings/deepdive/index.en.html",
+    "facebook": "https://www.facebook.com/HochschuleMuenchen/",
+    "instagram": "—",
+    "twitter": "https://twitter.com/HAW_Muenchen"
+  }
+}

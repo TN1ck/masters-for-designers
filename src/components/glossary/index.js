@@ -21,6 +21,14 @@ const GlossarContainer = styled.main`
       width: 100%;
     }
   }
+
+  h4 {
+    margin-bottom: -5px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
 `;
 
 const GroupLetter = styled.h2`
