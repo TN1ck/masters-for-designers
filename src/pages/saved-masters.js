@@ -80,9 +80,11 @@ class SavedMasters extends React.Component {
   render() {
     const {masters, universityMap} = this.props;
     const savedMastersIds = this.state.savedMasters;
-    const savedMasters = savedMastersIds.map(id => {
-      return masters.find(m => m.id === id);
-    });
+    const savedMasters = savedMastersIds
+      .map(id => {
+        return masters.find(m => m.id === id);
+      })
+      .filter(d => d);
     const groupedAndSortedMasters = sortAndGroupMasters(savedMasters, "alphabet", universityMap);
 
     return (
