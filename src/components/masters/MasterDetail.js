@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon, SaveIcon} from "../Icons";
+import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
 import {Link} from "gatsby";
 import Tippy from "@tippy.js/react";
 
@@ -16,7 +16,6 @@ import {
   masterTranslation,
   topicAndFocusTranslation,
 } from "./translations";
-import THEME from "../../theme";
 
 function formatMoney(n) {
   return `${n} €`;

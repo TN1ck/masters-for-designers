@@ -1,5 +1,5 @@
 import React from "react";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import Layout from "../../components/Layout";
 import Navbar from "../Navbar";
 import Container from "../../components/Container";
@@ -10,7 +10,7 @@ import {Masthead} from "../Masthead";
 import {Headline} from "../Headline";
 import {SubHeadline} from "../SubHeadline";
 import {sortAndGroupMasters, SORT_NAME_MAPPING} from "./sortAndGroupMasters";
-import {FILTERS, filterMasters} from "./filterMasters";
+import {filterMasters} from "./filterMasters";
 import THEME from "../../theme";
 import {saveMasters, getSavedMasters} from "../../storage";
 import FilterOverlay, {FilterText, ResetFilters, FilterHeaderInner} from "./FilterOverlay";

@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import {Masthead} from "../components/Masthead";
 import {Headline} from "../components/Headline";
 import Navbar from "../components/Navbar";
-import {Row, ColumnHalf, ColumnFull, Container as InformationPageContainer} from "../components/InformationPage";
+import {Row, ColumnHalf, Container as InformationPageContainer} from "../components/InformationPage";
 
 const Imprint = ({data}) => {
   return (
@@ -28,9 +28,9 @@ const Imprint = ({data}) => {
               12043 Berlin
               <br />
               <br />
-              <a href="tel:+49 176 66 893 941">+49 176 66 893 941</a>
+              <a href="tel:+4917666893941">+49 176 66 893 941</a>
               <br />
-              <a mailto="hello@mastersfordesigners.com">hello@mastersfordesigners.com</a>
+              <a href="mailto:hello@mastersfordesigners.com">hello@mastersfordesigners.com</a>
             </ColumnHalf>
             <ColumnHalf>
               MASTERS FOR DESIGNERS ist ein Projekt

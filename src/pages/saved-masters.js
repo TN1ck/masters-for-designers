@@ -13,7 +13,6 @@ import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
 import {GroupHeader, MAIN_HEADER_HEIGHT, GroupsContainer} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
 import scrollTo from "../utils/scrollTo";
-import TextContainer from "../components/TextContainer";
 
 const StyledMaster = styled(Master)`
   &:visited {

@@ -51,7 +51,7 @@ export function sortAndGroupMasters(masters, sortKey, universityMap) {
               timeAndMoney: {
                 ...m.timeAndMoney,
                 // we still put the other dates in as well to not confuse the user
-                applicationDeadlines: [d].concat(m.timeAndMoney.applicationDeadlines.filter(dd => d != dd)),
+                applicationDeadlines: [d].concat(m.timeAndMoney.applicationDeadlines.filter(dd => d !== dd)),
               },
             };
           });

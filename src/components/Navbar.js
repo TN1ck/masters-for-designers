@@ -107,7 +107,9 @@ const Navbar = class extends React.Component {
               <NavbarInformation>
                 <MainNavbarLink to="/">
                   <i>M</i>asters for <i>D</i>esigners
-                  {` (${masterCount})`}
+                  {" ("}
+                  <i>{masterCount}</i>
+                  {")"}
                 </MainNavbarLink>
               </NavbarInformation>
               <NavbarLinks>
