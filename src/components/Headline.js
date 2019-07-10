@@ -7,7 +7,7 @@ export const Headline = styled.h1`
   padding-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 3.2px;
-  line-height: 35px;
+  line-height: 0.9;
   margin: 0;
 
   @media (max-width: 800px) {
