@@ -138,11 +138,11 @@ collections:
               - {label: "Disziplinär", value: "disciplinary"}
               - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
               - {label: "Gestalterisch & Nicht-gestalterisch", value: "artAndNonArt"}
-          - label: "Zugelassene Disziplinen"
+          - label: "Disziplinen"
             name: allowedDisciplines
             widget: string
             default: ""
-          - label: "Zugelassene Disziplinen Tags"
+          - label: "Disziplinen Tags"
             name: allowedDisciplinesTag
             widget: select
             multiple: true

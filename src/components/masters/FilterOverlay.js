@@ -20,7 +20,8 @@ export const FilterText = styled.div`
 
   &:hover {
     cursor: pointer;
-    border-bottom: 1px solid black;
+    font-weight: bold;
+    letter-spacing: -0.1px;
   }
 
   ${p =>
@@ -54,7 +55,7 @@ const FilterButtonSection = styled.div`
 `;
 
 export const ResetFilters = styled(FilterText)`
-  margin-left: 20px;
+  margin-left: 30px;
   font-size: 13px;
   line-height: 1;
   opacity: 0;
@@ -88,6 +89,7 @@ const FilterMain = styled.div`
 `;
 
 const FilterButton = styled.button`
+  font-family: L10;
   position: relative;
   font-weight: 400;
   font-size: 13px;
@@ -112,6 +114,7 @@ const FilterButton = styled.button`
 
   &:disabled {
     opacity: 0.3;
+    color: black;
     cursor: default;
     pointer-events: none;
   }
@@ -131,6 +134,7 @@ const FilterHeader = styled.div`
   position: sticky;
   border-bottom: 1px solid black;
   z-index: 100;
+  margin-bottom: 30px;
 `;
 
 export const FilterHeaderInner = styled.div`
@@ -142,13 +146,14 @@ export const FilterHeaderInner = styled.div`
 `;
 
 const FilterSectionTitle = styled.div`
-  flex-basis: 170px;
+  flex-basis: 180px;
   flex-shrink: 0;
+  font-weight: bold;
 `;
 const FilterSectionButtons = styled.div`
   & ${FilterButton} {
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 `;
 

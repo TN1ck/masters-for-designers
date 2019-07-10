@@ -93,12 +93,8 @@ const SortSection = styled.div`
   align-items: center;
   position: relative;
 
-  @media not all and (hover: none) {
-    &:hover {
-      ${FilterText} {
-        border-bottom: 1px solid black;
-      }
-    }
+  ${FilterText} {
+    width: 95px; // stop jumping
   }
 `;
 const FilterHeader = styled.div`

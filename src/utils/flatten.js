@@ -1,3 +1,3 @@
 export function flatten(arr) {
-    return [].concat(...arr);
+  return [].concat(...arr);
 }

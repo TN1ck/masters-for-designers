@@ -177,7 +177,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
               "Disziplinäre Zusammensetzung",
               functionalCompositionTranslation[master.topicAndFocus.functionalComposition],
             ],
-            ["Zugelassene Disziplinen", master.topicAndFocus.allowedDisciplines.normalize()],
+            ["Disziplinen", master.topicAndFocus.allowedDisciplines.normalize()],
           ]}
         />
       </MasterDetailDirectionSection>
