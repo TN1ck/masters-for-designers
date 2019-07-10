@@ -26,8 +26,8 @@ const About = ({data}) => {
           <Headline>{"About"}</Headline>
           <TextContainer>
             <SubHeadline>
-              Masters for Designers hat es sich zum Ziel gesetzt jedem interessierten Designer die Möglichkeit zu geben
-              den individuell passenden Studiengang zu finden.
+              Masters for Designers hat sich zum Ziel gesetzt die Diversität des Masterangebots sichtbar zu machen und
+              jedem interessierten Designer die Möglichkeit zu geben den individuell passenden Studiengang zu finden.
               <br />
               Alle Studiengänge sind daher übersichtlich sortiert nach formalen und inhaltlichen Eigenschaften: von
               Standort und Internationalität bis hin zur disziplinärer Zusammensetzung der Studierenden.
@@ -36,7 +36,7 @@ const About = ({data}) => {
               verstehen zu können.
               <br />
               <br />
-              Es warten über 140 Studiengänge darauf entdeckt zu werden - also schau dich um und{" "}
+              Es warten über 150 Studiengänge darauf entdeckt zu werden - also schau dich um und{" "}
               <Link to="/">finde den Master</Link>, der am besten zu dir passt.
             </SubHeadline>
           </TextContainer>
@@ -63,7 +63,7 @@ const About = ({data}) => {
                 <h3>Kontakt</h3>
                 <p>Du möchtest uns Feedback geben, hast eine Frage oder Anregungen?</p>
                 <p>
-                  Schreibe uns eine Email - wir freuen uns von dir zu hören.
+                  Schreib uns eine Email - wir freuen uns von dir zu hören.
                   <br />
                   <a href="mailto:hello@mastersfordesigners.com">hello@mastersfordesigners.com</a>
                 </p>
@@ -78,23 +78,28 @@ const About = ({data}) => {
               <ColumnHalf>
                 <h3>News</h3>
                 <p>Aktuelle Informationen findest du hier.</p>
-                <SocialIcons>
-                  <InstagramLink />
-                  <FacebookLink />
-                </SocialIcons>
+                <div style={{paddingLeft: 5}}>
+                  <SocialIcons>
+                    <InstagramLink />
+                    <FacebookLink />
+                  </SocialIcons>
+                </div>
               </ColumnHalf>
             </Row>
+            <br />
+            <br />
             <Row>
               <ColumnFull>
                 <h3>Recherche und Aktualität</h3>
                 <p>
                   Alle Informationen zu den einzelnen Masterstudiengängen sind mit bestem Wissen und Gewissen
                   recherchiert und basieren auf der Analyse der Prüfungs- und Studienordnungen sowie der
-                  Selbstdarstellung der Studiengänge auf der jeweiligen Hochschulseite. (Stand Mai 2019)
+                  Selbstdarstellung der Studiengänge auf der jeweiligen Hochschulseite. (Stand Juni 2019)
                   <br />
                   <br />
-                  Die Bewerbungsfristen sind für 2019 und vermutlich auch weiterhin gültig. Sie können demnach für 2020
-                  als Anhaltspunkt genommen werden, bis ein Update stattgefunden hat.
+                  Die Bewerbungsfristen sind für 2019 und vermutlich auch weiterhin gültig. Sie können demnach auch für
+                  2020 als Anhaltspunkt genommen werden. Fällt die Frist auf ein Wochenende oder Feiertag, so verschiebt
+                  sie sich meist auf den Werktag davor oder danach.
                 </p>
               </ColumnFull>
             </Row>
