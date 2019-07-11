@@ -25,11 +25,11 @@
       "content": "\nDie Zusammensetzung gibt Auskunft über die fachliche Herkunft der Studierenden innerhalb eines Studiengangs.",
       "sections": [
         {
-          "subtitle": "disziplinär",
+          "subtitle": "Disziplinär",
           "content": "Alle Studierenden kommen aus derselben Fachrichtung."
         },
         {
-          "subtitle": "interdisziplinär gestalterisch",
+          "subtitle": "Interdisziplinär gestalterisch",
           "content": "Studierende verschiedener gestalterischer Fachrichtungen studieren zusammen."
         },
         {
