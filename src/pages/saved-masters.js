@@ -13,6 +13,7 @@ import {sortAndGroupMasters} from "../components/masters/sortAndGroupMasters";
 import {GroupHeader, MAIN_HEADER_HEIGHT, GroupsContainer} from "../components/masters/styles";
 import {SubHeadline} from "../components/SubHeadline";
 import scrollTo from "../utils/scrollTo";
+import TextContainer from "../components/TextContainer";
 
 const StyledMaster = styled(Master)`
   &:visited {
@@ -85,6 +86,7 @@ class SavedMasters extends React.Component {
       })
       .filter(d => d);
     const groupedAndSortedMasters = sortAndGroupMasters(savedMasters, "alphabet", universityMap);
+    const noMaster = savedMasters.length === 0;
 
     return (
       <Layout background={"white"}>
@@ -92,15 +94,13 @@ class SavedMasters extends React.Component {
         <Masthead>
           <Container>
             <Headline>{"Merkliste"}</Headline>
-            {/* <TextContainer>
-              <SubHeadline>
-                {"Die Platform für Designer, um einen individuell passenden Masterstudiengang zu finden."}
-              </SubHeadline>
-            </TextContainer> */}
+            <TextContainer>
+              <SubHeadline>{"Deine persönliche Übersicht aller von dir favorisierten Masterstudiengänge."}</SubHeadline>
+            </TextContainer>
           </Container>
         </Masthead>
         <Container>
-          {savedMasters.length === 0 && (
+          {noMaster && (
             <React.Fragment>
               <SubHeadline>{"Du hast noch keinen Studiengang auf deine Merkliste gesetzt."}</SubHeadline>
             </React.Fragment>
