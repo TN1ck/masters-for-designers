@@ -94,7 +94,7 @@ const MasterDetailSectionDescription = styled.dd`
     padding: 0;
 
     li {
-      padding-bottom: 5px;
+      padding-bottom: 10px;
     }
   }
 `;
