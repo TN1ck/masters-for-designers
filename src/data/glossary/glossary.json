@@ -73,15 +73,15 @@
       "content": "Das Masterstudium wird in verschiedenen Studienstrukturen angeboten: Es gibt konsekutive,\n nicht-konsekutive und weiterbildende Masterstudiengänge.",
       "sections": [
         {
-          "subtitle": "konsekutiv",
+          "subtitle": "Konsekutiv",
           "content": "Konsekutive Masterprogramme folgen inhaltlich den erworbenen Kenntnissen und Fähigkeiten des\n Erststudiums, wie zum Beispiel dem Bachelor. Diese Programme können vertiefen oder – soweit der\n fachliche Zusammenhang gewahrt bleibt – fächerübergreifend erweitern."
         },
         {
-          "subtitle": "nicht-konsekutiv",
+          "subtitle": "Nicht-konsekutiv",
           "content": "In nicht-konsekutiven Masterprogrammen wird das Gelernte fächerübergreifend erweitert."
         },
         {
-          "subtitle": "weiterbildend",
+          "subtitle": "Weiterbildend",
           "content": "Als weiterbildende Masterstudiengänge werden Studiengänge bezeichnet, die eine Phase der Berufspraxis\n voraussetzen, welche im Lehrangebot berücksichtigt wird."
         }
       ]
