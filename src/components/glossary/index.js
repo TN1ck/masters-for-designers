@@ -13,6 +13,21 @@ import THEME from "../../theme";
 import TextContainer from "../TextContainer";
 import {Row, ColumnHalf, Container as InformationPageContainer} from "../InformationPage";
 
+const StyledInformationContainer = styled(InformationPageContainer)`
+  h3 {
+    margin-top: 42px;
+  }
+
+  h4 {
+    margin-top: 28px;
+    margin-bottom: -5px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+`;
+
 const GlossarContainer = styled.main`
   background: ${THEME.colors.blue};
 
@@ -20,14 +35,6 @@ const GlossarContainer = styled.main`
     @media (max-width: 800px) {
       width: 100%;
     }
-  }
-
-  h4 {
-    margin-bottom: -5px;
-  }
-
-  p {
-    line-height: 1.6;
   }
 `;
 
@@ -39,7 +46,11 @@ const GroupLetter = styled.h2`
   margin-top: 60px;
 `;
 
-const Group = styled.div``;
+const Group = styled.div`
+  // ${Row} {
+  //   margin-top: -30px;
+  // }
+`;
 
 export const GlossaryInner = ({glossary, title, content}) => {
   const groupedByLetter = sortBy(pairs(groupBy(glossary, d => d.title[0])), d => d[0]);
@@ -54,7 +65,7 @@ export const GlossaryInner = ({glossary, title, content}) => {
         </Container>
       </Masthead>
       <Container>
-        <InformationPageContainer>
+        <StyledInformationContainer>
           {groupedByLetter.map(([letter, list], i) => {
             return (
               <React.Fragment key={i}>
@@ -81,7 +92,7 @@ export const GlossaryInner = ({glossary, title, content}) => {
               </React.Fragment>
             );
           })}
-        </InformationPageContainer>
+        </StyledInformationContainer>
       </Container>
     </GlossarContainer>
   );

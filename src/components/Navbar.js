@@ -61,6 +61,7 @@ const NavbarLink = styled(Link)`
 `;
 
 const MainNavbarLink = styled(NavbarLink)`
+  letter-spacing: 0.3px;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 400;

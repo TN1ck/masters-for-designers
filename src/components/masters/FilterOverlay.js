@@ -32,7 +32,7 @@ export const FilterText = styled.div`
         transition: transform 200ms ease-out;
         position: absolute;
         content: "";
-        right: -20px;
+        right: ${p => p.arrowRight || -20}px;
         top: 9px;
         border-right: 6px solid transparent;
         border-top: 6px solid black;
@@ -168,6 +168,9 @@ const FilterSection = styled.div`
       padding-bottom: 10px;
       flex-basis: 0;
     }
+    ${FilterSectionButtons} {
+      margin-left: -2px;
+    }
   }
 `;
 
@@ -253,7 +256,7 @@ export default class FilterOverlay extends React.Component {
           <FilterHeader>
             <FilterHeaderInner>
               <FilterButtonSection>
-                <FilterText showArrow onClick={close} withRotation active={show}>
+                <FilterText arrowRight={-23} showArrow onClick={close} withRotation active={show}>
                   {`Filter (${numberOfFilters})`}
                 </FilterText>
                 <ResetFilters onClick={resetFilters} show={numberOfFilters > 0}>
@@ -284,7 +287,7 @@ export default class FilterOverlay extends React.Component {
             <FilterSectionButtons>{FILTERS.functionalComposition.map(createButton)}</FilterSectionButtons>
           </FilterSection>
           <FilterSection>
-            <FilterSectionTitle>{"Zugelassenene Disziplinen"}</FilterSectionTitle>
+            <FilterSectionTitle>{"Disziplinen"}</FilterSectionTitle>
             <FilterSectionButtons>{FILTERS.allowedDisciplinesTag.map(createButton)}</FilterSectionButtons>
           </FilterSection>
 

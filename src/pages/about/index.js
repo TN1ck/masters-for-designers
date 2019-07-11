@@ -78,7 +78,7 @@ const About = ({data}) => {
               <ColumnHalf>
                 <h3>News</h3>
                 <p>Aktuelle Informationen findest du hier.</p>
-                <div style={{paddingLeft: 5}}>
+                <div style={{marginLeft: -5}}>
                   <SocialIcons>
                     <InstagramLink />
                     <FacebookLink />

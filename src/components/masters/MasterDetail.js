@@ -18,8 +18,13 @@ import {
 } from "./translations";
 
 function formatMoney(n) {
-  return `${n} €`;
+  return `${n}€`;
 }
+
+const TippySquare = styled(Tippy)`
+  background: black !important;
+  border-radius: 0;
+`;
 
 const MasterDetailContainer = styled.div`
   display: grid;
@@ -127,9 +132,9 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
       <MasterDetailLinks>
         <div>
           <HouseIcon href={master.metadata.website} style={{marginRight: 10}} />
-          <TwitterIcon href={master.metadata.twitter} style={{marginRight: 10}} />
-          <InstagramIcon href={master.metadata.instagram} style={{marginRight: 10}} />
           <FacebookIcon href={master.metadata.facebook} style={{marginRight: 10}} />
+          <InstagramIcon href={master.metadata.instagram} style={{marginRight: 10}} />
+          <TwitterIcon href={master.metadata.twitter} style={{marginRight: 10}} />
         </div>
         <SaveIconContainer>
           {/* <SaveIcon onClick={save} fill={saved ? THEME.colors.orange : "black"} /> */}
@@ -151,17 +156,17 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
                 {mastersSameUniversity.map(m => {
                   return (
                     <li key={m.id}>
-                      <Tippy content={goToMasterText}>
+                      <TippySquare content={goToMasterText}>
                         <Link onClick={e => goToMaster(e, m.id)} to={`/#${m.id}`}>
-                          {m.name} - <i>{masterTranslation[m.direction.degree]}</i>
+                          {m.name}
                         </Link>
-                      </Tippy>
+                      </TippySquare>
                     </li>
                   );
                 })}
               </ul>
             ) : (
-              "-"
+              "—"
             )}
           </MasterDetailSectionDescription>
         </MasterDetailSection>
@@ -177,7 +182,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
               "Disziplinäre Zusammensetzung",
               functionalCompositionTranslation[master.topicAndFocus.functionalComposition],
             ],
-            ["Disziplinen", master.topicAndFocus.allowedDisciplines.normalize()],
+            ["Zugelassene Disziplinen", master.topicAndFocus.allowedDisciplines.normalize()],
           ]}
         />
       </MasterDetailDirectionSection>
@@ -197,7 +202,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
             ],
             [
               "Gebühren",
-              master.timeAndMoney.costs === 0 ? "-" : formatMoney(master.timeAndMoney.costs) + " pro Semester",
+              master.timeAndMoney.costs === 0 ? "—" : formatMoney(master.timeAndMoney.costs) + " pro Semester",
             ],
           ]}
         />

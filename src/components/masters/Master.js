@@ -35,7 +35,9 @@ const MasterUniversity = styled.div`
   padding-right: 10%;
   width: 50%;
 `;
-const MasterDetailContainer = styled.div``;
+const MasterDetailContainer = styled.div`
+  padding-bottom: 10px;
+`;
 
 const MasterDetailDegree = styled.div`
   /* top: -12px;
@@ -167,7 +169,7 @@ class Master extends React.Component {
     return props.previewMode || props.saved !== this.props.saved || props.active !== this.props.active;
   }
   render() {
-    const {master, university, save, saved, active, className, goToMaster, goToMasterText} = this.props;
+    const {master, university, save, isLast, saved, active, className, goToMaster, goToMasterText} = this.props;
     let title = master.name.normalize();
     // When there is something in parentheses in the title, we always make a line-break
     if (title.includes("(")) {
@@ -182,7 +184,7 @@ class Master extends React.Component {
       );
     }
     return (
-      <div>
+      <div style={{borderBottom: active && !isLast ? "1px solid black" : "1px solid transparent"}}>
         <MasterContainer
           className={className}
           id={master.id}
