@@ -43,7 +43,6 @@ const MasterDetailDegree = styled.div`
   /* top: -12px;
   width: 50px;
   position: absolute; */
-  padding-left: 5px;
   display: inline-block;
   text-transform: uppercase;
   font-style: italic;
@@ -159,6 +158,10 @@ const MasterContainer = styled.a`
   }
 `;
 
+const MasterTitleText = styled.span`
+  padding-right: 5px;
+`;
+
 class Master extends React.Component {
   save = e => {
     e.stopPropagation();
@@ -193,7 +196,7 @@ class Master extends React.Component {
           active={this.props.active}
         >
           <MasterTitle>
-            {title}
+            <MasterTitleText>{title}</MasterTitleText>
             <MasterDetailDegree show={this.props.active}>
               {" (" + masterTranslation[master.direction.degree] + ")"}
             </MasterDetailDegree>
