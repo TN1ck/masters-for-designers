@@ -28,7 +28,11 @@ const FooterInnerContainer = styled.div`
   @media (max-width: 800px) {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    grid-template-areas: "footer-header footer-social-links" "footer-links footer-links";
+    grid-template-areas: "footer-header footer-header" "footer-links footer-social-links";
+
+    ${FooterSocialLinks} {
+      align-self: flex-end;
+    }
   }
 `;
 
