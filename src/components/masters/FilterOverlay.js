@@ -256,7 +256,7 @@ export default class FilterOverlay extends React.Component {
           <FilterHeader>
             <FilterHeaderInner>
               <FilterButtonSection>
-                <FilterText arrowRight={-23} showArrow onClick={close} withRotation active={show}>
+                <FilterText arrowRight={-22} showArrow onClick={close} withRotation active={show}>
                   {`Filter (${numberOfFilters})`}
                 </FilterText>
                 <ResetFilters onClick={resetFilters} show={numberOfFilters > 0}>

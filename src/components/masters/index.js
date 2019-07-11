@@ -327,7 +327,7 @@ class Masters extends React.Component {
           <Container>
             <FilterHeaderInner>
               <FilterButtonSection>
-                <FilterText showArrow onClick={this.showOverlay} withRotation active={this.state.show}>
+                <FilterText arrowRight={-22} showArrow onClick={this.showOverlay} withRotation active={this.state.show}>
                   {`Filter (${numberOfFilters})`}
                 </FilterText>
                 <ResetFilters hideOnMobile onClick={this.resetFilters} show={numberOfFilters > 0}>
