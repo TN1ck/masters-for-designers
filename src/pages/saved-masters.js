@@ -101,9 +101,9 @@ class SavedMasters extends React.Component {
         </Masthead>
         <Container>
           {noMaster && (
-            <React.Fragment>
+            <div style={{paddingTop: 25, marginBottom: -25}}>
               <SubHeadline>{"Du hast noch keinen Studiengang auf deine Merkliste gesetzt."}</SubHeadline>
-            </React.Fragment>
+            </div>
           )}
           <GroupsContainer>
             {groupedAndSortedMasters.map(([group, name, masters]) => {
