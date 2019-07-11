@@ -111,6 +111,7 @@ class SavedMasters extends React.Component {
                 <React.Fragment key={group}>
                   <GroupHeader>{name}</GroupHeader>
                   {masters.map((master, i) => {
+                    const isLast = i === masters.length - 1;
                     const university = universityMap[master.universityName];
                     const active = this.state.masterIds.includes(master.id);
                     const unsave = () => this.unsave(master.id);
@@ -120,6 +121,7 @@ class SavedMasters extends React.Component {
                     };
                     return (
                       <StyledMaster
+                        isLast={isLast}
                         goToMasterText={"Dieser Link öffnet den Master auf der Hauptseite."}
                         goToMaster={() => {}}
                         active={active}
