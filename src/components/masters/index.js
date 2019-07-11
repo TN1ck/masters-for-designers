@@ -358,12 +358,12 @@ class Masters extends React.Component {
         </FilterHeader>
         <Container id="masters-main">
           <GroupsContainer>
-            {groupedAndSortedMasters.map(([group, name, masters], i) => {
-              const isLast = i === masters.length - 1;
+            {groupedAndSortedMasters.map(([group, name, masters]) => {
               return (
                 <React.Fragment key={group}>
                   <GroupHeader>{name}</GroupHeader>
                   {masters.map((master, i) => {
+                    const isLast = i === masters.length - 1;
                     const university = universityMap[master.universityName];
                     const active = this.state.masterIds.includes(master.id);
                     const saved = this.state.saved.includes(master.id);
