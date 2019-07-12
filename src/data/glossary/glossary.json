@@ -4,15 +4,15 @@
   "items": [
     {
       "title": "Ausrichtung",
-      "content": "Im Gegensatz zu einem hauptsächlich entwurfspraktischen Erststudium bietet das Masterstudium die Möglichkeit einer verstärkt theoretischen Schwerpunktsetzung.",
+      "content": "Im Gegensatz zu einem hauptsächlich entwurfspraktischen Erststudium bietet das Masterstudium die Möglichkeit einer verstärkt theoretischen Schwerpunktsetzung. \nTeilweise besteht auch die Möglichkeit frei zu wählen, ob ein Studiengang mit einem theoretischen oder entwurfspraktischen Schwerpunkt studiert wird.",
       "sections": [
         {
           "subtitle": "Entwurfspraktisch",
-          "content": "Die meisten Masterstudiengänge für Designer zeichnen sich durch ein entwurfspraktisches Studium aus.\nDabei liegt der Fokus auf einer aktiv gestalterischen Tätigkeit."
+          "content": "Die meisten Masterstudiengänge für Designer zeichnen sich durch ein entwurfspraktisches Studium aus.\nDabei liegt der Fokus auf einer aktiv gestalterischen Tätigkeit, welche einen starken Praxisbezug ebenso wie einen forschungsorientierten Ansatz haben kann.\nEine theoretische, wissenschaftliche Arbeit ist jedoch fester Bestandteil einer jeden Thesis.\n"
         },
         {
           "subtitle": "Theoretisch",
-          "content": "Das theoretische Masterstudium aus der Perspektive von Gestaltern kann projekt- und anwendungsorientiert sein jedoch ohne den Fokus auf einer entwurfspraktischen Tätigkeit zu haben. Das kann z.B. bei Studiengängen der Fall sein, die den Schwerpunkt darauf legen die gestalterischen Fähigkeiten durch Managementkompetenzen zu erweitern.\nEs gibt jedoch auch die Möglichkeit einer rein wissenschaftlichen Auseinandersetzung mit der Disziplin des Design. \nDie Thesis kennzeichnet sich hier durch eine theoretischen Arbeit, welche keinen entwurfspraktischen Teil erfordert."
+          "content": "Unter einem Masterstudium mit theoretischer Schwerpunktsetzung wird nicht nur ein rein wissenschaftliches Studium verstanden, sondern auch ein Studium welches durchaus projekt- und anwendungsorientiert sein kann, jedoch keine entwurfspraktische Tätigkeit im Vordergrund steht. Dabei kann es dann beispielsweise darum gehen die gestalterischen Fähigkeiten um Managementkompetenzen zu erweitern.\nDie Thesis ist hier eine rein theoretische Arbeit, welche keinen entwurfspraktischen Teil erfordert."
         }
       ]
     },
