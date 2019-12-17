@@ -1,8 +1,8 @@
 {
-    "name": "Hochschule für angewandte Wissenschaften Coburg",
-    "city": "Coburg",
-    "address": "Am Hofbräuhaus 1, 96450 Coburg",
-    "type": "college",
-    "longitude": 10.95763,
-    "latitude": 50.25365
+  "name": "Hochschule Coburg",
+  "city": "Coburg",
+  "address": "Am Hofbräuhaus 1, 96450 Coburg",
+  "type": "college",
+  "longitude": 10.95763,
+  "latitude": 50.25365
 }
