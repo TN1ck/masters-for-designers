@@ -1,5 +1,5 @@
 {
-  "name": "Information und Kommunikation",
+  "name": "Design",
   "universityName": "Fachhochschule Münster",
   "universityDetails": {
     "otherUniversity": "nein",
@@ -13,7 +13,7 @@
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "fachspezifisch",
+    "topicFocus": "fachuebergreifend",
     "functionalComposition": "interdisciplinaryArt",
     "allowedDisciplines": "Design",
     "allowedDisciplinesTag": [
