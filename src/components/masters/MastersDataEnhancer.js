@@ -10,6 +10,9 @@ export const enhanceUniversities = (universities, masters) => {
 
   for (const master of masters) {
     const university = universityMap[master.universityName];
+    if (!university) {
+      throw new Error(`Master ${master.id} has university ${master.universityName} set, but it does not exist.`);
+    }
     university.masters.push(master);
   }
   return universityMap;
