@@ -26,14 +26,14 @@
   "timeAndMoney": {
     "applicationDeadlines": [
       {
-        "type": "winter",
-        "date": "2019-06-30T22:00:00.000Z",
-        "international": false
-      },
-      {
         "type": "summer",
         "date": "2020-01-15T11:44:16.969Z",
         "international": false
+      },
+      {
+        "type": "winter",
+        "international": false,
+        "date": "2020-07-01T10:37:22.022Z"
       }
     ],
     "allowedForms": [
@@ -53,7 +53,7 @@
   "metadata": {
     "website": "https://www.hs-anhalt.de/nc/studieren/orientierung/studienangebot/detail/intermediales-design-master-of-arts.html",
     "facebook": "https://www.facebook.com/Fachbereich-Design-Dessau-Department-of-Design-157046407723342/",
-    "instagram": "https://www.instagram.com/dessau_department_of_design/",
+    "instagram": "https://www.instagram.com/designhochschuleanhalt/",
     "twitter": "—"
   }
 }
