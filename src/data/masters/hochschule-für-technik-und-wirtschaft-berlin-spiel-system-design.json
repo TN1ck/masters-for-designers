@@ -1,0 +1,51 @@
+{
+  "name": "Spiel (System Design)",
+  "universityName": "Hochschule für Technik und Wirtschaft Berlin",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Game Design, Industrial Design, Design-Studiengänge, Architektur und in besonderen Fällen auch Informatik-Studiengänge, ingenieurwissenschaftliche Studiengänge, geisteswissenschaftliche Studiengänge",
+    "allowedDisciplinesTag": [
+      "digital",
+      "product"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "international": false,
+        "date": "2020-12-15T14:14:29.872Z"
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "doubleDegree": false,
+    "semesterAbroad": "no"
+  },
+  "metadata": {
+    "website": "https://systemdesign.htw-berlin.de/studium/",
+    "twitter": "https://twitter.com/HTW_Berlin",
+    "instagram": "https://www.instagram.com/industrialdesign_htw/",
+    "facebook": "https://www.facebook.com/htw.id"
+  }
+}
