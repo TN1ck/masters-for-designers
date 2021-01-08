@@ -1,0 +1,51 @@
+{
+  "name": "Material Culture Design",
+  "universityName": "Hochschule Wismar",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Produktdesign, Schmuckdesign",
+    "allowedDisciplinesTag": [
+      "product",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "summer",
+        "international": false,
+        "date": "2021-01-15T14:35:59.565Z"
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "doubleDegree": false,
+    "semesterAbroad": "no"
+  },
+  "metadata": {
+    "website": "https://fg.hs-wismar.de/studium/studienangebot/design/master/",
+    "facebook": "https://www.facebook.com/gestaltungwismar",
+    "instagram": "https://www.instagram.com/gestaltungwismar/",
+    "twitter": "https://twitter.com/fgwismar"
+  }
+}
