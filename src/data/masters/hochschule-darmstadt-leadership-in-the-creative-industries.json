@@ -24,14 +24,14 @@
   "timeAndMoney": {
     "applicationDeadlines": [
       {
-        "type": "winter",
-        "international": false,
-        "date": "2021-09-01T09:58:05.994Z"
-      },
-      {
         "type": "summer",
         "international": false,
         "date": "2021-02-01T10:58:38.385Z"
+      },
+      {
+        "type": "winter",
+        "international": false,
+        "date": "2021-09-01T09:58:05.994Z"
       }
     ],
     "allowedForms": [
