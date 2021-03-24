@@ -1,5 +1,5 @@
 {
-  "name": "Design",
+  "name": "Produktdesign (Design)",
   "universityName": "Universität der Künste Berlin",
   "universityDetails": {
     "otherUniversity": "nein",
@@ -13,11 +13,10 @@
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "thematisch",
-    "functionalComposition": "interdisciplinaryArt",
-    "allowedDisciplines": "Modedesign, Produktdesign",
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Produktdesign",
     "allowedDisciplinesTag": [
-      "fashion",
       "product"
     ]
   },
