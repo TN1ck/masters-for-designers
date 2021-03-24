@@ -1,0 +1,50 @@
+{
+  "name": "Modedesign (Design)",
+  "universityName": "Universität der Künste Berlin",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "disciplinary",
+    "allowedDisciplines": "Modedesign",
+    "allowedDisciplinesTag": [
+      "fashion"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2021-03-24T16:28:02.299Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "2"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.udk-berlin.de/studium/design-produktdesign-modedesign/",
+    "facebook": "https://www.facebook.com/udkberlin/",
+    "instagram": "https://www.instagram.com/udkfashion/",
+    "twitter": "—"
+  }
+}
