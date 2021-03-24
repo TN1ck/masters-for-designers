@@ -26,12 +26,12 @@
     "applicationDeadlines": [
       {
         "type": "summer",
-        "date": "2019-04-01T00:00:00.000Z",
+        "date": "2021-01-03T23:00:00.000Z",
         "international": false
       },
       {
         "type": "winter",
-        "date": "2019-07-01T21:07:14.745Z",
+        "date": "2021-07-03T22:00:00.000Z",
         "international": false
       }
     ],
