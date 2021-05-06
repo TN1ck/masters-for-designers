@@ -31,8 +31,8 @@
     "applicationDeadlines": [
       {
         "type": "winter",
-        "date": "2021-05-14T22:00:00.000Z",
-        "international": false
+        "international": false,
+        "date": "2021-05-05T12:26:05.761Z"
       }
     ],
     "allowedForms": [
