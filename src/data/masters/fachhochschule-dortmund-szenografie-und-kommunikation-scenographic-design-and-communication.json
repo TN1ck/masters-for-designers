@@ -1,57 +1,62 @@
 {
-    "name": "Szenografie und Kommunikation/Scenographic Design and Communication",
-    "universityName": "Fachhochschule Dortmund",
-    "universityDetails": {
-        "otherUniversity": "nein",
-        "department": "Design"
-    },
-    "direction": {
-        "degree": "ma",
-        "direction": [
-            "practical"
-        ],
-        "masterType": "consecutive"
-    },
-    "topicAndFocus": {
-        "topicFocus": "fachspezifisch",
-        "functionalComposition": "artAndNonArt",
-        "allowedDisciplines": "Design, Architektur, Raumplanung, Medienwissenschaften, Kulturwissenschaften, Geisteswissenschaften",
-        "allowedDisciplinesTag": [
-            "digital",
-            "filmAndPhotograpy",
-            "illustrations",
-            "fashion",
-            "product",
-            "room",
-            "visualCommunication"
-        ]
-    },
-    "timeAndMoney": {
-        "allowedForms": [
-            "fullTime"
-        ],
-        "costs": 0,
-        "semester": "4",
-        "applicationDeadlines": [
-            {
-                "date": "2019-05-15T00:00:00.000Z",
-                "international": false,
-                "type": "summer"
-            }
-        ]
-    },
-    "internationality": {
-        "mainLanguages": [
-            "german",
-            "english"
-        ],
-        "semesterAbroad": "no",
-        "doubleDegree": false
-    },
-    "metadata": {
-        "website": "https://www.fh-dortmund.de/de/fb/2/studium/studiengaenge/szeno_ma/index.php",
-        "facebook": "https://www.facebook.com/FhDortmundFachbereichDesign/",
-        "instagram": "https://www.instagram.com/fhdortmund/",
-        "twitter": "https://twitter.com/fh_dortmund"
-    }
+  "name": "Szenografie und Kommunikation/Scenographic Design and Communication",
+  "universityName": "Fachhochschule Dortmund",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Design"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "artAndNonArt",
+    "allowedDisciplines": "Design, Architektur, Raumplanung, Medienwissenschaften, Kulturwissenschaften, Geisteswissenschaften",
+    "allowedDisciplinesTag": [
+      "digital",
+      "filmAndPhotograpy",
+      "illustrations",
+      "fashion",
+      "product",
+      "room",
+      "visualCommunication"
+    ]
+  },
+  "timeAndMoney": {
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4",
+    "applicationDeadlines": [
+      {
+        "date": "2021-05-14T22:00:00.000Z",
+        "international": false,
+        "type": "winter"
+      },
+      {
+        "type": "summer",
+        "international": false,
+        "date": "2021-12-14T23:00:00.000Z"
+      }
+    ]
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german",
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://www.fh-dortmund.de/de/fb/2/studium/studiengaenge/szeno_ma/index.php",
+    "facebook": "https://www.facebook.com/FhDortmundFachbereichDesign/",
+    "instagram": "https://www.instagram.com/fhdortmund/",
+    "twitter": "https://twitter.com/fh_dortmund"
+  }
 }
