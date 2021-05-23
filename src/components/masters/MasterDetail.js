@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {HouseIcon, InstagramIcon, FacebookIcon, TwitterIcon} from "../Icons";
 import {Link} from "gatsby";
 import Tippy from "@tippy.js/react";
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/shift-away.css';
 
 import {
   universityTypeTranslation,
@@ -156,7 +158,7 @@ const MasterDetail = ({master, university, goToMaster, goToMasterText, save, sav
                 {mastersSameUniversity.map(m => {
                   return (
                     <li key={m.id}>
-                      <TippySquare content={goToMasterText}>
+                      <TippySquare content={goToMasterText} animation="shift-away" arrow={false}>
                         <Link onClick={e => goToMaster(e, m.id)} to={`/#${m.id}`}>
                           {m.name}
                         </Link>
