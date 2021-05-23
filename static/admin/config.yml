@@ -48,9 +48,9 @@ collections:
     identifier_field: name
     summary: "{{city}} - {{name}}"
     fields:
-      - {label: Name, name: name, widget: string}
-      - {label: Stadt, name: city, widget: string}
-      - {label: Adresse, name: address, widget: string}
+      - { label: Name, name: name, widget: string }
+      - { label: Stadt, name: city, widget: string }
+      - { label: Adresse, name: address, widget: string }
       - label: Hochschultyp
         name: type
         widget: "select"
@@ -58,8 +58,8 @@ collections:
           - { label: "Universität", value: "university" }
           - { label: "Kunsthochschule", value: "artCollege" }
           - { label: "Fachhochschule", value: "college" }
-      - {label: Longitude, name: longitude, widget: number, valueType: float}
-      - {label: Latitude, name: latitude, widget: number, valueType: float}
+      - { label: Longitude, name: longitude, widget: number, valueType: float }
+      - { label: Latitude, name: latitude, widget: number, valueType: float }
   - name: "master"
     identifier_field: name
     label: "Master"
@@ -69,7 +69,12 @@ collections:
     slug: "{{universityName}}-{{name}}"
     summary: "{{universityName}} - {{name}}"
     fields:
-      - {label: Studiengang, name: name, widget: string, default: "Neuer Master"}
+      - {
+          label: Studiengang,
+          name: name,
+          widget: string,
+          default: "Neuer Master",
+        }
       - label: "Hochschule"
         name: "universityName"
         widget: "relation"
@@ -82,14 +87,14 @@ collections:
         name: "universityDetails"
         widget: object
         fields:
-        - label: "Hochschulübergreifend"
-          name: otherUniversity
-          widget: text
-          default: "nein"
-        - label: "Fachbereich"
-          name: department
-          widget: text
-          default: ""
+          - label: "Hochschulübergreifend"
+            name: otherUniversity
+            widget: text
+            default: "nein"
+          - label: "Fachbereich"
+            name: department
+            widget: text
+            default: ""
       - label: Ausrichtung
         name: direction
         widget: object
@@ -99,25 +104,25 @@ collections:
             default: "ma"
             widget: select
             options:
-              - {label: "Master of Arts (MA)", value: ma}
-              - {label: "Master of Fine Arts (MFA)", value: mfa}
-              - {label: "Master of Science (MSc)", value: msc}
+              - { label: "Master of Arts (MA)", value: ma }
+              - { label: "Master of Fine Arts (MFA)", value: mfa }
+              - { label: "Master of Science (MSc)", value: msc }
           - label: Ausrichtung
             name: direction
             widget: select
             multiple: true
             default: []
             options:
-              - {label: Entwurfspraktisch, value: practical}
-              - {label: Theoretisch, value: theoretical}
+              - { label: Entwurfspraktisch, value: practical }
+              - { label: Theoretisch, value: theoretical }
           - label: Mastertyp
             name: masterType
             widget: select
             default: "consecutive"
             options:
-              - {label: Konsekutiv, value: consecutive}
-              - {label: "Nicht-konsekutiv", value: notConsecutive}
-              - {label: "Weiterbildend", value: studyingFurther}
+              - { label: Konsekutiv, value: consecutive }
+              - { label: "Nicht-konsekutiv", value: notConsecutive }
+              - { label: "Weiterbildend", value: studyingFurther }
       - label: "Inhaltlichel Fokus und fachliche Zusammensetzung"
         name: "topicAndFocus"
         widget: object
@@ -127,17 +132,23 @@ collections:
             name: topicFocus
             default: "fachspezifisch"
             options:
-              - {label: Fachspezifisch, value: fachspezifisch}
-              - {label: Fachübergreifend, value: fachuebergreifend}
-              - {label: Thematisch, value: thematisch}
+              - { label: Fachspezifisch, value: fachspezifisch }
+              - { label: Fachübergreifend, value: fachuebergreifend }
+              - { label: Thematisch, value: thematisch }
           - label: "Disziplinäre Zusammensetzung"
             name: functionalComposition
             widget: select
             default: "artAndNonArt"
             options:
-              - {label: "Disziplinär", value: "disciplinary"}
-              - {label: "Interdisziplinär gestalterisch", value: "interdisciplinaryArt"}
-              - {label: "Gestalterisch & Nicht-gestalterisch", value: "artAndNonArt"}
+              - { label: "Disziplinär", value: "disciplinary" }
+              - {
+                  label: "Interdisziplinär gestalterisch",
+                  value: "interdisciplinaryArt",
+                }
+              - {
+                  label: "Gestalterisch & Nicht-gestalterisch",
+                  value: "artAndNonArt",
+                }
           - label: "Zugelassene Disziplinen"
             name: allowedDisciplines
             widget: string
@@ -148,14 +159,17 @@ collections:
             multiple: true
             default: []
             options:
-              - {label: "Digitale Medien", value: "digital"}
-              - {label: "Film/Fotografie", value: "filmAndPhotograpy"}
-              - {label: "Illustrationen", value: "illustrations"}
-              - {label: "Mode/Textil", value: "fashion"}
-              - {label: "Produkt/Industrie", value: "product"}
-              - {label: "Innenarchitektur", value: room}
-              - {label: "Schmuck", value: jewelry}
-              - {label: "Visuelle Kommunikation", value: "visualCommunication"}
+              - { label: "Digitale Medien", value: "digital" }
+              - { label: "Film/Fotografie", value: "filmAndPhotograpy" }
+              - { label: "Illustrationen", value: "illustrations" }
+              - { label: "Mode/Textil", value: "fashion" }
+              - { label: "Produkt/Industrie", value: "product" }
+              - { label: "Innenarchitektur", value: room }
+              - { label: "Schmuck", value: jewelry }
+              - {
+                  label: "Visuelle Kommunikation",
+                  value: "visualCommunication",
+                }
       - label: "Zeit und Geld"
         name: timeAndMoney
         widget: object
@@ -172,18 +186,28 @@ collections:
                 options:
                   - { label: "Sommersemester", value: "summer" }
                   - { label: "Wintersemester", value: "winter" }
-              - {label: Datum, name: date, widget: date, dateFormat: "DD.MM.YYYY"}
-              - {label: International, name: international, widget: boolean, default: false}
+              - {
+                  label: Datum,
+                  name: date,
+                  widget: datetime,
+                  dateFormat: "DD.MM.YYYY",
+                }
+              - {
+                  label: International,
+                  name: international,
+                  widget: boolean,
+                  default: false,
+                }
           - label: Studienformen
             name: allowedForms
             widget: select
             multiple: true
             default: []
             options:
-            - {label: Vollzeit, value: fullTime}
-            - {label: Teilzeit, value: partTime}
-            - {label: Berufsbegleitend, value: extraOccupational}
-            - {label: Ferstudium, value: remote}
+              - { label: Vollzeit, value: fullTime }
+              - { label: Teilzeit, value: partTime }
+              - { label: Berufsbegleitend, value: extraOccupational }
+              - { label: Ferstudium, value: remote }
           - label: Gebühren
             name: costs
             widget: number
@@ -203,15 +227,15 @@ collections:
             multiple: true
             default: ["german"]
             options:
-              - {label: deutsch, value: german}
-              - {label: english, value: english}
+              - { label: deutsch, value: german }
+              - { label: english, value: english }
           - label: "Integriertes Auslandssemester"
             name: semesterAbroad
             widget: select
             options:
-              - {label: "Ja", value: "yes"}
-              - {label: "Nein", value: "no"}
-              - {label: "Wahlweise", value: "choose"}
+              - { label: "Ja", value: "yes" }
+              - { label: "Nein", value: "no" }
+              - { label: "Wahlweise", value: "choose" }
           - label: "Doppelabschluss"
             name: "doubleDegree"
             widget: boolean
@@ -220,8 +244,7 @@ collections:
         name: metadata
         widget: object
         fields:
-        - {label: Website, name: website, widget: string}
-        - {label: Facebook, name: facebook, widget: string}
-        - {label: Instagram, name: instagram, widget: string}
-        - {label: Twitter, name: twitter, widget: string}
-
+          - { label: Website, name: website, widget: string }
+          - { label: Facebook, name: facebook, widget: string }
+          - { label: Instagram, name: instagram, widget: string }
+          - { label: Twitter, name: twitter, widget: string }
