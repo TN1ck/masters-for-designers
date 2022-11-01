@@ -1,31 +1,27 @@
 {
-  "name": "Design Future Society",
+  "name": "Creative Leadership (Kommunikationsdesign)",
   "universityName": "Hochschule Mannheim",
   "universityDetails": {
-    "otherUniversity": "mit School of Design der University of Leeds",
+    "otherUniversity": "—",
     "department": "Gestaltung"
   },
   "direction": {
     "degree": "ma",
     "direction": [
-      "practical",
-      "theoretical"
+      "practical"
     ],
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "thematisch",
+    "topicFocus": "fachspezifisch",
     "functionalComposition": "artAndNonArt",
-    "allowedDisciplines": "Design oder aus anderen Disziplinen, wie z.B. Sozial Wissenschaft, Philosophie, Architektur, Politikwissenschaft, Anthropolgie, Soziologie, Produkt und Industrial Design, Media and Communications und Bildende Kunst",
+    "allowedDisciplines": "Design oder verwandte Disziplinen",
     "allowedDisciplinesTag": [
-      "room",
       "visualCommunication",
       "digital",
-      "filmAndPhotograpy",
       "product",
-      "fashion",
       "illustrations",
-      "jewelry"
+      "room"
     ]
   },
   "timeAndMoney": {
@@ -44,14 +40,13 @@
   },
   "internationality": {
     "mainLanguages": [
-      "german",
-      "english"
+      "german"
     ],
-    "semesterAbroad": "yes",
-    "doubleDegree": true
+    "semesterAbroad": "no",
+    "doubleDegree": false
   },
   "metadata": {
-    "website": "https://www.hs-mannheim.de/studieninteressierte/studienangebot/masterstudiengaenge/kommunikationsdesign.html",
+    "website": "https://www.gestaltung.hs-mannheim.de/studium/ma-kommunikationsdesign",
     "facebook": "https://www.facebook.com/fakultaetfuergestaltung",
     "instagram": "https://www.instagram.com/fakultaetfuergestaltung/",
     "twitter": "https://twitter.com/HsMaNews"
