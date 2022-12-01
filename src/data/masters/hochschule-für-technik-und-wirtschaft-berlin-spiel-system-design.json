@@ -1,5 +1,5 @@
 {
-  "name": "Spiel (System Design)",
+  "name": "System Design",
   "universityName": "Hochschule für Technik und Wirtschaft Berlin",
   "universityDetails": {
     "otherUniversity": "nein",
@@ -26,7 +26,7 @@
       {
         "type": "summer",
         "international": false,
-        "date": "2020-12-15T14:14:29.872Z"
+        "date": "2020-12-04T14:14:00.000Z"
       }
     ],
     "allowedForms": [
