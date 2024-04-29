@@ -1,0 +1,50 @@
+{
+  "name": "Kunst",
+  "universityName": "Hochschule für Gestaltung Offenbach am Main",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Kunst"
+  },
+  "direction": {
+    "degree": "mfa",
+    "direction": [
+      "practical",
+      "theoretical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Voraussetzung ist der Nachweis Deiner künstlerisch-gestalterischen oder hervorragenden künstlerisch-gestalterischen Eignung und einen Hochschulabschluss (Bachelor/Diplom)",
+    "allowedDisciplinesTag": [
+      "digital",
+      "visualCommunication",
+      "fashion",
+      "room",
+      "filmAndPhotograpy",
+      "illustrations"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "4"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "german"
+    ],
+    "doubleDegree": false,
+    "semesterAbroad": "no"
+  },
+  "metadata": {
+    "website": "https://www.hfg-offenbach.de/de/pages/bachelor-und-masterstudium-kunst#ueber",
+    "instagram": "https://www.instagram.com/hfg_offenbach/",
+    "twitter": "https://twitter.com/HfG_Offenbach",
+    "facebook": "https://www.facebook.com/HfG.Offenbach"
+  }
+}
