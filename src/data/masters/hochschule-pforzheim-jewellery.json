@@ -1,0 +1,52 @@
+{
+  "name": "Jewellery",
+  "universityName": "Hochschule Pforzheim",
+  "universityDetails": {
+    "otherUniversity": "nein",
+    "department": "Gestaltung"
+  },
+  "direction": {
+    "degree": "ma",
+    "direction": [
+      "practical"
+    ],
+    "masterType": "consecutive"
+  },
+  "topicAndFocus": {
+    "topicFocus": "fachspezifisch",
+    "functionalComposition": "interdisciplinaryArt",
+    "allowedDisciplines": "Design",
+    "allowedDisciplinesTag": [
+      "product",
+      "fashion",
+      "jewelry"
+    ]
+  },
+  "timeAndMoney": {
+    "applicationDeadlines": [
+      {
+        "type": "winter",
+        "date": "2019-04-30T00:00:00.000Z",
+        "international": false
+      }
+    ],
+    "allowedForms": [
+      "fullTime"
+    ],
+    "costs": 0,
+    "semester": "3"
+  },
+  "internationality": {
+    "mainLanguages": [
+      "english"
+    ],
+    "semesterAbroad": "no",
+    "doubleDegree": false
+  },
+  "metadata": {
+    "website": "https://designpf.hs-pforzheim.de/maj",
+    "facebook": "https://www.facebook.com/hs.pforzheim",
+    "instagram": "https://www.instagram.com/schmuck_objekt_design_pf/",
+    "twitter": "https://twitter.com/hs_pforzheim"
+  }
+}
