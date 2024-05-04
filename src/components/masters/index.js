@@ -419,7 +419,7 @@ class Masters extends React.Component {
   }
 }
 
-export default () => (
+const MastersWrapped = () => (
   <StaticQuery
     query={graphql`
       query MastersQuery {
@@ -442,3 +442,5 @@ export default () => (
     }}
   />
 );
+
+export default MastersWrapped;

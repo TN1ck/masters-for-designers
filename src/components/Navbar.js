@@ -156,7 +156,7 @@ const Navbar = class extends React.Component {
   }
 };
 
-export default ({masterCount, background, showBorder}) => (
+const NavbarWrapped = ({masterCount, background, showBorder}) => (
   <StaticQuery
     query={graphql`
       query NavbarQuery {
@@ -172,3 +172,5 @@ export default ({masterCount, background, showBorder}) => (
     }}
   />
 );
+
+export default NavbarWrapped;
