@@ -56,7 +56,7 @@ const About = ({data}) => {
                 <p>
                   Programmierung
                   <br />
-                  <a href="https://tn1ck.ocm">Tom Nick</a>
+                  <a href="https://tn1ck.com">Tom Nick</a>
                 </p>
               </ColumnHalf>
               <ColumnHalf>
