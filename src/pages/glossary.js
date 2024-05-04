@@ -2,8 +2,8 @@ import React from "react";
 import {StaticQuery, graphql} from "gatsby";
 import Glossary from "../components/glossary";
 
-export default () => (
-  <StaticQuery
+export default function GlossaryWrapped() {
+  return <StaticQuery
     query={graphql`
       query GlossaryQuery {
         glossary: allGlossaryJson {
@@ -26,4 +26,4 @@ export default () => (
     `}
     render={data => <Glossary data={data} />}
   />
-);
+}

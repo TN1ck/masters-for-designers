@@ -15,7 +15,6 @@ import {
   semesterAbroadTranslation,
   mainLanguagesTranslation,
   functionalCompositionTranslation,
-  masterTranslation,
   topicAndFocusTranslation,
 } from "./translations";
 

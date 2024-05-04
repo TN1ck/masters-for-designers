@@ -147,7 +147,7 @@ class SavedMasters extends React.Component {
   }
 }
 
-export default () => (
+const SavedMastersWrapped = () => (
   <StaticQuery
     query={graphql`
       query SavedMastersQuery {
@@ -168,3 +168,5 @@ export default () => (
     )}
   />
 );
+
+export default SavedMastersWrapped;
