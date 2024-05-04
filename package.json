@@ -18,16 +18,13 @@
     "gatsby-source-filesystem": "3.5.0",
     "gatsby-transformer-json": "3.5.0",
     "gatsby-transformer-remark": "4.2.0",
-    "lodash": "4.17.21",
-    "lodash-webpack-plugin": "0.11.6",
     "netlify-cms": "2.10.131",
     "netlify-cms-app": "^2.15.11",
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
-    "styled-components": "5.3.0",
-    "uuid": "8.3.2"
+    "styled-components": "5.3.0"
   },
   "keywords": [
     "gatsby"
@@ -42,14 +39,14 @@
     "build": "run-p build:**",
     "develop": "npm run clean && gatsby develop --verbose",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "gatsby-plugin-google-analytics": "3.5.0",
     "http-proxy-middleware": "2.0.0",
     "npm-run-all": "4.1.5",
-    "prettier": "2.3.0",
+    "prettier": "3.1.0",
     "rimraf": "3.0.2"
   }
 }
