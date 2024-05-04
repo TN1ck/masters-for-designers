@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">=14.15.4"
+    "node": ">=16.0.0"
   },
   "name": "masters-for-designers",
   "description": "Masters For Designers",
