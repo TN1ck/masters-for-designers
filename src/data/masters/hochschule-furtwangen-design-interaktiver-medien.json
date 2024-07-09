@@ -27,6 +27,11 @@
         "type": "winter",
         "date": "2019-07-15T16:27:48.549Z",
         "international": false
+      },
+      {
+        "type": "summer",
+        "international": false,
+        "date": "2024-01-15T16:18:54.299Z"
       }
     ],
     "allowedForms": [
@@ -43,7 +48,7 @@
     "doubleDegree": false
   },
   "metadata": {
-    "website": "http://www.hs-furtwangen.de/studiengaenge/fakultaet/digitale-medien/design-interaktiver-medien-ma.html",
+    "website": "https://www.hs-furtwangen.de/zukunft-studieren/studiengaenge/design-interaktiver-medien-master",
     "facebook": "https://www.facebook.com/DigitaleMedien.Furtwangen",
     "instagram": "https://www.instagram.com/digitalemedienfurtwangen/",
     "twitter": "https://twitter.com/hs_furtwangen"
