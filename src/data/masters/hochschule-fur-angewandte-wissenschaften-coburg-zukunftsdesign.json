@@ -31,12 +31,12 @@
     "applicationDeadlines": [
       {
         "type": "summer",
-        "date": "2019-01-15T00:00:00.000Z",
+        "date": "2019-03-14T00:00:00.000Z",
         "international": false
       },
       {
         "type": "winter",
-        "date": "2019-07-15T00:00:00.000Z",
+        "date": "2019-09-30T00:00:00.000Z",
         "international": false
       }
     ],
@@ -55,7 +55,7 @@
     "doubleDegree": false
   },
   "metadata": {
-    "website": "https://www.hs-coburg.de/studium/master/interdisziplinaer/zukunftsdesign.html",
+    "website": "https://www.hs-coburg.de/studium/master/wirtschaft/zukunftsdesign.html",
     "facebook": "https://www.facebook.com/ZukunftsDesign-177356409497688/",
     "instagram": "https://www.instagram.com/zukunftsdesign/",
     "twitter": "—"
