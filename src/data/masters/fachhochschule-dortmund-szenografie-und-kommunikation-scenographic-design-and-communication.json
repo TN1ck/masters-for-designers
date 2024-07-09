@@ -34,14 +34,14 @@
     "semester": "4",
     "applicationDeadlines": [
       {
-        "date": "2021-07-14T22:00:00.000Z",
+        "type": "winter",
         "international": false,
-        "type": "winter"
+        "date": "2024-07-15T14:54:31.828Z"
       },
       {
         "type": "summer",
         "international": false,
-        "date": "2022-01-14T23:00:00.000Z"
+        "date": "2024-01-15T15:54:46.900Z"
       }
     ]
   },
@@ -54,7 +54,7 @@
     "doubleDegree": false
   },
   "metadata": {
-    "website": "https://www.fh-dortmund.de/en/studiengaenge/scenographic-design-and-communication-master.php/studiengaenge/emb",
+    "website": "https://www.fh-dortmund.de/studiengaenge/szenografie-und-kommunikation-scenographic-design-and-communication-master.php",
     "facebook": "https://www.facebook.com/FhDortmundFachbereichDesign/",
     "instagram": "https://www.instagram.com/fhdortmund/",
     "twitter": "https://twitter.com/fh_dortmund"
