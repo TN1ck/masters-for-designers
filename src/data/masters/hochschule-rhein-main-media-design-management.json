@@ -27,6 +27,11 @@
         "type": "winter",
         "date": "2017-07-15T00:00:00.000Z",
         "international": false
+      },
+      {
+        "type": "summer",
+        "international": false,
+        "date": "2024-01-01T16:25:34.083Z"
       }
     ],
     "allowedForms": [
