@@ -1,5 +1,5 @@
 {
-  "name": "Intermedia & Marketing",
+  "name": "Design, Film & Marketing",
   "universityName": "Hochschule Flensburg",
   "universityDetails": {
     "otherUniversity": "nein",
@@ -13,7 +13,7 @@
     "masterType": "consecutive"
   },
   "topicAndFocus": {
-    "topicFocus": "fachspezifisch",
+    "topicFocus": "fachuebergreifend",
     "functionalComposition": "artAndNonArt",
     "allowedDisciplines": "Gestalterische, medienbezogene, wirtschaftliche oder künstlerische Disziplinen",
     "allowedDisciplinesTag": [
