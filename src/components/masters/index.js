@@ -307,7 +307,7 @@ class Masters extends React.Component {
             <TextContainer>
               <SubHeadline>
                 {
-                  "Der Überblick aller für Designer zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
+                  "Der Überblick aller für Designer:innen zugänglichen Masterstudiengänge an staatlichen Hochschulen in Deutschland."
                 }
               </SubHeadline>
             </TextContainer>

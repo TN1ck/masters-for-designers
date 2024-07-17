@@ -27,7 +27,7 @@ const About = ({data}) => {
           <TextContainer>
             <SubHeadline>
               Masters for Designers hat sich zum Ziel gesetzt die Diversität des Masterangebots sichtbar zu machen und
-              jedem interessierten Designer die Möglichkeit zu geben den individuell passenden Studiengang zu finden.
+              allen interessierten Designer:innen die Möglichkeit zu geben den individuell passenden Studiengang zu finden.
               <br />
               Alle Studiengänge sind daher übersichtlich sortiert nach formalen und inhaltlichen Eigenschaften: von
               Standort und Internationalität bis hin zur disziplinärer Zusammensetzung der Studierenden.
@@ -94,7 +94,7 @@ const About = ({data}) => {
                 <p>
                   Alle Informationen zu den einzelnen Masterstudiengängen sind mit bestem Wissen und Gewissen
                   recherchiert und basieren auf der Analyse der Prüfungs- und Studienordnungen sowie der
-                  Selbstdarstellung der Studiengänge auf der jeweiligen Hochschulseite. (Stand Juni 2019)
+                  Selbstdarstellung der Studiengänge auf der jeweiligen Hochschulseite. (Stand Januar 2024)
                   <br />
                   <br />
                   Die Bewerbungsfristen sind für 2019 und vermutlich auch weiterhin gültig. Sie können demnach auch für
