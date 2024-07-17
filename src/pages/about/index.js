@@ -95,11 +95,6 @@ const About = ({data}) => {
                   Alle Informationen zu den einzelnen Masterstudiengängen sind mit bestem Wissen und Gewissen
                   recherchiert und basieren auf der Analyse der Prüfungs- und Studienordnungen sowie der
                   Selbstdarstellung der Studiengänge auf der jeweiligen Hochschulseite. (Stand Januar 2024)
-                  <br />
-                  <br />
-                  Die Bewerbungsfristen sind für 2019 und vermutlich auch weiterhin gültig. Sie können demnach auch für
-                  2020 als Anhaltspunkt genommen werden. Fällt die Frist auf ein Wochenende oder Feiertag, so verschiebt
-                  sie sich meist auf den Werktag davor oder danach.
                 </p>
               </ColumnFull>
             </Row>
